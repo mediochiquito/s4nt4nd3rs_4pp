@@ -1,0 +1,72 @@
+#SeccionFoto{
+	background-image: url(../img/foto/marco.jpg);
+	background-repeat: repeat-y;
+	width: 1024px;
+	height: 600px;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -512px;
+}
+#btn_menos{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -293px;
+	margin-left: -505px;
+}
+#btn_mas{
+	position: absolute;
+		top: 50%;
+	left: 50%;
+	margin-top: -188px;
+	margin-left: -505px;
+}
+#btn_continuar{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -279px;
+	margin-left: 423px;
+}
+#btn_volver{
+	position: absolute;
+		top: 50%;
+	left: 50%;
+	margin-top: -196px;
+	margin-left: 424px;
+}
+
+.canvas_export{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -400px;
+}
+
+.canvas_export_thumb{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -920px;
+	margin-left: -400px;
+}
+
+
+._BotonToogle{
+	position: absolute;
+	left: 50%;
+	margin-left: -505px;
+
+}
+
+._BotonToogle_txt{
+	
+	font-family: 'brandon_grotesque_regularRg';
+	font-size: 18px;
+	width: 100%;
+	top: 11px;
+	text-align: center;
+}
+
