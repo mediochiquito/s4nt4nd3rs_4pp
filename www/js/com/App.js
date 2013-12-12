@@ -1,7 +1,5 @@
 function App(){
 
-	var self = this
-
 	this.main = document.createElement('div');
 	this.main.id = 'app'
 	this.ancho = 320;
@@ -9,20 +7,32 @@ function App(){
 	this.secciones = null;
 	this.lightbox = null;
 	this.obj_usuario;
+	this.server = 'http://localhost/s4nt4nd3rs_4pp/server/'
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
 
-
+	var self = this
+	var tablas_creadas = 0
+	var xml_default_db;
+	var primera_vez_que_instala = false;
+	var array_tablas_a_crear;
+	var version_sync = 0;
+	var new_version_sync = 0
 	this.initialize = function(){
-		
-		if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
-	    if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
-	    if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-		
+		if(app.is_phonegap()){
+				if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
+			    if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
+			    if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
+		}
 		document.addEventListener('deviceready', deviceready, false);
+		$(document).bind('touchmove', doPrevent);
 
 	}
-	
+
+	function doPrevent(event) {
+		event.preventDefault();
+	}
+
 	this.alerta = function($str){
 		try{
     		navigator.notification.alert($str, function(){}, 'ALERTA')
@@ -32,7 +42,6 @@ function App(){
 	}
 	
 	this.is_phonegap =  function (){
-		
 		try {
 		    if(device.platform == ''){}
 		    return true;  
@@ -76,40 +85,13 @@ function App(){
         return false;
     }
 
-	function onErrorFile(e){
-		app.alerta('Error file sistem')
-    }
-   
-    function crearTabla_Usuarios(){
-		
-		app.db.transaction(function (tx) {
-		
-			tx.executeSql('CREATE TABLE IF NOT EXISTS usuarios ("usuarios_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "usuarios_nombre" VARCHAR NOT NULL, "usuarios_apellido" VARCHAR NOT NULL, "usuarios_ci" VARCHAR NOT NULL, "usuarios_fecha_nac" VARCHAR NOT NULL, "usuarios_email" VARCHAR NOT NULL, "usuarios_archivo" VARCHAR NOT NULL, "usuarios_lugar" VARCHAR NOT NULL, "usuarios_recibe_info" INTEGER NOT NULL, "usuarios_fecha_hora" DATETIME)', [], function(e){});
-		
-		}, app.db_errorGeneral);
-				
-    }
-
-
-    this.db_errorGeneral = function(tx, err) {
-		
-		try{
-      		alert("Error processing SQL: " + err.message);
-		}catch(e){
-			alert("Error processing SQL: " + tx.message);
-
-		}
-
-    }
-
-   
-
+	
 	function deviceready(){
-
-    	crearTabla_Usuarios()
-
-    	_ManagePush = new _ManagePush();
-    	_ManagePush.register_push();
+		
+		if(app.is_phonegap()){
+	    	_ManagePush = new ManagePush();
+	    	_ManagePush.register_push();
+   		}
 
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
@@ -133,12 +115,158 @@ function App(){
 		
 		self.lightbox = new LightBox()
 		$(self.main).append(self.lightbox.main);
+		$('body').append(self.main)
+        
+        app.db.transaction(function (tx) {
+			crear_db(tx)	
+		});
+      
 
-        $('body').append(self.main)
-
-        //app.secciones.go(app.secciones.seccioninicio)
 	}
 
+	function start(){
+		
+		setTimeout(function(){
+			//if(app.hay_internet()) 
+				verfificar_sync();
+		}, 1000)
+	}
+
+	function verfificar_sync(){
+    		$.ajax({
+				type: "GET",
+				url: app.server + "version_sync.txt",
+				dataType: 'text',
+				cache:false, 
+				success: function($int) {
+					new_version_sync = Number($int);
+					if(new_version_sync>Number(version_sync)){
+
+						$.ajax({
+
+							type: "POST",
+							url: app.server + "xml.eventos.php",
+							dataType: 'xml',
+							cache: false, 
+							data:{version_sync: version_sync},
+							success: function($xml) {
+								
+								actualizar_db($xml)
+
+							}
+						});	
+					}
+				}
+			});
+    }
+
+	//C:\Users\Mateo\AppData\Local\Google\Chrome\User Data\Default\databases\http_localhost_0
+
+	function actualizar_db($xml){
+		app.db.transaction(function (tx) {
+			alert(new_version_sync);
+			tx.executeSql('UPDATE app SET version_sync='+new_version_sync);
+		});
+	}
+
+	function crear_db($tx) {
+		   
+		   $.ajax({
+				type: "GET",
+				url: "xml/default_db.xml",
+				dataType: 'xml',
+				async : false,
+			}).success(function(xml) {
+					xml_default_db = xml
+					tablas_creadas = 0
+					array_tablas_a_crear = new Array(crearTabla_Eventos,
+													 crearTabla_App)
+					for(var func in array_tablas_a_crear){
+						array_tablas_a_crear[func]($tx)
+					}
+			});
+	}
+
+
+	function comprobacion_total_tablas_creadas(e){
+
+    	tablas_creadas++
+    	if(tablas_creadas == array_tablas_a_crear.length) start()
+
+    }
+
+     function crearTabla_App($tx){
+
+			la_tala_fue_creada($tx, 'app', function($bool){
+				
+				$tx.executeSql('CREATE TABLE IF NOT EXISTS app ("app_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
+						  	   '"version_sync" INTEGER)', [], comprobacion_total_tablas_creadas);
+
+				if(!$bool) {
+					$tx.executeSql('INSERT INTO app (version_sync) VALUES (?)', [0]);
+
+				} else {
+
+					$tx.executeSql("SELECT version_sync FROM app" , [], function (tx, resultado) {
+	    					version_sync = resultado.rows.item(0).version_sync
+					});
+				} 
+			});	
+    }
+
+    /* function crearTabla_Ofertas($tx){
+		
+	  
+			$tx.executeSql('CREATE TABLE IF NOT EXISTS ofertas ("ofertas_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
+						  '"ofertas_nombre" VARCHAR, ' +
+						  '"ofertas_categoria_ofertas_id" INTEGER, ' +
+						  '"ofertas_descuento" VARCHAR, ' +
+						  '"ofertas_intereses" VARCHAR, ' +
+						  '"ofertas_dias" VARCHAR, ' +
+						  '"ofertas_locales" TEXT, ' +
+						  '"ofertas_observaciones" TEXT, ' +
+						  '"usuarios_lon" VARCHAR, ' +
+						  '"usuarios_uid" VARCHAR, ' +
+						  '"usuarios_fecha_creado" DATETIME)', [], comprobacion_total_tablas_creadas);
+		
+				
+    }*/
+
+    function crearTabla_Eventos($tx){
+		
+			$tx.executeSql('CREATE TABLE IF NOT EXISTS eventos ("eventos_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
+						  '"eventos_nombre" VARCHAR, ' +
+						  '"eventos_fecha" DATETIME, ' +
+						  '"eventos_categoria_eventos_id" INTEGER, ' +
+						  '"eventos_lugar" VARCHAR, ' +
+						  '"eventos_desc" VARCHAR, ' +
+						  '"eventos_lat" VARCHAR, ' +
+						  '"eventos_lon" VARCHAR, ' +
+						  '"eventos_uid" VARCHAR, ' +
+						  '"eventos_fecha_hora_creado" DATETIME)', [], comprobacion_total_tablas_creadas);
+    }
+
+
+    function la_tala_fue_creada($tx, $table_name, $callback){
+    	$tx.executeSql("SELECT name FROM sqlite_master WHERE name='"+$table_name+"'" , [],	
+		function (tx, resultado) {
+					if(resultado.rows.length==0) $callback(false);
+					else $callback(true);
+		},  app.db_errorGeneral);
+    }
+
+    this.db_errorGeneral = function(tx, err) {
+		
+		try{
+      		alert("Error processing SQL: " + err.message);
+		}catch(e){
+			alert("Error processing SQL: " + tx.message);
+
+		}
+
+    }
+
+   
 	this.cargando = function ($bool, $txt){
 		if($bool){
 			$('#txt_loading').html($txt);

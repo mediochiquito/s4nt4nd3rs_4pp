@@ -6,18 +6,8 @@ function Secciones(){
   	this.main = document.createElement('div')
   	this.main.id = 'secciones'
 
-	this.seccioninicio = new SeccionInicio();
-	$(this.main).append(this.seccioninicio.main)
-
-	this.seccionfoto = new SeccionFoto();
-	$(this.main).append(this.seccionfoto.main);
-
-	this.secciongaleria = new SeccionGaleria();
-	$(this.main).append(this.secciongaleria.main);
-	
-	this.seccionregistro = new SeccionRegistro();
-	$(this.main).append(this.seccionregistro.main)
-
+	this.seccionmapa = new SeccionMapa();
+	$(this.main).append(this.seccionmapa.main)
 
 	var obj_seccion_actual = null;	
 
