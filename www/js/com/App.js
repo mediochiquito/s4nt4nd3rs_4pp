@@ -16,8 +16,8 @@ function App(){
 	var xml_default_db;
 	var primera_vez_que_instala = false;
 	var array_tablas_a_crear;
-	var version_sync = 0;
-	var new_version_sync = 0
+	var sync_value = 0;
+	var new_sync_value = 0
 	this.initialize = function(){
 		if(app.is_phonegap()){
 				if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
@@ -135,12 +135,12 @@ function App(){
 	function verfificar_sync(){
     		$.ajax({
 				type: "GET",
-				url: app.server + "version_sync.txt",
+				url: app.server + "sync_value.txt",
 				dataType: 'text',
 				cache:false, 
 				success: function($int) {
-					new_version_sync = Number($int);
-					if(new_version_sync>Number(version_sync)){
+					new_sync_value = Number($int);
+					if(new_sync_value>Number(sync_value)){
 
 						$.ajax({
 
@@ -148,7 +148,7 @@ function App(){
 							url: app.server + "xml.eventos.php",
 							dataType: 'xml',
 							cache: false, 
-							data:{version_sync: version_sync},
+							data:{sync_value: sync_value},
 							success: function($xml) {
 								
 								actualizar_db($xml)
@@ -164,8 +164,8 @@ function App(){
 
 	function actualizar_db($xml){
 		app.db.transaction(function (tx) {
-			alert(new_version_sync);
-			tx.executeSql('UPDATE app SET version_sync='+new_version_sync);
+			alert(new_sync_value);
+			tx.executeSql('UPDATE app SET sync_value='+new_sync_value);
 		});
 	}
 
@@ -199,16 +199,15 @@ function App(){
 
 			la_tala_fue_creada($tx, 'app', function($bool){
 				
-				$tx.executeSql('CREATE TABLE IF NOT EXISTS app ("app_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
-						  	   '"version_sync" INTEGER)', [], comprobacion_total_tablas_creadas);
+				$tx.executeSql('CREATE TABLE IF NOT EXISTS app ("sync_value" INTEGER)', [], comprobacion_total_tablas_creadas);
 
 				if(!$bool) {
-					$tx.executeSql('INSERT INTO app (version_sync) VALUES (?)', [0]);
+					$tx.executeSql('INSERT INTO app (sync_value) VALUES (?)', [0]);
 
 				} else {
 
-					$tx.executeSql("SELECT version_sync FROM app" , [], function (tx, resultado) {
-	    					version_sync = resultado.rows.item(0).version_sync
+					$tx.executeSql("SELECT sync_value FROM app" , [], function (tx, resultado) {
+	    					sync_value = resultado.rows.item(0).sync_value
 					});
 				} 
 			});	
