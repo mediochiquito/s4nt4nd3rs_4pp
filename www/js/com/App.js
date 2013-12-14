@@ -91,7 +91,7 @@ function App(){
 
 	
 	function deviceready(){
-			
+			alert(app.is_phonegap())
 		if(app.is_phonegap()){
 	    	_ManagePush = new ManagePush();
 	    	_ManagePush.register_push();
