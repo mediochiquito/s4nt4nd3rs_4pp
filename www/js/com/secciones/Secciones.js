@@ -1,6 +1,5 @@
 function Secciones(){ 
 	
-
 	var self = this
 
   	this.main = document.createElement('div')

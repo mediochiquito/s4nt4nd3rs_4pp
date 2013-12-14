@@ -43,6 +43,7 @@ function ManagePush(){
 	    // here is where you might want to send it the token for later use.
 	    alert('device token = ' + result);
 	}
+	
 	// iOS
 	function onNotificationAPN (event) {
 	   

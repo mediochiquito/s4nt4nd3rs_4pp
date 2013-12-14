@@ -1,5 +1,17 @@
-<root>
-	<item>
+<?
+include dirname(__FILE__) . '/init.php';
 
-	</item>
+?>
+<root>
+	<categorias>
+		<item></item>
+	</categorias>
+
+
+	<eventos>
+		<item>
+			
+		</item>
+	</eventos>
+
 </root>

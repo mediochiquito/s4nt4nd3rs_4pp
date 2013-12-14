@@ -1,5 +1,5 @@
 function App(){
-
+	//com.mateomenestrina.testing
 	this.main = document.createElement('div');
 	this.main.id = 'app'
 	this.ancho = 320;
@@ -18,6 +18,7 @@ function App(){
 	var array_tablas_a_crear;
 	var sync_value = 0;
 	var new_sync_value = 0
+
 	this.initialize = function(){
 		if(app.is_phonegap()){
 				if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
@@ -99,12 +100,12 @@ function App(){
 		if( self.ancho<320) self.ancho = 320;
 		if( self.alto<640) self.alto = 640;
 
-		if(window.innerWidth<320 || window.innerHeight<640){
+		/*if(window.innerWidth<320 || window.innerHeight<640){
 
 			$(self.main).css('transform-origin', '0 0');
 			$(self.main).transition({scale: [(window.innerWidth/320), (window.innerHeight/640)]}, 0);
 
-		}
+		}*/
 
 		$(self.main).css({width:self.ancho, height:self.alto})
 
@@ -127,8 +128,11 @@ function App(){
 	function start(){
 		
 		setTimeout(function(){
-			//if(app.hay_internet()) 
+			if(app.hay_internet() || !app.is_phonegap()) 
 				verfificar_sync();
+
+				app.secciones.go(app.secciones.seccionmapa)
+
 		}, 1000)
 	}
 

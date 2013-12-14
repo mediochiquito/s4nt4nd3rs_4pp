@@ -1,11 +1,4 @@
-* {
-
-    /*-webkit-tap-highlight-color: rgba(0,0,0,0); */
-    margin:0px;
-    padding:0px;
-}
-
-body {
+html,body {
  
     -webkit-touch-callout: none; 
     -webkit-text-size-adjust: none;
@@ -13,6 +6,7 @@ body {
     margin:0px;
     padding:0px;
     background-color: #fa2b43;
+    height: 100%;
    
 }
 
@@ -28,12 +22,6 @@ body {
 
 }
 
-
-
-
-
-
-
 #app{
 	position: absolute;
 	top: 0px;
@@ -45,12 +33,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-div{
-	position: absolute;
-}
-##Boton{
 
-}
 #secciones,.seccion{
 	position: absolute;
 	top: 0px;
@@ -58,11 +41,6 @@ div{
 	width: 100%;
 	height: 100%;
 
-}
-canvas{
-	position: absolute;
-	pointer-events:none;
-	
 }
 
 
