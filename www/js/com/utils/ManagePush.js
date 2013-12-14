@@ -6,9 +6,9 @@ function ManagePush(){
 	this.plataform = '';
 
 	this.register_push = function(){
-
+		alert('register_push1')
     	pushNotification = window.plugins.pushNotification;
-
+		alert('register_push2')
     	if ( device.platform == 'android' || device.platform == 'Android' )
 		{
 		    pushNotification.register(
@@ -18,6 +18,7 @@ function ManagePush(){
 		            "ecb":"onNotificationGCM"
 		        });
 		    self.plataform = 'android'
+		    alert('register_push3')
 		}
 		else
 		{
