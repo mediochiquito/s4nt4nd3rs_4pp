@@ -47,6 +47,8 @@ function App(){
 	}
 	
 	this.is_phonegap =  function (){
+
+		alert('device.platform: ' +  device.platform)
 		try {
 		    if(device.platform == ''){}
 		    return true;  
