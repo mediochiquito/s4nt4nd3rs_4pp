@@ -7,13 +7,14 @@ function Secciones(){
 
 	this.seccionmapa = new SeccionMapa();
 	$(this.main).append(this.seccionmapa.main)
+	this.seccionmapa.ocultar(0);
 
 	var obj_seccion_actual = null;	
 
 	this.go = function($base_seccion, $time, $data){
 
 		$(this.main).css({ display: 'block'});
-
+	
 		try{
 			if($base_seccion != obj_seccion_actual)
 				obj_seccion_actual.ocultar($time);

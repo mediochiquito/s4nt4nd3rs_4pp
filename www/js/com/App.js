@@ -7,7 +7,7 @@ function App(){
 	this.secciones = null;
 	this.lightbox = null;
 	this.obj_usuario;
-	this.server = 'http://localhost/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
 
@@ -24,8 +24,12 @@ function App(){
 				if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
 			    if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
 			    if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
+			    document.addEventListener('deviceready', deviceready, false);
+		}else{
+			deviceready()
+
 		}
-		document.addEventListener('deviceready', deviceready, false);
+		
 		$(document).bind('touchmove', doPrevent);
 
 	}
@@ -65,30 +69,29 @@ function App(){
 
      		try{
             	var networkState = navigator.connection.type;
-	        }catch(e){
+	 
+	            var states = {};
+	            states[Connection.UNKNOWN]  = 'Unknown connection';
+	            states[Connection.ETHERNET] = 'Ethernet connection';
+	            states[Connection.WIFI]     = 'WiFi connection';
+	            states[Connection.CELL_2G]  = 'Cell 2G connection';
+	            states[Connection.CELL_3G]  = 'Cell 3G connection';
+	            states[Connection.CELL_4G]  = 'Cell 4G connection';
+	            states[Connection.CELL]     = 'Cell generic connection';
+	            states[Connection.NONE]     = 'No network connection';
+
+	            if(networkState == Connection.WIFI ||  networkState == Connection.CELL_3G || networkState == Connection.CELL_4G || networkState == Connection.WIFI){
+	 				return true;
+	            }
+			}catch(e){
 				return true
 	        }
-
-            var states = {};
-            states[Connection.UNKNOWN]  = 'Unknown connection';
-            states[Connection.ETHERNET] = 'Ethernet connection';
-            states[Connection.WIFI]     = 'WiFi connection';
-            states[Connection.CELL_2G]  = 'Cell 2G connection';
-            states[Connection.CELL_3G]  = 'Cell 3G connection';
-            states[Connection.CELL_4G]  = 'Cell 4G connection';
-            states[Connection.CELL]     = 'Cell generic connection';
-            states[Connection.NONE]     = 'No network connection';
-
-            if(networkState == Connection.WIFI ||  networkState == Connection.CELL_3G || networkState == Connection.CELL_4G || networkState == Connection.WIFI){
- 				return true;
-            }
-
-        return false;
+     
     }
 
 	
 	function deviceready(){
-		
+			
 		if(app.is_phonegap()){
 	    	/*_ManagePush = new ManagePush();
 	    	_ManagePush.register_push();*/
@@ -96,11 +99,12 @@ function App(){
 
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
-
+		
+/*
 		if( self.ancho<320) self.ancho = 320;
 		if( self.alto<640) self.alto = 640;
 
-		/*if(window.innerWidth<320 || window.innerHeight<640){
+		if(window.innerWidth<320 || window.innerHeight<640){
 
 			$(self.main).css('transform-origin', '0 0');
 			$(self.main).transition({scale: [(window.innerWidth/320), (window.innerHeight/640)]}, 0);
@@ -120,29 +124,33 @@ function App(){
         
         app.db.transaction(function (tx) {
 			crear_db(tx)	
+
 		});
       
 
 	}
 
 	function start(){
-		
+		 
 		setTimeout(function(){
-			if(app.hay_internet() || !app.is_phonegap()) 
-				verfificar_sync();
 
-				app.secciones.go(app.secciones.seccionmapa)
+			if(app.hay_internet())  verfificar_sync();
+			app.secciones.go(app.secciones.seccionmapa)
 
-		}, 1000)
+
+		}, 100)
 	}
 
 	function verfificar_sync(){
+    		
+
     		$.ajax({
 				type: "GET",
 				url: app.server + "sync_value.txt",
 				dataType: 'text',
 				cache:false, 
 				success: function($int) {
+					
 					new_sync_value = Number($int);
 					if(new_sync_value>Number(sync_value)){
 
@@ -174,13 +182,14 @@ function App(){
 	}
 
 	function crear_db($tx) {
-		   
+		 
 		   $.ajax({
 				type: "GET",
 				url: "xml/default_db.xml",
 				dataType: 'xml',
 				async : false,
 			}).success(function(xml) {
+
 					xml_default_db = xml
 					tablas_creadas = 0
 					array_tablas_a_crear = new Array(crearTabla_Eventos,
@@ -195,6 +204,7 @@ function App(){
 	function comprobacion_total_tablas_creadas(e){
 
     	tablas_creadas++
+
     	if(tablas_creadas == array_tablas_a_crear.length) start()
 
     }
@@ -212,7 +222,9 @@ function App(){
 
 					$tx.executeSql("SELECT sync_value FROM app" , [], function (tx, resultado) {
 	    					sync_value = resultado.rows.item(0).sync_value
-					});
+					})
+
+
 				} 
 			});	
     }
