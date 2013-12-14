@@ -91,8 +91,8 @@ function App(){
 			if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
 			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 			
-	    	_ManagePush = new ManagePush();
-	    	_ManagePush.register_push();
+	    	self._ManagePush = new ManagePush();
+	    	self._ManagePush.register_push();
    		}
 
         self.ancho = window.innerWidth;
