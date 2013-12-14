@@ -90,8 +90,8 @@ function App(){
 	function deviceready(){
 		
 		if(app.is_phonegap()){
-	    	_ManagePush = new ManagePush();
-	    	_ManagePush.register_push();
+	    	/*_ManagePush = new ManagePush();
+	    	_ManagePush.register_push();*/
    		}
 
         self.ancho = window.innerWidth;

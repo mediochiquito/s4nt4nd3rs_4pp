@@ -34,8 +34,8 @@
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect">
-        <param name="APP_ID" value="..." />
-        <param name="APP_NAME" value="..." />
+        <param name="APP_ID" value="381248932009498" />
+        <param name="APP_NAME" value="Santanders App" />
     </gap:plugin>
 
     <feature name="http://api.phonegap.com/1.0/device"/>
