@@ -35,9 +35,9 @@ function ManagePush(){
 		}
 
 	}
-	function (){
+	function sendToken(){
 
-		sendToken()
+		
 	}
 
 	// result contains any message sent from the plugin call

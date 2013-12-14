@@ -20,15 +20,7 @@ function App(){
 	var new_sync_value = 0
 
 	this.initialize = function(){
-		if(app.is_phonegap()){
-				if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
-			    if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
-			    if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-			    document.addEventListener('deviceready', deviceready, false);
-		}else{
-			deviceready()
-
-		}
+		document.addEventListener('deviceready', deviceready, false);
 		
 		$(document).bind('touchmove', doPrevent);
 
@@ -48,7 +40,7 @@ function App(){
 	
 	this.is_phonegap =  function (){
 
-		alert('device.platform: ' +  device.platform)
+		//alert('device.platform: ' +  device.platform)
 		try {
 		    if(device.platform == ''){}
 		    return true;  
@@ -93,8 +85,12 @@ function App(){
 
 	
 	function deviceready(){
-			alert(app.is_phonegap())
+		
 		if(app.is_phonegap()){
+			if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
+			if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
+			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
+			
 	    	_ManagePush = new ManagePush();
 	    	_ManagePush.register_push();
    		}
