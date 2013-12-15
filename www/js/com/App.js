@@ -144,6 +144,7 @@ function App(){
 	function doConnect(){	
 		 console.log('doConnect');
 		 FB.login(function(response) {
+		 	console.log('responses');
 		   if (response.authResponse) {
 		     console.log('Welcome!  Fetching your information.... ');
 		     app.alerta(response.authResponse.userID)
