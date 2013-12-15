@@ -144,26 +144,27 @@ function App(){
       
 
 	}
-	
+
 	function doConnect(){	
 		
 		try {
-             
-             	if (response.status == 'connected') {
-					alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
-				} else {
-		
-		             FB.login(function(response) {
-				 
-						  if (response.authResponse) {
-						    	
-						    	alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
-						    
-						   } else {
-						     console.log('User cancelled login or did not fully authorize.');
-						   }
-						 }, {scope: ''});
-         		}
+             FB.getLoginStatus(function(response) {
+	             	if (response.status == 'connected') {
+						alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+					} else {
+			
+			             FB.login(function(response) {
+					 
+							  if (response.authResponse) {
+							    	
+							    	alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+							    
+							   } else {
+							     console.log('User cancelled login or did not fully authorize.');
+							   }
+							 }, {scope: ''});
+	         		}
+         		});
 			 } catch (e) {
                  alert(e);
             }
