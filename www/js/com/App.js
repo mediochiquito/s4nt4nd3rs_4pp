@@ -147,19 +147,20 @@ function App(){
 
 	function doConnect(){	
 		 console.log('doConnect');
-		 FB.login(function(response) {
-		 	console.log('responses');
-		   if (response.authResponse) {
-		     console.log('Welcome!  Fetching your information.... ');
-		     app.alerta(response.authResponse.userID)
-		     FB.api('/me', function(response) {
-		       console.log('Good to see you, ' + response.name + '.');
-		     });
-		   } else {
-		     console.log('User cancelled login or did not fully authorize.');
-		   }
-		 });
-
+	x
+try {
+             	try {
+             	FB.init({
+				  appId: '381248932009498',
+				  nativeInterface: CDV.FB,
+				  useCachedDialogs: false
+				});
+			 } catch (e) {
+                 alert(e);
+            }
+			 } catch (e) {
+                 alert(e);
+            }
 	}
 
 	function start(){
