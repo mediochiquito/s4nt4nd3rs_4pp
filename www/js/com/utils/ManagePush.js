@@ -32,7 +32,7 @@ function ManagePush(){
 		        });
 		       self.plataform = 'ios'
 		}
-		}
+		
 
 	}
 	function sendToken(){
