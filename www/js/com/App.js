@@ -146,21 +146,22 @@ function App(){
 	}
 
 	function doConnect(){	
-		 console.log('doConnect');
-	
-try {
-             		 FB.login(function(response) {
-		 	console.log('responses');
-		   if (response.authResponse) {
-		     console.log('Welcome!  Fetching your information.... ');
-		     app.alerta(response.authResponse.userID)
-		     FB.api('/me', function(response) {
-		       console.log('Good to see you, ' + response.name + '.');
-		     });
-		   } else {
-		     console.log('User cancelled login or did not fully authorize.');
-		   }
-		 });
+		
+		try {
+             
+             FB.login(function(response) {
+		 
+				  if (response.authResponse) {
+				    
+				     app.alerta(response.authResponse.userID)
+				     FB.api('/me', function(response) {
+				       console.log('Good to see you, ' + response.name + '.');
+				     });
+				   } else {
+				     console.log('User cancelled login or did not fully authorize.');
+				   }
+				 }, {scope: ''});
+
 			 } catch (e) {
                  alert(e);
             }
