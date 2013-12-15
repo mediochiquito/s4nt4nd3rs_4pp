@@ -94,8 +94,8 @@ function ManagePush(){
 		        if ( e.foreground )
 		        {
 		            alert('notificacion en primer plano')
-		            var my_media = new Media("/android_asset/www/"+e.soundname);
-		            my_media.play();
+		         /*   var my_media = new Media("/android_asset/www/"+e.soundname);
+		            my_media.play();*/
 		        }
 		        else
 		        { 
