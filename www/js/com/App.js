@@ -103,9 +103,9 @@ function App(){
 				  nativeInterface: CDV.FB,
 				  useCachedDialogs: false
 				});
-			 } catch (e) {
+		}  catch (e) {
                  alert(e);
-            }
+        }
 			
    		
         self.ancho = window.innerWidth;
