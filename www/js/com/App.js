@@ -142,7 +142,7 @@ function App(){
 	}
 
 	function doConnect(){	
-		 console.log('doConnect');
+		 console.log('1111111doConnect');
 		 FB.login(function(response) {
 		 	console.log('responses');
 		   if (response.authResponse) {
