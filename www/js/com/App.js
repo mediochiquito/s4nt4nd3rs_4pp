@@ -20,6 +20,7 @@ function App(){
 	var new_sync_value = 0
 	var btn_connect;
 	this.initialize = function(){
+
 		document.addEventListener('deviceready', deviceready, false);
 		$(document).bind('touchmove', doPrevent);
 
@@ -93,10 +94,10 @@ function App(){
 			if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
 			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 			
-	    	self._ManagePush = new ManagePush();
-	    	self._ManagePush.registrar();
+	    /*	self._ManagePush = new ManagePush();
+	    	self._ManagePush.registrar();*/
    		}
-   		
+
    		FB.init({
 		  appId: '381248932009498',
 		  nativeInterface: CDV.FB,
@@ -140,8 +141,8 @@ function App(){
 
 	}
 
-	function doConnect(){
-
+	function doConnect(){	
+		 console.log('doConnect');
 		 FB.login(function(response) {
 		   if (response.authResponse) {
 		     console.log('Welcome!  Fetching your information.... ');
