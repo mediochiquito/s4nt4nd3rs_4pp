@@ -96,6 +96,12 @@ function App(){
 	    	self._ManagePush = new ManagePush();
 	    	self._ManagePush.registrar();
    		}
+   		
+   		FB.init({
+		  appId: '381248932009498',
+		  nativeInterface: CDV.FB,
+		  useCachedDialogs: false
+		});
 
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
@@ -135,7 +141,7 @@ function App(){
 	}
 
 	function doConnect(){
-	
+
 		 FB.login(function(response) {
 		   if (response.authResponse) {
 		     console.log('Welcome!  Fetching your information.... ');
