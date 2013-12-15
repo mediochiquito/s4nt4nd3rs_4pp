@@ -2,9 +2,8 @@
 class Push{
 
 	//ANDROID
-	var $apiKey = "AIzaSyCT_XC17z-Cshg_BjaBH0Kz5hctCGgxnEY";
-	
-	
+	var $apiKey = "AIzaSyDllM585-vFe4q8L-cI4-wntJ_jrcZvHHM";
+
 	
 	// IOS
 	var $apns;
@@ -17,9 +16,9 @@ class Push{
 	
 	function __construct(){
 		
-		$this->stream_context = stream_context_create();
+		/*$this->stream_context = stream_context_create();
 		stream_context_set_option($this->stream_context, 'ssl', 'local_cert', $this->apns_cert);
-		$this->apns = stream_socket_client('ssl://' . $this->apns_url . ':' . $this->apns_port, $error, $error_string, 2, STREAM_CLIENT_CONNECT, $this->stream_context);
+		$this->apns = stream_socket_client('ssl://' . $this->apns_url . ':' . $this->apns_port, $error, $error_string, 2, STREAM_CLIENT_CONNECT, $this->stream_context);*/
 		
 	}
 	
@@ -36,7 +35,7 @@ class Push{
 	}
 	
 	
-	function enviar_push_android($token, $titulo, $mensaje){   
+	public function enviar_push_android($token, $titulo, $mensaje){   
 	
 	
 			$headers = array("Content-Type:" . "application/json", "Authorization:" . "key=" . $this->apiKey);
@@ -72,3 +71,7 @@ class Push{
 	
 	
 }
+
+
+$p = new Push();
+$p->enviar_push_android('APA91bE5RcCsiKgVF0aM2_yGkE9owZhsIsc9Kny2uH1ULrIPfz4M368bwRDBdU_WWQoPvjs5As1caqwS95PNGQ-QgzsRXIatcAH3_H-Q4VjoEDuGHNig2EWEmEyBypAW4DHEwAvFW0B-ZbnKWIdWQqO108twyWaDAw', 'titulo titulo', 'caca caca caca');
