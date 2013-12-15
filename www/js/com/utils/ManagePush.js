@@ -39,21 +39,27 @@ function ManagePush(){
 
 	function sendToken(){
 
-		alert(this.plataform + ': ' + self.token)
+		$.ajax({
+
+							type: "POST",
+							url: app.server + "void.set_push_token.php",
+							dataType: 'xml',
+							cache: false, 
+							data:{plataform: self.plataform, token:self.token}
+						});	
 	}
 
 	// result contains any message sent from the plugin call
 	function successHandler (result) {
-	    alert('result = ' + result);
+	  
 	}
-	// result contains any error description text returned from the plugin call
+	
 	function errorHandler (error) {
-	    alert('error = ' + error);
+	  
 	}
+
 	function tokenHandler (result) {
-	    // Your iOS push server needs to know the token before it can push to this device
-	    // here is where you might want to send it the token for later use.
-	    alert('device token = ' + result);
+	  
  		self.token = result
 		sendToken()
 	}
