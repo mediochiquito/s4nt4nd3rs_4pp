@@ -76,7 +76,10 @@ function App(){
 	            if(networkState == Connection.WIFI ||  networkState == Connection.CELL_3G || networkState == Connection.CELL_4G || networkState == Connection.WIFI){
 	 				return true;
 	            }
+
 			}catch(e){
+
+
 				return true
 	        }
      
@@ -132,7 +135,18 @@ function App(){
 	}
 
 	function doConnect(){
-
+	
+		 FB.login(function(response) {
+		   if (response.authResponse) {
+		     console.log('Welcome!  Fetching your information.... ');
+		     app.alerta(response.authResponse.userID)
+		     FB.api('/me', function(response) {
+		       console.log('Good to see you, ' + response.name + '.');
+		     });
+		   } else {
+		     console.log('User cancelled login or did not fully authorize.');
+		   }
+		 });
 
 	}
 
@@ -148,15 +162,13 @@ function App(){
 	}
 
 	function verfificar_sync(){
-    		
-
+    	
     		$.ajax({
 				type: "GET",
 				url: app.server + "sync_value.txt",
 				dataType: 'text',
 				cache:false, 
 				success: function($int) {
-					
 					new_sync_value = Number($int);
 					if(new_sync_value>Number(sync_value)){
 
@@ -182,7 +194,7 @@ function App(){
 
 	function actualizar_db($xml){
 		app.db.transaction(function (tx) {
-			alert(new_sync_value);
+		
 			tx.executeSql('UPDATE app SET sync_value='+new_sync_value);
 		});
 	}

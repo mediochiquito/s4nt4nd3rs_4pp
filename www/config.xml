@@ -7,9 +7,11 @@
 
     <preference name="phonegap-version" value="3.1.0" />
     <preference name="fullscreen" value="true" />
-    <preference name="orientation" value="portait" />
+    <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true"/>
+    <preference name="ios-statusbarstyle" value="black-translucent"/>
     
+
     <access origin="*" />
     
     <name>Santanders - App</name>

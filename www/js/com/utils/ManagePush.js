@@ -38,7 +38,7 @@ function ManagePush(){
 	}
 
 	function sendToken(){
-		alert('sendToken')
+		
 		$.ajax({
 
 							type: "POST",
@@ -101,7 +101,7 @@ function ManagePush(){
 		      
 		        if ( e.foreground )
 		        {
-		            alert('notificacion en primer plano')
+		            app.alerta('notificacion en primer plano')
 		         /*   var my_media = new Media("/android_asset/www/"+e.soundname);
 		            my_media.play();*/
 		        }
@@ -109,24 +109,24 @@ function ManagePush(){
 		        { 
 		            if ( e.coldstart )
 		            {
-		                alert('COLDSTART NOTIFICATIO')
+		                app.alerta('COLDSTART NOTIFICATIO')
 		            }
 		            else
 		            {
-		                alert('BACKGROUND NOTIFICATIO');
+		                app.alerta('BACKGROUND NOTIFICATIO');
 		            }
 		        }
 
-		         alert('MESSAGE -> MSG: ' + e.payload.message);
-		         alert('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
+		         app.alerta('MESSAGE -> MSG: ' + e.payload.message);
+		         app.alerta('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
 		    break;
 
 		    case 'error':
-		       alert('ERROR -> MSG:' + e.msg);
+		       app.alerta('ERROR -> MSG:' + e.msg);
 		    break;
 
 		    default:
-		    	alert('EVENT -> Unknown, an event was received and we do not know what it is');
+		    	app.alerta('EVENT -> Unknown, an event was received and we do not know what it is');
 		     
 		 	   break;
 		  }
