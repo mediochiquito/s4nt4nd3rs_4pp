@@ -6,9 +6,9 @@ function ManagePush(){
 	this.plataform = '';
 
 	this.register_push = function(){
-		alert('register_push1')
+	
     	pushNotification = window.plugins.pushNotification;
-		alert('register_push2')
+	
     	if ( device.platform == 'android' || device.platform == 'Android' )
 		{
 		    pushNotification.register(
@@ -18,7 +18,7 @@ function ManagePush(){
 		            "ecb":"onNotificationGCM"
 		        });
 		    self.plataform = 'android'
-		    alert('register_push3')
+		 
 		}
 		else
 		{
@@ -37,7 +37,7 @@ function ManagePush(){
 	}
 	function sendToken(){
 
-		
+		alert(this.plataform + ': ' + self.token)
 	}
 
 	// result contains any message sent from the plugin call
@@ -52,9 +52,8 @@ function ManagePush(){
 	    // Your iOS push server needs to know the token before it can push to this device
 	    // here is where you might want to send it the token for later use.
 	    alert('device token = ' + result);
-
-	      self.token = result
-		  sendToken()
+ 		self.token = result
+		sendToken()
 	}
 	
 	// iOS
