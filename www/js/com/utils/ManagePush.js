@@ -7,7 +7,13 @@ function ManagePush(){
 
 	this.register_push = function(){
 	
-    	pushNotification = window.plugins.pushNotification;
+    	registrar()	
+
+	}
+
+	function registrar(){
+		
+		pushNotification = window.plugins.pushNotification;
 	
     	if ( device.platform == 'android' || device.platform == 'Android' )
 		{
@@ -33,8 +39,8 @@ function ManagePush(){
 		       self.plataform = 'ios'
 		}
 		
-
 	}
+
 	function sendToken(){
 
 		alert(this.plataform + ': ' + self.token)
