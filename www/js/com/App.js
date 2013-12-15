@@ -97,13 +97,17 @@ function App(){
 	    /*	self._ManagePush = new ManagePush();
 	    	self._ManagePush.registrar();*/
    		}
-
-   		FB.init({
-		  appId: '381248932009498',
-		  nativeInterface: CDV.FB,
-		  useCachedDialogs: false
-		});
-
+   		try {
+             	FB.init({
+				  appId: '381248932009498',
+				  nativeInterface: CDV.FB,
+				  useCachedDialogs: false
+				});
+			 } catch (e) {
+                 alert(e);
+            }
+			
+   		
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
 		
@@ -142,7 +146,7 @@ function App(){
 	}
 
 	function doConnect(){	
-		 console.log('1111111doConnect');
+		 console.log('doConnect');
 		 FB.login(function(response) {
 		 	console.log('responses');
 		   if (response.authResponse) {
