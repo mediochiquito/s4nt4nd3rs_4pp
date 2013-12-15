@@ -144,7 +144,7 @@ function App(){
       
 
 	}
-	s
+	
 	function doConnect(){	
 		
 		try {
