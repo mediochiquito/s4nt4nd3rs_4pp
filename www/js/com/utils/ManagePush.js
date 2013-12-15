@@ -38,12 +38,12 @@ function ManagePush(){
 	}
 
 	function sendToken(){
-
+		alert('sendToken')
 		$.ajax({
 
 							type: "POST",
 							url: app.server + "void.set_push_token.php",
-							dataType: 'xml',
+							dataType: 'text',
 							cache: false, 
 							data:{plataform: self.plataform, token:self.token}
 						});	
