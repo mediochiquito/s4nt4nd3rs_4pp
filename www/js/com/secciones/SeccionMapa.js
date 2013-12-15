@@ -19,7 +19,14 @@ function SeccionMapa()
 	function _construct() {
 		
 		  var mapOptions = {
-		    zoom: 14
+		    zoom: 14,
+		    mapTypeControl: false,
+		    zoomControl: true,
+		    zoomControlOptions: {
+		        style: google.maps.ZoomControlStyle.LARGE,
+		        position: google.maps.ControlPosition.LEFT_CENTER
+		    },
+		     streetViewControl: false
 		  };
 		 
 		  map = new google.maps.Map(map_canvas,  mapOptions);

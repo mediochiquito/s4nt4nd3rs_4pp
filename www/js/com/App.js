@@ -1,5 +1,5 @@
 function App(){
-	//com.mateomenestrina.testing
+	//
 	this.main = document.createElement('div');
 	this.main.id = 'app'
 	this.ancho = 320;
@@ -18,10 +18,9 @@ function App(){
 	var array_tablas_a_crear;
 	var sync_value = 0;
 	var new_sync_value = 0
-
+	var btn_connect;
 	this.initialize = function(){
 		document.addEventListener('deviceready', deviceready, false);
-		
 		$(document).bind('touchmove', doPrevent);
 
 	}
@@ -114,10 +113,14 @@ function App(){
 		self.secciones = new Secciones()
 		$(self.main).append(self.secciones.main)
 
+		btn_connect = new Boton('fb connect', doConnect)
+		btn_connect.main.id = 'fpo_fb_connect'
+		$(self.main).append(btn_connect.main)
+
        	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"> <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
 		
-		self.lightbox = new LightBox()
-		$(self.main).append(self.lightbox.main);
+		/*self.lightbox = new LightBox()
+		$(self.main).append(self.lightbox.main);*/
 		$('body').append(self.main)
         
         app.db.transaction(function (tx) {
@@ -125,6 +128,11 @@ function App(){
 
 		});
       
+
+	}
+
+	function doConnect(){
+
 
 	}
 

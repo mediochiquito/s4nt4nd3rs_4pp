@@ -1,20 +1,17 @@
-function Boton($img,  $callback){
-
+function Boton($text, $callback){
 	var self = this
 	this.main = document.createElement('div');
 	this.main.className = 'Boton'
 
-	$(this.main).css("cursor", "pointer");
-	$(this.main).append('<img src="'+$img+'" />');
-
+	$(this.main).html($text)
 	$(this.main).css("cursor", "pointer");
 
 	var habil = true;
 
 	if(app.es_touch()){
 
+		$(this.main).bind("touchstart", do_click);
 		$(this.main).bind("touchend", do_mouseout);
-		$(this.main).bind("touchend", do_click);
 		$(this.main).bind("touchstart", do_mouseover);
 
 	}else{
@@ -28,32 +25,36 @@ function Boton($img,  $callback){
 	this.habil = function($b){
 		
 		habil =  $b
+		
 		if($b) {
 			$(this.main).css("cursor", "pointer");
 			$(this.main).css({ opacity: 1 });
 		}
 		else{
 		   $(this.main).css("cursor", "default");
-		   $(this.main).css({ opacity: .2 });
+		   $(this.main).css({ opacity: .3 });
 		}
 
 	}
 
+
 	function do_click(){
-		
+	
 		if(habil) $callback();
 		
 	}
 	
 	function do_mouseover(){
-	if(habil)
-			$(self.main).transition({opacity:.5});
+
+		$(self.main).css("background-color", '#CCC');
+		$(self.main).css("color", '#2B2B2B');
 	}
 	
 	function do_mouseout(){
-		
-		if(habil)
-			$(self.main).transition({opacity:1});
+
+		$(self.main).css("background-color", '#2B2B2B');
+		$(self.main).css("color", '#CCC');
+
 	}
 
 	this.getValor = function(){
