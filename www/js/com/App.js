@@ -147,7 +147,7 @@ function App(){
 
 	function doConnect(){	
 		 console.log('doConnect');
-	x
+	
 try {
              	try {
              	FB.init({
