@@ -5,14 +5,10 @@ function ManagePush(){
 	this.token = '';
 	this.plataform = '';
 
-	this.register_push = function(){
-	
-    	registrar()	
 
-	}
 
-	function registrar(){
-		
+	 this.registrar = function(){
+
 		pushNotification = window.plugins.pushNotification;
 	
     	if ( device.platform == 'android' || device.platform == 'Android' )
@@ -21,7 +17,7 @@ function ManagePush(){
 		        successHandler,
 		        errorHandler, {
 		            "senderID":"888062220460",
-		            "ecb":"onNotificationGCM"
+		            "ecb":"app._ManagePush.onNotificationGCM"
 		        });
 		    self.plataform = 'android'
 		 
@@ -34,7 +30,7 @@ function ManagePush(){
 		            "badge":"true",
 		            "sound":"true",
 		            "alert":"true",
-		            "ecb":"onNotificationAPN"
+		            "ecb":"app._ManagePush.onNotificationAPN"
 		        });
 		       self.plataform = 'ios'
 		}
@@ -63,7 +59,7 @@ function ManagePush(){
 	}
 	
 	// iOS
-	function onNotificationAPN (event) {
+	this.onNotificationAPN = function (event) {
 	   
 	    if ( event.alert )
 	    {
@@ -83,7 +79,7 @@ function ManagePush(){
 	}
 
 	// Android
-	function onNotificationGCM(e) {
+	this.onNotificationGCM = function (e) {
 	   
 	    switch( e.event )
 	    {

@@ -92,7 +92,7 @@ function App(){
 			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 			
 	    	self._ManagePush = new ManagePush();
-	    	self._ManagePush.register_push();
+	    	self._ManagePush.registrar();
    		}
 
         self.ancho = window.innerWidth;

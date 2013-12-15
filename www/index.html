@@ -46,54 +46,7 @@
 		
 		<script>
 
-		// Android
-	function onNotificationGCM(e) {
-	   
-	    switch( e.event )
-	    {
-		    case 'registered':
-		        if ( e.regid.length > 0 )
-		        {
-			         alert(e.regid)
-			         
-		        }
-		    break;
-
-		    case 'message':
-		      
-		        if ( e.foreground )
-		        {
-		            alert('notificacion en primer plano')
-		         /*   var my_media = new Media("/android_asset/www/"+e.soundname);
-		            my_media.play();*/
-		        }
-		        else
-		        { 
-		            if ( e.coldstart )
-		            {
-		                alert('COLDSTART NOTIFICATIO')
-		            }
-		            else
-		            {
-		                alert('BACKGROUND NOTIFICATIO');
-		            }
-		        }
-
-		         alert('MESSAGE -> MSG: ' + e.payload.message);
-		         alert('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
-		    break;
-
-		    case 'error':
-		       alert('ERROR -> MSG:' + e.msg);
-		    break;
-
-		    default:
-		    	alert('EVENT -> Unknown, an event was received and we do not know what it is');
-		     
-		 	   break;
-		  }
-
-	}
+	
 
 			var app = new App()
 				app.initialize()
