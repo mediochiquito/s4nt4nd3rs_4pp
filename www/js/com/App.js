@@ -85,7 +85,7 @@ function App(){
 
 	
 	function deviceready(){
-		alert(app.is_phonegap())
+		
 		if(app.is_phonegap()){
 			if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
 			if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
