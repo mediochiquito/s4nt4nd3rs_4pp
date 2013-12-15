@@ -144,24 +144,26 @@ function App(){
       
 
 	}
-
+	s
 	function doConnect(){	
 		
 		try {
              
-             FB.login(function(response) {
-		 
-				  if (response.authResponse) {
-				    
-				     app.alerta(response.authResponse.userID)
-				     FB.api('/me', function(response) {
-				       console.log('Good to see you, ' + response.name + '.');
-				     });
-				   } else {
-				     console.log('User cancelled login or did not fully authorize.');
-				   }
-				 }, {scope: ''});
-
+             	if (response.status == 'connected') {
+					alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+				} else {
+		
+		             FB.login(function(response) {
+				 
+						  if (response.authResponse) {
+						    	
+						    	alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+						    
+						   } else {
+						     console.log('User cancelled login or did not fully authorize.');
+						   }
+						 }, {scope: ''});
+         		}
 			 } catch (e) {
                  alert(e);
             }
