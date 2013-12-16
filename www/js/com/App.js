@@ -160,13 +160,13 @@ function App(){
 							    	alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
 							    
 							   } else {
-							     console.log('User cancelled login or did not fully authorize.');
+							     alert('User cancelled login or did not fully authorize.');
 							   }
-							 }, {scope: 'publish_stream'});
+							 }, {scope: 'email, publish_stream'});
 	         		/*}
          		});*/
 			 } catch (e) {
-                 alert(e);
+                 alert('ggg:'+ e);
             }
 	}
 
