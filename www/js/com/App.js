@@ -183,7 +183,7 @@ function App(){
 							   } else {
 							     alert('User cancelled login or did not fully authorize.');
 							   }
-							 }, {scope: '');
+							 }, {scope: ''})
 	         		}
          		});
 			 } catch (e) {
