@@ -148,11 +148,11 @@ function App(){
 	function doConnect(){	
 		
 		try {
-             FB.getLoginStatus(function(response) {
+          /*   FB.getLoginStatus(function(response) {
 	             	if (response.status == 'connected') {
 						alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
 					} else {
-			
+			*/
 			             FB.login(function(response) {
 					 
 							  if (response.authResponse) {
@@ -162,9 +162,9 @@ function App(){
 							   } else {
 							     console.log('User cancelled login or did not fully authorize.');
 							   }
-							 }, {scope: ''});
-	         		}
-         		});
+							 }, {scope: 'email'});
+	         		/*}
+         		});*/
 			 } catch (e) {
                  alert(e);
             }
