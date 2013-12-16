@@ -157,7 +157,7 @@ function App(){
 					 
 							  if (response.authResponse) {
 							    	
-							    	alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+							    	alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
 							    
 							   } else {
 							     console.log('User cancelled login or did not fully authorize.');
