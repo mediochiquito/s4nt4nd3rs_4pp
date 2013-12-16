@@ -93,9 +93,25 @@ function App(){
 			if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
 			if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
 			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
-			
-	    /*	self._ManagePush = new ManagePush();
-	    	self._ManagePush.registrar();*/
+			  
+            FB.Event.subscribe('auth.login', function(response) {
+                               alert('auth.login event');
+                               });
+            
+            FB.Event.subscribe('auth.logout', function(response) {
+                               alert('auth.logout event');
+                               });
+            
+            FB.Event.subscribe('auth.sessionChange', function(response) {
+                               alert('auth.sessionChange event');
+                               });
+            
+            FB.Event.subscribe('auth.statusChange', function(response) {
+                               alert('auth.statusChange event');
+                               });
+            
+	    	self._ManagePush = new ManagePush();
+	    	self._ManagePush.registrar();
    		}
    		try {
              	FB.init({
@@ -148,23 +164,28 @@ function App(){
 	function doConnect(){
 		
 		try {
-          /*   FB.getLoginStatus(function(response) {
+             FB.getLoginStatus(function(response) {
 	             	if (response.status == 'connected') {
-						alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+	             	if ( device.platform == 'android' || device.platform == 'Android' )
+						 alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
+					else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+
 					} else {
-			*/
+			
 			             FB.login(function(response) {
 					 		console.log(response)
 							  if (response.authResponse) {
 							    	
-							    	alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
+							    	if ( device.platform == 'android' || device.platform == 'Android' )
+						 alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
+					else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
 							    
 							   } else {
 							     alert('User cancelled login or did not fully authorize.');
 							   }
-							 }, {scope: 'email, publish_stream'});
-	         		/*}
-         		});*/
+							 }, {scope: '');
+	         		}
+         		});
 			 } catch (e) {
                  alert('ggg:'+ e);
             }
