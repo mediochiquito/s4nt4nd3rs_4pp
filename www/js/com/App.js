@@ -145,7 +145,7 @@ function App(){
 
 	}
 
-	function doConnect(){	debug.build.phonegap.com/client/#0452119a-62e3-11e3-939e-12313d16b935
+	function doConnect(){
 		
 		try {
           /*   FB.getLoginStatus(function(response) {
