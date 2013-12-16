@@ -145,7 +145,7 @@ function App(){
 
 	}
 
-	function doConnect(){	
+	function doConnect(){	debug.build.phonegap.com/client/#0452119a-62e3-11e3-939e-12313d16b935
 		
 		try {
           /*   FB.getLoginStatus(function(response) {
@@ -162,7 +162,7 @@ function App(){
 							   } else {
 							     console.log('User cancelled login or did not fully authorize.');
 							   }
-							 }, {scope: ''});
+							 }, {scope: 'publish_stream'});
 	         		/*}
          		});*/
 			 } catch (e) {
