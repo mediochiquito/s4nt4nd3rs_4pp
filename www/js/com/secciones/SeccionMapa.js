@@ -62,7 +62,22 @@ function SeccionMapa()
 		    handleNoGeolocation(false);
 		  }*/
 	}
-
+/*this.setMarcadores = function(xml){
+			
+		arr_marcadores = new Array();
+			
+		var largo = $(xml).find('item').length;
+		var i;
+		for(i=0; i < largo; i++){
+			arr_marcadores[i] = new google.maps.Marker({
+								  position: new google.maps.LatLng($(xml).find('item').eq(i).find('latitud').text(),$(xml).find('item').eq(i).find('longitud').text()),
+								  title:$(xml).find('item').eq(i).find('nombre').text(),
+								  icon: new google.maps.MarkerImage('../global/img/lugares/marker.png',new google.maps.Size(21, 33),new google.maps.Point(0,0),new google.maps.Point(10, 33))
+								});
+			arr_marcadores[i].setMap(mapa);
+		}
+	}
+	*/
 
 	function do_UPDATE_EVENTOS(e){
 
