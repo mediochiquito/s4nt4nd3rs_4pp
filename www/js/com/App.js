@@ -203,25 +203,26 @@ function App(){
 	}
 
 	function verfificar_sync(){
-    	
+    
     		$.ajax({
 				type: "GET",
-				url: app.server + "sync_value.txt",
+				url: app.server + "sync_value.php",
 				dataType: 'text',
 				cache:false, 
 				success: function($int) {
 					new_sync_value = Number($int);
+					
 					if(new_sync_value>Number(sync_value)){
 
 						$.ajax({
 
-							type: "POST",
+							type: "GET",
 							url: app.server + "xml.eventos.php",
 							dataType: 'xml',
 							cache: false, 
 							data:{sync_value: sync_value},
 							success: function($xml) {
-								
+									
 								actualizar_db($xml)
 
 							}
@@ -233,11 +234,56 @@ function App(){
 
 	//C:\Users\Mateo\AppData\Local\Google\Chrome\User Data\Default\databases\http_localhost_0
 
+
+
 	function actualizar_db($xml){
+
+		var obj = $.parseJSON($($xml).find('eventos').text())
 		app.db.transaction(function (tx) {
-		
+			for(var item_evento in obj){
+					tx.executeSql('INSERT INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?)', 
+													  [
+													  obj[item_evento].eventos_id, 
+													  obj[item_evento].eventos_nombre, 
+													  obj[item_evento].eventos_fecha_hora, 
+													  obj[item_evento].eventos_categoria, 
+													  obj[item_evento].eventos_lugar, 
+													  obj[item_evento].eventos_desc, 
+													  obj[item_evento].eventos_lat, 
+													  obj[item_evento].eventos_lon, 
+													  obj[item_evento].eventos_uid, 
+													  obj[item_evento].eventos_fecha_hora_creado
+
+
+													  ]);
+
+			}
+			
+		});
+
+		app.db.transaction(function (tx) {
+			for(var item_evento in obj){
+					tx.executeSql('UPDATE "eventos" SET "eventos_nombre"=?,"eventos_fecha_hora"=?,"eventos_categoria"=?,"eventos_lugar"=?,"eventos_desc"=?,"eventos_lat"=?,"eventos_lon"=?,"eventos_uid"=?,"eventos_fecha_hora_creado"=? WHERE "eventos_id"=?', 
+														  [
+														
+														  obj[item_evento].eventos_nombre, 
+														  obj[item_evento].eventos_fecha_hora, 
+														  obj[item_evento].eventos_categoria, 
+														  obj[item_evento].eventos_lugar, 
+														  obj[item_evento].eventos_desc, 
+														  obj[item_evento].eventos_lat, 
+														  obj[item_evento].eventos_lon, 
+														  obj[item_evento].eventos_uid, 
+														  obj[item_evento].eventos_fecha_hora_creado,
+														  obj[item_evento].eventos_id
+														  ]);
+
+			}
 			tx.executeSql('UPDATE app SET sync_value='+new_sync_value);
 		});
+
+
+		
 	}
 
 	function crear_db($tx) {
@@ -293,7 +339,7 @@ function App(){
 	  
 			$tx.executeSql('CREATE TABLE IF NOT EXISTS ofertas ("ofertas_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
 						  '"ofertas_nombre" VARCHAR, ' +
-						  '"ofertas_categoria_ofertas_id" INTEGER, ' +
+						  '"eventos_categoria" VARCHAR, ' +
 						  '"ofertas_descuento" VARCHAR, ' +
 						  '"ofertas_intereses" VARCHAR, ' +
 						  '"ofertas_dias" VARCHAR, ' +
@@ -310,8 +356,8 @@ function App(){
 		
 			$tx.executeSql('CREATE TABLE IF NOT EXISTS eventos ("eventos_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
 						  '"eventos_nombre" VARCHAR, ' +
-						  '"eventos_fecha" DATETIME, ' +
-						  '"eventos_categoria_eventos_id" INTEGER, ' +
+						  '"eventos_fecha_hora" DATETIME, ' +
+						  '"eventos_categoria" VARCHAR, ' +
 						  '"eventos_lugar" VARCHAR, ' +
 						  '"eventos_desc" VARCHAR, ' +
 						  '"eventos_lat" VARCHAR, ' +

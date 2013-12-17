@@ -1,6 +1,4 @@
 <?php
-	session_start();
-	session_cache_expire(360);
 	ob_start("ob_gzhandler");
 	ignore_user_abort ( true );
 	error_reporting( E_ALL ^ E_NOTICE);

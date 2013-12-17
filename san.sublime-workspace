@@ -1,0 +1,359 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mysql",
+				"mysql_query"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"class",
+				"className"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"strip",
+				"stripslashes"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/js/facebook.js",
+		"/C/Users/Mateo/Desktop/Home.js",
+		"/C/Users/Mateo/AppData/Local/Temp/fz3temp-1/Home.js",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/config.xml",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/index.html",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/ManagePush.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/C/wamp/www/green ray led/public/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/void.set_push_token.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
+		"/C/Users/Mateo/AppData/Local/Temp/Rar$DRa1.425/Payload/SantandersApp.app/config.xml",
+		"/C/Users/Mateo/AppData/Local/Temp/Rar$DRa0.425/Payload/SantandersApp.app/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/js/lib/main/Main.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/version_sync.txt",
+		"/C/wamp/www/green ray led/public/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/CanvasSaver.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionFoto.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/foto.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/export.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/upload.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/foto.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionFoto.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/galeria.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_foto.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/ItemGaleria.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionGaleria.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/App.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/config.xml",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/TouchSlide.js",
+		"/C/wamp/www/gennerayled/js/com/App.js",
+		"/C/wamp/www/gennerayled/js/com/upload_reportes_lightbox/ReportesUploadLightbox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_guardar.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Boton.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/export.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/index.html",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionRegistro.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Secciones.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Base_Seccion.js",
+		"/C/wamp/www/b64.js",
+		"/C/wamp/www/base64-binary.js",
+		"/C/wamp/www/1383333762132.png",
+		"/C/wamp/www/test.htm",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/mosaic.js",
+		"/C/wamp/www/1383333762132.txt",
+		"/C/wamp/test.htm",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/pixastic.core.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/Boton.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/invert.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/glow.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/edges.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/solarize.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/sharpen.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/unsharpmask.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/pointillize.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/lighten.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/resize.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/hsl.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/blend.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/colorhistogram.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/sepia.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/CamanJS - Interactive Examples.html",
+		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.core.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.jquery.js",
+		"/C/wamp/www/ford_escapate/public/tab/index.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/BotonToogle.js",
+		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/savings/SavingsList.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/savings/Savings.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/login.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/LightBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CanvasSaver.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/registro.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/btn_continuar.png",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_guardar - copia.js",
+		"/C/wamp/www/gennerayled/css/utils.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/FormRelevamiento.js",
+		"/C/wamp/www/gennerayled/css/controls.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/EditorRelevamiento.js",
+		"/C/wamp/www/gennerayled/css/Form_LamparasActuales.css",
+		"/C/Users/Mateo/Downloads/APP SMIRNOFF/webfontkit-20131102-232101/stylesheet.css",
+		"/C/wamp/www/Croma/cordova.js",
+		"/C/wamp/www/Croma/css/foto.css",
+		"/C/wamp/www/Croma/com/CanvasSaver.js",
+		"/C/wamp/www/Croma/com/SeccionRegistro.js",
+		"/C/wamp/www/Croma/com/SeccionFoto.js",
+		"/C/wamp/www/Croma/css/app.css",
+		"/C/wamp/www/Croma/com/App.js",
+		"/C/wamp/www/Croma/index.html",
+		"/C/wamp/www/Croma/com/SeccionInicio.js",
+		"/C/wamp/www/Croma/com/ControlTolerancia.js",
+		"/C/wamp/www/Croma/com/Boton.js",
+		"/C/wamp/www/Croma/com/SeccionGaleria.js",
+		"/C/wamp/www/Croma/com/Secciones.js",
+		"/C/wamp/www/Croma/css/inicio.css",
+		"/C/wamp/www/gennerayled/js/com/home/Home.js",
+		"/C/wamp/www/Croma/css/registro.css",
+		"/C/wamp/www/Croma/css/galeria.css",
+		"/C/wamp/www/Croma/com/Base_Seccion.js",
+		"/C/wamp/www/Croma/upload.php",
+		"/C/wamp/www/Croma/com/videos/Videos.js",
+		"/C/wamp/www/Croma/com/TouchSlide.js",
+		"/C/wamp/www/Croma/css/estilos.css",
+		"/C/wamp/www/Croma/com/Boton2Frames.js",
+		"/Z/System Volume Information/IndexerVolumeGuid",
+		"/C/Users/Mateo/Documents/Vuze Downloads/Media Monkey Gold 4.0.7.1510+Keygen [SOURAVFILE]/Media Monkey Gold 4.0.7.1510+Keygen [SOURAVFILE]/Media.Monkey.Gold.4.0.7.1510/CORE/CORE.NFO"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alert",
+			"my_client_id",
+			"hay_internet",
+			"alerta",
+			"alert",
+			"onNotificationGCM",
+			"successHandler",
+			"is_phonegap",
+			"array_tablas_a_crear",
+			"seccion",
+			"alert",
+			"version_sync",
+			"app_sync",
+			"selec",
+			"	setTimeout(function(){\n\n			if(app.hay_internet()){\n				verfificar_version_nueva_app()\n			}\n\n		}, 1000)\n",
+			"start",
+			"verificar_db",
+			"charset=\"utf-8\" src=\"",
+			"_canvas_export",
+			"canvas",
+			"applyAction",
+			"desaturate",
+			"Value",
+			"value",
+			"app",
+			"onError2",
+			"onError0",
+			"()",
+			"getValor",
+			"usuarios_lugar",
+			"comprobacion_total_tablas_creadas",
+			"	app.cargando(false)",
+			"Ligthbox_guardar",
+			"no",
+			"lightbox",
+			"Boton",
+			"cancelar_envio",
+			"siguiente",
+			"cancelar_envio",
+			"uri_foto",
+			"self",
+			"4",
+			"ny",
+			"mostrar_fondo_con_foto",
+			"secciones",
+			"60"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true
+}
