@@ -279,11 +279,15 @@ function App(){
 														  ]);
 
 			}
-			tx.executeSql('UPDATE app SET sync_value='+new_sync_value);
+			tx.executeSql('UPDATE app SET sync_value=' + new_sync_value);
+
+			$(document).bind('UPDATE_EVENTOS');
+			
+
 		});
 
 
-		
+
 	}
 
 	function crear_db($tx) {
