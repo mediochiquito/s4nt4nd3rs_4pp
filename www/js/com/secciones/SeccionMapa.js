@@ -10,7 +10,7 @@ function SeccionMapa()
 	$(this.main).append(map_canvas)
 	$(map_canvas).css({	width: app.ancho, height: app.alto})
 
-
+	var array_markers
 	//$(this.main).append('map_canvas')
 	var map
 
@@ -19,7 +19,7 @@ function SeccionMapa()
 	function _construct() {
 		
 		  var mapOptions = {
-		    zoom: 14,
+		    zoom: 16,
 		    mapTypeControl: false,
 		    zoomControl: true,
 		    zoomControlOptions: {
@@ -33,9 +33,11 @@ function SeccionMapa()
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
 
-		  setTimeout(function() {
+		  $(document).bind('UPDATE_EVENTOS', do_UPDATE_EVENTOS);
+
+		//  setTimeout(function() {
 		    //  google.maps.event.trigger(map,'resize');
-		   }, 200);
+		  // }, 200);
 		
 /*
 
@@ -45,12 +47,7 @@ function SeccionMapa()
 		        	 alert(position.coords.latitude)
 			        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-				      var infowindow = new google.maps.InfoWindow({
-				        map: map,
-				        position: pos,
-				        content: 'Location found using HTML5.'
-				      });
-
+				    
 			      map.setCenter(pos);
 
 			    }, function() {
@@ -65,6 +62,15 @@ function SeccionMapa()
 		    handleNoGeolocation(false);
 		  }*/
 	}
+
+
+	function do_UPDATE_EVENTOS(e){
+
+		array_markers = new Array()
+		alert('do_UPDATE_EVENTOS')
+
+	}
+
 
 	function handleNoGeolocation(errorFlag) {
 		  

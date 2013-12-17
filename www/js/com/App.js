@@ -161,14 +161,17 @@ function App(){
 
 	}
 
+
+
 	function doConnect(){
 		
-		try {
+		
              FB.getLoginStatus(function(response) {
 	             	if (response.status == 'connected') {
 	             	if ( device.platform == 'android' || device.platform == 'Android' )
-						 alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
-					else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+						
+						alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
+						else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
 
 					} else {
 			
@@ -177,8 +180,8 @@ function App(){
 							  if (response.authResponse) {
 							    	
 							    	if ( device.platform == 'android' || device.platform == 'Android' )
-						 alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
-					else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
+									alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
+									else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
 							    
 							   } else {
 							     alert('User cancelled login or did not fully authorize.');
@@ -186,10 +189,10 @@ function App(){
 							 }, {scope: ''})
 	         		}
          		});
-			 } catch (e) {
-                 alert('ggg:'+ e);
-            }
+			 
 	}
+
+
 
 	function start(){
 		 
@@ -197,10 +200,12 @@ function App(){
 
 			app.secciones.go(app.secciones.seccionmapa)
 			if(app.hay_internet()) verfificar_sync();
-			else $(document).bind('UPDATE_EVENTOS');
+			else $(document).trigger('UPDATE_EVENTOS');
 
 		}, 100)
 	}
+
+
 
 	function verfificar_sync(){
     
@@ -226,18 +231,17 @@ function App(){
 								actualizar_db($xml)
 
 							},
-							error: function(){ $(document).bind('UPDATE_EVENTOS'); }
+							error: function(){ $(document).trigger('UPDATE_EVENTOS'); }
 						});	
 					}
 				},
-				error: function() {$(document).bind('UPDATE_EVENTOS'); }
+				error: function() {$(document).trigger('UPDATE_EVENTOS'); }
 			});
+
     }
 
+
 	//C:\Users\Mateo\AppData\Local\Google\Chrome\User Data\Default\databases\http_localhost_0
-
-
-
 	function actualizar_db($xml){
 
 		var obj = $.parseJSON($($xml).find('eventos').text())
@@ -292,6 +296,7 @@ function App(){
 
 	}
 
+
 	function crear_db($tx) {
 		 
 		   $.ajax({
@@ -301,26 +306,30 @@ function App(){
 				async : false,
 			}).success(function(xml) {
 
-					xml_default_db = xml
-					tablas_creadas = 0
+					xml_default_db = xml;
+					tablas_creadas = 0;
 					array_tablas_a_crear = new Array(crearTabla_Eventos,
-													 crearTabla_App)
+													 crearTabla_Categorias, 
+													 crearTabla_App);
+
 					for(var func in array_tablas_a_crear){
-						array_tablas_a_crear[func]($tx)
+						array_tablas_a_crear[func]($tx);
 					}
 			});
 	}
 
 
+
 	function comprobacion_total_tablas_creadas(e){
 
-    	tablas_creadas++
-
-    	if(tablas_creadas == array_tablas_a_crear.length) start()
+    	tablas_creadas++;
+    	if(tablas_creadas == array_tablas_a_crear.length) start();
 
     }
 
-     function crearTabla_App($tx){
+
+
+    function crearTabla_App($tx){
 
 			la_tala_fue_creada($tx, 'app', function($bool){
 				
@@ -372,6 +381,17 @@ function App(){
 						  '"eventos_fecha_hora_creado" DATETIME)', [], comprobacion_total_tablas_creadas);
     }
 
+    function crearTabla_Categorias($tx){
+		
+			$tx.executeSql('DROP TABLE IF EXISTS categorias');
+			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "categorias" ("categorias_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "categorias_nombre" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
+
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("1", "Categoria 1")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("2", "Categoria 2")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("3", "Categoria 3")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Categoria 4")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Categoria 5")');
+    }
 
     function la_tala_fue_creada($tx, $table_name, $callback){
     	$tx.executeSql("SELECT name FROM sqlite_master WHERE name='"+$table_name+"'" , [],	
