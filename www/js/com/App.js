@@ -195,9 +195,9 @@ function App(){
 		 
 		setTimeout(function(){
 
-			if(app.hay_internet())  verfificar_sync();
 			app.secciones.go(app.secciones.seccionmapa)
-
+			if(app.hay_internet()) verfificar_sync();
+			else $(document).bind('UPDATE_EVENTOS');
 
 		}, 100)
 	}
@@ -225,10 +225,12 @@ function App(){
 									
 								actualizar_db($xml)
 
-							}
+							},
+							error: function(){ $(document).bind('UPDATE_EVENTOS'); }
 						});	
 					}
-				}
+				},
+				error: function() {$(document).bind('UPDATE_EVENTOS'); }
 			});
     }
 
@@ -282,7 +284,7 @@ function App(){
 			tx.executeSql('UPDATE app SET sync_value=' + new_sync_value);
 
 			$(document).bind('UPDATE_EVENTOS');
-			
+
 
 		});
 
