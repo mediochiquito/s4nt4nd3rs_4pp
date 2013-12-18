@@ -8,6 +8,10 @@ html,body {
     height: 100%;
    
 }
+/*img{
+	width: 50% !important;
+	height: 50% !important;
+}*/
 body{
 	background-image: url(../img/bg_x.jpg);
 	background-repeat: repeat-x;
@@ -22,14 +26,15 @@ body{
 	margin:0px;
     padding:0px;
     overflow: hidden;
-  
+  	width: 640px;
+  	height: 100%
 }
 
 #secciones,.seccion{
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 100%;
+	width: 640px;
 	height: 100%;
 }
 

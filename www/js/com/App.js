@@ -131,18 +131,20 @@ function App(){
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
 		
-/*
+		/*
+
+
 		if( self.ancho<320) self.ancho = 320;
 		if( self.alto<640) self.alto = 640;
 
-		if(window.innerWidth<320 || window.innerHeight<640){
+		if(window.innerWidth<320){
 
 			$(self.main).css('transform-origin', '0 0');
 			$(self.main).transition({scale: [(window.innerWidth/320), (window.innerHeight/640)]}, 0);
 
 		}*/
 
-		$(self.main).css({width:self.ancho, height:self.alto})
+		//$(self.main).css({width:self.ancho, height:self.alto})
 
 		self.secciones = new Secciones()
 		$(self.main).append(self.secciones.main)
@@ -156,7 +158,7 @@ function App(){
 		btn_connect.main.id = 'fpo_fb_connect'
 		$(self.main).append(btn_connect.main)*/
 
-       	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"> <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
+      // 	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"> <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
 		
 		/*self.lightbox = new LightBox()
 		$(self.main).append(self.lightbox.main);*/
