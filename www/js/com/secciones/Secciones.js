@@ -5,6 +5,10 @@ function Secciones(){
   	this.main = document.createElement('div')
   	this.main.id = 'secciones'
 
+  	this.seccionhome = new SeccionHome();
+	$(this.main).append(this.seccionhome.main)
+	this.seccionhome.ocultar(0);
+
 	this.seccionmapa = new SeccionMapa();
 	$(this.main).append(this.seccionmapa.main)
 	this.seccionmapa.ocultar(0);

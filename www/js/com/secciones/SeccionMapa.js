@@ -10,11 +10,11 @@ function SeccionMapa()
 	$(this.main).append(map_canvas)
 	$(map_canvas).css({	width: app.ancho, height: app.alto})
 
-	var array_markers
+	var array_markers_eventos;
 	//$(this.main).append('map_canvas')
-	var map
+	var map;
 
-	setTimeout(_construct, 100);
+	setTimeout(_construct, 0);
 	
 	function _construct() {
 		
@@ -33,9 +33,9 @@ function SeccionMapa()
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
 
-		  $(document).bind('UPDATE_EVENTOS', do_UPDATE_EVENTOS);
+		  $(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 
-		//  setTimeout(function() {
+		  //  setTimeout(function() {
 		    //  google.maps.event.trigger(map,'resize');
 		  // }, 200);
 		
@@ -66,26 +66,45 @@ function SeccionMapa()
 			
 		arr_marcadores = new Array();
 			
-		var largo = $(xml).find('item').length;
-		var i;
-		for(i=0; i < largo; i++){
-			arr_marcadores[i] = new google.maps.Marker({
-								  position: new google.maps.LatLng($(xml).find('item').eq(i).find('latitud').text(),$(xml).find('item').eq(i).find('longitud').text()),
-								  title:$(xml).find('item').eq(i).find('nombre').text(),
-								  icon: new google.maps.MarkerImage('../global/img/lugares/marker.png',new google.maps.Size(21, 33),new google.maps.Point(0,0),new google.maps.Point(10, 33))
-								});
-			arr_marcadores[i].setMap(mapa);
+		
 		}
 	}
 	*/
 
-	function do_UPDATE_EVENTOS(e){
+	function do_LISTAR_EVENTOS(e){
 
-		array_markers = new Array()
-		alert('do_UPDATE_EVENTOS')
+		array_markers_eventos = new Array();
 
+		app.db.transaction(function (tx) {
+			//TODO agregar el estado
+			tx.executeSql("SELECT * FROM eventos" , [], function (tx, resultado) {
+		    	
+		    	var cant_eventos = resultado.rows.length;
+		        for(var i=0; i<cant_eventos; i++){
+	
+		           array_markers_eventos[i] = new google.maps.Marker(
+		           				{
+								  position: new google.maps.LatLng(resultado.rows.item(i).eventos_lat,resultado.rows.item(i).eventos_lon),
+								  title:resultado.rows.item(i).eventos_nombre,
+								  icon: 'img/markers/evento.png',
+								  row: resultado.rows.item(i)
+								});
+
+					array_markers_eventos[i].setMap(map);
+
+					google.maps.event.addListener(array_markers_eventos[i], 'click', function() {
+					   	mostrar_un_evento(this.row)
+					});
+		        }
+		    })
+		});
+
+		
 	}
 
+	function mostrar_un_evento($row){
+		alert($row.eventos_id)
+	}
 
 	function handleNoGeolocation(errorFlag) {
 		  

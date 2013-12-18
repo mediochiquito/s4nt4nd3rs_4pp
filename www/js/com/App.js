@@ -7,7 +7,9 @@ function App(){
 	this.secciones = null;
 	this.lightbox = null;
 	this.obj_usuario;
-	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
+	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
 
@@ -19,6 +21,7 @@ function App(){
 	var sync_value = 0;
 	var new_sync_value = 0
 	var btn_connect;
+
 	this.initialize = function(){
 
 		document.addEventListener('deviceready', deviceready, false);
@@ -90,6 +93,7 @@ function App(){
 	function deviceready(){
 		
 		if(app.is_phonegap()){
+
 			if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
 			if (typeof CDV == 'undefined') alert('CDV variable does not exist. Check that you have included cdv-plugin-fb-connect.js correctly');
 			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
@@ -112,17 +116,16 @@ function App(){
             
 	    	self._ManagePush = new ManagePush();
 	    	self._ManagePush.registrar();
-   		}
-   		try {
-             	FB.init({
+
+
+	    	FB.init({
 				  appId: '381248932009498',
 				  nativeInterface: CDV.FB,
 				  useCachedDialogs: false
 				});
-		}  catch (e) {
-                 alert(e);
-        }
-			
+   		}
+
+   	
    		
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
@@ -143,9 +146,9 @@ function App(){
 		self.secciones = new Secciones()
 		$(self.main).append(self.secciones.main)
 
-		btn_connect = new Boton('fb connect', doConnect)
+		/*btn_connect = new Boton('fb connect', doConnect)
 		btn_connect.main.id = 'fpo_fb_connect'
-		$(self.main).append(btn_connect.main)
+		$(self.main).append(btn_connect.main)*/
 
        	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"> <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
 		
@@ -155,7 +158,6 @@ function App(){
         
         app.db.transaction(function (tx) {
 			crear_db(tx)	
-
 		});
       
 
@@ -164,7 +166,6 @@ function App(){
 
 
 	function doConnect(){
-		
 		
              FB.getLoginStatus(function(response) {
 	             	if (response.status == 'connected') {
@@ -193,18 +194,17 @@ function App(){
 	}
 
 
-
 	function start(){
 		 
 		setTimeout(function(){
 
-			app.secciones.go(app.secciones.seccionmapa)
+			app.secciones.go(app.secciones.seccionhome)
 			if(app.hay_internet()) verfificar_sync();
-			else $(document).trigger('UPDATE_EVENTOS');
+			else $(document).trigger('LISTAR_EVENTOS');
 
-		}, 100)
+		}, 100);
+
 	}
-
 
 
 	function verfificar_sync(){
@@ -231,11 +231,13 @@ function App(){
 								actualizar_db($xml)
 
 							},
-							error: function(){ $(document).trigger('UPDATE_EVENTOS'); }
+							error: function(){ $(document).trigger('LISTAR_EVENTOS'); }
 						});	
+					}else{
+						$(document).trigger('LISTAR_EVENTOS');
 					}
 				},
-				error: function() {$(document).trigger('UPDATE_EVENTOS'); }
+				error: function() {$(document).trigger('LISTAR_EVENTOS'); }
 			});
 
     }
@@ -287,12 +289,10 @@ function App(){
 			}
 			tx.executeSql('UPDATE app SET sync_value=' + new_sync_value);
 
-			$(document).bind('UPDATE_EVENTOS');
+			$(document).bind('LISTAR_EVENTOS');
 
 
 		});
-
-
 
 	}
 
