@@ -4,12 +4,28 @@
 		"selected_items":
 		[
 			[
-				"url",
-				"urlencode"
+				"mar",
+				"margin-left"
 			],
 			[
 				"bac",
-				"background-repeat"
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"boo",
+				"bottom"
+			],
+			[
+				"url",
+				"urlencode"
 			],
 			[
 				"bor",
@@ -30,10 +46,6 @@
 			[
 				"txt",
 				"txt_dia"
-			],
-			[
-				"mar",
-				"margin"
 			],
 			[
 				"t",
@@ -83,6 +95,57 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/css/header.css",
+			"settings":
+			{
+				"buffer_size": 117,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/SeccionHome.js",
+			"settings":
+			{
+				"buffer_size": 977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#SeccionHome{\n	position: absolute;\n\n}\n#SeccionHome div{\n	position: absolute;\n\n}\n#SeccionHome_btn_mapa{\n	bottom: 27px;\n	left: 50%;\n	margin-left: -199px;\n}\n#SeccionHome_btn_descuentos{\n	bottom: 30px;\n	left: 50%;\n	margin-left: -70px;\n}\n#SeccionHome_btn_eventos{\n	bottom: 30px;\n	left: 50%;\n	margin-left: 106px;\n}\n\n#SeccionHome_promo{\n	left: 50%;\n	margin-left: -199px;\n}\n",
+			"file": "www/css/home.css",
+			"file_size": 311,
+			"file_write_time": 1387394206000000,
+			"settings":
+			{
+				"buffer_size": 366,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/header/Header.js",
+			"settings":
+			{
+				"buffer_size": 120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/App.js",
+			"settings":
+			{
+				"buffer_size": 12715,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Volumes/www/mateo/instarealtime/index.php",
+			"settings":
+			{
+				"buffer_size": 2990,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -108,6 +171,15 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/_init.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/sync_value.php",
+		"/Volumes/www/popular_fifa/app/css/estilos.css",
+		"/Volumes/www/greenray_ipad/public/js/com/secciones/savings/SavingsList.js",
 		"/Volumes/www/instatest/index.php",
 		"/Volumes/www/mateo/instarealtime/index.php",
 		"/Volumes/www/mateo/instatest/index",
@@ -226,16 +298,7 @@
 		"/Users/mateomenrstrina/Documents/phonegapApps/absolut_ipad/www/index.html",
 		"/Users/mateomenrstrina/Desktop/copy greenray to phonegap.txt",
 		"/Volumes/www/greenray_ipad/public/copy.sh",
-		"/Volumes/www/greenray_ipad/public/css/config.css",
-		"/Users/mateomenrstrina/Documents/phonegapApps/green_ray_led/platforms/ios/cordova/lib/copy-www-build-step.sh",
-		"/Users/mateomenrstrina/Desktop/xml_productos.php",
-		"/Users/mateomenrstrina/Desktop/xml_lamparas_actuales.php",
-		"/Volumes/www/greenray_ipad/public/js/com/config/Config.js",
-		"/Volumes/www/greenray_ipad/public/js/com/config/ItemOficina.js",
-		"/Volumes/www/greenray_ipad/public/xml/default_db.xml",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/relevamiento/remplazo/selector_lamparas_greenray/SelectorLamparasGreenrayItemLista.js",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/relevamiento/EditorRelevamiento.js",
-		"/Volumes/www/greenray_ipad/public/js/com/forms/Abm_LamparasActuales.js"
+		"/Volumes/www/greenray_ipad/public/css/config.css"
 	],
 	"find":
 	{
@@ -253,6 +316,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"btn_descuentos",
+			"btn_mapa",
+			"doConnect",
+			"mapa",
+			"Mapa",
+			"mapa",
+			"UPDATE_EVENTOS",
 			"_buscala",
 			"LightBox",
 			"'",
@@ -350,8 +420,171 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/css/header.css",
+					"settings":
+					{
+						"buffer_size": 117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/com/secciones/SeccionHome.js",
+					"settings":
+					{
+						"buffer_size": 977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								685,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/css/home.css",
+					"settings":
+					{
+						"buffer_size": 366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/js/com/header/Header.js",
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								114,
+								114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/js/com/App.js",
+					"settings":
+					{
+						"buffer_size": 12715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4193,
+								4193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1925.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Volumes/www/mateo/instarealtime/index.php",
+					"settings":
+					{
+						"buffer_size": 2990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2731,
+								2731
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 430.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

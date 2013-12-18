@@ -6,6 +6,7 @@ function App(){
 	this.alto = 640
 	this.secciones = null;
 	this.lightbox = null;
+	this.header = null;
 	this.obj_usuario;
 	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
@@ -145,6 +146,11 @@ function App(){
 
 		self.secciones = new Secciones()
 		$(self.main).append(self.secciones.main)
+		
+
+		self.header =  new Header();
+		$(self.main).append(self.header.main)
+
 
 		/*btn_connect = new Boton('fb connect', doConnect)
 		btn_connect.main.id = 'fpo_fb_connect'

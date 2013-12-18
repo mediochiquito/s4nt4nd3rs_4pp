@@ -5,9 +5,14 @@ html,body {
     -webkit-user-select: none;
     margin:0px;
     padding:0px;
-    background-color: #fa2b43;
     height: 100%;
    
+}
+body{
+	background-image: url(../img/bg_x.jpg);
+	background-repeat: repeat-x;
+    background-size: 100% 100%;
+    background-color: #f59e5d;
 }
 
 #app{
@@ -17,9 +22,7 @@ html,body {
 	margin:0px;
     padding:0px;
     overflow: hidden;
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+  
 }
 
 #secciones,.seccion{
