@@ -136,14 +136,14 @@ function App(){
 
 		if( self.ancho<320) self.ancho = 320;
 		if( self.alto<640) self.alto = 640;
-
-		if(window.innerWidth<320){
+		*/
+		/*if(window.innerWidth<640){
 
 			$(self.main).css('transform-origin', '0 0');
-			$(self.main).transition({scale: [(window.innerWidth/320), (window.innerHeight/640)]}, 0);
+			$(self.main).transition({scale: [(window.innerWidth/640)]}, 0);
 
-		}*/
-
+		}
+*/
 		//$(self.main).css({width:self.ancho, height:self.alto})
 
 		self.secciones = new Secciones()
