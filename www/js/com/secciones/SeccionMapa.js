@@ -1,17 +1,27 @@
 function SeccionMapa()
 {
 	
-
 	this.main.id = 'SeccionMapa';
 	this.ocultar(0);
 	
+	var holder_blanco_secciones = document.createElement('div')
+	holder_blanco_secciones.className = 'holder_blanco_secciones'
+	$(this.main).append(holder_blanco_secciones)
+	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-75})
+	
 	var map_canvas = document.createElement('div')
 	map_canvas.id = 'SeccionMapa_map_canvas'
-	$(this.main).append(map_canvas)
-	$(map_canvas).css({	width: app.ancho, height: app.alto})
+	$(holder_blanco_secciones).append(map_canvas)
+
+	$(map_canvas).css({	width: app.ancho-20, height: app.alto-140})
+
+	/*var esquina_si = new Image()
+	esquina_si.src = 'img/mapa/esquina_si.png';
+	esquina_si.id = 'SeccionMapa_esquina_si';
+	$(this.main).append(esquina_si);*/
+
 
 	var array_markers_eventos;
-	//$(this.main).append('map_canvas')
 	var map;
 
 	setTimeout(_construct, 0);

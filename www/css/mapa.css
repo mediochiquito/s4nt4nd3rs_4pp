@@ -2,13 +2,28 @@
 	position: absolute;
 
 }
-#SeccionMapa_map_canvas{
+#SeccionMapa img{
 	position: absolute;
-	top: 0px;
-	left: 0px;
 
 }
+#SeccionMapa div{
+	position: absolute;
 
+}
+#SeccionMapa_map_canvas{
+
+	top: 0px;
+	left: 0px;
+	border-radius: 10px;
+
+}
+#SeccionMapa_esquina_si{
+
+	top: 59px;
+	
+
+	left: 6px;
+}
 
 #SeccionMapa_map_canvas img{
 

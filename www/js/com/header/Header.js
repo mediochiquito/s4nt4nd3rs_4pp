@@ -18,8 +18,14 @@ function Header(){
 	$(this.main).append(search);
 
 
-	if(app.ancho > 400) $(search).css({'margin-left':-149, 'width':290});
-	else $(search).css({'margin-left':-86, 'width':220});
+	var lupa = new Image()
+	lupa.src = 'img/header/lupa.png';
+	lupa.id = 'Header_lupa';
+	$(this.main).append(lupa);
+
+
+	if(app.ancho > 400) $(search).css({'margin-left':-149, 'width':270});
+	else $(search).css({'margin-left':-86, 'width':200});
 
 	function doMenu(){
 

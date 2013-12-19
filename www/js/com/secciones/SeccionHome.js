@@ -9,9 +9,9 @@ function SeccionHome()
 	promo.id = 'SeccionHome_promo';
 	$(this.main).append(promo);
 
-	var btn_mapa = new Boton2Frames('img/home/btn_mapa.png', 45, 128, doVerMapa)
-	btn_mapa.main.id = 'SeccionHome_btn_mapa'
-	$(this.main).append(btn_mapa.main)
+	var btn_mapa = new Boton2Frames('img/home/btn_mapa.png', 45, 128, doVerMapa);
+	btn_mapa.main.id = 'SeccionHome_btn_mapa';
+	$(this.main).append(btn_mapa.main);
 
 	var btn_descuentos = new Boton2Frames('img/home/btn_descuentos.png', 69, 125, doVerDescuentos)
 	btn_descuentos.main.id = 'SeccionHome_btn_descuentos'
