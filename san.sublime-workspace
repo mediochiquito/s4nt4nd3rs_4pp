@@ -4,12 +4,32 @@
 		"selected_items":
 		[
 			[
-				"mar",
-				"margin-left"
+				"fon",
+				"font-family"
+			],
+			[
+				"te",
+				"text-align"
 			],
 			[
 				"bac",
 				"background-color"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"ba",
+				"background-position"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"bo",
+				"bottom"
 			],
 			[
 				"back",
@@ -26,14 +46,6 @@
 			[
 				"url",
 				"urlencode"
-			],
-			[
-				"bor",
-				"border-bottom"
-			],
-			[
-				"fon",
-				"font-weight"
 			],
 			[
 				"mysql_e",
@@ -72,14 +84,6 @@
 				"color"
 			],
 			[
-				"ba",
-				"background-color"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
 				"data",
 				"openDatabase"
 			],
@@ -99,39 +103,7 @@
 			"file": "www/index.html",
 			"settings":
 			{
-				"buffer_size": 2541,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/header.css",
-			"settings":
-			{
-				"buffer_size": 118,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/SeccionHome.js",
-			"settings":
-			{
-				"buffer_size": 977,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/home.css",
-			"settings":
-			{
-				"buffer_size": 500,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/header/Header.js",
-			"settings":
-			{
-				"buffer_size": 120,
+				"buffer_size": 3430,
 				"line_ending": "Unix"
 			}
 		},
@@ -139,47 +111,31 @@
 			"file": "www/js/com/App.js",
 			"settings":
 			{
-				"buffer_size": 12677,
+				"buffer_size": 12812,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Volumes/www/popular_fifa/landing/mobile/index.php",
+			"file": "www/js/com/secciones/SeccionEventosOfertas.js",
 			"settings":
 			{
-				"buffer_size": 1726,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/css/app.css",
-			"settings":
-			{
-				"buffer_size": 3383,
+				"buffer_size": 800,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/js/com/controls/Boton2Frames.js",
+			"file": "www/js/com/controls/Solapa.js",
 			"settings":
 			{
-				"buffer_size": 1351,
+				"buffer_size": 1153,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "www/js/com/secciones/Base_Seccion.js",
+			"file": "www/css/eventosofertas.css",
 			"settings":
 			{
-				"buffer_size": 904,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/Secciones.js",
-			"settings":
-			{
-				"buffer_size": 832,
+				"buffer_size": 140,
 				"line_ending": "Unix"
 			}
 		}
@@ -208,11 +164,24 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/mapa.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
+		"/Volumes/www/popular_fifa/landing/mobile/index.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/home.css",
 		"/Volumes/www/recompensaverde.com/public/mobile/index.php",
 		"/Volumes/www/mateo/instarealtime/index.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/_init.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
@@ -322,20 +291,7 @@
 		"/Volumes/www/greenray_ipad/server/relevamientos/upload_relevamiento.php",
 		"/Volumes/www/greenray_ipad/public/css/reportes_upload_lightbox.css",
 		"/Volumes/www/greenray_ipad/public/js/com/upload_reportes_lightbox/ReportesUploadPreloader.js",
-		"/Volumes/www/greenray_ipad/public/js/com/upload_reportes_lightbox/ReportesUploadLightbox.js",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/savings/reportes/ReportesUploadLightbox.js",
-		"/Users/mateomenrstrina/Desktop/ventana.php",
-		"/Volumes/www/greenray_ipad/public/js/com/forms/Form_LamparasActuales.js",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/relevamiento/contadores/Contadores.js",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/relevamiento/selector_rooms/SelectorRooms.js",
-		"/Volumes/www/ford_escapate/public/tab/Escape2013.php",
-		"/Volumes/www/ford_escapate/public/tab/js/secciones/Escape2013.js",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/relevamiento/FormRelevamiento.js",
-		"/Volumes/www/greenray_ipad/app/app.plist",
-		"/Users/mateomenrstrina/Documents/phonegapApps/green_ray_led/platforms/ios/www/index.html",
-		"/Users/mateomenrstrina/Documents/phonegapApps/absolut_ipad/www/index.html",
-		"/Users/mateomenrstrina/Desktop/copy greenray to phonegap.txt",
-		"/Volumes/www/greenray_ipad/public/copy.sh"
+		"/Volumes/www/greenray_ipad/public/js/com/upload_reportes_lightbox/ReportesUploadLightbox.js"
 	],
 	"find":
 	{
@@ -353,6 +309,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	\n",
+			"img",
+			"();\n",
 			"btn_descuentos",
 			"btn_mapa",
 			"doConnect",
@@ -457,7 +416,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -465,69 +424,70 @@
 					"file": "www/index.html",
 					"settings":
 					{
-						"buffer_size": 2541,
+						"buffer_size": 3430,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								1920,
+								1920
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": false,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13.0,
+						"translation.y": 350.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "www/css/header.css",
+					"file": "www/js/com/App.js",
 					"settings":
 					{
-						"buffer_size": 118,
+						"buffer_size": 12812,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
-								25
+								1191,
+								1199
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 535.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "www/js/com/secciones/SeccionHome.js",
+					"file": "www/js/com/secciones/SeccionEventosOfertas.js",
 					"settings":
 					{
-						"buffer_size": 977,
+						"buffer_size": 800,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								679,
-								696
+								703,
+								703
 							]
 						],
 						"settings":
@@ -543,212 +503,49 @@
 				},
 				{
 					"buffer": 3,
-					"file": "www/css/home.css",
+					"file": "www/js/com/controls/Solapa.js",
 					"settings":
 					{
-						"buffer_size": 500,
+						"buffer_size": 1153,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
+								952,
+								952
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 124.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "www/js/com/header/Header.js",
+					"file": "www/css/eventosofertas.css",
 					"settings":
 					{
-						"buffer_size": 120,
+						"buffer_size": 140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								114,
-								114
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "www/js/com/App.js",
-					"settings":
-					{
-						"buffer_size": 12677,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								810,
-								810
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/Volumes/www/popular_fifa/landing/mobile/index.php",
-					"settings":
-					{
-						"buffer_size": 1726,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								608,
-								409
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "www/css/app.css",
-					"settings":
-					{
-						"buffer_size": 3383,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								229,
-								174
+								140,
+								140
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "www/js/com/controls/Boton2Frames.js",
-					"settings":
-					{
-						"buffer_size": 1351,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "www/js/com/secciones/Base_Seccion.js",
-					"settings":
-					{
-						"buffer_size": 904,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								172,
-								512
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "www/js/com/secciones/Secciones.js",
-					"settings":
-					{
-						"buffer_size": 832,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								237,
-								350
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -815,6 +612,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 228.0,
+	"side_bar_width": 215.0,
 	"status_bar_visible": true
 }

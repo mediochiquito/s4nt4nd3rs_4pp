@@ -17,15 +17,22 @@ function Header(){
 	search.id = 'Header_search'
 	$(this.main).append(search);
 
-
+/*
 	var lupa = new Image()
 	lupa.src = 'img/header/lupa.png';
 	lupa.id = 'Header_lupa';
-	$(this.main).append(lupa);
+	$(this.main).append(lupa);*/
 
+	var ancho_search = 200+((app.ancho-320)/2)
+	if(ancho_search>250) ancho_search = 250;
+	$(search).css({'width':ancho_search});
 
-	if(app.ancho > 400) $(search).css({'margin-left':-149, 'width':270});
-	else $(search).css({'margin-left':-86, 'width':200});
+	//$(lupa).css({'margin-right':ancho_search/2-10});
+	
+	
+	
+	/*if(app.ancho > 400) $(search).css({'margin-left':-149, 'width':270});
+	else $(search).css({'margin-left':-86, 'width':200});*/
 
 	function doMenu(){
 

@@ -20,7 +20,8 @@ function BotonToogle($img, $txt,$value, $img_w, $img_h, $callback){
 	$(txt).html($txt)
 
 	$(this.main).append(txt)
-	 $(document).bind("SELECT_FILTER", select_filter);
+	$(document).bind("SELECT_FILTER", select_filter);
+	
 	if(app.es_touch()){
 
 		$(this.main).bind("touchstart", do_click);

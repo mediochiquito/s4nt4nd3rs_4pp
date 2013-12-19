@@ -13,6 +13,18 @@ function Secciones(){
 	$(this.main).append(this.seccionmapa.main)
 	this.seccionmapa.ocultar(0);
 
+	this.seccioneventosofertas = new SeccionEventosOfertas();
+	$(this.main).append(this.seccioneventosofertas.main)
+	this.seccioneventosofertas.ocultar(0);
+
+	this.seccionunevento = new SeccionUnEvento();
+	$(this.main).append(this.seccionunevento.main)
+	this.seccionunevento.ocultar(0);
+
+	this.seccionunaoferta = new SeccionUnaOferta();
+	$(this.main).append(this.seccionunaoferta.main)
+	this.seccionunaoferta.ocultar(0);
+
 	var obj_seccion_actual = null;	
 
 	this.go = function($base_seccion, $time, $data){

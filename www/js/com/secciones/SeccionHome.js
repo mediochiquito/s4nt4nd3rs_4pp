@@ -23,14 +23,12 @@ function SeccionHome()
 
 	function doVerDescuentos(){
 
-		alert('doVerDescuentos');
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'ofertas'});
 
 	}
 
 	function doVerEventos(){
-
-		alert('doVerEventos');
-		app.secciones.go(app.secciones.seccionmapa);
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'eventos'});
 	}
 
 

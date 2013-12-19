@@ -11,6 +11,24 @@
 	border-radius: 0;
 
 }
+.Solapa{
+
+	width: 120px;
+	height: 45px;
+	border-radius: 7px 7px 0px 0px;
+	
+	position: absolute;
+	font-family: Verdana;
+}
+
+.Solapa_txt{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	top: 15px;
+}
 
 .ComboBox
 {
@@ -26,6 +44,7 @@
 }
 
 .InputText{
+	
 	-webkit-appearance: none;
 	border: none;
 	padding: 10px;

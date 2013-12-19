@@ -18,7 +18,7 @@
 
 left: 0px;
 
-top: 20px;
+top: 18px;
 
 }
 
@@ -29,15 +29,14 @@ top: 20px;
 }
 #Header_lupa{
 	width: 16px;
-	left: 85px;
+	right: 50%;
 	top: 26px;
 }
 
 
 #Header_search{
-
-	left: 50%;
-
+	right: 50%;
+	margin-right: -145px;
 	border-radius: 20px;
 	background-color: #fff;
 	border: none;
@@ -46,10 +45,13 @@ top: 20px;
 	position: absolute;
 	padding: 0px;
 	outline: none;
-	
 
 	padding-left: 35px;
  	-webkit-border-radius: 20px;
 	-webkit-appearance: none;
+	background-image: url(../img/header/lupa.png);
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: 9px 8px;
 	
 }
