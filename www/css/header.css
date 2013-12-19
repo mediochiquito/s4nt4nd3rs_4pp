@@ -2,9 +2,47 @@
 	
 	height: 50px;
 	position: absolute;
-	width: 640px;
-	background-color: #ff0000;
-	opacity: .6;
-	top: 0px;
+	width: 100%;
+
+	
+}
+#Header div{
+	position: absolute;
+}
+#Header img{
+	
+	position: absolute;
+	
+}
+#Header_btn_menu{
+
+left: 0px;
+
+top: 20px;
+
+}
+
+#Header_logito{
+	width: 25px;
+	left: 30px;
+	top: 20px;
+}
+
+
+#Header_search{
+
+	left: 50%;
+
+	border-radius: 20px;
+	background-color: #fff;
+	border: none;
+	top: 18px;
+	height: 30px;
+	position: absolute;
+	padding: 0px;
+	outline: none;
+	padding-left: 10px;
+ 	-webkit-border-radius: 20px;
+	-webkit-appearance: none;
 	
 }

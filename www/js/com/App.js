@@ -8,8 +8,8 @@ function App(){
 	this.lightbox = null;
 	this.header = null;
 	this.obj_usuario;
-	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
-	this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	//this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
@@ -31,7 +31,7 @@ function App(){
 	}
 
 	function doPrevent(event) {
-		event.preventDefault();
+		//event.preventDefault();
 	}
 
 	this.alerta = function($str){
@@ -130,7 +130,7 @@ function App(){
    		
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
-		
+		if(self.alto<480)self.alto = 480;
 		/*
 
 
@@ -144,16 +144,18 @@ function App(){
 
 		}
 */
-		//$(self.main).css({width:self.ancho, height:self.alto})
+		$(self.main).css({width:self.ancho, height:self.alto})
 
 		self.secciones = new Secciones()
 		$(self.main).append(self.secciones.main)
 		
-
 		self.header =  new Header();
 		$(self.main).append(self.header.main)
 
 
+		var fpo_320 = document.createElement('div')
+		fpo_320.id= 'fpo_320'
+		$(self.main).append(fpo_320)
 		/*btn_connect = new Boton('fb connect', doConnect)
 		btn_connect.main.id = 'fpo_fb_connect'
 		$(self.main).append(btn_connect.main)*/

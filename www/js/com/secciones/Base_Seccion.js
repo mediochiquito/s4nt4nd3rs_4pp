@@ -7,7 +7,7 @@ function Base_Seccion(){
 
 	this.mostrar = function($time, $data){
 		
-		/*var t = $time; 
+		var t = $time; 
 		if(typeof($time) == 'undefined') t = 300;
 
 		document.activeElement.blur();
@@ -20,12 +20,12 @@ function Base_Seccion(){
 			  opacity: 1
 
 		}, t, function(){
-			//$(self.main).css('pointer-events', 'auto');
+			$(self.main).css('pointer-events', 'auto');
 		});
 
-		// se puede overritear
+	
 		this._set($data)
-		*/
+		
 	}
 
 	this._set = function ($data){
@@ -35,13 +35,13 @@ function Base_Seccion(){
 	}
 	this.ocultar = function($time){
 		
-		/*document.activeElement.blur();
+		document.activeElement.blur();
 		$("input").blur();
 
 		var t = $time; 
 		if(typeof($time) ==  'undefined') t = 300
 
-		//$(this.main).css('pointer-events', 'none');
+		$(this.main).css('pointer-events', 'none');
 
 		$(this.main).transition({
 			  
@@ -50,7 +50,7 @@ function Base_Seccion(){
 
 		}, t, function(){
 			$(self.main).transition({x:3000},0)
-		})*/
+		})
 		
 	}
 

@@ -54,13 +54,12 @@
 	color: #ccc;
 	font-family: 'Conv_FuturaBT Medium';
 	padding: 15px 40px 15px 40px;
-	
+	-webkit-transform: scale(.5, .5) 
 	font-size: 18px;
 	position: absolute;
 }
 .Boton2Frames{
 	overflow: hidden;
 	background-position: 0px 0px;
-
 
 }

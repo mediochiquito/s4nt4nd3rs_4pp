@@ -9,10 +9,10 @@ function Secciones(){
 	$(this.main).append(this.seccionhome.main)
 	this.seccionhome.ocultar(0);
 
-/*	this.seccionmapa = new SeccionMapa();
+	this.seccionmapa = new SeccionMapa();
 	$(this.main).append(this.seccionmapa.main)
 	this.seccionmapa.ocultar(0);
-*/
+
 	var obj_seccion_actual = null;	
 
 	this.go = function($base_seccion, $time, $data){

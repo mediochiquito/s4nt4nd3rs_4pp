@@ -13,30 +13,28 @@
 }
 
 #SeccionHome_btn_mapa{
-	bottom: 27px;
+	bottom: 18px;
 	left: 50%;
-	margin-left: -199px;
+	margin-left: -107px;
 }
 
 #SeccionHome_btn_descuentos{
-	bottom: 30px;
+	bottom: 20px;
 	left: 50%;
-	margin-left: -70px;
+	margin-left: -35px;
 }
 
 #SeccionHome_btn_eventos{
-	bottom: 30px;
+	bottom: 19px;
 	left: 50%;
-	margin-left: 106px;
+	margin-left: 60px;
 }
 
 #SeccionHome_promo{
 	left: 50%;
-	margin-left: -199px;
-}
-#SeccionHome_promo{
-	left: 50%;
 	top: 50%;
-	margin-left: -200px;
-	margin-top: -370px;
+	margin-left: -100px;
+	margin-top: -176px;
+	width: 200px;
+	
 }

@@ -1,4 +1,4 @@
-function Boton2Frames($img, $img_w, $img_h, $callback){
+function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 
 	var self = this
 	this.main = document.createElement('div');
@@ -17,7 +17,7 @@ function Boton2Frames($img, $img_w, $img_h, $callback){
 	if(app.es_touch()){
 
 		$(this.main).bind("touchend", do_mouseout);
-		$(this.main).bind("touchstart", do_click);
+		$(this.main).bind("touchend", do_click);
 		$(this.main).bind("touchstart", do_mouseover);
 
 	}else{

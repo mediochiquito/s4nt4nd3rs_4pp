@@ -19,7 +19,7 @@ function SeccionMapa()
 	function _construct() {
 		
 		  var mapOptions = {
-		    zoom: 16,
+		    zoom: 14,
 		    mapTypeControl: false,
 		    zoomControl: true,
 		    zoomControlOptions: {
