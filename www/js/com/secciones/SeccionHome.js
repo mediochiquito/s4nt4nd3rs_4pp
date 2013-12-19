@@ -21,8 +21,6 @@ function SeccionHome()
 	btn_eventos.main.id = 'SeccionHome_btn_eventos'
 	$(this.main).append(btn_eventos.main)
 
-
-	
 	function doVerDescuentos(){
 
 		alert('doVerDescuentos');
@@ -32,7 +30,7 @@ function SeccionHome()
 	function doVerEventos(){
 
 		alert('doVerEventos');
-
+		app.secciones.go(app.secciones.seccionmapa);
 	}
 
 

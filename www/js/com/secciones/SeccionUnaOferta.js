@@ -1,7 +1,7 @@
-function SeccionEventosOfertas()
+function SeccionUnaOferta()
 {
 	
-	this.main.id = 'SeccionEventosOfertas';
+	this.main.id = 'SeccionUnaOferta';
 	this.ocultar(0);
 	
 	var holder_blanco_secciones = document.createElement('div')
@@ -15,7 +15,6 @@ function SeccionEventosOfertas()
 	function _construct() {
 		
 
-
 	}
 
 
@@ -23,10 +22,10 @@ function SeccionEventosOfertas()
 
 	this._set = function ($obj){
 
-		alert('solapa')
+		alert('SeccionUnaOferta set')
 
 	}
 
 }
 
-SeccionEventosOfertas.prototype = new Base_Seccion();
+SeccionUnaOferta.prototype = new Base_Seccion();
