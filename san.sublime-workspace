@@ -4,8 +4,16 @@
 		"selected_items":
 		[
 			[
+				"bo",
+				"border-left"
+			],
+			[
 				"fon",
-				"font-family"
+				"font-size"
+			],
+			[
+				"fo",
+				"font-size"
 			],
 			[
 				"te",
@@ -26,10 +34,6 @@
 			[
 				"mar",
 				"margin-right"
-			],
-			[
-				"bo",
-				"bottom"
 			],
 			[
 				"back",
@@ -99,46 +103,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 3430,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/App.js",
-			"settings":
-			{
-				"buffer_size": 12812,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/SeccionEventosOfertas.js",
-			"settings":
-			{
-				"buffer_size": 936,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/controls/Solapa.js",
-			"settings":
-			{
-				"buffer_size": 1240,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/eventosofertas.css",
-			"settings":
-			{
-				"buffer_size": 140,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -164,31 +128,40 @@
 	},
 	"file_history":
 	[
-		"/Volumes/www/estrellaheineken.com/public/tab/index.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/Volumes/www/greenray_ipad/public/js/com/App.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/xml.ofertas.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/assets/ofertas.csv",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/assets/Gotham-Book/gotham-book.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/assets/Gotham-Bold/gotham-bold.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
+		"/Volumes/www/greenray_ipad/public/js/com/secciones/savings/SavingsList.js",
+		"/Volumes/www/estrellaheineken.com/public/tab/index.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/mapa.css",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
 		"/Volumes/www/popular_fifa/landing/mobile/index.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/home.css",
 		"/Volumes/www/recompensaverde.com/public/mobile/index.php",
 		"/Volumes/www/mateo/instarealtime/index.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/_init.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/sync_value.php",
 		"/Volumes/www/popular_fifa/app/css/estilos.css",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/savings/SavingsList.js",
 		"/Volumes/www/instatest/index.php",
 		"/Volumes/www/mateo/instatest/index",
 		"/Volumes/www/estrellaheineken.com/public/global/eventos.html",
@@ -263,7 +236,6 @@
 		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/Base_Seccion.js",
 		"/Volumes/www/estrellaheineken.com/public/tab/css/controls.css",
 		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/inicio/SeccionInicio.js",
-		"/Volumes/www/greenray_ipad/public/js/com/App.js",
 		"/Volumes/www/greenray_ipad/public/index.html",
 		"/Volumes/www/estrellaheineken.com/public/templates/terminos.php",
 		"/Users/mateomenrstrina/Documents/phonegapApps/havannaslots/platforms/ios/cordova/lib/copy-www-build-step.sh",
@@ -283,15 +255,7 @@
 		"/Volumes/www-1/absolute/public_phonegap/_css/Main.css",
 		"/Volumes/www-1/absolute/public_phonegap/index.html",
 		"/Volumes/www/havanna/public/_registro/registro.php",
-		"/Volumes/www-1/havanna/_registro/registro.php",
-		"/Volumes/www-1/absolute/public_phonegap/_js/core/Site.js",
-		"/Volumes/www/havanna/index.php",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/savings/SavingsListItem.js",
-		"/Volumes/www/greenray_ipad/server/relevamientos/rm.php",
-		"/Volumes/www/greenray_ipad/server/relevamientos/upload_relevamiento.php",
-		"/Volumes/www/greenray_ipad/public/css/reportes_upload_lightbox.css",
-		"/Volumes/www/greenray_ipad/public/js/com/upload_reportes_lightbox/ReportesUploadPreloader.js",
-		"/Volumes/www/greenray_ipad/public/js/com/upload_reportes_lightbox/ReportesUploadLightbox.js"
+		"/Volumes/www-1/havanna/_registro/registro.php"
 	],
 	"find":
 	{
@@ -309,6 +273,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"item_evento",
+			"crear_db",
+			"eventos",
+			"eventos_categoria",
+			"\"	 -",
+			"\"-",
+			"\"	-",
+			"\"	 -",
+			"\"-",
 			"	\n",
 			"img",
 			"();\n",
@@ -401,6 +374,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"-",
 			"",
 			"<vida_util>50000</vida_util>",
 			"<precio_oficina_6>500</precio_oficina_6>",
@@ -416,144 +390,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "www/index.html",
-					"settings":
-					{
-						"buffer_size": 3430,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1920,
-								1920
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 350.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "www/js/com/App.js",
-					"settings":
-					{
-						"buffer_size": 12812,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1191,
-								1199
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 535.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "www/js/com/secciones/SeccionEventosOfertas.js",
-					"settings":
-					{
-						"buffer_size": 936,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								826,
-								826
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 158.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/js/com/controls/Solapa.js",
-					"settings":
-					{
-						"buffer_size": 1240,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								771,
-								771
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 313.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/css/eventosofertas.css",
-					"settings":
-					{
-						"buffer_size": 140,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								140,
-								140
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -613,6 +451,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 307.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true
 }
