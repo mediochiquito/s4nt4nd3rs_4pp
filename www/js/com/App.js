@@ -397,11 +397,12 @@ function App(){
 			$tx.executeSql('DROP TABLE IF EXISTS categorias');
 			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "categorias" ("categorias_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "categorias_nombre" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
 
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("1", "Categoria 1")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("2", "Categoria 2")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("3", "Categoria 3")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Categoria 4")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Categoria 5")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("1", "Deportes")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("2", "Moda")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("3", "Música")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Culturales")');
+			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Gastronómico")');
+    
     }
 
     function la_tala_fue_creada($tx, $table_name, $callback){
