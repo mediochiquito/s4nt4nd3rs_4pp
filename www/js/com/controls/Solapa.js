@@ -28,6 +28,17 @@ function Solapa($txt, $value, $color){
 		
 	}
 
+	this.habil = function ($bool){
+
+		if($bool){
+
+		}else{
+
+
+		}
+		this.setSelected($bool)
+	}
+
 	this.setSelected = function ($Selected){
 		
 		Selected = $Selected;
@@ -40,14 +51,16 @@ function Solapa($txt, $value, $color){
 			$(txt).css('color', '#999');
 		}
 
-		var _event = jQuery.Event("SOLAPA_CLICK");
-        _event.value = value;
-        $(this.main).trigger(_event);
+		
 	}
 
 	function do_click(){
-		self.setSelected(true)
-		if(habil) $callback(value);
+		
+		alert('asdasdasd')
+		var _event = jQuery.Event("SOLAPA_CLICK");
+        _event.value = value;
+        $(self.main).trigger(_event);
+
 	}
 	
 }

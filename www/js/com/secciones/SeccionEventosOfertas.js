@@ -19,9 +19,57 @@ function SeccionEventosOfertas()
 
 	$(this.main).bind("SOLAPA_CLICK", doSolapaClick)
 
+	var holder_tabs = document.createElement('div')
+	holder_tabs.id = 'SeccionEventosOfertas_holder_tabs'
+	$(this.main).append(holder_tabs)
+	$(holder_tabs).css({	width: app.ancho-55, height: app.alto-155})
+	
+	var lista_descuentos = new ListaEventos()
+	var lista_ofertas = new ListaOfertas()
+
+	
+
+	function doSolapaClick(e){
+
+		mostrar_solapa(e.value)
+
+	}
+
+	this.cargar_listas = function(){
+	
+		lista_descuentos.listar()
+
+	}
+
+	function mostrar_solapa($solapa){
+
+		if($solapa == 'eventos'){
+		
+			solapa_eventos.habil(true)
+			solapa_ofertas.habil(false)
+			$(holder_tabs).html(lista_descuentos.main)
+
+		}
+
+		if($solapa == 'ofertas'){
+			
+			solapa_eventos.habil(false)
+			solapa_ofertas.habil(true)
+			$(holder_tabs).html(lista_ofertas.main)
+		}
+
+
+            setTimeout(function(){  
+               
+               new iScroll('SeccionEventosOfertas_holder_tabs', {hScrollbar: false, vScrollbar: false});
+
+            }, 300);
+	}
+
 	this._set = function ($obj){
 
-		
+		this.cargar_listas()
+		mostrar_solapa($obj.solapa)
 
 	}
 

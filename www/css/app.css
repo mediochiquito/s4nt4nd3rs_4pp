@@ -8,18 +8,35 @@ html,body {
     height: 100%;
    
 }
+@font-face {
+    font-family: 'GothamBold';
+    src: url('fonts/gotham-bold.eot');
+    src: url('fonts/gotham-bold.eot') format('embedded-opentype'),
+         url('fonts/gotham-bold.woff') format('woff'),
+         url('fonts/gotham-bold.ttf') format('truetype'),
+         url('fonts/gotham-bold.svg#GothamBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamBook';
+    src: url('fonts/gotham-book.eot');
+    src: url('fonts/gotham-book.eot') format('embedded-opentype'),
+         url('fonts/gotham-book.woff') format('woff'),
+         url('fonts/gotham-book.ttf') format('truetype'),
+         url('fonts/gotham-book.svg#GothamBook') format('svg');
+}
+
+
 input,textarea{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body{
 	background-image: url(../img/bg_x.jpg);
 	background-repeat: repeat-x;
-  
     background-color: #f59e5d;
 }
-img{
 
-}
+
+
 #app{
 	position: absolute;
 	top: 0px;

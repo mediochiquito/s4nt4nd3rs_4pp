@@ -8,9 +8,36 @@
 	top: 80px;
 
 }
+
 #solapa_ofertas{
 
 	left: 156px;
 	top: 80px;
 
+}
+
+#SeccionEventosOfertas_holder_tabs{
+
+	position: absolute;
+	 border-top: solid 1px #ccc;
+	width: 200px;
+	height: 200px;
+	top: 125px;
+	left: 27px;
+
+}
+.ItemListaEvento{
+	position: relative !important;
+	padding: 15px 5px 15px 20px;
+	 border-left: solid 1px #ccc;
+	 border-bottom: solid 1px #ccc;
+	 border-right: solid 1px #ccc;
+}
+.ItemListaEvento_txt_nombre{
+	
+	
+	 font-family: 'GothamBook';
+	 font-size: 16px;
+	
+	
 }

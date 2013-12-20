@@ -119,7 +119,7 @@
 			"file": "www/js/com/secciones/SeccionEventosOfertas.js",
 			"settings":
 			{
-				"buffer_size": 800,
+				"buffer_size": 936,
 				"line_ending": "Unix"
 			}
 		},
@@ -127,7 +127,7 @@
 			"file": "www/js/com/controls/Solapa.js",
 			"settings":
 			{
-				"buffer_size": 1153,
+				"buffer_size": 1240,
 				"line_ending": "Unix"
 			}
 		},
@@ -164,6 +164,7 @@
 	},
 	"file_history":
 	[
+		"/Volumes/www/estrellaheineken.com/public/tab/index.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
@@ -196,7 +197,6 @@
 		"/Applications/MAMP/htdocs/stream_tweets/stream_tweets.php",
 		"/Volumes/www/estrellaheineken.com/public/global/buscala.html",
 		"/Volumes/www/estrellaheineken.com/public/tab/js/com/Menu.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/index.php",
 		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_eventos.js",
 		"/Volumes/www/estrellaheineken.com/public/tab/css/eventos.css",
 		"/Volumes/www/estrellaheineken.com/public/tab/css/buscala.css",
@@ -416,7 +416,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -479,15 +479,15 @@
 					"file": "www/js/com/secciones/SeccionEventosOfertas.js",
 					"settings":
 					{
-						"buffer_size": 800,
+						"buffer_size": 936,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								703,
-								703
+								826,
+								826
 							]
 						],
 						"settings":
@@ -496,7 +496,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 158.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -506,23 +506,24 @@
 					"file": "www/js/com/controls/Solapa.js",
 					"settings":
 					{
-						"buffer_size": 1153,
+						"buffer_size": 1240,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								952,
-								952
+								771,
+								771
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 124.0,
+						"translation.y": 313.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -612,6 +613,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 215.0,
+	"side_bar_width": 307.0,
 	"status_bar_visible": true
 }

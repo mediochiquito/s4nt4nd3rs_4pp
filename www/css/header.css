@@ -45,7 +45,8 @@ top: 18px;
 	position: absolute;
 	padding: 0px;
 	outline: none;
-
+	font-family: 'GothamBook';
+	font-size: 12px;
 	padding-left: 35px;
  	-webkit-border-radius: 20px;
 	-webkit-appearance: none;
