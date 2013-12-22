@@ -28,11 +28,14 @@ html,body {
 
 input,textarea{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-modify: read-write-plaintext-only;
 }
 body{
 	background-image: url(../img/bg_x.jpg);
 	background-repeat: repeat-x;
-    background-color: #f59e5d;
+	background-size: 50% 100%;
+    background-color: #60478b;
+   /* background-image: -webkit-linear-gradient(bottom, #60478b 0%, #ec1c24 80%);*/
 }
 
 
@@ -65,7 +68,7 @@ body{
 	background-color: #fff;
 	left: 10px;
 	overflow: hidden;
-	top: 65px;
+	top: 50px;
 	position: absolute;
 }
 
@@ -140,7 +143,7 @@ body{
 	color: #fff;
 	position: absolute;
 	left: inherit;
-	font-family: Verdana;
+	 font-family: 'GothamBook';
 	top: 50%;
 	width: 100%;
 	margin-top: 6px;

@@ -10,7 +10,7 @@ function Boton($text, $callback){
 
 	if(app.es_touch()){
 
-		$(this.main).bind("touchstart", do_click);
+		$(this.main).bind("touchend", do_click);
 		$(this.main).bind("touchend", do_mouseout);
 		$(this.main).bind("touchstart", do_mouseover);
 
@@ -45,16 +45,14 @@ function Boton($text, $callback){
 	}
 	
 	function do_mouseover(){
-
-		$(self.main).css("background-color", '#CCC');
-		$(self.main).css("color", '#2B2B2B');
+	
+		$(self.main).transition({opacity:.5}, .2);
+		
 	}
 	
 	function do_mouseout(){
 
-		$(self.main).css("background-color", '#2B2B2B');
-		$(self.main).css("color", '#CCC');
-
+		$(self.main).transition({opacity:1}, .2);
 	}
 
 	this.getValor = function(){

@@ -14,7 +14,8 @@ function Header(){
 	$(this.main).append(logito);
 
 	var search = document.createElement('input');
-	search.id = 'Header_search'
+	search.id = 'Header_search';
+	search.type = 'text';
 	$(this.main).append(search);
 
 /*
@@ -23,8 +24,8 @@ function Header(){
 	lupa.id = 'Header_lupa';
 	$(this.main).append(lupa);*/
 
-	var ancho_search = 200+((app.ancho-320)/2)
-	if(ancho_search>250) ancho_search = 250;
+	var ancho_search = 210+((app.ancho-320)/2)
+	if(ancho_search>270) ancho_search = 270;
 	$(search).css({'width':ancho_search});
 
 	//$(lupa).css({'margin-right':ancho_search/2-10});

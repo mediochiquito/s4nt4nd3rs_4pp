@@ -4,40 +4,77 @@
 
 #solapa_eventos{
 
-	left: 27px;
-	top: 80px;
+	left: 20px;
+	
+
+	top: 60px;
 
 }
 
 #solapa_ofertas{
 
-	left: 156px;
-	top: 80px;
+	left: 119px;
+	top: 60px;
 
 }
 
 #SeccionEventosOfertas_holder_tabs{
 
 	position: absolute;
-	 border-top: solid 1px #ccc;
+	border-top: solid 1px #e5e5e5;
 	width: 200px;
 	height: 200px;
-	top: 125px;
-	left: 27px;
+	top: 96px;
+	left: 20px;
 
 }
 .ItemListaEvento{
 	position: relative !important;
-	padding: 15px 5px 15px 20px;
-	 border-left: solid 1px #ccc;
-	 border-bottom: solid 1px #ccc;
-	 border-right: solid 1px #ccc;
+	padding: 10px 5px 8px 20px;
+	 border-left: solid 1px #e5e5e5;
+	 border-bottom: solid 1px #e5e5e5;
+	 border-right: solid 1px #e5e5e5;
 }
 .ItemListaEvento_txt_nombre{
-	
-	
+
 	 font-family: 'GothamBook';
-	 font-size: 16px;
+	 font-size: 13px;
 	
+}
+.ItemListaOferta{
+	position: relative !important;
+	padding: 10px 5px 8px 20px;
+	 border-left: solid 1px #e5e5e5;
+	 border-bottom: solid 1px #e5e5e5;
+	 border-right: solid 1px #e5e5e5;
+}
+.ItemListaOferta_txt_nombre{
+
+	 font-family: 'GothamBook';
+	 font-size: 13px;
+
+}
+.ItemListaOferta_txt_descuento{
+
+	font-family: 'GothamBold';
+	 font-size: 13px;
+	 color: #ed1c24;
+	 position: absolute;
+	 
+
+	right: 10px;
+	 
+
+	top: 10px;
 	
+
+	text-align: right;
+
+}
+#SeccionEventosOfertas_btn_ver_en_mapa{
+	left: 50%;
+}
+#SeccionEventosOfertas_btn_subir_mapa{
+	left: 50%;
+
 }

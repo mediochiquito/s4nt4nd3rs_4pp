@@ -56,7 +56,7 @@ function Solapa($txt, $value, $color){
 
 	function do_click(){
 		
-		alert('asdasdasd')
+		
 		var _event = jQuery.Event("SOLAPA_CLICK");
         _event.value = value;
         $(self.main).trigger(_event);

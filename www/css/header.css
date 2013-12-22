@@ -18,14 +18,14 @@
 
 left: 0px;
 
-top: 18px;
+top: 10px;
 
 }
 
 #Header_logito{
 	width: 25px;
-	left: 30px;
-	top: 20px;
+	left: 26px;
+	top: 14px;
 }
 #Header_lupa{
 	width: 16px;
@@ -36,11 +36,11 @@ top: 18px;
 
 #Header_search{
 	right: 50%;
-	margin-right: -145px;
+	margin-right: -153px;
 	border-radius: 20px;
 	background-color: #fff;
 	border: none;
-	top: 18px;
+	top: 10px;
 	height: 30px;
 	position: absolute;
 	padding: 0px;
@@ -55,4 +55,6 @@ top: 18px;
 	background-size: 16px 16px;
 	background-position: 9px 8px;
 	
+ 
+  	outline-style: none;
 }

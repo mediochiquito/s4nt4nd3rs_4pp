@@ -13,8 +13,10 @@
 }
 .Solapa{
 
-	width: 120px;
-	height: 45px;
+	width: 93px;
+	
+
+	height: 36px;
 	border-radius: 7px 7px 0px 0px;
 	
 	position: absolute;
@@ -26,8 +28,8 @@
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	font-size: 14px;
-	top: 16px;
+	font-size: 11px;
+	top: 12px;
 	 font-family: 'GothamBold';
 }
 
@@ -69,14 +71,15 @@
 
 .Boton{
 	
-	background-color: #2B2B2B;
-	color: #473B3B;
-	color: #ccc;
-	font-family: 'Conv_FuturaBT Medium';
-	padding: 15px 40px 15px 40px;
-	-webkit-transform: scale(.5, .5) 
-	font-size: 18px;
+	background-image: -webkit-linear-gradient(bottom, #E91C24 30%, #F28F6C 100%);
+	color: #fff;
+	font-family: 'GothamBold';
+	padding: 11px 0px 11px 0px;
+	font-size: 12px;
 	position: absolute;
+	border-radius: 7px;
+	width: 140px;
+	text-align: center;
 }
 .Boton2Frames{
 	overflow: hidden;

@@ -9,8 +9,8 @@ function App(){
 	this.header = null;
 	this.obj_usuario;
 	
-	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
-	this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	//this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
@@ -50,7 +50,7 @@ function App(){
 		    if(device.platform == ''){}
 		    return true;  
 		} catch (e) {  
-		    return false;  
+		    return false;   
 		}
 
 	}
@@ -133,8 +133,6 @@ function App(){
 		self.alto = window.innerHeight;
 		if(self.alto<480)self.alto = 480;
 		/*
-
-
 		if( self.ancho<320) self.ancho = 320;
 		if( self.alto<640) self.alto = 640;
 		*/
@@ -154,14 +152,12 @@ function App(){
 		$(self.main).append(self.header.main)
 
 
-		var fpo_320 = document.createElement('div')
+		/*var fpo_320 = document.createElement('div')
 		fpo_320.id= 'fpo_320'
 		$(self.main).append(fpo_320)
-		/*btn_connect = new Boton('fb connect', doConnect)
-		btn_connect.main.id = 'fpo_fb_connect'
-		$(self.main).append(btn_connect.main)*/
+		*/
 
-      // 	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"> <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
+       	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
 		
 		/*self.lightbox = new LightBox()
 		$(self.main).append(self.lightbox.main);*/
@@ -219,7 +215,7 @@ function App(){
 
 
 	function verfificar_sync(){
-    
+    		
     		$.ajax({
 				type: "GET",
 				url: app.server + "sync_value.php",
@@ -229,7 +225,7 @@ function App(){
 					new_sync_value = Number($int);
 					
 					if(new_sync_value>Number(sync_value)){
-
+						app.cargando(true, 'Sincronizando eventos...')
 						$.ajax({
 
 							type: "GET",
@@ -237,14 +233,18 @@ function App(){
 							dataType: 'xml',
 							cache: false, 
 							data:{sync_value: sync_value},
-							success: function($xml) {
-									
-								actualizar_db($xml)
 
+							success: function($xml) {
+								app.cargando(false);
+								actualizar_db($xml);
 							},
-							error: function(){ $(document).trigger('LISTAR_EVENTOS'); }
+							error: function(){ 
+								$(document).trigger('LISTAR_EVENTOS'); 
+								app.cargando(false)
+							}
 						});	
 					}else{
+					
 						$(document).trigger('LISTAR_EVENTOS');
 					}
 				},
@@ -258,9 +258,11 @@ function App(){
 	function actualizar_db($xml){
 
 		var obj = $.parseJSON($($xml).find('eventos').text())
+
 		app.db.transaction(function (tx) {
+
 			for(var item_evento in obj){
-					tx.executeSql('INSERT INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria_id","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_tags","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?,?)', 
+					tx.executeSql('INSERT OR IGNORE INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria_id","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_tags","eventos_estado","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)', 
 													  [
 													  obj[item_evento].eventos_id, 
 													  obj[item_evento].eventos_nombre, 
@@ -272,6 +274,7 @@ function App(){
 													  obj[item_evento].eventos_lon, 
 													  obj[item_evento].eventos_uid, 
 													  obj[item_evento].eventos_tags, 
+													  obj[item_evento].eventos_estado, 
 													  obj[item_evento].eventos_fecha_hora_creado
 
 
@@ -279,11 +282,12 @@ function App(){
 
 			}
 			
-		});
+		},  app.db_errorGeneral);
 
 		app.db.transaction(function (tx) {
+			
 			for(var item_evento in obj){
-					tx.executeSql('UPDATE "eventos" SET "eventos_nombre"=?,"eventos_fecha_hora"=?,"eventos_categoria_id"=?,"eventos_lugar"=?,"eventos_desc"=?,"eventos_lat"=?,"eventos_lon"=?,"eventos_uid"=?,"eventos_tags"=?,"eventos_fecha_hora_creado"=? WHERE "eventos_id"=?', 
+					tx.executeSql('UPDATE "eventos" SET "eventos_nombre"=?,"eventos_fecha_hora"=?,"eventos_categoria_id"=?,"eventos_lugar"=?,"eventos_desc"=?,"eventos_lat"=?,"eventos_lon"=?,"eventos_uid"=?,"eventos_tags"=?,"eventos_estado"=?, "eventos_fecha_hora_creado"=? WHERE "eventos_id"=?', 
 														  [
 														
 														  obj[item_evento].eventos_nombre, 
@@ -295,17 +299,22 @@ function App(){
 														  obj[item_evento].eventos_lon, 
 														  obj[item_evento].eventos_uid, 
 														  obj[item_evento].eventos_tags, 
+														  obj[item_evento].eventos_estado, 
 														  obj[item_evento].eventos_fecha_hora_creado,
 														  obj[item_evento].eventos_id
 														  ]);
 
+
+				
+
 			}
 
-			tx.executeSql('UPDATE app SET sync_value=' + new_sync_value);
+			tx.executeSql('UPDATE app SET sync_value=?', [new_sync_value]);
+			$(document).trigger('LISTAR_EVENTOS');
 
-			$(document).bind('LISTAR_EVENTOS');
+		},  app.db_errorGeneral);
 
-		});
+		
 
 	}
 
@@ -365,23 +374,24 @@ function App(){
 
     
     function crearTabla_Eventos($tx){
-		
+			//$tx.executeSql('DROP TABLE IF EXISTS eventos');
 			$tx.executeSql('CREATE TABLE IF NOT EXISTS eventos ("eventos_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
 						  '"eventos_nombre" VARCHAR, ' +
 						  '"eventos_fecha_hora" DATETIME, ' +
-						  '"eventos_categoria_id" VARCHAR, ' +
+						  '"eventos_categoria_id" INTEGER, ' +
 						  '"eventos_lugar" VARCHAR, ' +
 						  '"eventos_desc" VARCHAR, ' +
 						  '"eventos_lat" VARCHAR, ' +
 						  '"eventos_lon" VARCHAR, ' +
 						  '"eventos_uid" VARCHAR, ' +
 						  '"eventos_tags" VARCHAR, ' +
+						  '"eventos_estado" INTEGER, ' +
 						  '"eventos_fecha_hora_creado" DATETIME)', [], comprobacion_total_tablas_creadas);
     }
 
 
     function crearTabla_Ofertas($tx){
-		
+		//$tx.executeSql('DROP TABLE IF EXISTS ofertas');
 			$tx.executeSql('CREATE TABLE IF NOT EXISTS ofertas ("ofertas_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
 						  '"ofertas_nombre" VARCHAR, ' +
 						  '"ofertas_tel" VARCHAR, ' +
@@ -400,7 +410,8 @@ function App(){
 			var obj = $.parseJSON($(xml_default_db).find('ofertas').text())
 		
 			for(var item_ofeta in obj){
-					$tx.executeSql('INSERT INTO "eventos" ("ofertas_id","ofertas_nombre","ofertas_tel","ofertas_dir","ofertas_descuento","ofertas_cutoas","ofertas_dias","ofertas_desc","ofertas_lat","ofertas_lon","ofertas_tags","ofertas_tipo","ofertas_header_img") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)', 
+					
+					$tx.executeSql('INSERT OR IGNORE INTO "ofertas" ("ofertas_id","ofertas_nombre","ofertas_tel","ofertas_dir","ofertas_descuento","ofertas_cutoas","ofertas_dias","ofertas_desc","ofertas_lat","ofertas_lon","ofertas_tags","ofertas_tipo","ofertas_header_img") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', 
 													  [
 													  obj[item_ofeta].ofertas_id, 
 													  obj[item_ofeta].ofertas_nombre, 
@@ -415,9 +426,7 @@ function App(){
 													  obj[item_ofeta].ofertas_tags, 
 													  obj[item_ofeta].ofertas_tipo, 
 													  obj[item_ofeta].ofertas_header_img
-
-
-													  ]);
+													  ], function(){}, app.db_errorGeneral);
 
 			}
 
@@ -425,14 +434,14 @@ function App(){
 
     function crearTabla_Categorias($tx){
 		
-			$tx.executeSql('DROP TABLE IF EXISTS categorias');
+
 			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "categorias" ("categorias_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "categorias_nombre" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
 
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("1", "Deportes")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("2", "Moda")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("3", "Música")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Culturales")');
-			$tx.executeSql('INSERT INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Gastronómico")');
+			$tx.executeSql('INSERT OR IGNORE INTO categorias (categorias_id, categorias_nombre) VALUES ("1", "Deportes")');
+			$tx.executeSql('INSERT OR IGNORE INTO categorias (categorias_id, categorias_nombre) VALUES ("2", "Moda")');
+			$tx.executeSql('INSERT OR IGNORE INTO categorias (categorias_id, categorias_nombre) VALUES ("3", "Música")');
+			$tx.executeSql('INSERT OR IGNORE  INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Culturales")');
+			$tx.executeSql('INSERT OR IGNORE  INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Gastronómico")');
     
     }
 

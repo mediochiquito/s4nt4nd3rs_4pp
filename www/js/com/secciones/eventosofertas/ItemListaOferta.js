@@ -1,20 +1,24 @@
-function ItemListaEvento($row)
+function ItemListaOferta($row)
 {
 	
 	var self = this
 	this.main = document.createElement('div');
-	this.main.className = 'ItemListaEvento';
+	this.main.className = 'ItemListaOferta';
 
 	var txt = document.createElement('div');
-	txt.className = 'ItemListaEvento_txt_nombre';
+	txt.className = 'ItemListaOferta_txt_nombre';
 	$(this.main).append(txt)
-	$(txt).html($row.eventos_nombre)
-	
+	$(txt).html($row.ofertas_nombre)
 
+	var txt = document.createElement('div');
+	txt.className = 'ItemListaOferta_txt_descuento';
+	$(this.main).append(txt)
+	$(txt).html($row.ofertas_descuento)
+	
 	this.main.addEventListener('click', doClick);
 /*	this.main.addEventListener('touchstart', pintar);
-	this.main.addEventListener('touchend', despintar);*/
-
+	this.main.addEventListener('touchend', despintar);
+*/
 	function doClick(e){
 		pintar()
 		setTimeout(function(){

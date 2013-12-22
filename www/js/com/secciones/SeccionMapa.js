@@ -7,7 +7,8 @@ function SeccionMapa()
 	var holder_blanco_secciones = document.createElement('div')
 	holder_blanco_secciones.className = 'holder_blanco_secciones'
 	$(this.main).append(holder_blanco_secciones)
-	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-75})
+		$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
+
 	
 	var map_canvas = document.createElement('div')
 	map_canvas.id = 'SeccionMapa_map_canvas'
@@ -25,7 +26,8 @@ function SeccionMapa()
 	var map;
 
 	setTimeout(_construct, 0);
-	
+	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
+
 	function _construct() {
 		
 		  var mapOptions = {
@@ -43,8 +45,7 @@ function SeccionMapa()
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
 
-		  $(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
-
+		 
 		  //  setTimeout(function() {
 		    //  google.maps.event.trigger(map,'resize');
 		  // }, 200);
@@ -72,7 +73,7 @@ function SeccionMapa()
 		    handleNoGeolocation(false);
 		  }*/
 	}
-/*this.setMarcadores = function(xml){
+	/*this.setMarcadores = function(xml){
 			
 		arr_marcadores = new Array();
 			
@@ -81,13 +82,17 @@ function SeccionMapa()
 	}
 	*/
 
+	this._set = function (obj){
+		alert(obj.solo_ver)
+	}
+
 	function do_LISTAR_EVENTOS(e){
 
 		array_markers_eventos = new Array();
 
 		app.db.transaction(function (tx) {
 			//TODO agregar el estado
-			tx.executeSql("SELECT * FROM eventos" , [], function (tx, resultado) {
+			tx.executeSql("SELECT * FROM eventos WHERE eventos_estado=1" , [], function (tx, resultado) {
 		    	
 		    	var cant_eventos = resultado.rows.length;
 		        for(var i=0; i<cant_eventos; i++){
@@ -109,8 +114,9 @@ function SeccionMapa()
 		    })
 		});
 
-		
 	}
+
+
 
 	function mostrar_un_evento($row){
 		alert($row.eventos_id)
