@@ -7,7 +7,7 @@ function SeccionUnEvento()
 	var holder_blanco_secciones = document.createElement('div')
 	holder_blanco_secciones.className = 'holder_blanco_secciones'
 	$(this.main).append(holder_blanco_secciones)
-		$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
+	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 
 	
 	
@@ -23,7 +23,7 @@ function SeccionUnEvento()
 
 	this._set = function ($obj){
 
-		alert('SeccionUnEvento set')
+		alert($obj.row.eventos_id)
 
 	}
 

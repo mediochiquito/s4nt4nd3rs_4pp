@@ -72,6 +72,9 @@ body{
 	overflow: hidden;
 	top: 50px;
 	position: absolute;
+	/* -webkit-transition: all 2s linear;
+	 -webkit-transform: scale(.6);*/
+	/*-webkit-mask-image: url('../img/mapa/mask.png');*/
 }
 
 #secciones,.seccion{

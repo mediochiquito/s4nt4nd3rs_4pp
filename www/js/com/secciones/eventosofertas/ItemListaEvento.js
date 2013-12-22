@@ -19,7 +19,8 @@ function ItemListaEvento($row)
 		pintar()
 		setTimeout(function(){
 
-			
+			app.secciones.go(app.secciones.seccionunevento, 300, {row: $row})
+
 
 		}, 200)
 		setTimeout(despintar, 800)

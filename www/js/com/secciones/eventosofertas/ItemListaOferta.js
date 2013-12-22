@@ -23,7 +23,7 @@ function ItemListaOferta($row)
 		pintar()
 		setTimeout(function(){
 
-			
+			app.secciones.go(app.secciones.seccionunaoferta, 300, {row: $row})
 
 		}, 200)
 		setTimeout(despintar, 800)

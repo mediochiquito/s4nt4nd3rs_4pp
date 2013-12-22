@@ -43,7 +43,16 @@ function SeccionMapa()
 		        style: google.maps.ZoomControlStyle.LARGE,
 		        position: google.maps.ControlPosition.LEFT_CENTER
 		    },
-		     streetViewControl: false
+		     streetViewControl: false,
+		     styles:[
+					    {
+					        featureType: "poi",
+					        elementType: "labels",
+					        stylers: [
+					              { visibility: "off" }
+					        ]
+					    }
+					]
 		  };
 		 
 		  map = new google.maps.Map(map_canvas,  mapOptions);
@@ -88,9 +97,62 @@ function SeccionMapa()
 	*/
 
 	this._set = function (obj){
-		//alert(obj.solo_ver)
+			
+			var solo_ver = '';
+			try{
+				solo_ver = obj.solo_ver;
+			}catch(e){}
+
+			switch(solo_ver){
+
+				case 'eventos':
+					mostrar_elementos('ofertas', false)
+					mostrar_elementos('eventos', true)
+						
+				break;
+				case 'ofertas':
+					mostrar_elementos('ofertas', true)
+					mostrar_elementos('eventos', false)
+				break;
+			    default:
+					mostrar_elementos('ofertas', true)
+					mostrar_elementos('eventos', true)
+				break;
+
+
+		}
 	}
 
+	function mostrar_elementos($que_elmentos, $visiblildad){
+
+		switch($que_elmentos){
+
+				case 'eventos':
+
+						for(var i in array_markers_eventos){
+							array_markers_eventos[i].setVisible($visiblildad)
+						}
+						
+						
+				break;
+				case 'ofertas':
+
+						for(var i in array_markers_ofertas){
+							array_markers_ofertas[i].setVisible($visiblildad)
+						}
+						
+				break;
+				case 'todo':
+					for(var i in array_markers_eventos){
+							array_markers_eventos[i].setVisible($visiblildad)
+					}
+					for(var i in array_markers_ofertas){
+							array_markers_ofertas[i].setVisible($visiblildad)
+					}
+				break;
+		}
+
+	}
 	function do_LISTAR_EVENTOS(e){
 
 		array_markers_eventos = new Array();
@@ -150,11 +212,11 @@ function SeccionMapa()
 
 
 	function mostrar_una_oferta($row){
-		
+		app.secciones.go(app.secciones.seccionunaoferta, 300, {row: $row})
 	}
 
 	function mostrar_un_evento($row){
-		
+		app.secciones.go(app.secciones.seccionunevento, 300, {row: $row})
 	}
 
 	function handleNoGeolocation(errorFlag) {
