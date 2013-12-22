@@ -4,105 +4,132 @@
 		"selected_items":
 		[
 			[
-				"bo",
-				"border-left"
-			],
-			[
-				"fon",
-				"font-size"
-			],
-			[
-				"fo",
-				"font-size"
-			],
-			[
-				"te",
-				"text-align"
-			],
-			[
-				"bac",
-				"background-color"
-			],
-			[
-				"bor",
-				"border-radius"
-			],
-			[
 				"ba",
-				"background-position"
+				"background"
 			],
 			[
-				"mar",
-				"margin-right"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
-				"re",
-				"repeat-x"
-			],
-			[
-				"boo",
-				"bottom"
-			],
-			[
-				"url",
-				"urlencode"
-			],
-			[
-				"mysql_e",
-				"mysql_real_escape_string"
-			],
-			[
-				"my",
-				"mysql_query"
-			],
-			[
-				"txt",
-				"txt_dia"
-			],
-			[
-				"t",
-				"typeof"
-			],
-			[
-				"ease",
-				"easeOut"
-			],
-			[
-				"tex",
-				"text-transform"
-			],
-			[
-				"in",
-				"inline-block"
+				"p",
+				"position"
 			],
 			[
 				"app",
 				"append"
 			],
 			[
+				"bac",
+				"background-color"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"bor",
+				"border-left"
+			],
+			[
+				"crea",
+				"createElement"
+			],
+			[
+				"mysql",
+				"mysql_query"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
 				"co",
 				"color"
 			],
 			[
-				"data",
-				"openDatabase"
+				"fo",
+				"font-size"
 			],
 			[
-				"fu",
-				"function"
+				"class",
+				"className"
 			],
 			[
-				"ti",
-				"this"
+				"bo",
+				"border"
+			],
+			[
+				"re",
+				"repeat-x"
+			],
+			[
+				"strip",
+				"stripslashes"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 3658,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/com/header/Header.js",
+			"settings":
+			{
+				"buffer_size": 889,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/Secciones.js",
+			"settings":
+			{
+				"buffer_size": 1246,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/Base_Seccion.js",
+			"settings":
+			{
+				"buffer_size": 871,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/SeccionMapa.js",
+			"settings":
+			{
+				"buffer_size": 3787,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#SeccionMapa{\n	position: absolute;\n\n}\n#SeccionMapa img{\n	position: absolute;\n\n}\n#SeccionMapa div{\n	position: absolute;\n\n}\n\n#SeccionMapa_holdermap_canvas{\n\n	top: 0px;\n	left: 0px;\n\n}\n\n#SeccionMapa_map_canvas{\n\n	top: 0px;\n	left: 0px;\n	width: 100%;\n	height: 100%;\n\n}\n\n#SeccionMapa_esquina_si{\n\n	top: 59px;\n	left: 6px;\n}\n\n#SeccionMapa_map_canvas img{\n\n/*	-webkit-transform: scale(1, 1); \n*/\n\n}\n",
+			"file": "www/css/mapa.css",
+			"file_size": 484,
+			"file_write_time": 130321486440128230,
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -115,7 +142,7 @@
 	},
 	"console":
 	{
-		"height": 125.0
+		"height": 0.0
 	},
 	"distraction_free":
 	{
@@ -128,138 +155,138 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/xml/default_db.xml",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
-		"/Volumes/www/greenray_ipad/public/js/com/App.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/xml.ofertas.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/assets/ofertas.csv",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/assets/Gotham-Book/gotham-book.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/assets/Gotham-Bold/gotham-bold.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
-		"/Volumes/www/greenray_ipad/public/js/com/secciones/savings/SavingsList.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/index.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/mapa.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
-		"/Volumes/www/popular_fifa/landing/mobile/index.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/home.css",
-		"/Volumes/www/recompensaverde.com/public/mobile/index.php",
-		"/Volumes/www/mateo/instarealtime/index.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/_init.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/sync_value.php",
-		"/Volumes/www/popular_fifa/app/css/estilos.css",
-		"/Volumes/www/instatest/index.php",
-		"/Volumes/www/mateo/instatest/index",
-		"/Volumes/www/estrellaheineken.com/public/global/eventos.html",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/santanders.sql",
-		"/Applications/MAMP/htdocs/twitertesthastags/stream_tweets/stream_tweets.php",
-		"/Applications/MAMP/htdocs/stream_tweets/stream_tweets.php",
-		"/Volumes/www/estrellaheineken.com/public/global/buscala.html",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/Menu.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_eventos.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/eventos.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/buscala.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/app.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/armala.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_buscala.js",
-		"/Volumes/www/estrellaheineken.com/public/global/css/slider.css",
-		"/Volumes/www/estrellaheineken.com/public/index.php",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/inicio/Inicio.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_terms.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_forcelike.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox.js",
-		"/Volumes/www/estrellaheineken.com/public/mobile/js/secciones/Comparte.js",
-		"/Volumes/www/estrellaheineken.com/assets/codigos.txt",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/App.js",
-		"/Volumes/www/estrellaheineken.com/public/global/terms_sorteo.html",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/Secciones.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/GlobalRegistro.js",
-		"/Volumes/www/absolute/info.txt",
-		"/Volumes/www/estrellaheineken.com/public/mobile/index.php",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_alerta.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/GlobalEventos.js",
-		"/Volumes/www/klim_navidad2013/public/tab/js/secciones/registro/Registro.js",
-		"/Volumes/www/estrellaheineken.com/public/init.php",
-		"/Volumes/www/estrellaheineken.com/public/global/xml/xml.lugares_eventos.php",
-		"/Volumes/www/estrellaheineken.com/public/global/js/SliderGanadores.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/ganadores/Ganadores.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/ganadores.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/armala/Armala.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/registroestrella/RegistroEstrella.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/inicio.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/activada/Activada.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/controls/CheckBox.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/activada.css",
-		"/Volumes/www/estrellaheineken.com/public/global/js/controls/InputText.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/registro.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/premios.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/premios/Premios.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/comparte.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/comparte/Comparte.js",
-		"/Volumes/www/estrellaheineken.com/public/global/registrar_estrella.php",
-		"/Volumes/www/ford_escapate/public/tab/js/secciones/Registro.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/LightBox_age.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/jquery.jscrollpane.css",
-		"/Applications/MAMP/htdocs/dev_sm1rn00_ka3a1a/css/app.css",
-		"/Applications/MAMP/htdocs/dev_sm1rn00_ka3a1a/com/App.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/controls/ComboBox.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/lugares/LugaresMapa.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/lugares/LugaresPaginador.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/GlobalEvents.js",
-		"/Volumes/www/estrellaheineken.com/public/global/js/lugares/<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-		"/Volumes/www/klim_navidad2013/public/tab/index.php",
-		"/Volumes/www/popular_fifa/app/index.php",
-		"/Volumes/www/ford_autoremedio/public/init.php",
-		"/Volumes/www/ford_autoremedio/public/info.php",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/controls/Boton2Frames.js",
-		"/Volumes/www/ford_escapate/public/tab/js/Navigate.js",
-		"/Volumes/www/ford_escapate/public/tab/js/core.site.js",
-		"/Volumes/www/estrellaheineken.com/public/global/terms.html",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/controls/CheckBox.js",
-		"/Volumes/www/knorrrecetas/public/index.php",
-		"/Volumes/www/knorrrecetas/public/init.php",
-		"/Applications/MAMP/htdocs/dev_sm1rn00_ka3a1a/com/SeccionRegistro.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/Base_Seccion.js",
-		"/Volumes/www/estrellaheineken.com/public/tab/css/controls.css",
-		"/Volumes/www/estrellaheineken.com/public/tab/js/com/secciones/inicio/SeccionInicio.js",
-		"/Volumes/www/greenray_ipad/public/index.html",
-		"/Volumes/www/estrellaheineken.com/public/templates/terminos.php",
-		"/Users/mateomenrstrina/Documents/phonegapApps/havannaslots/platforms/ios/cordova/lib/copy-www-build-step.sh",
-		"/Volumes/www/havanna/public/_js/site.js",
-		"/Volumes/www/havanna/public/_css/site.css",
-		"/Volumes/www/havanna/app/app.plist",
-		"/Volumes/www/havanna/app/index.html",
-		"/Volumes/www/havanna/public/_js/Boton.js",
-		"/Volumes/www/havanna/public/index.html",
-		"/Volumes/www/havanna/public/_js/Reporte.js",
-		"/Volumes/www-1/havanna/app/app.plist",
-		"/Volumes/www-1/havanna/app/index.html",
-		"/Volumes/www/havanna/public/_js/App.js",
-		"/Volumes/www/havanna/public/_js/utils.js",
-		"/Volumes/www/havanna/public/_js/site.css",
-		"/Volumes/www-1/absolute/public_phonegap/_js/secciones/Inicio.js",
-		"/Volumes/www-1/absolute/public_phonegap/_css/Main.css",
-		"/Volumes/www-1/absolute/public_phonegap/index.html",
-		"/Volumes/www/havanna/public/_registro/registro.php",
-		"/Volumes/www-1/havanna/_registro/registro.php"
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/SeccionHome.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa - copia.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
+		"/C/wamp/www/green ray led/public/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.txt",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/js/facebook.js",
+		"/C/Users/Mateo/Desktop/Home.js",
+		"/C/Users/Mateo/AppData/Local/Temp/fz3temp-1/Home.js",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/config.xml",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/index.html",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/ManagePush.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
+		"/C/wamp/www/green ray led/public/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/void.set_push_token.php",
+		"/C/Users/Mateo/AppData/Local/Temp/Rar$DRa1.425/Payload/SantandersApp.app/config.xml",
+		"/C/Users/Mateo/AppData/Local/Temp/Rar$DRa0.425/Payload/SantandersApp.app/config.xml",
+		"/C/Users/Mateo/Downloads/vida en balance mobile/public/js/lib/main/Main.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/version_sync.txt",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/CanvasSaver.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionFoto.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/foto.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/export.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/upload.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/foto.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionFoto.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/galeria.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_foto.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/ItemGaleria.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionGaleria.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/App.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/config.xml",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/TouchSlide.js",
+		"/C/wamp/www/gennerayled/js/com/App.js",
+		"/C/wamp/www/gennerayled/js/com/upload_reportes_lightbox/ReportesUploadLightbox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_guardar.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Boton.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/export.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/index.html",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionRegistro.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Secciones.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Base_Seccion.js",
+		"/C/wamp/www/b64.js",
+		"/C/wamp/www/base64-binary.js",
+		"/C/wamp/www/1383333762132.png",
+		"/C/wamp/www/test.htm",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/mosaic.js",
+		"/C/wamp/www/1383333762132.txt",
+		"/C/wamp/test.htm",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/pixastic.core.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/Boton.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/invert.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/glow.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/edges.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/solarize.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/sharpen.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/unsharpmask.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/pointillize.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/lighten.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/resize.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/hsl.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/blend.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/colorhistogram.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/sepia.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/CamanJS - Interactive Examples.html",
+		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.core.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.jquery.js",
+		"/C/wamp/www/ford_escapate/public/tab/index.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/BotonToogle.js",
+		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/savings/SavingsList.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/savings/Savings.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/login.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/LightBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CanvasSaver.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/registro.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/btn_continuar.png",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_guardar - copia.js",
+		"/C/wamp/www/gennerayled/css/utils.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/FormRelevamiento.js",
+		"/C/wamp/www/gennerayled/css/controls.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/EditorRelevamiento.js",
+		"/C/wamp/www/gennerayled/css/Form_LamparasActuales.css",
+		"/C/Users/Mateo/Downloads/APP SMIRNOFF/webfontkit-20131102-232101/stylesheet.css",
+		"/C/wamp/www/Croma/cordova.js",
+		"/C/wamp/www/Croma/css/foto.css",
+		"/C/wamp/www/Croma/com/CanvasSaver.js",
+		"/C/wamp/www/Croma/com/SeccionRegistro.js",
+		"/C/wamp/www/Croma/com/SeccionFoto.js",
+		"/C/wamp/www/Croma/css/app.css",
+		"/C/wamp/www/Croma/com/App.js",
+		"/C/wamp/www/Croma/index.html"
 	],
 	"find":
 	{
-		"height": 60.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -273,100 +300,60 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"item_evento",
-			"crear_db",
+			">\n",
+			"DROP",
 			"eventos",
-			"eventos_categoria",
-			"\"	 -",
-			"\"-",
-			"\"	-",
-			"\"	 -",
-			"\"-",
-			"	\n",
-			"img",
-			"();\n",
-			"btn_descuentos",
-			"btn_mapa",
-			"doConnect",
-			"mapa",
-			"Mapa",
-			"mapa",
-			"UPDATE_EVENTOS",
-			"_buscala",
-			"LightBox",
-			"'",
-			"	",
-			"btnEventos",
+			"FormSubirEvento",
+			"SeccionUnaOferta",
+			"logito",
+			"_320",
+			" '",
 			"alert",
-			"console",
-			"avtivada",
-			"registroestrella",
-			"RegistroEstrella",
-			"registroestrella",
-			"RegistroEstrella",
-			"registroestrella",
-			"validar",
-			"enviar",
-			"btn_armala",
-			"comenzar_app_titulo_e_inicio",
-			"escape",
-			"mysql_real_escape_string",
-			"chk_recibe_info",
-			"\n}",
-			"\n",
-			"'",
-			"nombre",
-			"txt_tel0",
-			"txt_nombre",
-			"nombre",
-			");\n",
-			"array_filtro",
-			"GlobalEvents_mapa_holder",
-			"this.main",
-			"si",
-			"0",
-			"this.main",
-			"ReturnSlots",
-			"moverPalancaStat",
-			"site.moverPalancaStat",
-			"%",
-			"resolver_carga",
-			"?ac=8",
-			"post",
-			"_ajax",
-			"borde",
-			"∂",
-			"<vida_util>0</vida_util>",
-			"<precio_oficina_6>100</precio_oficina_6>",
-			"<precio_oficina_6>0</precio_oficina_6>",
-			"<mantenimiento_oficina_6>0</mantenimiento_oficina_6>",
-			"id_planta_editando",
-			"combo_salas",
-			"cargar_lista_plantas",
-			"combo_salas",
-			"rooms",
-			"app.version_lamparas_greenray",
-			"la_tala_fue_creada",
-			"logg",
-			"uuid",
-			"ACTVIO",
-			"    function onDeviceReady(){\n",
-			"_Contad",
-			"lightboxProductos",
-			"light",
-			"ligt",
-			"3600",
-			"ABM_SelectorLamparasActuales",
-			"Abm_LamparasActuales_slide_holder",
-			"Abm_LamparasActuales",
-			"Abm_LamparasActuales_hodler_secc",
-			"form",
-			"_add",
-			", 'cinta'",
-			"Tambor",
-			" ",
-			"_Contadores",
-			"Tambor_izq"
+			"my_client_id",
+			"hay_internet",
+			"alerta",
+			"alert",
+			"onNotificationGCM",
+			"successHandler",
+			"is_phonegap",
+			"array_tablas_a_crear",
+			"seccion",
+			"alert",
+			"version_sync",
+			"app_sync",
+			"selec",
+			"	setTimeout(function(){\n\n			if(app.hay_internet()){\n				verfificar_version_nueva_app()\n			}\n\n		}, 1000)\n",
+			"start",
+			"verificar_db",
+			"charset=\"utf-8\" src=\"",
+			"_canvas_export",
+			"canvas",
+			"applyAction",
+			"desaturate",
+			"Value",
+			"value",
+			"app",
+			"onError2",
+			"onError0",
+			"()",
+			"getValor",
+			"usuarios_lugar",
+			"comprobacion_total_tablas_creadas",
+			"	app.cargando(false)",
+			"Ligthbox_guardar",
+			"no",
+			"lightbox",
+			"Boton",
+			"cancelar_envio",
+			"siguiente",
+			"cancelar_envio",
+			"uri_foto",
+			"self",
+			"4",
+			"ny",
+			"mostrar_fondo_con_foto",
+			"secciones",
+			"60"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -374,12 +361,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"-",
-			"",
-			"<vida_util>50000</vida_util>",
-			"<precio_oficina_6>500</precio_oficina_6>",
-			"<precio_oficina_6>100</precio_oficina_6>",
-			"<mantenimiento_oficina_6>3</mantenimiento_oficina_6>"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -390,8 +371,170 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/index.html",
+					"settings":
+					{
+						"buffer_size": 3658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2123,
+								2123
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/com/header/Header.js",
+					"settings":
+					{
+						"buffer_size": 889,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								804,
+								804
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/js/com/secciones/Secciones.js",
+					"settings":
+					{
+						"buffer_size": 1246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								376
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/js/com/secciones/Base_Seccion.js",
+					"settings":
+					{
+						"buffer_size": 871,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								372,
+								372
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/js/com/secciones/SeccionMapa.js",
+					"settings":
+					{
+						"buffer_size": 3787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								555,
+								577
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 104.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "www/css/mapa.css",
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -401,7 +544,7 @@
 	},
 	"input":
 	{
-		"height": 40.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -428,7 +571,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 64.0
+		"height": 0.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -451,6 +594,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 50.0,
+	"side_bar_width": 279.0,
 	"status_bar_visible": true
 }

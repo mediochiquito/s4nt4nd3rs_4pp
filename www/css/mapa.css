@@ -10,14 +10,25 @@
 	position: absolute;
 
 }
+
+#SeccionMapa_holdermap_canvas{
+
+	top: 0px;
+	left: 0px;
+
+}
+
 #SeccionMapa_map_canvas{
 
 	top: 0px;
 	left: 0px;
-	border-radius: 10px;
+	width: 100%;
+	height: 100%;
 
 }
-
+#SeccionMapa_map_canvas img {
+    max-width: none;
+}
 #SeccionMapa_esquina_si{
 
 	top: 59px;

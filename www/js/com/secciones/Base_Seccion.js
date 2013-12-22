@@ -9,7 +9,7 @@ function Base_Seccion(){
 		
 		var t = $time; 
 		if(typeof($time) == 'undefined') t = 300;
-
+		
 		document.activeElement.blur();
 		$("input").blur();
 

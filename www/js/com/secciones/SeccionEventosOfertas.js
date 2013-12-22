@@ -57,10 +57,10 @@ function SeccionEventosOfertas()
 
 	}
 
-	this.cargar_listas = function(){
-	
-		lista_descuentos.listar()
-		lista_ofertas.listar()
+	this.cargar_listas = function($query){
+		
+		lista_descuentos.listar($query)
+		lista_ofertas.listar($query)
 
 	}
 

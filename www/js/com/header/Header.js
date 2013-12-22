@@ -16,24 +16,21 @@ function Header(){
 	var search = document.createElement('input');
 	search.id = 'Header_search';
 	search.type = 'text';
-	$(this.main).append(search);
 
-/*
-	var lupa = new Image()
-	lupa.src = 'img/header/lupa.png';
-	lupa.id = 'Header_lupa';
-	$(this.main).append(lupa);*/
+	$(this.main).append(search);
+	$(search).bind('keyup', doKeyUp)
+
 
 	var ancho_search = 210+((app.ancho-320)/2)
 	if(ancho_search>270) ancho_search = 270;
 	$(search).css({'width':ancho_search});
 
-	//$(lupa).css({'margin-right':ancho_search/2-10});
-	
-	
-	
-	/*if(app.ancho > 400) $(search).css({'margin-left':-149, 'width':270});
-	else $(search).css({'margin-left':-86, 'width':200});*/
+
+	function doKeyUp(e){
+
+		app.secciones.go(app.secciones.seccioneventosofertas)
+		app.secciones.seccioneventosofertas.set
+	}
 
 	function doMenu(){
 
