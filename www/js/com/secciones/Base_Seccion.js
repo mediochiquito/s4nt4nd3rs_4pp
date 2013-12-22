@@ -10,8 +10,8 @@ function Base_Seccion(){
 		var t = $time; 
 		if(typeof($time) == 'undefined') t = 300;
 		
-		document.activeElement.blur();
-		$("input").blur();
+	/*	document.activeElement.blur();
+		$("input").blur();*/
 
 		$(self.main).transition({x:0},0)
 		$(this.main).transition({
@@ -35,9 +35,9 @@ function Base_Seccion(){
 	}
 	this.ocultar = function($time){
 		
-		document.activeElement.blur();
+		/*document.activeElement.blur();
 		$("input").blur();
-
+*/
 		var t = $time; 
 		if(typeof($time) ==  'undefined') t = 300
 

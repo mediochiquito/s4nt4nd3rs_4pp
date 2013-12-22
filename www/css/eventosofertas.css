@@ -78,3 +78,24 @@
 	left: 50%;
 
 }
+.sin_resultados{
+
+	font-family: 'GothamBold';
+	 
+
+	font-size: 13px;
+	 color: #ccc;
+	 
+
+	width: 100%;
+	 
+
+
+	position: absolute;
+
+}
+.sin_resultados div{
+
+	padding: 5px;
+
+}

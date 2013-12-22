@@ -26,9 +26,7 @@
 	height: 100%;
 
 }
-#SeccionMapa_map_canvas img {
-    max-width: none;
-}
+
 #SeccionMapa_esquina_si{
 
 	top: 59px;

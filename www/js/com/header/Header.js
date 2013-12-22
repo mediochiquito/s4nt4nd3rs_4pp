@@ -29,7 +29,7 @@ function Header(){
 	function doKeyUp(e){
 
 		app.secciones.go(app.secciones.seccioneventosofertas)
-		app.secciones.seccioneventosofertas.set
+		app.secciones.seccioneventosofertas.cargar_listas($(search).val())
 	}
 
 	function doMenu(){

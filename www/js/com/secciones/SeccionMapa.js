@@ -27,6 +27,7 @@ function SeccionMapa()
 
 
 	var array_markers_eventos;
+	var array_markers_ofertas;
 	var map;
 
 	setTimeout(_construct, 0);
@@ -93,6 +94,7 @@ function SeccionMapa()
 	function do_LISTAR_EVENTOS(e){
 
 		array_markers_eventos = new Array();
+		array_markers_ofertas = new Array();
 
 		app.db.transaction(function (tx) {
 			//TODO agregar el estado
@@ -105,7 +107,7 @@ function SeccionMapa()
 		           				{
 								  position: new google.maps.LatLng(resultado.rows.item(i).eventos_lat,resultado.rows.item(i).eventos_lon),
 								  title:resultado.rows.item(i).eventos_nombre,
-								  icon: 'img/markers/evento.png',
+								  icon: {url:'img/markers/evento.png', scaledSize: new google.maps.Size(19, 30), size: new google.maps.Size(19, 30)},
 								  row: resultado.rows.item(i)
 								});
 
@@ -115,15 +117,44 @@ function SeccionMapa()
 					   	mostrar_un_evento(this.row)
 					});
 		        }
-		    })
+		    });
+
+			tx.executeSql("SELECT * FROM ofertas" , [], function (tx, resulato_ofertas) {
+		    	
+		    	var cant_ofertas = resulato_ofertas.rows.length;
+		        for(var i=0; i<cant_ofertas; i++){
+				
+		           array_markers_ofertas[i] = new google.maps.Marker(
+		           				{
+								  position: new google.maps.LatLng(resulato_ofertas.rows.item(i).ofertas_lat, resulato_ofertas.rows.item(i).ofertas_lon),
+								  title:resulato_ofertas.rows.item(i).ofertas_nombre,
+								  icon: {url:'img/markers/oferta.png', scaledSize: new google.maps.Size(19, 30), size: new google.maps.Size(19, 30)},
+								  row: resulato_ofertas.rows.item(i)
+								});
+
+					array_markers_ofertas[i].setMap(map);
+
+					google.maps.event.addListener(array_markers_ofertas[i], 'click', function() {
+					   	mostrar_una_oferta(this.row)
+					});
+		        }
+		    });
+
+
+
+
 		});
 
 	}
 
 
 
+	function mostrar_una_oferta($row){
+		
+	}
+
 	function mostrar_un_evento($row){
-		alert($row.eventos_id)
+		
 	}
 
 	function handleNoGeolocation(errorFlag) {

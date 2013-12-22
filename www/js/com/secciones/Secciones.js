@@ -36,7 +36,8 @@ function Secciones(){
 				obj_seccion_actual.ocultar($time);
 		}catch(e){}
 		
-		$base_seccion.mostrar($time, $data)
+		
+			$base_seccion.mostrar($time, $data);
 
 		obj_seccion_actual = $base_seccion
 		
