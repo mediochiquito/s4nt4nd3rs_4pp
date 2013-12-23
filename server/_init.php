@@ -27,8 +27,6 @@
 						   
 	}
 
-
-    
     
 //DATE
 	if(function_exists("date_default_timezone_set") and function_exists("date_default_timezone_get"))

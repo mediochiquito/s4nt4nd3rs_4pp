@@ -14,7 +14,7 @@ function App(){
 	this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
-
+	this._Facebook
 	var self = this
 	var tablas_creadas = 0
 	var xml_default_db;
@@ -119,12 +119,8 @@ function App(){
 	    	self._ManagePush = new ManagePush();
 	    	self._ManagePush.registrar();
 
-
-	    	FB.init({
-				  appId: '381248932009498',
-				  nativeInterface: CDV.FB,
-				  useCachedDialogs: false
-			});
+	    	self._Facebook = new Facebook()
+	    	self._Facebook.init() 
 
 
 		    if ( device.platform == 'android' || device.platform == 'Android' ) { }
@@ -181,34 +177,6 @@ function App(){
 	}
 
 
-
-	function doConnect(){
-		
-             FB.getLoginStatus(function(response) {
-	             	if (response.status == 'connected') {
-	             	if ( device.platform == 'android' || device.platform == 'Android' )
-						
-						alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
-						else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
-
-					} else {
-			
-			             FB.login(function(response) {
-					 		console.log(response)
-							  if (response.authResponse) {
-							    	
-							    	if ( device.platform == 'android' || device.platform == 'Android' )
-									alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
-									else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
-							    
-							   } else {
-							     alert('User cancelled login or did not fully authorize.');
-							   }
-							 }, {scope: ''})
-	         		}
-         		});
-			 
-	}
 
 
 	function start(){

@@ -36,17 +36,23 @@ function UnaOferta()
 	}
 
 	function doCompartir(){
-		
-       var params = {
-            method: 'feed',
-            name: $obj.row.ofertas_nombre,
-           	link: 'http://www.google.com',
-            /*picture: 'http://fbrell.com/f8.jpg',*/
-            caption: $obj.row.ofertas_cutoas,
-            description: $obj.row.ofertas_desc
-       };
 
-       FB.ui(params, function(obj) { console.log(obj);});
+		
+		self._Facebook.init(function(){
+
+	  		var params = {
+	            method: 'feed',
+	            name: $obj.row.ofertas_nombre,
+	           	link: 'http://www.google.com',
+	            /*picture: 'http://fbrell.com/f8.jpg',*/
+	            caption: $obj.row.ofertas_cutoas,
+	            description: $obj.row.ofertas_desc
+	        };
+
+	       FB.ui(params, function(obj) { console.log(obj);});
+
+		}) 
+     
                 
 	}
 
