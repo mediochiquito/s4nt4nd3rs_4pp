@@ -35,7 +35,7 @@ function SeccionMapa()
 
 	function _construct() {
 		
-		/*  var mapOptions = {
+		  var mapOptions = {
 		    zoom: 14,
 		    mapTypeControl: false,
 		    zoomControl: true,
@@ -58,7 +58,7 @@ function SeccionMapa()
 		  map = new google.maps.Map(map_canvas,  mapOptions);
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
-*/
+
 		 
 		  //  setTimeout(function() {
 		    //  google.maps.event.trigger(map,'resize');
