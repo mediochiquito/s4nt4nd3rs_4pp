@@ -9,14 +9,13 @@ function SeccionEventosOfertas()
 	$(this.main).append(holder_blanco_secciones)
 	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 	
-
 	$(this.main).bind("SOLAPA_CLICK", doSolapaClick)
 
 	var holder_tabs = document.createElement('div')
 	holder_tabs.id = 'SeccionEventosOfertas_holder_tabs'
 	$(holder_tabs).append('<div></div>')
 	$(this.main).append(holder_tabs)
-	$(holder_tabs).css({width: app.ancho-40, height: app.alto-200})
+	
 	
 
 	var solapa_eventos = new Solapa('EVENTOS', 'eventos', '#674d97')
@@ -26,9 +25,6 @@ function SeccionEventosOfertas()
 	var solapa_ofertas = new Solapa('DESCUENTOS', 'ofertas', '#ed1c24')
 	solapa_ofertas.main.id = 'solapa_ofertas'
 	$(this.main).append(solapa_ofertas.main)
-
-
-
 
 	var lista_eventos = new ListaEventos()
 	var lista_ofertas = new ListaOfertas()
@@ -89,51 +85,48 @@ function SeccionEventosOfertas()
 		
 		if(typeof($obj.solapa) == 'undefined') en_solapa = 'eventos';
 		else en_solapa = $obj.solapa;
-		$(holder_tabs).find('>div').empty()
+		$(holder_tabs).find('>div').empty();
+
 		if($obj.solapa == 'eventos'){
-		
-			solapa_eventos.habil(true)
-			solapa_ofertas.habil(false)
+			$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
+			solapa_eventos.habil(true);
+			solapa_ofertas.habil(false);
 			setTimeout(function(){
 				$(holder_tabs).find('>div').html(lista_eventos.main);
-			}, 100)
-			
-			
+			}, 100);
 			$(btn_ver_en_mapa.main).css({'margin-left': -143, top:app.alto-80});
 			$(btn_subir_mapa.main).show();
 			$(btn_ver_en_mapa.main).show();
 		}
 
 		if($obj.solapa == 'ofertas'){
-			
-			solapa_eventos.habil(false)
-			solapa_ofertas.habil(true)
-			//setTimeout(function(){
-				$(holder_tabs).find('>div').html(lista_ofertas.main)
-			//}, 100)
-			
+			$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
+			solapa_eventos.habil(false);
+			solapa_ofertas.habil(true);
+			setTimeout(function(){
+				$(holder_tabs).find('>div').html(lista_ofertas.main);
+			}, 100);
 			$(btn_ver_en_mapa.main).css({'margin-left': -70, top:app.alto-80});
 			$(btn_ver_en_mapa.main).show();
 			$(btn_subir_mapa.main).hide();
 		}
 
 		if($obj.solapa == 'una_oferta'){
-			
-			solapa_eventos.habil(false)
-			solapa_ofertas.habil(true)
-			una_oferta._set($obj)
-			$(holder_tabs).find('>div').html(una_oferta.main)
+			$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
+			solapa_eventos.habil(false);
+			solapa_ofertas.habil(true);
+			una_oferta._set($obj);
+			$(holder_tabs).find('>div').html(una_oferta.main);
 			$(btn_ver_en_mapa.main).hide();
 			$(btn_subir_mapa.main).hide();
 
 		}
 
-
 		if($obj.solapa == 'un_evento'){
-			
-			solapa_eventos.habil(true)
-			solapa_ofertas.habil(false)
-			$(holder_tabs).find('>div').html(un_evento.main)
+			$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
+			solapa_eventos.habil(true);
+			solapa_ofertas.habil(false);
+			$(holder_tabs).find('>div').html(un_evento.main);
 			$(btn_ver_en_mapa.main).hide();
 			$(btn_subir_mapa.main).hide();
 		}

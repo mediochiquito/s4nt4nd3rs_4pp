@@ -65,7 +65,23 @@
 	color: #fff;
 }
 
-
+.BotonAzul{
+	
+	background-color: #3b5a99;
+	color: #fff;
+	font-family: 'GothamBold';
+	padding: 11px 0px 11px 0px;
+	font-size: 12px;
+	position: absolute;
+	border-radius: 7px;
+	width: 140px;
+	text-align: center;
+}
+.BotonAzul img{
+	position: absolute;
+	left: 8px;
+	top: 4px;
+}
 
 .Boton{
 	

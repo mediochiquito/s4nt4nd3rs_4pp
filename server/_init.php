@@ -19,10 +19,11 @@
 
 	}else{
 
+		// http://santander.crudo.com.uy/
 		define("DB_HOST", "localhost");
-		define("DB_USER", "root");
-		define("DB_PASS", "");
-		define("DB_NAME", "santanders");
+		define("DB_USER", "herna_moto");
+		define("DB_PASS", "vespa");
+		define("DB_NAME", "hernan_santanders");
 						   
 	}
 

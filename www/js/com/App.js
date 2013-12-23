@@ -124,17 +124,17 @@ function App(){
 				  appId: '381248932009498',
 				  nativeInterface: CDV.FB,
 				  useCachedDialogs: false
-				});
+			});
+
+
+		    if ( device.platform == 'android' || device.platform == 'Android' ) { }
+			else {
+			   StatusBar.hide();
+			}
+
    		}
    		
-   		if ( device.platform == 'android' || device.platform == 'Android' )
-		{
-		   
-		}
-		else
-		{
-		   StatusBar.hide();
-		}
+   		
 		
 
    	

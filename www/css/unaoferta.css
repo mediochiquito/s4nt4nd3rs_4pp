@@ -50,3 +50,13 @@
 	font-size: 12px;
 	float: left;
 }
+#UnaOferta_holder_footer{
+	position: relative;
+	width: 100%;
+	height: 70px;
+}
+#UnaOferta_btn_compartir{
+	left: 50%;
+	top: 15px;
+	margin-left: -75px;
+}

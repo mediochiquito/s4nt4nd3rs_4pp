@@ -20,6 +20,13 @@ function UnaOferta()
 	holder_data.id = 'UnaOferta_holder_data'
 	$(this.main).append(holder_data)
 
+	var holder_footer =  document.createElement('div')
+	holder_footer.id = 'UnaOferta_holder_footer'
+	$(this.main).append(holder_footer)
+
+	var btn_compartir = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;COMPARTIR", doCompartir, 'BotonAzul')
+	btn_compartir.main.id = 'UnaOferta_btn_compartir'
+	$(holder_footer).append(btn_compartir.main)
 
 	function addRegistro($label, $data){
 
@@ -28,6 +35,10 @@ function UnaOferta()
 							  '</div><br style="clear:both"></div>')
 	}
 
+	function doCompartir(){
+
+
+	}
 
 	this._set = function ($obj){
 
@@ -40,11 +51,11 @@ function UnaOferta()
 		addRegistro('Cuotas', $obj.row.ofertas_cutoas)
 		addRegistro('Descuento', $obj.row.ofertas_descuento)
 		addRegistro('Dias de descuento', $obj.row.ofertas_dias)
-		addRegistro('Telefono', $obj.row.ofertas_tel)
+		addRegistro('Telefono', '<a href="tel:' + $obj.row.ofertas_tel + '">' + $obj.row.ofertas_tel + "</a>")
 		addRegistro('Dirección', $obj.row.ofertas_dir)
 		addRegistro('Observaciones', $obj.row.ofertas_desc)
 
-
+		
 
 	}
 

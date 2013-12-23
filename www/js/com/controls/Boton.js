@@ -1,9 +1,13 @@
-function Boton($text, $callback){
+function Boton($html, $callback, $className){
 	var self = this
 	this.main = document.createElement('div');
-	this.main.className = 'Boton'
+	
+	if(typeof( $className) =='undefined')
+		this.main.className = 'Boton';
+	else
+		this.main.className = $className;
 
-	$(this.main).html($text)
+	$(this.main).html($html)
 	$(this.main).css("cursor", "pointer");
 
 	var habil = true;

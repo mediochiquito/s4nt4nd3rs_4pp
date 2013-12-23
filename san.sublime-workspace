@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bo",
+				"border-bottom"
+			],
+			[
 				"ba",
 				"background"
 			],
@@ -64,10 +68,6 @@
 				"className"
 			],
 			[
-				"bo",
-				"border"
-			],
-			[
 				"re",
 				"repeat-x"
 			],
@@ -83,50 +83,39 @@
 			"file": "www/index.html",
 			"settings":
 			{
-				"buffer_size": 3658,
+				"buffer_size": 3817,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/js/com/header/Header.js",
+			"file": "www/js/com/controls/Boton.js",
 			"settings":
 			{
-				"buffer_size": 889,
+				"buffer_size": 1193,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/css/controls.css",
+			"settings":
+			{
+				"buffer_size": 1695,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/js/com/secciones/Secciones.js",
+			"file": "www/js/com/secciones/eventosofertas/UnaOferta.js",
 			"settings":
 			{
-				"buffer_size": 1246,
+				"buffer_size": 1837,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "www/js/com/secciones/Base_Seccion.js",
+			"file": "www/css/unaoferta.css",
 			"settings":
 			{
-				"buffer_size": 871,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/SeccionMapa.js",
-			"settings":
-			{
-				"buffer_size": 3787,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "#SeccionMapa{\n	position: absolute;\n\n}\n#SeccionMapa img{\n	position: absolute;\n\n}\n#SeccionMapa div{\n	position: absolute;\n\n}\n\n#SeccionMapa_holdermap_canvas{\n\n	top: 0px;\n	left: 0px;\n\n}\n\n#SeccionMapa_map_canvas{\n\n	top: 0px;\n	left: 0px;\n	width: 100%;\n	height: 100%;\n\n}\n\n#SeccionMapa_esquina_si{\n\n	top: 59px;\n	left: 6px;\n}\n\n#SeccionMapa_map_canvas img{\n\n/*	-webkit-transform: scale(1, 1); \n*/\n\n}\n",
-			"file": "www/css/mapa.css",
-			"file_size": 484,
-			"file_write_time": 130321486440128230,
-			"settings":
-			{
-				"buffer_size": 389,
+				"buffer_size": 892,
 				"line_ending": "Windows"
 			}
 		}
@@ -156,38 +145,41 @@
 	"file_history":
 	[
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/SeccionHome.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa - copia.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
 		"/C/wamp/www/green ray led/public/js/com/App.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.txt",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
 		"/C/Users/Mateo/Downloads/vida en balance mobile/public/js/facebook.js",
 		"/C/Users/Mateo/Desktop/Home.js",
@@ -279,10 +271,7 @@
 		"/C/wamp/www/Croma/css/foto.css",
 		"/C/wamp/www/Croma/com/CanvasSaver.js",
 		"/C/wamp/www/Croma/com/SeccionRegistro.js",
-		"/C/wamp/www/Croma/com/SeccionFoto.js",
-		"/C/wamp/www/Croma/css/app.css",
-		"/C/wamp/www/Croma/com/App.js",
-		"/C/wamp/www/Croma/index.html"
+		"/C/wamp/www/Croma/com/SeccionFoto.js"
 	],
 	"find":
 	{
@@ -300,6 +289,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"holder_footer",
+			"html",
+			"lista_descuentos",
+			"mostrar_solapa",
+			"$solapa",
+			"solapa",
+			"resultado",
+			"eventos",
 			">\n",
 			"DROP",
 			"eventos",
@@ -371,7 +368,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -379,15 +376,15 @@
 					"file": "www/index.html",
 					"settings":
 					{
-						"buffer_size": 3658,
+						"buffer_size": 3817,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2123,
-								2123
+								3809,
+								3809
 							]
 						],
 						"settings":
@@ -396,25 +393,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 825.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "www/js/com/header/Header.js",
+					"file": "www/js/com/controls/Boton.js",
 					"settings":
 					{
-						"buffer_size": 889,
+						"buffer_size": 1193,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								804,
-								804
+								865,
+								865
 							]
 						],
 						"settings":
@@ -423,52 +420,52 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 450.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "www/js/com/secciones/Secciones.js",
+					"file": "www/css/controls.css",
 					"settings":
 					{
-						"buffer_size": 1246,
+						"buffer_size": 1695,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								355,
-								376
+								1695,
+								1695
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 135.0,
+						"translation.y": 901.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "www/js/com/secciones/Base_Seccion.js",
+					"file": "www/js/com/secciones/eventosofertas/UnaOferta.js",
 					"settings":
 					{
-						"buffer_size": 871,
+						"buffer_size": 1837,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								372,
-								372
+								1828,
+								1828
 							]
 						],
 						"settings":
@@ -477,60 +474,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "www/js/com/secciones/SeccionMapa.js",
+					"file": "www/css/unaoferta.css",
 					"settings":
 					{
-						"buffer_size": 3787,
+						"buffer_size": 892,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								555,
-								577
+								889,
+								889
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 104.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "www/css/mapa.css",
-					"settings":
-					{
-						"buffer_size": 389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								218,
-								218
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 496.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
