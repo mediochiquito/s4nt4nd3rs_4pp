@@ -12,7 +12,7 @@ function Facebook(){
 
 	}
 
-	
+
 	this.conectar = function($callback){
 
      	 FB.getLoginStatus(function(response) {
@@ -23,6 +23,8 @@ function Facebook(){
 						else 
 							alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
 
+
+						$callback();
 					} else {
 			
 			             FB.login(function(response) {
@@ -32,7 +34,8 @@ function Facebook(){
 							    	if ( device.platform == 'android' || device.platform == 'Android' )
 										 alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
 									else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
-							    
+							    	$callback();
+							    	
 							   } else {
 							     alert('User cancelled login or did not fully authorize.');
 							   }

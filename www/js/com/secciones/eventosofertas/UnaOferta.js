@@ -37,8 +37,8 @@ function UnaOferta()
 
 	function doCompartir(){
 
-		
-		self._Facebook.init(function(){
+
+		app._Facebook.conectar(function(){
 
 	  		var params = {
 	            method: 'feed',
