@@ -206,7 +206,7 @@ function App(){
 		setTimeout(function(){
 
 			app.secciones.go(app.secciones.seccionhome)
-			if(app.hay_internet()) setTimeout(verfificar_sync, 3000);
+			if(app.hay_internet()) setTimeout(verfificar_sync, 2000);
 			else $(document).trigger('LISTAR_EVENTOS');
 
 		}, 100);
