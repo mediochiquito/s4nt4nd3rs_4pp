@@ -272,7 +272,7 @@ function App(){
 		app.db.transaction(function (tx) {
 
 			for(var item_evento in obj){
-					tx.executeSql('INSERT OR IGNORE INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria_id","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_tags","eventos_estado","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?,?,?)', 
+					tx.executeSql('INSERT OR IGNORE INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria_id","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_tags","eventos_estado","eventos_header_img","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', 
 													  [
 													  obj[item_evento].eventos_id, 
 													  obj[item_evento].eventos_nombre, 
@@ -285,6 +285,7 @@ function App(){
 													  obj[item_evento].eventos_uid, 
 													  obj[item_evento].eventos_tags, 
 													  obj[item_evento].eventos_estado, 
+													  obj[item_evento].eventos_header_img, 
 													  obj[item_evento].eventos_fecha_hora_creado
 
 
@@ -297,7 +298,7 @@ function App(){
 		app.db.transaction(function (tx) {
 			
 			for(var item_evento in obj){
-					tx.executeSql('UPDATE "eventos" SET "eventos_nombre"=?,"eventos_fecha_hora"=?,"eventos_categoria_id"=?,"eventos_lugar"=?,"eventos_desc"=?,"eventos_lat"=?,"eventos_lon"=?,"eventos_uid"=?,"eventos_tags"=?,"eventos_estado"=?, "eventos_fecha_hora_creado"=? WHERE "eventos_id"=?', 
+					tx.executeSql('UPDATE "eventos" SET "eventos_nombre"=?,"eventos_fecha_hora"=?,"eventos_categoria_id"=?,"eventos_lugar"=?,"eventos_desc"=?,"eventos_lat"=?,"eventos_lon"=?,"eventos_uid"=?,"eventos_tags"=?,"eventos_estado"=?,"eventos_header_img"=?, "eventos_fecha_hora_creado"=? WHERE "eventos_id"=?', 
 														  [
 														
 														  obj[item_evento].eventos_nombre, 
@@ -310,6 +311,7 @@ function App(){
 														  obj[item_evento].eventos_uid, 
 														  obj[item_evento].eventos_tags, 
 														  obj[item_evento].eventos_estado, 
+														  obj[item_evento].eventos_header_img, 
 														  obj[item_evento].eventos_fecha_hora_creado,
 														  obj[item_evento].eventos_id
 														  ]);
@@ -396,6 +398,7 @@ function App(){
 						  '"eventos_uid" VARCHAR, ' +
 						  '"eventos_tags" VARCHAR, ' +
 						  '"eventos_estado" INTEGER, ' +
+						  '"eventos_header_img" VARCHAR, ' +
 						  '"eventos_fecha_hora_creado" DATETIME)', [], comprobacion_total_tablas_creadas);
     }
 

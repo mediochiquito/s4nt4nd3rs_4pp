@@ -37,7 +37,18 @@ function UnaOferta()
 
 	function doCompartir(){
 
+        var params = {
+            method: 'feed',
+            name: $obj.row.ofertas_nombre,
+           	
+            /*picture: 'http://fbrell.com/f8.jpg',*/
+            caption: $obj.row.ofertas_cutoas,
+            description: $obj.row.ofertas_desc
+          };
 
+       
+       FB.ui(params, function(obj) { console.log(obj);});
+                
 	}
 
 	this._set = function ($obj){

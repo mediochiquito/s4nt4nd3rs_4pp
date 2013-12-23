@@ -8,7 +8,7 @@ class Push{
 	// IOS
 	var $apns;
 	var $apns_url = 'gateway.push.apple.com';
-	var $apns_cert = 'apns-dev.pem';
+	var $apns_cert = 'apns-prod.pem';
 	var $apns_port = 2195;
 	var $stream_context;
 	
@@ -16,9 +16,9 @@ class Push{
 	
 	function __construct(){
 		
-		/*$this->stream_context = stream_context_create();
+		$this->stream_context = stream_context_create();
 		stream_context_set_option($this->stream_context, 'ssl', 'local_cert', $this->apns_cert);
-		$this->apns = stream_socket_client('ssl://' . $this->apns_url . ':' . $this->apns_port, $error, $error_string, 2, STREAM_CLIENT_CONNECT, $this->stream_context);*/
+		$this->apns = stream_socket_client('ssl://' . $this->apns_url . ':' . $this->apns_port, $error, $error_string, 2, STREAM_CLIENT_CONNECT, $this->stream_context);
 		
 	}
 	
@@ -72,6 +72,7 @@ class Push{
 	
 }
 
-
 $p = new Push();
-$p->enviar_push_android('APA91bE5RcCsiKgVF0aM2_yGkE9owZhsIsc9Kny2uH1ULrIPfz4M368bwRDBdU_WWQoPvjs5As1caqwS95PNGQ-QgzsRXIatcAH3_H-Q4VjoEDuGHNig2EWEmEyBypAW4DHEwAvFW0B-ZbnKWIdWQqO108twyWaDAw', 'titulo titulo', 'caca caca caca');
+$p->enviar_push_ios('2842f7860c6d8b8e1229c2a7a462e6a70cf1dc314c264887c40b5addd29df11c', 'Test Titulo',  'Test mensaje mensaje');
+
+//$p->enviar_push_android('APA91bE5RcCsiKgVF0aM2_yGkE9owZhsIsc9Kny2uH1ULrIPfz4M368bwRDBdU_WWQoPvjs5As1caqwS95PNGQ-QgzsRXIatcAH3_H-Q4VjoEDuGHNig2EWEmEyBypAW4DHEwAvFW0B-ZbnKWIdWQqO108twyWaDAw', 'titulo titulo', 'caca caca caca');
