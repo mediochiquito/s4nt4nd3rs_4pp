@@ -1,6 +1,6 @@
 <?
 include dirname(__FILE__) . '/_init.php';
-$rs = mysql_query('SELECT sync_value FROM sync LIMIT 1');
+$rs = mysql_query('SELECT MAX(eventos_sync_value) as sync_value FROM eventos LIMIT 1');
 $row = mysql_fetch_object($rs);
-echo $row->sync_value;
+echo strtotime($row->sync_value);
 	

@@ -1,7 +1,7 @@
 <?
 include dirname(__FILE__) . '/_init.php';
 $sync_value = $_GET['sync_value'];
-$rs_eventos = mysql_query('SELECT * FROM eventos WHERE eventos_sync_value>' . $sync_value . ' ORDER BY eventos_id ASC');
+$rs_eventos = mysql_query('SELECT * FROM eventos WHERE eventos_sync_value>"' . date('Y-m-d H:i:s', strtotime($sync_value)) . '" ORDER BY eventos_id ASC');
 	
 	/*<categorias>
 		<item></item>

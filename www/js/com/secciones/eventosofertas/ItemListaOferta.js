@@ -23,7 +23,7 @@ function ItemListaOferta($row)
 		pintar()
 		setTimeout(function(){
 
-			app.secciones.go(app.secciones.seccionunaoferta, 300, {row: $row})
+			app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'una_oferta', row: $row})
 
 		}, 200)
 		setTimeout(despintar, 800)

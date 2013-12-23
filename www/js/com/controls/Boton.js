@@ -41,7 +41,8 @@ function Boton($text, $callback){
 	function do_click(){
 	
 		if(habil) $callback();
-		
+		document.activeElement.blur();
+		$("input").blur();
 	}
 	
 	function do_mouseover(){

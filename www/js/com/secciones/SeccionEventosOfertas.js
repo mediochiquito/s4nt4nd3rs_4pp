@@ -9,13 +9,6 @@ function SeccionEventosOfertas()
 	$(this.main).append(holder_blanco_secciones)
 	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 	
-	var solapa_eventos = new Solapa('EVENTOS', 'eventos', '#674d97')
-	solapa_eventos.main.id = 'solapa_eventos'
-	$(this.main).append(solapa_eventos.main)
-
-	var solapa_ofertas = new Solapa('DESCUENTOS', 'ofertas', '#ed1c24')
-	solapa_ofertas.main.id = 'solapa_ofertas'
-	$(this.main).append(solapa_ofertas.main)
 
 	$(this.main).bind("SOLAPA_CLICK", doSolapaClick)
 
@@ -25,9 +18,22 @@ function SeccionEventosOfertas()
 	$(this.main).append(holder_tabs)
 	$(holder_tabs).css({width: app.ancho-40, height: app.alto-200})
 	
-	var lista_descuentos = new ListaEventos()
-	var lista_ofertas = new ListaOfertas()
 
+	var solapa_eventos = new Solapa('EVENTOS', 'eventos', '#674d97')
+	solapa_eventos.main.id = 'solapa_eventos'
+	$(this.main).append(solapa_eventos.main)
+
+	var solapa_ofertas = new Solapa('DESCUENTOS', 'ofertas', '#ed1c24')
+	solapa_ofertas.main.id = 'solapa_ofertas'
+	$(this.main).append(solapa_ofertas.main)
+
+
+
+
+	var lista_eventos = new ListaEventos()
+	var lista_ofertas = new ListaOfertas()
+	var un_evento = new UnEvento()
+	var una_oferta = new UnaOferta()
 
 	var   is ;
 	var scroll_set =  false
@@ -53,13 +59,16 @@ function SeccionEventosOfertas()
 
 	function doSolapaClick(e){
 
-		mostrar_solapa(e.value)
+		mostrar_solapa({solapa:e.value})
 
 	}
 
 	this.cargar_listas = function($busqueda){
 		
-		lista_descuentos.listar($busqueda)
+		if(en_solapa=='una_oferta') mostrar_solapa({solapa:'eventos'});
+		if(en_solapa=='un_evento')  mostrar_solapa({solapa:'ofertas'});
+
+		lista_eventos.listar($busqueda)
 		lista_ofertas.listar($busqueda)
 
 		setTimeout(function(){  
@@ -74,30 +83,61 @@ function SeccionEventosOfertas()
 
 	}
 
-	function mostrar_solapa($solapa){
+	function mostrar_solapa($obj){
 		
 		$(btn_subir_mapa.main).css({'margin-left': 3, top:app.alto-80})
 		
-		if(typeof($solapa) == 'undefined') en_solapa = 'eventos';
-		else en_solapa = $solapa;
-
-		if($solapa == 'eventos'){
+		if(typeof($obj.solapa) == 'undefined') en_solapa = 'eventos';
+		else en_solapa = $obj.solapa;
+		$(holder_tabs).find('>div').empty()
+		if($obj.solapa == 'eventos'){
 		
 			solapa_eventos.habil(true)
 			solapa_ofertas.habil(false)
-			$(holder_tabs).find('>div').html(lista_descuentos.main)
+			setTimeout(function(){
+				$(holder_tabs).find('>div').html(lista_eventos.main);
+			}, 100)
+			
+			
 			$(btn_ver_en_mapa.main).css({'margin-left': -143, top:app.alto-80});
 			$(btn_subir_mapa.main).show();
+			$(btn_ver_en_mapa.main).show();
 		}
 
-		if($solapa == 'ofertas'){
+		if($obj.solapa == 'ofertas'){
 			
 			solapa_eventos.habil(false)
 			solapa_ofertas.habil(true)
-			$(holder_tabs).find('>div').html(lista_ofertas.main)
+			//setTimeout(function(){
+				$(holder_tabs).find('>div').html(lista_ofertas.main)
+			//}, 100)
+			
 			$(btn_ver_en_mapa.main).css({'margin-left': -70, top:app.alto-80});
+			$(btn_ver_en_mapa.main).show();
 			$(btn_subir_mapa.main).hide();
 		}
+
+		if($obj.solapa == 'una_oferta'){
+			
+			solapa_eventos.habil(false)
+			solapa_ofertas.habil(true)
+			una_oferta._set($obj)
+			$(holder_tabs).find('>div').html(una_oferta.main)
+			$(btn_ver_en_mapa.main).hide();
+			$(btn_subir_mapa.main).hide();
+
+		}
+
+
+		if($obj.solapa == 'un_evento'){
+			
+			solapa_eventos.habil(true)
+			solapa_ofertas.habil(false)
+			$(holder_tabs).find('>div').html(un_evento.main)
+			$(btn_ver_en_mapa.main).hide();
+			$(btn_subir_mapa.main).hide();
+		}
+
 
 		setTimeout(function(){  
                if(!scroll_set){
@@ -107,7 +147,7 @@ function SeccionEventosOfertas()
                		is.refresh()
                }
                is.scrollTo(0, 0, 0)
-   		}, 110)
+   		}, 200)
 
 
 	}
@@ -117,11 +157,11 @@ function SeccionEventosOfertas()
 		if(typeof($obj)!='undefined'){
 
 			this.cargar_listas('');
-			mostrar_solapa($obj.solapa);
+			mostrar_solapa($obj);
 
 		}else{
 
-			if(en_solapa=='') mostrar_solapa('eventos');
+			if(en_solapa=='') mostrar_solapa({solapa:'eventos'});
 
 
 

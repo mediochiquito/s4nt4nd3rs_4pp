@@ -212,11 +212,13 @@ function SeccionMapa()
 
 
 	function mostrar_una_oferta($row){
-		app.secciones.go(app.secciones.seccionunaoferta, 300, {row: $row})
+	
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'una_oferta', row: $row})
+
 	}
 
 	function mostrar_un_evento($row){
-		app.secciones.go(app.secciones.seccionunevento, 300, {row: $row})
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'un_evento', row: $row})
 	}
 
 	function handleNoGeolocation(errorFlag) {

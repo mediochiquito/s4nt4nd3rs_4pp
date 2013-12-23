@@ -3,10 +3,50 @@
 }
 
 #SeccionUnaOferta_img{
-
-	left: 20px;
+	position: relative;
 	
 
-	top: 60px;
-
+}
+#UnaOferta_header_titulo{
+	position: relative;
+	
+	height: 35px;
+	width: 100%;
+	background-color: #ed1c24;
+}
+#UnaOferta_titulo_txt{
+	position: absolute;
+	
+	height: 35px;
+	width: 90%;
+	color: #fff;
+	font-family: 'GothamBold';
+	font-size: 14px;
+	top: 9px;
+	left: 11px;
+}
+#UnaOferta_holder_data{
+	position: relative;
+	
+	width: 100%;
+}
+.UnaOferta_reg{
+	position: relative;
+	width: 100%;
+	padding: 5px;
+	border-bottom: solid 1px #ccc;
+	
+}
+.UnaOferta_label{
+	position: relative;
+	width: 100px;
+	font-family: 'GothamBold';
+	font-size: 12px;
+	float: left;
+}
+.UnaOferta_data{
+	position: relative;
+	font-family: 'GothamBook';
+	font-size: 12px;
+	float: left;
 }

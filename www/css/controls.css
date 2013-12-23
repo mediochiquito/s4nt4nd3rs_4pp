@@ -14,11 +14,8 @@
 .Solapa{
 
 	width: 93px;
-	
-
 	height: 36px;
 	border-radius: 7px 7px 0px 0px;
-	
 	position: absolute;
 	font-family: Verdana;
 }
@@ -29,8 +26,9 @@
 	text-align: center;
 	color: #fff;
 	font-size: 11px;
-	top: 12px;
-	 font-family: 'GothamBold';
+	top: 13px;
+	font-family: 'GothamBold';
+	line-height: 13px;
 }
 
 .ComboBox

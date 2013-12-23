@@ -10,7 +10,7 @@ function ItemListaEvento($row)
 	$(this.main).append(txt)
 	$(txt).html($row.eventos_nombre)
 	
-
+	
 	this.main.addEventListener('click', doClick);
 /*	this.main.addEventListener('touchstart', pintar);
 	this.main.addEventListener('touchend', despintar);*/
@@ -18,10 +18,7 @@ function ItemListaEvento($row)
 	function doClick(e){
 		pintar()
 		setTimeout(function(){
-
-			app.secciones.go(app.secciones.seccionunevento, 300, {row: $row})
-
-
+			app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'un_evento', row: $row})
 		}, 200)
 		setTimeout(despintar, 800)
 	}

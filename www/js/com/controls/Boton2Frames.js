@@ -45,7 +45,8 @@ function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 	function do_click(){
 
 		if(habil) $callback();
-		
+		document.activeElement.blur();
+		$("input").blur();
 	}
 	
 	function do_mouseover(){
