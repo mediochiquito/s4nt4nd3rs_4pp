@@ -50,16 +50,16 @@ function UnaOferta()
 	        };
 
 	       FB.ui(params, function(obj) { console.log(obj);});*/
-	       console.log('Debug 1');
+	      // console.log('Debug 1');
                                 var params = {
                                     method: 'feed',
-                                    name: 'Facebook Dialogs',
+                                    name: $obj.row.ofertas_nombre,
                                     link: 'https://developers.facebook.com/docs/reference/dialogs/',
                                     picture: 'http://fbrell.com/f8.jpg',
                                     caption: 'Reference Documentation',
                                     description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
                                   };
-                                console.log(params);
+                               // console.log(params);
                             FB.ui(params, function(obj) { console.log(obj);});
 		}) 
      

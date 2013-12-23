@@ -24,6 +24,9 @@ function App(){
 	var new_sync_value = 0
 	var btn_connect;
 
+	this.categorias_eventos = new Array("Deportes","Moda", "Música", "Culturales", "Gastronómico");
+
+
 	this.initialize = function(){
 
 		document.addEventListener('deviceready', deviceready, false);
@@ -310,8 +313,9 @@ function App(){
 
 					xml_default_db = xml;
 					tablas_creadas = 0;
+					//crearTabla_Categorias, 
 					array_tablas_a_crear = new Array(crearTabla_Eventos,
-													 crearTabla_Categorias, 
+													
 													 crearTabla_Ofertas, 
 													 crearTabla_App);
 
@@ -413,7 +417,7 @@ function App(){
 
     }
 
-    function crearTabla_Categorias($tx){
+  /*  function crearTabla_Categorias($tx){
 		
 
 			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "categorias" ("categorias_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "categorias_nombre" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
@@ -424,7 +428,7 @@ function App(){
 			$tx.executeSql('INSERT OR IGNORE  INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Culturales")');
 			$tx.executeSql('INSERT OR IGNORE  INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Gastronómico")');
     
-    }
+    }*/
 
     function la_tala_fue_creada($tx, $table_name, $callback){
     	$tx.executeSql("SELECT name FROM sqlite_master WHERE name='"+$table_name+"'" , [],	

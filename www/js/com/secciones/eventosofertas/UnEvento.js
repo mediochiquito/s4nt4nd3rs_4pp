@@ -29,6 +29,16 @@ function UnEvento()
 	btn_compartir.main.id = 'UnEvento_btn_compartir'
 	$(holder_footer).append(btn_compartir.main)
 
+
+	var btn_participar = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;PARTICIPAR", doParticipar, 'BotonAzul')
+	btn_participar.main.id = 'UnEvento_btn_participar'
+	$(holder_footer).append(btn_participar.main)
+
+	var holder_participaciones =  document.createElement('div')
+	holder_participaciones.id = 'UnEvento_holder_participaciones'
+	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div>')
+	$(this.main).append(holder_participaciones)
+
 	function addRegistro($label, $data){
 
 		$(holder_data).append('<div class="UnEvento_reg"><div class="UnEvento_label">'+ $label+
@@ -36,9 +46,15 @@ function UnEvento()
 							  '</div><br style="clear:both"></div>')
 	}
 
-	function doCompartir(){
-/*
+	function doParticipar(){
+		
 
+	}
+
+
+	function doCompartir(){
+		
+		/*
 		app._Facebook.conectar(function(){
 
 	  		var params = {
@@ -65,13 +81,11 @@ function UnEvento()
 		$(titulo_txt).html($obj.row.eventos_nombre);
 		$(holder_data).empty()
 		
-	/*	addRegistro('Cuotas', $obj.row.ofertas_cutoas)
-		addRegistro('Descuento', $obj.row.ofertas_descuento)
-		addRegistro('Dias de descuento', $obj.row.ofertas_dias)
-		addRegistro('Telefono', '<a href="tel:' + $obj.row.ofertas_tel + '">' + $obj.row.ofertas_tel + "</a>")
-		addRegistro('Dirección', $obj.row.ofertas_dir)
-		addRegistro('Observaciones', $obj.row.ofertas_desc)*/
-
+		addRegistro('Categoria', app.categorias_eventos[$obj.row.eventos_categoria_id-1])
+		addRegistro('Fecha', $obj.row.eventos_fecha_hora)
+		addRegistro('Lugar', $obj.row.eventos_lugar)
+		addRegistro('Descripción', $obj.row.eventos_desc)
+	
 		
 
 	}

@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.8.1
+-- version 4.0.6
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 23-12-2013 a las 11:37:17
--- Versión del servidor: 5.5.30
--- Versión de PHP: 5.3.10
+-- Servidor: localhost
+-- Tiempo de generación: 23-12-2013 a las 22:42:27
+-- Versión del servidor: 5.5.33
+-- Versión de PHP: 5.5.3
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `hernan_santanders`
+-- Base de datos: `santanders`
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `categorias`
 --
 
-CREATE TABLE IF NOT EXISTS `categorias` (
+CREATE TABLE `categorias` (
   `categorias_id` tinyint(2) unsigned NOT NULL AUTO_INCREMENT,
   `categorias_nombre` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`categorias_id`)
@@ -49,7 +49,7 @@ INSERT INTO `categorias` (`categorias_id`, `categorias_nombre`) VALUES
 -- Estructura de tabla para la tabla `eventos`
 --
 
-CREATE TABLE IF NOT EXISTS `eventos` (
+CREATE TABLE `eventos` (
   `eventos_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `eventos_nombre` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `eventos_fecha_hora` datetime NOT NULL,
@@ -73,17 +73,17 @@ CREATE TABLE IF NOT EXISTS `eventos` (
 --
 
 INSERT INTO `eventos` (`eventos_id`, `eventos_nombre`, `eventos_fecha_hora`, `eventos_lugar`, `eventos_desc`, `eventos_lat`, `eventos_lon`, `eventos_uid`, `eventos_tags`, `eventos_fecha_hora_creado`, `eventos_categoria_id`, `eventos_sync_value`, `eventos_estado`, `eventos_header_img`) VALUES
-(1, 'Mateo Evento', '2013-12-13 12:00:00', 'Lugar 1111', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.966647', '-54.95191', 0, 'tags', '2013-12-13 00:59:42', 1, '2013-12-23 02:17:32', -1, ''),
-(2, 'Evento ole', '2013-12-13 12:00:00', '2232323232323', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.969812', '-54.950537', 0, 'tags', '2013-12-03 00:00:00', 1, '2013-12-23 02:17:32', 1, ''),
-(3, '33 3 3 33 ', '2013-12-13 12:00:00', '333 333 ', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.953282', '-54.937405', 0, 'tags', '2013-12-25 10:00:00', 3, '2013-12-23 02:17:32', 1, ''),
-(4, 'Evento 4', '2013-12-13 12:00:00', 'Lugar4', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.962005', '-54.945473', 0, 'tags', '0000-00-00 00:00:00', 2, '2013-12-23 02:17:32', 1, ''),
-(5, 'Evento 555555', '2013-12-13 12:00:00', 'Lugar5555555', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.963693', '-54.941095', 0, 'tags', '0000-00-00 00:00:00', 5, '2013-12-23 02:17:32', 1, ''),
-(6, 'Even6', '2013-12-13 12:00:00', 'Lugar6', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.95293', '-54.931912', 0, 'tags', '0000-00-00 00:00:00', 1, '2013-12-23 02:17:32', 1, ''),
-(8, 'Even7', '2013-12-13 12:00:00', 'Lugar7', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.947654', '-54.939722', 0, 'tags', '0000-00-00 00:00:00', 3, '2013-12-23 02:17:32', 1, ''),
-(9, 'Even real 9', '2013-12-13 12:00:00', 'Luga8', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.945614', '-54.932255', 0, 'tags', '0000-00-00 00:00:00', 4, '2013-12-23 02:17:32', 1, ''),
-(10, 'Even9', '2013-12-13 12:00:00', 'Luga9', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.940267', '-54.930538', 0, 'tags', '0000-00-00 00:00:00', 4, '2013-12-23 02:17:32', 1, ''),
-(11, '000000', '2013-12-13 12:00:00', 'Luga1000000', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.946036', '-54.934916', 0, 'tags', '0000-00-00 00:00:00', 3, '2013-12-23 02:17:32', 1, ''),
-(12, '111111111111111111111111', '2013-12-13 12:00:00', 'Luga1111111', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.959402', '-54.941095', 0, 'tags', '0000-00-00 00:00:00', 3, '2013-12-23 02:17:32', 1, '');
+(1, 'MMM MMM NNN', '2013-12-13 12:00:00', 'Lugar 1111', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.966647', '-54.95191', 0, 'tagss', '2013-12-13 00:59:42', 1, '2013-12-23 15:36:13', -1, 'http://www.google.com'),
+(2, 'KK KK KK', '2013-12-13 12:00:00', '2232323232323', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.969812', '-54.950537', 0, 'tagss', '2013-12-03 00:00:00', 1, '2013-12-23 15:29:39', 1, ''),
+(3, '33 3 3 33 ', '2013-12-13 12:00:00', '333 333 ', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.953282', '-54.937405', 0, 'tagss', '2013-12-25 10:00:00', 3, '2013-12-23 15:36:59', 1, 'http://www.google.com/'),
+(4, 'Evento 4', '2013-12-13 12:00:00', 'Lugar4', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.962005', '-54.945473', 0, 'tagss', '0000-00-00 00:00:00', 2, '2013-12-23 15:23:18', 1, ''),
+(5, 'Evento 555555', '2013-12-13 12:00:00', 'Lugar5555555', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.963693', '-54.941095', 0, 'tagss', '0000-00-00 00:00:00', 5, '2013-12-23 15:23:18', 1, ''),
+(6, 'Even6', '2013-12-13 12:00:00', 'Lugar6', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.95293', '-54.931912', 0, 'tagss', '0000-00-00 00:00:00', 1, '2013-12-23 15:23:18', 1, ''),
+(8, 'Even7', '2013-12-13 12:00:00', 'Lugar7', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.947654', '-54.939722', 0, 'tagss', '0000-00-00 00:00:00', 3, '2013-12-23 15:23:18', 1, ''),
+(9, 'Even real 9', '2013-12-13 12:00:00', 'Luga8', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.945614', '-54.932255', 0, 'tagss', '0000-00-00 00:00:00', 4, '2013-12-23 15:23:18', 1, ''),
+(10, 'Even9', '2013-12-13 12:00:00', 'Luga9', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.940267', '-54.930538', 0, 'tagss', '0000-00-00 00:00:00', 4, '2013-12-23 15:23:18', 1, ''),
+(11, '000000', '2013-12-13 12:00:00', 'Luga1000000', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.946036', '-54.934916', 0, 'tagss', '0000-00-00 00:00:00', 3, '2013-12-23 15:23:18', 1, ''),
+(12, '111111111111111111111111', '2013-12-13 12:00:00', 'Luga1111111', 'Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs Descs asdsf', '-34.959402', '-54.941095', 0, 'tagss', '0000-00-00 00:00:00', 3, '2013-12-23 15:23:18', 1, '');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ INSERT INTO `eventos` (`eventos_id`, `eventos_nombre`, `eventos_fecha_hora`, `ev
 -- Estructura de tabla para la tabla `ofertas`
 --
 
-CREATE TABLE IF NOT EXISTS `ofertas` (
+CREATE TABLE `ofertas` (
   `ofertas_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `ofertas_nombre` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ofertas_tel` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -155,25 +155,55 @@ INSERT INTO `ofertas` (`ofertas_id`, `ofertas_nombre`, `ofertas_tel`, `ofertas_d
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `participaciones`
+--
+
+CREATE TABLE `participaciones` (
+  `participaciones_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `participaciones_eventos_id` smallint(5) unsigned NOT NULL,
+  `participaciones_uid` bigint(20) unsigned NOT NULL,
+  `participaciones_fecha_hora` datetime NOT NULL,
+  PRIMARY KEY (`participaciones_id`),
+  UNIQUE KEY `participaciones_eventos_id` (`participaciones_eventos_id`,`participaciones_uid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+
+--
+-- Volcado de datos para la tabla `participaciones`
+--
+
+INSERT INTO `participaciones` (`participaciones_id`, `participaciones_eventos_id`, `participaciones_uid`, `participaciones_fecha_hora`) VALUES
+(1, 1, 502872758, '0000-00-00 00:00:00'),
+(2, 1, 582872896, '0000-00-00 00:00:00'),
+(3, 1, 1210936978, '0000-00-00 00:00:00'),
+(4, 1, 342700049, '0000-00-00 00:00:00'),
+(5, 1, 20400145, '0000-00-00 00:00:00'),
+(6, 1, 501002947, '0000-00-00 00:00:00'),
+(7, 1, 695345220, '0000-00-00 00:00:00'),
+(8, 1, 689652994, '0000-00-00 00:00:00'),
+(9, 2, 100001115403098, '0000-00-00 00:00:00'),
+(10, 2, 100001516411126, '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `push`
 --
 
-CREATE TABLE IF NOT EXISTS `push` (
+CREATE TABLE `push` (
   `push_id` mediumint(9) unsigned NOT NULL AUTO_INCREMENT,
   `push_token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `push_platform` enum('ios','android') COLLATE utf8_unicode_ci NOT NULL,
   `push_fecha_hora_creado` datetime NOT NULL,
   PRIMARY KEY (`push_id`),
   UNIQUE KEY `push_token` (`push_token`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `push`
 --
 
 INSERT INTO `push` (`push_id`, `push_token`, `push_platform`, `push_fecha_hora_creado`) VALUES
-(10, 'APA91bE5RcCsiKgVF0aM2_yGkE9owZhsIsc9Kny2uH1ULrIPfz4M368bwRDBdU_WWQoPvjs5As1caqwS95PNGQ-QgzsRXIatcAH3_H-Q4VjoEDuGHNig2EWEmEyBypAW4DHEwAvFW0B-ZbnKWIdWQqO108twyWaDAw', 'android', '2013-12-22 23:09:17'),
-(9, '37c75c0e353f129b71044c79d50e4f25a05ad341f6d937ed7fd6bb0266df4c0e', 'ios', '2013-12-22 22:30:50');
+(12, '2842f7860c6d8b8e1229c2a7a462e6a70cf1dc314c264887c40b5addd29df11c', 'ios', '2013-12-23 13:28:13');
 
 --
 -- Restricciones para tablas volcadas
@@ -184,6 +214,12 @@ INSERT INTO `push` (`push_id`, `push_token`, `push_platform`, `push_fecha_hora_c
 --
 ALTER TABLE `eventos`
   ADD CONSTRAINT `eventos_ibfk_1` FOREIGN KEY (`eventos_categoria_id`) REFERENCES `categorias` (`categorias_id`);
+
+--
+-- Filtros para la tabla `participaciones`
+--
+ALTER TABLE `participaciones`
+  ADD CONSTRAINT `participaciones_ibfk_1` FOREIGN KEY (`participaciones_eventos_id`) REFERENCES `eventos` (`eventos_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
