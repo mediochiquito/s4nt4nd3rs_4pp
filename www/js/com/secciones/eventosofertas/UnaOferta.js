@@ -36,24 +36,23 @@ function UnaOferta()
 	}
 
 	function doCompartir(){
-
-        var params = {
+		
+       var params = {
             method: 'feed',
             name: $obj.row.ofertas_nombre,
-           	
+           	link: 'http://www.google.com',
             /*picture: 'http://fbrell.com/f8.jpg',*/
             caption: $obj.row.ofertas_cutoas,
             description: $obj.row.ofertas_desc
-          };
+       };
 
-       
        FB.ui(params, function(obj) { console.log(obj);});
                 
 	}
 
 	this._set = function ($obj){
 
-		img.src = 'img/fotos_header/' + $obj.row.ofertas_header_img;
+		img.src = 'img/fotos_header_ofertas/' + $obj.row.ofertas_header_img;
 		$(img).css('width', app.ancho-20);
 
 		$(titulo_txt).html($obj.row.ofertas_nombre);

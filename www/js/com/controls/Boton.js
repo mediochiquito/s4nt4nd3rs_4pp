@@ -14,15 +14,15 @@ function Boton($html, $callback, $className){
 
 	if(app.es_touch()){
 
-		$(this.main).bind("touchend", do_click);
-		$(this.main).bind("touchend", do_mouseout);
-		$(this.main).bind("touchstart", do_mouseover);
+		this.main.addEventListener("touchend", do_click);
+		this.main.addEventListener("touchend", do_mouseout);
+		this.main.addEventListener("touchstart", do_mouseover);
 
 	}else{
 
-		$(this.main).bind("click", do_click);
-		$(this.main).bind("mouseout", do_mouseout);
-		$(this.main).bind("mouseover", do_mouseover);
+		this.main.addEventListener("click", do_click);
+		this.main.addEventListener("mouseout", do_mouseout);
+		this.main.addEventListener("mouseover", do_mouseover);
 		
 	}
 
