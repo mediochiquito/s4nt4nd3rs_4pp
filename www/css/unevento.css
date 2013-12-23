@@ -1,0 +1,61 @@
+#SeccionUnEvento{
+	position: absolute;
+}
+
+#SeccionUnEvento_img{
+	position: relative;
+	
+
+}
+#UnEvento_header_titulo{
+	position: relative;
+	height: 35px;
+	width: 100%;
+	background-color: #674d97;
+}
+#UnEvento_titulo_txt{
+	position: absolute;
+	
+	height: 35px;
+	width: 90%;
+	color: #fff;
+	font-family: 'GothamBold';
+	font-size: 14px;
+	top: 9px;
+	left: 11px;
+}
+#UnEvento_holder_data{
+	position: relative;
+	
+	width: 100%;
+}
+.UnEvento_reg{
+	position: relative;
+	width: 100%;
+	padding: 5px;
+	border-bottom: solid 1px #ccc;
+	
+}
+.UnEvento_label{
+	position: relative;
+	width: 100px;
+	font-family: 'GothamBold';
+	font-size: 12px;
+	float: left;
+}
+.UnEvento_data{
+	position: relative;
+	font-family: 'GothamBook';
+	font-size: 12px;
+	float: left;
+}
+#UnEvento_holder_footer{
+	position: relative;
+	width: 100%;
+	height: 70px;
+}
+#UnEvento_btn_compartir{
+	left: 50%;
+	top: 15px;
+	margin-left: -75px;
+}

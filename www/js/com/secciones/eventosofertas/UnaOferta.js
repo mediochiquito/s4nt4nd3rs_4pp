@@ -40,17 +40,27 @@ function UnaOferta()
 
 		app._Facebook.conectar(function(){
 
-	  		var params = {
+	  		/*var params = {
 	            method: 'feed',
 	            name: $obj.row.ofertas_nombre,
 	           	link: 'http://www.google.com',
-	            /*picture: 'http://fbrell.com/f8.jpg',*/
+	            picture: 'http://fbrell.com/f8.jpg',
 	            caption: $obj.row.ofertas_cutoas,
 	            description: $obj.row.ofertas_desc
 	        };
 
-	       FB.ui(params, function(obj) { console.log(obj);});
-
+	       FB.ui(params, function(obj) { console.log(obj);});*/
+	       console.log('Debug 1');
+                                var params = {
+                                    method: 'feed',
+                                    name: 'Facebook Dialogs',
+                                    link: 'https://developers.facebook.com/docs/reference/dialogs/',
+                                    picture: 'http://fbrell.com/f8.jpg',
+                                    caption: 'Reference Documentation',
+                                    description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
+                                  };
+                                console.log(params);
+                            FB.ui(params, function(obj) { console.log(obj);});
 		}) 
      
                 
@@ -59,7 +69,7 @@ function UnaOferta()
 	this._set = function ($obj){
 
 		img.src = 'img/fotos_header_ofertas/' + $obj.row.ofertas_header_img;
-		$(img).css('width', app.ancho-20);
+		$(img).css('width', app.ancho-40);
 
 		$(titulo_txt).html($obj.row.ofertas_nombre);
 		$(holder_data).empty()

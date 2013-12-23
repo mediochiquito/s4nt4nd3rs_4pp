@@ -126,6 +126,7 @@ function SeccionEventosOfertas()
 			$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
 			solapa_eventos.habil(true);
 			solapa_ofertas.habil(false);
+			un_evento._set($obj);
 			$(holder_tabs).find('>div').html(un_evento.main);
 			$(btn_ver_en_mapa.main).hide();
 			$(btn_subir_mapa.main).hide();
