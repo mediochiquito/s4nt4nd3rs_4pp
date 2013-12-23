@@ -126,6 +126,16 @@ function App(){
 				  useCachedDialogs: false
 				});
    		}
+   		
+   		if ( device.platform == 'android' || device.platform == 'Android' )
+		{
+		   
+		}
+		else
+		{
+		   StatusBar.hide();
+		}
+		
 
    	
    		

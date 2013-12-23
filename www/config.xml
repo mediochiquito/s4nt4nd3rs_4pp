@@ -40,7 +40,7 @@
         <param name="APP_NAME" value="Santanders App" />
     </gap:plugin>
 
-    
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
     
     
 </widget>
