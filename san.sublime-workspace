@@ -79,46 +79,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 3817,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/js/com/controls/Boton.js",
-			"settings":
-			{
-				"buffer_size": 1193,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/controls.css",
-			"settings":
-			{
-				"buffer_size": 1695,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/eventosofertas/UnaOferta.js",
-			"settings":
-			{
-				"buffer_size": 1837,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/css/unaoferta.css",
-			"settings":
-			{
-				"buffer_size": 892,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -144,6 +104,13 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unaoferta.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/config.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
@@ -264,14 +231,7 @@
 		"/C/wamp/www/gennerayled/css/utils.css",
 		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/FormRelevamiento.js",
 		"/C/wamp/www/gennerayled/css/controls.css",
-		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/EditorRelevamiento.js",
-		"/C/wamp/www/gennerayled/css/Form_LamparasActuales.css",
-		"/C/Users/Mateo/Downloads/APP SMIRNOFF/webfontkit-20131102-232101/stylesheet.css",
-		"/C/wamp/www/Croma/cordova.js",
-		"/C/wamp/www/Croma/css/foto.css",
-		"/C/wamp/www/Croma/com/CanvasSaver.js",
-		"/C/wamp/www/Croma/com/SeccionRegistro.js",
-		"/C/wamp/www/Croma/com/SeccionFoto.js"
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/EditorRelevamiento.js"
 	],
 	"find":
 	{
@@ -368,144 +328,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "www/index.html",
-					"settings":
-					{
-						"buffer_size": 3817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3809,
-								3809
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 825.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "www/js/com/controls/Boton.js",
-					"settings":
-					{
-						"buffer_size": 1193,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								865,
-								865
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 450.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "www/css/controls.css",
-					"settings":
-					{
-						"buffer_size": 1695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1695,
-								1695
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 901.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/js/com/secciones/eventosofertas/UnaOferta.js",
-					"settings":
-					{
-						"buffer_size": 1837,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1828,
-								1828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/css/unaoferta.css",
-					"settings":
-					{
-						"buffer_size": 892,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								889,
-								889
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 496.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
