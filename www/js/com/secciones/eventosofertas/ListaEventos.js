@@ -5,8 +5,13 @@ function ListaEventos()
 	this.main = document.createElement('div')
 	this.main.id = 'ListaEventos';
 	
-
+	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 	
+	function do_LISTAR_EVENTOS(){
+
+		self.listar('');
+
+	}
 	this.listar =  function ($busqueda){
 
 		var where = ' WHERE eventos_estado=1 ';
@@ -16,6 +21,7 @@ function ListaEventos()
 
 
 		$(this.main).empty();
+		
 		app.db.transaction(function (tx) {
 
 			tx.executeSql("SELECT * FROM eventos "+where+" ORDER BY eventos_nombre ASC" , [], function (tx, resultado) {

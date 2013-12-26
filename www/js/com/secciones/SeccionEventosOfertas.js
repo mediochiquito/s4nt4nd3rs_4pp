@@ -74,7 +74,7 @@ function SeccionEventosOfertas()
                }else{
                		is.refresh()
                }
-               is.scrollTo(0, 0, 0)
+               is.scrollTo(0, 0, 0);
    		}, 110)
 
 	}
@@ -145,6 +145,13 @@ function SeccionEventosOfertas()
 
 
 	}
+
+	this.updateScroll =  function (){
+
+		is.refresh()
+
+	}
+
 
 	this._set = function ($obj){
 

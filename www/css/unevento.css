@@ -57,12 +57,14 @@
 #UnEvento_btn_participar{
 	left: 50%;
 	top: 15px;
-	margin-left: -153px;
+	margin-left: -132px;
+	width: 130px;
 }
 #UnEvento_btn_compartir{
 	left: 50%;
 	top: 15px;
-	margin-left: 3px;
+	margin-left: 2px;
+	width: 130px;
 }
 
 #UnEvento_holder_participaciones{
@@ -71,12 +73,38 @@
 	width: 100%;
 	padding: 5px;
 	border-top: solid 1px #ccc;
-	height: 70px;
 
 }
 #UnEvento_txt_tambien_participan{
 	position: relative;
 	font-family: 'GothamBold';
 	font-size: 12px;
+	width: 100%;
 	float: left;
+	height: 24px;
+}
+#UnEvento_holder_usuarios_fb{
+
+	position: relative;
+	width: 100%;
+	/* background-color: #ff0000; */
+
+}
+#UnEvento_holder_usuarios_fb img{
+
+	position: relative;
+	width: 50px;
+	height: 50px;
+	padding: 2px;
+	float: left;
+
+
+}
+#UnEvento_mensaje_participantes{
+
+	font-family: 'GothamBook';
+	font-size: 12px;
+	font-style: italic;
+	color: #ccc;
+
 }
