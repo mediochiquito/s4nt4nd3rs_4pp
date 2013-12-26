@@ -19,12 +19,37 @@ function ListaEventos()
 
 	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 
+	var btn_ver_en_mapa = new Boton('VER EN MAPA', doVerEnMapa);
+	btn_ver_en_mapa.main.id = 'ListaEventos_btn_ver_en_mapa'
+	$(this.main).append(btn_ver_en_mapa.main);
+
+	var btn_subir_evento = new Boton('SUBIR EVENTO', doSubirEvento);
+	btn_subir_evento.main.id = 'ListaEventos_btn_subir_evento'
+	$(this.main).append(btn_subir_evento.main);
+
+	$(btn_ver_en_mapa.main).css({'margin-left': -132, top: app.alto-75});
+	$(btn_subir_evento.main).css({'margin-left': 2, top: app.alto-75});
+
+	function doVerEnMapa(e){
+
+		app.secciones.go(app.secciones.seccionmapa, 300, {solo_ver:'eventos'})
+
+	}
+	function doSubirEvento(e){
+
+
+		
+	}
+
+
 	
 	function do_LISTAR_EVENTOS(){
 
 		self.listar('');
 
 	}
+
+
 	this.listar =  function ($busqueda){
 
 		var where = ' WHERE eventos_estado=1 ';

@@ -14,6 +14,21 @@ function ListaOfertas()
 
 	var is ;
 	var scroll_set =  false
+
+
+	var btn_ver_en_mapa = new Boton('VER EN MAPA', doVerEnMapa);
+	btn_ver_en_mapa.main.id = 'ListaOfertas_btn_ver_en_mapa'
+	$(this.main).append(btn_ver_en_mapa.main);
+
+	$(btn_ver_en_mapa.main).css({'margin-left': -70, top: app.alto-75});
+	
+
+	function doVerEnMapa(e){
+
+		app.secciones.go(app.secciones.seccionmapa, 300, {solo_ver:'eventos'})
+
+	}
+	
 	
 	this.listar =  function ($busqueda){
 		

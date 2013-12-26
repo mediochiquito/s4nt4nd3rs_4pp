@@ -20,19 +20,37 @@
 
 #ListaOfertas{
 	position: absolute;
-	top: 96px;
-	left: 20px;
+
+	width: 100%;
 }
 
 #ListaEventos{
 	position: absolute;
-	top: 96px;
-	left: 20px;
+	
+	width: 100%;
 }
+
+#ListaEventos_btn_ver_en_mapa{
+	left: 50%;
+	width: 130px;
+}
+#ListaEventos_btn_subir_evento{
+	left: 50%;
+	width: 130px;
+}
+#ListaOfertas{
+	left: 50%;
+	width: 140px;
+}
+
+
 
 .Tabs_holder{
 	position: absolute;
 	border-top: solid 1px #e5e5e5;
+	left: 20px;
+	top: 96px;
+	
 }
 
 
@@ -86,13 +104,7 @@
 	text-align: right;
 
 }
-#SeccionEventosOfertas_btn_ver_en_mapa{
-	left: 50%;
-}
-#SeccionEventosOfertas_btn_subir_mapa{
-	left: 50%;
 
-}
 .sin_resultados{
 
 	font-family: 'GothamBook';
