@@ -32,11 +32,11 @@ function Boton($html, $callback, $className){
 		
 		if($b) {
 			$(this.main).css("cursor", "pointer");
-			$(this.main).css({ opacity: 1 });
+			$(this.main).transition({ opacity: 1 }, 0);
 		}
 		else{
 		   $(this.main).css("cursor", "default");
-		   $(this.main).css({ opacity: .3 });
+		   $(this.main).transition({ opacity: .3 }, 0);
 		}
 
 	}

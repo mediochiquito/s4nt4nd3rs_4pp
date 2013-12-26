@@ -7,7 +7,11 @@ function App(){
 	this.secciones = null;
 	this.lightbox = null;
 	this.header = null;
-	this.obj_usuario;
+	this.usuario = {
+
+		uid:'',
+		access_token:''
+	};
 	
 	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
@@ -23,6 +27,8 @@ function App(){
 	var sync_value = 0;
 	var new_sync_value = 0
 	var btn_connect;
+
+
 
 	this.categorias_eventos = new Array("Deportes","Moda", "Música", "Culturales", "Gastronómico");
 
@@ -104,19 +110,19 @@ function App(){
 			if (typeof FB == 'undefined') alert('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
 			  
             FB.Event.subscribe('auth.login', function(response) {
-                               alert('auth.login event');
+                               //alert('auth.login event');
                                });
             
             FB.Event.subscribe('auth.logout', function(response) {
-                               alert('auth.logout event');
+                             //  alert('auth.logout event');
                                });
             
             FB.Event.subscribe('auth.sessionChange', function(response) {
-                               alert('auth.sessionChange event');
+                              // alert('auth.sessionChange event');
                                });
             
             FB.Event.subscribe('auth.statusChange', function(response) {
-                               alert('auth.statusChange event');
+                             //  alert('auth.statusChange event');
                                });
             
 	    	self._ManagePush = new ManagePush();
@@ -240,7 +246,6 @@ function App(){
 
     }
 
-
 	//C:\Users\Mateo\AppData\Local\Google\Chrome\User Data\Default\databases\http_localhost_0
 	function actualizar_db($xml){
 	
@@ -320,7 +325,7 @@ function App(){
 					tablas_creadas = 0;
 					//crearTabla_Categorias, 
 					array_tablas_a_crear = new Array(crearTabla_Eventos,
-													
+													 crearTabla_Participaciones,
 													 crearTabla_Ofertas, 
 													 crearTabla_App);
 
@@ -420,6 +425,13 @@ function App(){
 
 			}
 
+    }
+    function crearTabla_Participaciones($tx){
+		
+
+			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "participaciones" ("participaciones_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "participaciones_id_evento" VARCHAR NOT NULL, "participaciones_uid" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
+
+		
     }
 
   /*  function crearTabla_Categorias($tx){

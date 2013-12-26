@@ -47,7 +47,7 @@ function UnEvento()
  	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div><div id="UnEvento_holder_usuarios_fb"></div>')
  	$(holder).find('>div').append(holder_participaciones)
 
-	var is ;
+	var is;
 	var scroll_set =  false;
 	
 
@@ -63,13 +63,39 @@ function UnEvento()
 
 	function doParticipar(){
 		
+		/*if(!app.hay_internet()) {
+			app.alerta('Debes conectarte a internet para marcar la participación.')
+			return;
+		}
+*/	
+		//app._Facebook.conectar(function(){
+
+	  		$.ajax({
+
+                type: "POST",
+                url: app.server + "set_participar.php",
+                dataType: 'text',
+                cache: false, 
+               // data:{id_evento: $obj.row.eventos_id, uid: app.usuario.uid},
+                data:{id_evento: 1, uid: 1234567},
+
+                success: function($data) {
+                	app.alerta($data)
+                },
+                error: function(){ 
+                       
+                }
+	        });
+
+		//}) 
+		       
 
 	}
 
 
 	function doCompartir(){
 		
-		/*
+		
 		app._Facebook.conectar(function(){
 
 	  		var params = {
@@ -84,7 +110,7 @@ function UnEvento()
 	       FB.ui(params, function(obj) { console.log(obj);});
 
 		}) 
-     */
+     
                 
 	}
 

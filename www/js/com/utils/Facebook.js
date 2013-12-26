@@ -17,23 +17,29 @@ function Facebook(){
 
      	 FB.getLoginStatus(function(response) {
 	          	if (response.status == 'connected') {
-/*
-	             		if ( device.platform == 'android' || device.platform == 'Android' )
-							alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
-						else 
-							alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);
-*/
+
+	             		if ( device.platform == 'android' || device.platform == 'Android' ){
+								app.usuario.uid = response.authResponse.userId
+								app.usuario.access_token = response.authResponse.accessToken
+						}else {
+							 	app.usuario.uid = response.authResponse.userID
+							 	app.usuario.access_token = response.authResponse.accessToken
+						}
 						$callback();
 
 					} else {
 			
 			             FB.login(function(response) {
-					 		  console.log(response)
+					 		
 							  if (response.authResponse) {
 							    	
-							    	/*if ( device.platform == 'android' || device.platform == 'Android' )
-										 alert(response.authResponse.userId +'__'+ response.authResponse.accessToken);
-									else alert(response.authResponse.userID +'__'+ response.authResponse.accessToken);*/
+							    	if ( device.platform == 'android' || device.platform == 'Android' ){
+											app.usuario.uid = response.authResponse.userId
+											app.usuario.access_token = response.authResponse.accessToken
+									}else {
+										 	app.usuario.uid = response.authResponse.userID
+										 	app.usuario.access_token = response.authResponse.accessToken
+									}
 							    	$callback();
 
 							   } else {

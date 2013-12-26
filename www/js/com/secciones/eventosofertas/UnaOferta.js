@@ -53,27 +53,16 @@ function UnaOferta()
 
 		app._Facebook.conectar(function(){
 
-	  		/*var params = {
-	            method: 'feed',
-	            name: $obj.row.ofertas_nombre,
-	           	link: 'http://www.google.com',
-	            picture: 'http://fbrell.com/f8.jpg',
-	            caption: $obj.row.ofertas_cutoas,
-	            description: $obj.row.ofertas_desc
-	        };
-
-	       FB.ui(params, function(obj) { console.log(obj);});*/
-	      // console.log('Debug 1');
-                                var params = {
-                                    method: 'feed',
-                                    name: $obj.row.ofertas_nombre,
-                                    link: 'https://developers.facebook.com/docs/reference/dialogs/',
-                                    picture: 'http://fbrell.com/f8.jpg',
-                                    caption: 'Reference Documentation',
-                                    description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
-                                  };
-                               // console.log(params);
-                            FB.ui(params, function(obj) { console.log(obj);});
+                var params = {
+                    method: 'feed',
+                    name: $obj.row.ofertas_nombre,
+                    link: 'https://developers.facebook.com/docs/reference/dialogs/',
+                    picture: 'http://fbrell.com/f8.jpg',
+                    caption: 'Reference Documentation',
+                    description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
+                  };
+            
+            FB.ui(params, function(obj) { console.log(obj);});
 		}) 
      
                 
