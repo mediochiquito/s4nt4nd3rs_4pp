@@ -10,5 +10,5 @@ $rs = mysql_query('SELECT * FROM participaciones WHERE participaciones_eventos_i
                  $rows[] = $row;
         }
         echo json_encode($rows);
-        ?>
+ ?>
 
