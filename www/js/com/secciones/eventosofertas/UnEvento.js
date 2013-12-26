@@ -1,17 +1,25 @@
+
 function UnEvento()
 {
 	var self = this;
 	this.main =  document.createElement('div')
 	this.main.id = 'UnEvento';
 	
-	
+	var holder = document.createElement('div')
+	holder.id = 'UnEvento_holder'
+	holder.className = 'Tabs_holder'
+	$(holder).append('<div></div>')
+	$(this.main).append(holder)
+
+	$(holder).css({width: app.ancho-40, height: app.alto-120});
+
 	var img = new Image()
 	img.id = 'SeccionUnEvento_img'
-	$(this.main).append(img)
+	$(holder).find('>div').append(img)
 	
 	var header_titulo =  document.createElement('div')
 	header_titulo.id = 'UnEvento_header_titulo'
-	$(this.main).append(header_titulo)
+	$(holder).find('>div').append(header_titulo)
 	
 	var titulo_txt =  document.createElement('div')
 	titulo_txt.id = 'UnEvento_titulo_txt'
@@ -19,16 +27,15 @@ function UnEvento()
 
 	var holder_data =  document.createElement('div')
 	holder_data.id = 'UnEvento_holder_data'
-	$(this.main).append(holder_data)
+	$(holder).find('>div').append(holder_data)
 
 	var holder_footer =  document.createElement('div')
 	holder_footer.id = 'UnEvento_holder_footer'
-	$(this.main).append(holder_footer)
+	$(holder).find('>div').append(holder_footer)
 
 	var btn_compartir = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;COMPARTIR", doCompartir, 'BotonAzul')
 	btn_compartir.main.id = 'UnEvento_btn_compartir'
 	$(holder_footer).append(btn_compartir.main)
-
 
 	var btn_participar = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;PARTICIPAR", doParticipar, 'BotonAzul')
 	btn_participar.main.id = 'UnEvento_btn_participar'
@@ -36,8 +43,12 @@ function UnEvento()
 
 	var holder_participaciones =  document.createElement('div')
 	holder_participaciones.id = 'UnEvento_holder_participaciones'
-	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div>')
-	$(this.main).append(holder_participaciones)
+ 	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div><div id="UnEvento_holder_usuarios_fb"></div>')
+ 	$(holder).find('>div').append(holder_participaciones)
+
+	var is ;
+	var scroll_set =  false;
+	
 
 	function addRegistro($label, $data){
 
@@ -87,7 +98,56 @@ function UnEvento()
 		addRegistro('Descripción', $obj.row.eventos_desc)
 	
 		
+		$('#UnEvento_holder_usuarios_fb').empty()
+        $('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Obteniendo participaciones...</div>')
 
+        try{
+        	is.scrollTo(0, 0, 0);
+        }catch(e){}
+
+        cargar_participantes($obj)
+
+		setTimeout(function(){  
+			if(!scroll_set){
+					scroll_set = true;
+					is =  new iScroll('UnEvento_holder', {hScrollbar: false, vScrollbar: false});
+			}else{
+					is.refresh()
+			}
+			
+			}, 0)
+
+
+	}
+
+	function cargar_participantes($obj){
+
+		 $.ajax({
+
+                type: "POST",
+                url: app.server + "json.participaciones.php",
+                dataType: 'json',
+                cache: false, 
+                data:{id_evento: $obj.row.eventos_id},
+
+                success: function($json) {
+                		$('#UnEvento_holder_usuarios_fb').html('');
+                        for(var i in $json){
+
+                                $('#UnEvento_holder_usuarios_fb').append('<img src="http://graph.facebook.com/'+$json[i].participaciones_uid+'/picture">')
+
+                        }
+                        if($json.length == 0) $('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Aun no hay participantes en este evento.</div>')
+
+
+                        $('#UnEvento_holder_usuarios_fb').append('<br style="clear:both" />');
+                       	is.refresh()
+                },
+                error: function(){ 
+                        $('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Ocurrio un error al obtener los participantes</div>');
+                        is.refresh()
+                }
+        });        
 	}
 
 

@@ -4,13 +4,22 @@ function UnaOferta()
 	this.main =  document.createElement('div')
 	this.main.id = 'UnaOferta';
 	
+
+	var holder = document.createElement('div')
+	holder.id = 'UnaOferta_holder'
+	holder.className = 'Tabs_holder'
+	$(holder).append('<div></div>')
+	$(this.main).append(holder)
+
+	$(holder).css({width: app.ancho-40, height: app.alto-120});
+
 	var img = new Image()
 	img.id = 'SeccionUnaOferta_img'
-	$(this.main).append(img)
+	$(holder).find('>div').append(img)
 	
 	var header_titulo =  document.createElement('div')
 	header_titulo.id = 'UnaOferta_header_titulo'
-	$(this.main).append(header_titulo)
+	$(holder).find('>div').append(header_titulo)
 	
 	var titulo_txt =  document.createElement('div')
 	titulo_txt.id = 'UnaOferta_titulo_txt'
@@ -18,21 +27,25 @@ function UnaOferta()
 
 	var holder_data =  document.createElement('div')
 	holder_data.id = 'UnaOferta_holder_data'
-	$(this.main).append(holder_data)
+	$(holder).find('>div').append(holder_data)
 
 	var holder_footer =  document.createElement('div')
 	holder_footer.id = 'UnaOferta_holder_footer'
-	$(this.main).append(holder_footer)
+	$(holder).find('>div').append(holder_footer)
 
 	var btn_compartir = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;COMPARTIR", doCompartir, 'BotonAzul')
 	btn_compartir.main.id = 'UnaOferta_btn_compartir'
 	$(holder_footer).append(btn_compartir.main)
 
+	var is ;
+	var scroll_set =  false
+	
 	function addRegistro($label, $data){
-
+		
 		$(holder_data).append('<div class="UnaOferta_reg"><div class="UnaOferta_label">'+ $label+
 							  '</div><div class="UnaOferta_data" style="width: ' + (app.ancho-150) + 'px">'+ $data+
-							  '</div><br style="clear:both"></div>')
+							  '</div><br style="clear:both"></div>');
+		
 	}
 
 	function doCompartir(){
@@ -81,7 +94,19 @@ function UnaOferta()
 		addRegistro('Dirección', $obj.row.ofertas_dir)
 		addRegistro('Observaciones', $obj.row.ofertas_desc)
 
-		
+	  	try{
+	        is.scrollTo(0, 0, 0);
+	        }catch(e){}
+		setTimeout(function(){  
+		if(!scroll_set){
+				scroll_set = true;
+				is =  new iScroll('UnaOferta_holder', {hScrollbar: false, vScrollbar: false});
+		}else{
+				is.refresh()
+		}
+		is.scrollTo(0, 0, 0);
+		}, 0)
+
 
 	}
 

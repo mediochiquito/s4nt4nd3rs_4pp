@@ -18,6 +18,27 @@
 
 }
 
+#ListaOfertas{
+	position: absolute;
+	top: 96px;
+	left: 20px;
+}
+
+#ListaEventos{
+	position: absolute;
+	top: 96px;
+	left: 20px;
+}
+
+.Tabs_holder{
+	position: absolute;
+	border-top: solid 1px #e5e5e5;
+}
+
+
+
+
+
 #SeccionEventosOfertas_holder_tabs{
 
 	position: absolute;
@@ -60,14 +81,8 @@
 	 font-size: 13px;
 	 color: #ed1c24;
 	 position: absolute;
-	 
-
 	right: 10px;
-	 
-
 	top: 10px;
-	
-
 	text-align: right;
 
 }

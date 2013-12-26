@@ -11,12 +11,10 @@ function SeccionEventosOfertas()
 	
 	$(this.main).bind("SOLAPA_CLICK", doSolapaClick)
 
-	var holder_tabs = document.createElement('div')
+/*	var holder_tabs = document.createElement('div')
 	holder_tabs.id = 'SeccionEventosOfertas_holder_tabs'
 	$(holder_tabs).append('<div></div>')
-	$(this.main).append(holder_tabs)
-	
-	
+	$(this.main).append(holder_tabs)*/
 
 	var solapa_eventos = new Solapa('EVENTOS', 'eventos', '#674d97')
 	solapa_eventos.main.id = 'solapa_eventos'
@@ -27,12 +25,24 @@ function SeccionEventosOfertas()
 	$(this.main).append(solapa_ofertas.main)
 
 	var lista_eventos = new ListaEventos()
-	var lista_ofertas = new ListaOfertas()
-	var un_evento = new UnEvento()
-	var una_oferta = new UnaOferta()
+	$(lista_eventos.main).transition({x:3000}, 0)
+	$(this.main).append(lista_eventos.main)
 
-	var   is ;
-	var scroll_set =  false
+	var lista_ofertas = new ListaOfertas()
+	$(lista_ofertas.main).transition({x:3000}, 0)
+	$(this.main).append(lista_ofertas.main)
+
+	var un_evento = new UnEvento()
+	$(un_evento.main).transition({x:3000}, 0)
+	$(this.main).append(un_evento.main);
+
+	var una_oferta = new UnaOferta()
+	$(una_oferta.main).transition({x:3000}, 0)
+	$(this.main).append(una_oferta.main);
+
+
+/*	var is ;
+	var scroll_set =  false*/
 	var en_solapa=''
 	var btn_ver_en_mapa = new Boton('VER EN MAPA', doVerEnMapa);
 	btn_ver_en_mapa.main.id = 'SeccionEventosOfertas_btn_ver_en_mapa'
@@ -67,7 +77,7 @@ function SeccionEventosOfertas()
 		lista_eventos.listar($busqueda)
 		lista_ofertas.listar($busqueda)
 
-		setTimeout(function(){  
+		/*setTimeout(function(){  
                if(!scroll_set){
                		scroll_set = true;
                		is =  new iScroll('SeccionEventosOfertas_holder_tabs', {hScrollbar: false, vScrollbar: false});
@@ -75,7 +85,7 @@ function SeccionEventosOfertas()
                		is.refresh()
                }
                is.scrollTo(0, 0, 0)
-   		}, 110)
+   		}, 110)*/
 
 	}
 
@@ -85,54 +95,65 @@ function SeccionEventosOfertas()
 		
 		if(typeof($obj.solapa) == 'undefined') en_solapa = 'eventos';
 		else en_solapa = $obj.solapa;
-		$(holder_tabs).find('>div').empty();
+		//$(holder_tabs).find('>div').empty();
+
+		$(lista_ofertas.main).transition({x:3000}, 0);
+		$(lista_eventos.main).transition({x:3000}, 0);
+		$(un_evento.main).transition({x:3000}, 0);
+		$(una_oferta.main).transition({x:3000}, 0);
 
 		if($obj.solapa == 'eventos'){
-			$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
+			//$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
 			solapa_eventos.habil(true);
 			solapa_ofertas.habil(false);
-			setTimeout(function(){
+			/*setTimeout(function(){
 				$(holder_tabs).find('>div').html(lista_eventos.main);
-			}, 100);
+			}, 100);*/
 			$(btn_ver_en_mapa.main).css({'margin-left': -143, top:app.alto-80});
 			$(btn_subir_mapa.main).show();
 			$(btn_ver_en_mapa.main).show();
+			$(lista_eventos.main).transition({x:0}, 0)
+			
 		}
 
 		if($obj.solapa == 'ofertas'){
-			$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
+			//$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
 			solapa_eventos.habil(false);
 			solapa_ofertas.habil(true);
-			setTimeout(function(){
+			/*setTimeout(function(){
 				$(holder_tabs).find('>div').html(lista_ofertas.main);
-			}, 100);
-			$(btn_ver_en_mapa.main).css({'margin-left': -70, top:app.alto-80});
+			}, 100);*/
+			// $(btn_ver_en_mapa.main).css({'margin-left': -70, top:app.alto-80});
 			$(btn_ver_en_mapa.main).show();
 			$(btn_subir_mapa.main).hide();
+			$(lista_ofertas.main).transition({x:0}, 0);
 		}
 
 		if($obj.solapa == 'una_oferta'){
-			$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
+			//$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
 			solapa_eventos.habil(false);
 			solapa_ofertas.habil(true);
 			una_oferta._set($obj);
-			$(holder_tabs).find('>div').html(una_oferta.main);
+			// $(holder_tabs).find('>div').html(una_oferta.main);
 			$(btn_ver_en_mapa.main).hide();
 			$(btn_subir_mapa.main).hide();
+			$(una_oferta.main).transition({x:0}, 0);
 
 		}
 
 		if($obj.solapa == 'un_evento'){
-			$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
+			//$(holder_tabs).css({width: app.ancho-40, height: app.alto-120});
 			solapa_eventos.habil(true);
 			solapa_ofertas.habil(false);
 			un_evento._set($obj);
-			$(holder_tabs).find('>div').html(un_evento.main);
+			// $(holder_tabs).find('>div').html(un_evento.main);
 			$(btn_ver_en_mapa.main).hide();
 			$(btn_subir_mapa.main).hide();
+			$(un_evento.main).transition({x:0}, 0);
+			
 		}
 
-
+/*
 		setTimeout(function(){  
                if(!scroll_set){
                		scroll_set = true;
@@ -142,7 +163,7 @@ function SeccionEventosOfertas()
                }
                is.scrollTo(0, 0, 0)
    		}, 200)
-
+*/
 
 	}
 
