@@ -84,13 +84,10 @@ function SeccionEventosOfertas()
                }else{
                		is.refresh()
                }
-<<<<<<< HEAD
+
                is.scrollTo(0, 0, 0)
    		}, 110)*/
-=======
-               is.scrollTo(0, 0, 0);
-   		}, 110)
->>>>>>> 5f4096a256e72ee7fd24c0eadb1cb06f8aba01c2
+
 
 	}
 
