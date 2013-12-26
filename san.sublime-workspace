@@ -79,54 +79,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 3987,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/App.js",
-			"settings":
-			{
-				"buffer_size": 14003,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/_init.php",
-			"settings":
-			{
-				"buffer_size": 1162,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/eventosofertas/UnEvento.js",
-			"settings":
-			{
-				"buffer_size": 2690,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/json.participaciones.php",
-			"settings":
-			{
-				"buffer_size": 359,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/unevento.css",
-			"settings":
-			{
-				"buffer_size": 1202,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -152,18 +104,26 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unevento.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unaoferta.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/xml.ofertas.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/json.participaciones.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/sync_value.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/_init.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/class.Push.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unaoferta.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unevento.css",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/config.xml",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
@@ -271,15 +231,7 @@
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
 		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css",
-		"/C/wamp/www/gennerayled/js/com/secciones/savings/SavingsList.js",
-		"/C/wamp/www/gennerayled/js/com/secciones/savings/Savings.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/login.php",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/LightBox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CanvasSaver.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/registro.css"
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js"
 	],
 	"find":
 	{
@@ -297,6 +249,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ListaEventos_btn_ver_en_mapa",
+			"btn_ver_en_mapa",
+			"$(this.main)",
+			"$(holder)",
+			"this.main).append(h",
+			"ListaEventos_holder",
+			"ListaEventos",
+			"holder",
+			"holder_tabs",
 			"btn_compartir",
 			"UnaOferta",
 			"UUnEvento",
@@ -382,171 +343,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "www/index.html",
-					"settings":
-					{
-						"buffer_size": 3987,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2833,
-								2841
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 304.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "www/js/com/App.js",
-					"settings":
-					{
-						"buffer_size": 14003,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								726,
-								744
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "server/_init.php",
-					"settings":
-					{
-						"buffer_size": 1162,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								748,
-								748
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/js/com/secciones/eventosofertas/UnEvento.js",
-					"settings":
-					{
-						"buffer_size": 2690,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1746,
-								1746
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 316.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "server/json.participaciones.php",
-					"settings":
-					{
-						"buffer_size": 359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								355,
-								355
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "www/css/unevento.css",
-					"settings":
-					{
-						"buffer_size": 1202,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								985,
-								985
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 485.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

@@ -15,7 +15,6 @@ function ListaOfertas()
 	var is ;
 	var scroll_set =  false
 
-
 	var btn_ver_en_mapa = new Boton('VER EN MAPA', doVerEnMapa);
 	btn_ver_en_mapa.main.id = 'ListaOfertas_btn_ver_en_mapa'
 	$(this.main).append(btn_ver_en_mapa.main);
