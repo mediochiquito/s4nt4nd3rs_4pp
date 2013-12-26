@@ -26,6 +26,10 @@ function Secciones(){
 	this.seccionunaoferta.ocultar(0);
 */
 	var obj_seccion_actual = null;	
+	
+	this.get_obj_seccion_actual = function (){
+		return obj_seccion_actual;
+	}
 
 	this.go = function($base_seccion, $time, $data){
 

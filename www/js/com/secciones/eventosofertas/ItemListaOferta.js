@@ -22,8 +22,8 @@ function ItemListaOferta($row)
 	function doClick(e){
 		pintar()
 		setTimeout(function(){
-
-			app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'una_oferta', row: $row})
+			app.secciones.seccioneventosofertas.ir_a_una_solapa({solapa:'una_oferta', row: $row})
+			//app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'una_oferta', row: $row})
 
 		}, 200)
 		setTimeout(despintar, 800)

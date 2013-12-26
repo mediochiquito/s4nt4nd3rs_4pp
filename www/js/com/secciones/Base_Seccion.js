@@ -2,20 +2,21 @@ function Base_Seccion(){
 
 	var self = this;
 	this.main = document.createElement('div')
-    this.main.className = 'seccion'
-
+	this.main.className = 'seccion'
 
 	this.mostrar = function($time, $data){
 		
-		var t = $time; 
+		var t = $time;
 		if(typeof($time) == 'undefined') t = 300;
 		
-	/*	document.activeElement.blur();
-		$("input").blur();*/
+		/*
+		document.activeElement.blur();
+		$("input").blur();
+		*/
 
-		$(self.main).transition({x:0},0)
+		$(self.main).transition({x:app.ancho},0)
 		$(this.main).transition({
-			  
+			  x:0,
 			  scale: 1, 
 			  opacity: 1
 

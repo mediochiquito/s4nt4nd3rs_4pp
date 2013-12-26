@@ -27,8 +27,9 @@ function Header(){
 
 
 	function doKeyUp(e){
-
-		app.secciones.go(app.secciones.seccioneventosofertas)
+		if(app.secciones.get_obj_seccion_actual().main.id != 'SeccionEventosOfertas')
+		app.secciones.go(app.secciones.seccioneventosofertas);
+	
 		app.secciones.seccioneventosofertas.cargar_listas($(search).val())
 	}
 

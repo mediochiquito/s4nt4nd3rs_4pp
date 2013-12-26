@@ -50,8 +50,8 @@ function UnaOferta()
 	var obj;
 
 	function doVolver(){
-
-		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'ofertas'});
+		app.secciones.seccioneventosofertas.ir_a_una_solapa({solapa: 'ofertas'})
+		//app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'ofertas'});
 
 	}
 	function doVerEnMapa(){
@@ -109,14 +109,21 @@ function UnaOferta()
 	        is.scrollTo(0, 0, 0);
 	        }catch(e){}
 		setTimeout(function(){  
-		if(!scroll_set){
-				scroll_set = true;
-				is =  new iScroll('UnaOferta_holder', {hScrollbar: false, vScrollbar: false});
-		}else{
-				is.refresh()
-		}
-		is.scrollTo(0, 0, 0);
+			if(!scroll_set){
+					scroll_set = true;
+					is =  new iScroll('UnaOferta_holder', {hScrollbar: false, vScrollbar: false});
+			}else{
+					is.refresh()
+			}
+			is.scrollTo(0, 0, 0);
 		}, 0)
+
+
+		setTimeout(function(){  
+			is.refresh()
+			
+		}, 300)
+
 
 
 	}

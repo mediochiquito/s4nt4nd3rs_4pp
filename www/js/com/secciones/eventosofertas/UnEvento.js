@@ -61,8 +61,8 @@ function UnEvento()
 	var obj;
 
 	function doVolver(){
-
-		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'eventos'});
+		app.secciones.seccioneventosofertas.ir_a_una_solapa({solapa: 'eventos'})
+		//app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'eventos'});
 
 	}
 	function doVerEnMapa(){
@@ -189,6 +189,7 @@ function UnEvento()
 	}
 
 	this._set = function ($obj){
+
 		obj = $obj;
 		img.src = 'img/fotos_header_eventos/' + $obj.row.eventos_categoria_id + '.jpg';
 		$(img).css('width', app.ancho-40);
@@ -205,6 +206,7 @@ function UnEvento()
 
 			if($bool) btn_participar.habil(false);
 			else btn_participar.habil(true);
+
 		})
 
 
@@ -215,18 +217,22 @@ function UnEvento()
         	is.scrollTo(0, 0, 0);
         }catch(e){}
 
-        cargar_participantes($obj)
+        cargar_participantes($obj);
 
 		setTimeout(function(){  
+			
 			if(!scroll_set){
-					scroll_set = true;
-					is =  new iScroll('UnEvento_holder', {hScrollbar: false, vScrollbar: false});
+				scroll_set = true;
+				is =  new iScroll('UnEvento_holder', {hScrollbar: false, vScrollbar: false});
 			}else{
-					is.refresh()
+				is.refresh();
 			}
 			
-			}, 0)
+		}, 0);
 
+		setTimeout(function(){
+			is.refresh();
+		}, 300)
 
 	}
 

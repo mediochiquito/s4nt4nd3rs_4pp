@@ -79,6 +79,70 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/css/eventosofertas.css",
+			"settings":
+			{
+				"buffer_size": 1643,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/App.js",
+			"settings":
+			{
+				"buffer_size": 14426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/eventosofertas/ListaOfertas.js",
+			"settings":
+			{
+				"buffer_size": 2060,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+			"settings":
+			{
+				"buffer_size": 884,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/eventosofertas/UnaOferta.js",
+			"settings":
+			{
+				"buffer_size": 3836,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/eventosofertas/UnEvento.js",
+			"settings":
+			{
+				"buffer_size": 7454,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/header/Header.js",
+			"settings":
+			{
+				"buffer_size": 998,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/Secciones.js",
+			"settings":
+			{
+				"buffer_size": 1333,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -105,24 +169,31 @@
 	"file_history":
 	[
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unevento.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/mapa.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/set_participar.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unaoferta.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unevento.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/xml.ofertas.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/json.participaciones.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/sync_value.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/_init.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/class.Push.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/config.xml",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
@@ -224,14 +295,7 @@
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/CamanJS - Interactive Examples.html",
 		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.core.js",
 		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.jquery.js",
-		"/C/wamp/www/ford_escapate/public/tab/index.php",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/BotonToogle.js",
-		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
-		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js"
+		"/C/wamp/www/ford_escapate/public/tab/index.php"
 	],
 	"find":
 	{
@@ -249,6 +313,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"UnaOferta_btn_volver",
+			"obj_usuario",
 			"ListaEventos_btn_ver_en_mapa",
 			"btn_ver_en_mapa",
 			"$(this.main)",
@@ -343,8 +409,225 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/css/eventosofertas.css",
+					"settings":
+					{
+						"buffer_size": 1643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1169,
+								1217
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1088.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/js/com/App.js",
+					"settings":
+					{
+						"buffer_size": 14426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14270,
+								14278
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6565.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/js/com/secciones/eventosofertas/ListaOfertas.js",
+					"settings":
+					{
+						"buffer_size": 2060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								739,
+								739
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 6.0,
+						"translation.y": 74.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+					"settings":
+					{
+						"buffer_size": 884,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/js/com/secciones/eventosofertas/UnaOferta.js",
+					"settings":
+					{
+						"buffer_size": 3836,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1644,
+								1716
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "www/js/com/secciones/eventosofertas/UnEvento.js",
+					"settings":
+					{
+						"buffer_size": 7454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2270,
+								2270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 670.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "www/js/com/header/Header.js",
+					"settings":
+					{
+						"buffer_size": 998,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								844,
+								844
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "www/js/com/secciones/Secciones.js",
+					"settings":
+					{
+						"buffer_size": 1333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								812,
+								834
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 202.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

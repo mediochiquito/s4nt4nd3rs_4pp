@@ -72,6 +72,11 @@ function SeccionEventosOfertas()
 
 	}
 
+	this.ir_a_una_solapa = function($obj){
+
+		mostrar_solapa($obj)
+	}
+
 	function mostrar_solapa($obj){
 		
 		//$(btn_subir_mapa.main).css({'margin-left': 3, top:app.alto-80})
