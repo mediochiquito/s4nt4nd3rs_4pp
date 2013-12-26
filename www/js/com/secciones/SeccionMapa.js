@@ -59,6 +59,10 @@ function SeccionMapa()
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
 
+		 listar_ofertas()
+
+
+
 		 
 		  //  setTimeout(function() {
 		    //  google.maps.event.trigger(map,'resize');
@@ -98,9 +102,6 @@ function SeccionMapa()
 
 	this._set = function (obj){
 			
-
-			
-
 			var solo_ver = '';
 			try{
 				solo_ver = obj.solo_ver;
@@ -156,10 +157,43 @@ function SeccionMapa()
 		}
 
 	}
+
+	function listar_ofertas(){
+
+		array_markers_ofertas = new Array();
+		app.db.transaction(function (tx) {
+			
+			
+			tx.executeSql("SELECT * FROM ofertas" , [], function (tx, resulato_ofertas) {
+		    	
+		    	var cant_ofertas = resulato_ofertas.rows.length;
+		        for(var i=0; i<cant_ofertas; i++){
+				
+		           array_markers_ofertas[i] = new google.maps.Marker(
+		           				{
+								  position: new google.maps.LatLng(resulato_ofertas.rows.item(i).ofertas_lat, resulato_ofertas.rows.item(i).ofertas_lon),
+								  title:resulato_ofertas.rows.item(i).ofertas_nombre,
+								  icon: {url:'img/markers/oferta.png', scaledSize: new google.maps.Size(19, 30), size: new google.maps.Size(19, 30)},
+								  row: resulato_ofertas.rows.item(i)
+								});
+
+					array_markers_ofertas[i].setMap(map);
+
+					google.maps.event.addListener(array_markers_ofertas[i], 'click', function() {
+					   	mostrar_una_oferta(this.row)
+					});
+		        }
+		    });
+
+
+		});
+
+	}
 	function do_LISTAR_EVENTOS(e){
 
+
 		array_markers_eventos = new Array();
-		array_markers_ofertas = new Array();
+		
 
 		app.db.transaction(function (tx) {
 			//TODO agregar el estado
@@ -183,30 +217,6 @@ function SeccionMapa()
 					});
 		        }
 		    });
-
-			tx.executeSql("SELECT * FROM ofertas" , [], function (tx, resulato_ofertas) {
-		    	
-		    	var cant_ofertas = resulato_ofertas.rows.length;
-		        for(var i=0; i<cant_ofertas; i++){
-				
-		           array_markers_ofertas[i] = new google.maps.Marker(
-		           				{
-								  position: new google.maps.LatLng(resulato_ofertas.rows.item(i).ofertas_lat, resulato_ofertas.rows.item(i).ofertas_lon),
-								  title:resulato_ofertas.rows.item(i).ofertas_nombre,
-								  icon: {url:'img/markers/oferta.png', scaledSize: new google.maps.Size(19, 30), size: new google.maps.Size(19, 30)},
-								  row: resulato_ofertas.rows.item(i)
-								});
-
-					array_markers_ofertas[i].setMap(map);
-
-					google.maps.event.addListener(array_markers_ofertas[i], 'click', function() {
-					   	mostrar_una_oferta(this.row)
-					});
-		        }
-		    });
-
-
-
 
 		});
 

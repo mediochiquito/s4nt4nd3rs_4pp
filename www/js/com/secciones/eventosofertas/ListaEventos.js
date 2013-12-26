@@ -5,6 +5,7 @@ function ListaEventos()
 	this.main = document.createElement('div')
 	this.main.id = 'ListaEventos';
 	
+<<<<<<< HEAD
 	var holder = document.createElement('div')
 	holder.id = 'ListaEventos_holder'
 	holder.className = 'Tabs_holder'
@@ -15,7 +16,15 @@ function ListaEventos()
 
 	var is ;
 	var scroll_set =  false
+=======
+	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
+>>>>>>> 5f4096a256e72ee7fd24c0eadb1cb06f8aba01c2
 	
+	function do_LISTAR_EVENTOS(){
+
+		self.listar('');
+
+	}
 	this.listar =  function ($busqueda){
 
 		var where = ' WHERE eventos_estado=1 ';
@@ -23,7 +32,13 @@ function ListaEventos()
 			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 ';
 		}
 
+<<<<<<< HEAD
 		$(holder).find('>div').empty();
+=======
+
+		$(this.main).empty();
+		
+>>>>>>> 5f4096a256e72ee7fd24c0eadb1cb06f8aba01c2
 		app.db.transaction(function (tx) {
 
 			tx.executeSql("SELECT * FROM eventos "+where+" ORDER BY eventos_nombre ASC" , [], function (tx, resultado) {

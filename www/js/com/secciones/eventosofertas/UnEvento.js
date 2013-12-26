@@ -43,18 +43,25 @@ function UnEvento()
 
 	var holder_participaciones =  document.createElement('div')
 	holder_participaciones.id = 'UnEvento_holder_participaciones'
+<<<<<<< HEAD
  	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div><div id="UnEvento_holder_usuarios_fb"></div>')
  	$(holder).find('>div').append(holder_participaciones)
 
 	var is ;
 	var scroll_set =  false;
 	
+=======
+	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div><div id="UnEvento_holder_usuarios_fb"></div>')
+	$(this.main).append(holder_participaciones)
+>>>>>>> 5f4096a256e72ee7fd24c0eadb1cb06f8aba01c2
+
 
 	function addRegistro($label, $data){
 
 		$(holder_data).append('<div class="UnEvento_reg"><div class="UnEvento_label">'+ $label+
 							  '</div><div class="UnEvento_data" style="width: ' + (app.ancho-150) + 'px">'+ $data+
-							  '</div><br style="clear:both"></div>')
+							  '</div><br style="clear:both"></div>');
+
 	}
 
 	function doParticipar(){
@@ -97,6 +104,7 @@ function UnEvento()
 		addRegistro('Lugar', $obj.row.eventos_lugar)
 		addRegistro('Descripción', $obj.row.eventos_desc)
 	
+<<<<<<< HEAD
 		
 		$('#UnEvento_holder_usuarios_fb').empty()
         $('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Obteniendo participaciones...</div>')
@@ -139,6 +147,36 @@ function UnEvento()
                         }
                         if($json.length == 0) $('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Aun no hay participantes en este evento.</div>')
 
+=======
+		$('#UnEvento_holder_usuarios_fb').empty()
+		$('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Obteniendo participaciones...</div>')
+
+		$.ajax({
+
+							type: "POST",
+							url: app.server + "json.participaciones.php",
+							dataType: 'json',
+							cache: false, 
+							data:{id_evento: $obj.row.eventos_id},
+
+							success: function($json) {
+								for(var i in $json){
+
+									$('#UnEvento_holder_usuarios_fb').append('<img src="http://graph.facebook.com/'+$json[i].participaciones_uid+'/picture">')
+
+								}
+								if($json.length == 0) $('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Aun no hay participantes en este evento.</div>')
+
+
+								$('#UnEvento_holder_usuarios_fb').append('<br style="clear:both" />');
+								app.secciones.seccioneventosofertas.updateScroll();
+							},
+							error: function(){ 
+								$('#UnEvento_holder_usuarios_fb').html('<div id="UnEvento_mensaje_participantes">Ocurrio un error al obtener los participantes</div>');
+								app.secciones.seccioneventosofertas.updateScroll();
+							}
+						});	
+>>>>>>> 5f4096a256e72ee7fd24c0eadb1cb06f8aba01c2
 
                         $('#UnEvento_holder_usuarios_fb').append('<br style="clear:both" />');
                        	is.refresh()

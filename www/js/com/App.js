@@ -9,9 +9,9 @@ function App(){
 	this.header = null;
 	this.obj_usuario;
 	
-	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
-	this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
+	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
 	this._Facebook
@@ -206,6 +206,7 @@ function App(){
 					new_sync_value = Number($int);
 					
 					if(new_sync_value>Number(sync_value)){
+						
 						app.cargando(true, 'Sincronizando eventos...')
 						$.ajax({
 
@@ -216,20 +217,25 @@ function App(){
 							data:{sync_value: sync_value},
 
 							success: function($xml) {
+								
 								app.cargando(false);
 								actualizar_db($xml);
 							},
 							error: function(){ 
 								$(document).trigger('LISTAR_EVENTOS'); 
 								app.cargando(false)
+								
 							}
 						});	
 					}else{
-					
+						
 						$(document).trigger('LISTAR_EVENTOS');
 					}
 				},
-				error: function() {$(document).trigger('LISTAR_EVENTOS'); }
+				error: function() {
+					$(document).trigger('LISTAR_EVENTOS');
+
+					 }
 			});
 
     }
@@ -237,9 +243,8 @@ function App(){
 
 	//C:\Users\Mateo\AppData\Local\Google\Chrome\User Data\Default\databases\http_localhost_0
 	function actualizar_db($xml){
-
+	
 		var obj = $.parseJSON($($xml).find('eventos').text())
-
 		app.db.transaction(function (tx) {
 
 			for(var item_evento in obj){
