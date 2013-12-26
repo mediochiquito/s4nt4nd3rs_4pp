@@ -24,7 +24,7 @@ function ListaOfertas()
 
 	function doVerEnMapa(e){
 
-		app.secciones.go(app.secciones.seccionmapa, 300, {solo_ver:'eventos'})
+		app.secciones.go(app.secciones.seccionmapa, 300, {solo_ver:'ofertas'})
 
 	}
 	

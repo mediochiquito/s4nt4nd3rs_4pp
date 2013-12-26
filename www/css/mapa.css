@@ -11,6 +11,57 @@
 
 }
 
+#SeccionMapa_txt_filtrar{
+
+	 font-family: 'GothamBold';
+	 font-size: 13px;
+	 left: 50%;
+	 
+
+	 bottom: 30px;
+	 
+-webkit-backface-visibility: hidden;
+	 margin-left: -127px;
+}
+#SeccionMapa_txt_eventos{
+
+	 font-family: 'GothamBook';
+	 font-size: 13px;
+	  left: 50%;
+	 
+
+	 bottom: 30px;
+	  -webkit-backface-visibility: hidden;
+
+	 margin-left: -70px;
+}
+#SeccionMapa_txt_ofertas{
+
+	 font-family: 'GothamBook';
+	 font-size: 13px;
+	 left: 50%;
+	 
+
+	 bottom: 30px;
+	  -webkit-backface-visibility: hidden;
+
+	 margin-left: 23px;
+}
+#Mapa_chk_eventos{
+	left: 50%;
+	bottom: 24px;
+	margin-left: -13px;
+	-webkit-backface-visibility: hidden;
+}
+#Mapa_chk_oferta{
+left: 50%;
+	bottom: 24px;
+	
+margin-left: 105px;
+-webkit-backface-visibility: hidden;
+
+}
+
 #SeccionMapa_holdermap_canvas{
 
 	top: 0px;

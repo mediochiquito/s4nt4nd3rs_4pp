@@ -10,6 +10,19 @@ function SeccionMapa()
 	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 
 
+		$(this.main).append('<div id="SeccionMapa_txt_filtrar">Filtrar:</div>')
+	$(this.main).append('<div id="SeccionMapa_txt_eventos">Eventos</div>')
+	$(this.main).append('<div id="SeccionMapa_txt_ofertas">Descuentos:</div>')
+
+	var chk_eventos = new BotonToogle("img/mapa/checkbox.svg", 'eventos' , 30, 60, doCheckEventos)
+	chk_eventos.main.id = 'Mapa_chk_eventos'
+	$(this.main).append(chk_eventos.main);
+
+
+	var chk_oferta = new BotonToogle("img/mapa/checkbox.svg", 'eventos' , 30, 60, doCheckOfertas)
+	chk_oferta.main.id = 'Mapa_chk_oferta'
+	$(this.main).append(chk_oferta.main)
+
 	var holdermap_canvas = document.createElement('div')
 	holdermap_canvas.id = 'SeccionMapa_holdermap_canvas'
 	$(holder_blanco_secciones).append(holdermap_canvas)
@@ -18,7 +31,7 @@ function SeccionMapa()
 	map_canvas.id = 'SeccionMapa_map_canvas'
 	$(holdermap_canvas).append(map_canvas)
 
-	$(holdermap_canvas).css({	width: app.ancho-20, height: app.alto-140})
+	$(holdermap_canvas).css({	width: app.ancho-20, height: app.alto-120})
 
 	/*var esquina_si = new Image()
 	esquina_si.src = 'img/mapa/esquina_si.png';
@@ -33,10 +46,23 @@ function SeccionMapa()
 	setTimeout(_construct, 0);
 	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 
+
+
+
+	function doCheckEventos(){
+
+		mostrar_elementos('eventos', chk_eventos.getSelected())
+
+	}
+	function doCheckOfertas(){
+
+		mostrar_elementos('ofertas', chk_oferta.getSelected())
+	}
+
 	function _construct() {
 		
 		  var mapOptions = {
-		    zoom: 14,
+		    zoom: 16,
 		    mapTypeControl: false,
 		    zoomControl: true,
 		    zoomControlOptions: {
@@ -107,20 +133,34 @@ function SeccionMapa()
 				solo_ver = obj.solo_ver;
 			}catch(e){}
 
+			try{
+
+				  map.setCenter(new google.maps.LatLng(obj.center[0], obj.center[1]));
+				  map.setZoom(18)
+
+			}catch(e){}
+				  
+
 			switch(solo_ver){
 
 				case 'eventos':
 					mostrar_elementos('ofertas', false)
 					mostrar_elementos('eventos', true)
-						
+					chk_eventos.setSelected(true)
+					chk_oferta.setSelected(false)
 				break;
 				case 'ofertas':
 					mostrar_elementos('ofertas', true)
 					mostrar_elementos('eventos', false)
+					chk_eventos.setSelected(false)
+					chk_oferta.setSelected(true)
+
 				break;
 			    default:
 					mostrar_elementos('ofertas', true)
 					mostrar_elementos('eventos', true)
+					chk_eventos.setSelected(true)
+					chk_oferta.setSelected(true)
 				break;
 
 

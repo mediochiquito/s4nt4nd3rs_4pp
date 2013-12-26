@@ -37,8 +37,29 @@ function UnaOferta()
 	btn_compartir.main.id = 'UnaOferta_btn_compartir'
 	$(holder_footer).append(btn_compartir.main)
 
+	var btn_volver = new Boton2Frames("img/btn_volver.svg", 25, 50, doVolver)
+	btn_volver.main.id = 'UnaOferta_btn_volver'
+	$(header_titulo).append(btn_volver.main)
+
+	var btn_ver_en_mapa = new Boton2Frames("img/ofertas/marker_lineas.svg", 25, 50, doVerEnMapa)
+	btn_ver_en_mapa.main.id = 'UnEvento_btn_ver_en_mapa'
+	$(header_titulo).append(btn_ver_en_mapa.main)
+
 	var is ;
 	var scroll_set =  false
+	var obj;
+
+	function doVolver(){
+
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'ofertas'});
+
+	}
+	function doVerEnMapa(){
+
+			app.secciones.go(app.secciones.seccionmapa, 300, {solo_ver:'ofertas', center:[obj.row.ofertas_lat, obj.row.ofertas_lon]});
+
+
+	}
 	
 	function addRegistro($label, $data){
 		
@@ -55,7 +76,7 @@ function UnaOferta()
 
                 var params = {
                     method: 'feed',
-                    name: $obj.row.ofertas_nombre,
+                    name:  obj.row.ofertas_nombre,
                     link: 'https://developers.facebook.com/docs/reference/dialogs/',
                     picture: 'http://fbrell.com/f8.jpg',
                     caption: 'Reference Documentation',
@@ -70,14 +91,15 @@ function UnaOferta()
 
 	this._set = function ($obj){
 
+		obj = $obj;
 		img.src = 'img/fotos_header_ofertas/' + $obj.row.ofertas_header_img;
 		$(img).css('width', app.ancho-40);
 
 		$(titulo_txt).html($obj.row.ofertas_nombre);
-		$(holder_data).empty()
+		$(holder_data).empty();
 		
-		addRegistro('Cuotas', $obj.row.ofertas_cutoas)
 		addRegistro('Descuento', $obj.row.ofertas_descuento)
+		addRegistro('Cuotas', $obj.row.ofertas_cutoas)
 		addRegistro('Dias de descuento', $obj.row.ofertas_dias)
 		addRegistro('Telefono', '<a href="tel:' + $obj.row.ofertas_tel + '">' + $obj.row.ofertas_tel + "</a>")
 		addRegistro('Dirección', $obj.row.ofertas_dir)

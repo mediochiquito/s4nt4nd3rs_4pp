@@ -9,7 +9,7 @@ function App(){
 	this.header = null;
 	this.usuario = {
 
-		uid:'',
+		uid:'1234567890',
 		access_token:''
 	};
 	
@@ -429,7 +429,7 @@ function App(){
     function crearTabla_Participaciones($tx){
 		
 
-			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "participaciones" ("participaciones_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "participaciones_id_evento" VARCHAR NOT NULL, "participaciones_uid" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
+			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "participaciones" ("participaciones_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "participaciones_id_evento" VARCHAR, "participaciones_uid" VARCHAR) ', [], comprobacion_total_tablas_creadas);
 
 		
     }

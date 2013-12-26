@@ -50,13 +50,13 @@ function Boton($html, $callback, $className){
 	}
 	
 	function do_mouseover(){
-	
+		if(habil)
 		$(self.main).transition({opacity:.5}, .2);
 		
 	}
 	
 	function do_mouseout(){
-
+		if(habil)
 		$(self.main).transition({opacity:1}, .2);
 	}
 

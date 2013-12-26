@@ -1,4 +1,4 @@
-function BotonToogle($img, $txt,$value, $img_w, $img_h, $callback){
+function BotonToogle($img, $value, $img_w, $img_h, $callback){
 
 	var self = this
 	this.main = document.createElement('div');
@@ -15,12 +15,6 @@ function BotonToogle($img, $txt,$value, $img_w, $img_h, $callback){
 	var habil = true;
 	var Selected = false;
 	var value = $value
-	var txt  = document.createElement('div');
-	txt.className = '_BotonToogle_txt'
-	$(txt).html($txt)
-
-	$(this.main).append(txt)
-	$(document).bind("SELECT_FILTER", select_filter);
 	
 	if(app.es_touch()){
 
@@ -36,25 +30,17 @@ function BotonToogle($img, $txt,$value, $img_w, $img_h, $callback){
 		
 	}
 
-	function  select_filter(e){
-
-		if(e.value == value){
-			Selected = true;
-		}else{
-			Selected = false;
-		}
-		
-		if(Selected) $(self.main).css("background-position", '0px ' + ($img_h/2) + 'px');
-		else		 $(self.main).css("background-position", '0px 0px');
-	}
 
 	this.setSelected = function ($Selected){
 		
 		Selected = $Selected;
-		
-		  var _event = jQuery.Event("SELECT_FILTER");
-               _event.value = value;
-               $(document).trigger(_event);
+		if(Selected){
+			$(self.main).css("background-position", '0px '+($img_h/2)+'px');
+		}else{
+			$(self.main).css("background-position", '0px 0px');
+
+		}
+	
 	}
 
 	this.getSelected = function (){
@@ -79,7 +65,8 @@ function BotonToogle($img, $txt,$value, $img_w, $img_h, $callback){
 	}
 
 	function do_click(){
-		self.setSelected(true)
+
+		self.setSelected(!Selected)
 		if(habil) $callback(value);
 
 		

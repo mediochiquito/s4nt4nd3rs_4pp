@@ -3,6 +3,19 @@
 	
 }
 
+#UnEvento_btn_volver{
+
+	position: absolute;
+	right: 6px;
+	top: 4px;
+}
+
+#UnEvento_btn_ver_en_mapa{
+
+	position: absolute;
+	right: 35px;
+	top: 4px;
+}
 
 #SeccionUnEvento{
 	position: absolute;
