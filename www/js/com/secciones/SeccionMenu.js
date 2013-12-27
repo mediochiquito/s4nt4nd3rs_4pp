@@ -21,9 +21,11 @@ function SeccionMenu()
 	var btn_notitficaciones = new ItemMenu('Notificaciones Push', '', doMapa)
 	$(this.main).append(btn_cargar_evento.main)
 
+	var btn_terms = new ItemMenu('Términos y Condiciones', '', doMapa)
+	$(this.main).append(btn_terms.main)
 
 	setTimeout(function(){
-		$('#SeccionMenu_header_bg').css({width: app.ancho-20})
+		$('#SeccionMenu_header_bg').css({width: app.ancho-40})
 	})
 
 

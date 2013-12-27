@@ -6,6 +6,7 @@ function ItemMenu($txt,$icon,$callback){
 	
 	$(this.main).html($txt)
 	$(this.main).css("cursor", "pointer");
+	$(this.main).css("width", app.ancho-20);
 
 	var habil = true;
 
