@@ -13,9 +13,9 @@ function App(){
 		access_token:''
 	};
 	
-	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://localhost:8888/s4nt4nd3rs_4pp/server/'
-	this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
+	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
 	this._Facebook
@@ -27,8 +27,6 @@ function App(){
 	var sync_value = 0;
 	var new_sync_value = 0
 	var btn_connect;
-
-
 
 	this.categorias_eventos = new Array("Deportes","Moda", "Música", "Culturales", "Gastronómico");
 

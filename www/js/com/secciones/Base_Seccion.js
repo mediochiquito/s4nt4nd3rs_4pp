@@ -46,7 +46,7 @@ function Base_Seccion(){
 
 		$(this.main).transition({
 			  
-			  scale:.95, 
+			  scale:.9, 
 			  opacity: 0
 
 		}, t, function(){
