@@ -54,6 +54,14 @@
 }
 
 
+#ListaOfertas_holder{
+	overflow: hidden;
+}
+#ListaOfertas_holder > div{
+	overflow: hidden;
+}
+
+
 #SeccionEventosOfertas_holder_tabs{
 
 	position: absolute;
