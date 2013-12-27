@@ -17,11 +17,11 @@ function Secciones(){
 	$(this.main).append(this.seccioneventosofertas.main)
 	this.seccioneventosofertas.ocultar(0);
 
-/*	this.seccionunevento = new SeccionUnEvento();
-	$(this.main).append(this.seccionunevento.main)
-	this.seccionunevento.ocultar(0);
+	this.seccionmenu = new SeccionMenu();
+	$(this.main).append(this.seccionmenu.main)
+	this.seccionmenu.ocultar(0);
 
-	this.seccionunaoferta = new SeccionUnaOferta();
+	/*this.seccionunaoferta = new SeccionUnaOferta();
 	$(this.main).append(this.seccionunaoferta.main)
 	this.seccionunaoferta.ocultar(0);
 */

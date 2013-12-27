@@ -35,7 +35,7 @@ function Header(){
 
 	function doMenu(){
 
-		app.secciones.go(app.secciones.seccionhome)
+		app.secciones.go(app.secciones.seccionmenu)
 		
 	}
 
