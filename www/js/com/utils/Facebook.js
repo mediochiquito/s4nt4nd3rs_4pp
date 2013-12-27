@@ -31,7 +31,7 @@ function Facebook(){
 					} else {
 						console.log('login');
 			             FB.login(function(response2) {
-					 		
+					 			console.log(response2);
 							  if (response2.authResponse) {
 							    	
 							    	if ( device.platform == 'android' || device.platform == 'Android' ){
