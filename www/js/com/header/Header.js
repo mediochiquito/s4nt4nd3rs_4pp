@@ -19,6 +19,7 @@ function Header(){
 	$(this.main).append(search);
 	$(search).bind('keyup', doKeyUp)
 	$(search).bind('click', do_click)
+	$(search).bind('touchstart', do_touchstart)
 	$(search).bind('blur', do_blur)
 	var btn_close = new Boton2Frames('img/header/close.svg', 30, 60, do_click_btn_close)
 	btn_close.main.id = 'Header_btn_close'
@@ -34,6 +35,12 @@ function Header(){
 	function do_blur(){
 
 		if($(search).val() == '') $(search).val(wm);
+	}
+	
+	function do_touchstart(){
+
+		$(search).focus();
+		if($(search).val() == wm) $(search).val('');
 	}
 
 	function doKeyUp(e){
