@@ -33,6 +33,12 @@ function Secciones(){
 
 	this.go = function($base_seccion, $time, $data){
 
+		if($base_seccion.main.id == 'SeccionMenu') app.header.ocultar_menu()
+		else  app.header.mostrar_menu()
+
+		if($base_seccion==obj_seccion_actual) return;
+
+
 		$(this.main).css({ display: 'block'});
 	
 		try{

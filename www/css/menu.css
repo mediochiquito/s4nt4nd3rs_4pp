@@ -16,6 +16,16 @@
 
 
 }
+#SeccionMenu_punta{
+
+	position: absolute;
+	
+
+	left: 22px;
+	
+
+	top: 46px;
+}
 #SeccionMenu_header{
 
 	font-family: 'GothamBold';
@@ -49,4 +59,11 @@
 	border-bottom: solid 1px #fff;
 	padding: 10px 10px 10px 40px;
 	margin-left: 10px;
+}
+.ItemMenu > img{
+	position: absolute;
+	width: 30px;
+	
+	top: 4px;
+	left: 5px;
 }

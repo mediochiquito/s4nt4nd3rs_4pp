@@ -32,7 +32,13 @@ top: 10px;
 	right: 50%;
 	top: 26px;
 }
-
+#Header_btn_close{
+	position: absolute;
+	right: 50%;
+	margin-right: -153px;
+	
+	top: 10px;
+}
 
 #Header_search{
 	right: 50%;

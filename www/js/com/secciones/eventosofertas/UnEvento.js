@@ -117,12 +117,14 @@ function UnEvento()
 												  );
 
 									 app.cargando(false);
+									 btn_participar.habil(false);
 									 
 								},  app.db_errorGeneral);
 		    
 		                	}else{
 		                		app.alerta($data)
-		                		 app.cargando(false)
+		                		app.cargando(false)
+		                		btn_participar.habil(false);
 		                	}
 		                	
 		                	

@@ -16,10 +16,12 @@ function Header(){
 	var search = document.createElement('input');
 	search.id = 'Header_search';
 	search.type = 'text';
-
 	$(this.main).append(search);
 	$(search).bind('keyup', doKeyUp)
-
+	var btn_close = new Boton2Frames('img/header/close.svg', 30, 60, do_click_btn_close)
+	btn_close.main.id = 'Header_btn_close'
+	$(this.main).append(btn_close.main)
+	$(btn_close.main).hide()
 
 	var ancho_search = 210+((app.ancho-320)/2)
 	if(ancho_search>270) ancho_search = 270;
@@ -29,16 +31,40 @@ function Header(){
 	function doKeyUp(e){
 		if(app.secciones.get_obj_seccion_actual().main.id != 'SeccionEventosOfertas')
 		app.secciones.go(app.secciones.seccioneventosofertas);
-	
-		app.secciones.seccioneventosofertas.cargar_listas($(search).val())
-	}
+		
+		if($(search).val().length > 0) $(btn_close.main).show();
 
+		app.secciones.seccioneventosofertas.cargar_listas($(search).val())
+
+	}
+	function do_click_btn_close(){
+
+		$(search).val('');
+		$(search).blur();
+		$(btn_close.main).hide()
+
+	}
 	function doMenu(){
 
 		app.secciones.go(app.secciones.seccionmenu)
 		
 	}
+	
+	this.mostrar_menu = function(){
 
+		$(btn_menu.main).transition({x:0}, 500)
+		$(logito).transition({x:0}, 500)
+
+			
+	}
+
+	this.ocultar_menu = function(){
+
+		$(btn_menu.main).transition({x:-20}, 500)
+		$(logito).transition({x:-15}, 500)
+		
+		
+	}
 
 
 

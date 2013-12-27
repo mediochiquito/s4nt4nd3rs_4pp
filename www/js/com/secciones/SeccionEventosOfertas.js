@@ -58,18 +58,6 @@ function SeccionEventosOfertas()
 		lista_eventos.listar($busqueda)
 		lista_ofertas.listar($busqueda)
 
-		/*setTimeout(function(){  
-               if(!scroll_set){
-               		scroll_set = true;
-               		is =  new iScroll('SeccionEventosOfertas_holder_tabs', {hScrollbar: false, vScrollbar: false});
-               }else{
-               		is.refresh()
-               }
-
-               is.scrollTo(0, 0, 0)
-   		}, 110)*/
-
-
 	}
 
 	this.ir_a_una_solapa = function($obj){
@@ -79,42 +67,40 @@ function SeccionEventosOfertas()
 
 	function mostrar_solapa($obj){
 		
-		//$(btn_subir_mapa.main).css({'margin-left': 3, top:app.alto-80})
 		
 		if(typeof($obj.solapa) == 'undefined') en_solapa = 'eventos';
 		else en_solapa = $obj.solapa;
-		//$(holder_tabs).find('>div').empty();
-
+		
 		$(lista_ofertas.main).transition({x:3000}, 0);
 		$(lista_eventos.main).transition({x:3000}, 0);
 		$(un_evento.main).transition({x:3000}, 0);
 		$(una_oferta.main).transition({x:3000}, 0);
 
+		$(lista_ofertas.main).css('pointer-events', 'none')
+		$(lista_eventos.main).css('pointer-events', 'none')
+
 		if($obj.solapa == 'eventos'){
-			//$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
+		
 			solapa_eventos.habil(true);
 			solapa_ofertas.habil(false);
-			/*setTimeout(function(){
-				$(holder_tabs).find('>div').html(lista_eventos.main);
-			}, 100);*/
-			//$(btn_ver_en_mapa.main).css({'margin-left': -143, top:app.alto-80});
-		/*	$(btn_subir_mapa.main).show();
-			$(btn_ver_en_mapa.main).show();*/
 			$(lista_eventos.main).transition({x:0}, 0)
+
+			setTimeout(function(){
+				$(lista_eventos.main).css('pointer-events', 'auto')
+			}, 500)
 			
 		}
 
 		if($obj.solapa == 'ofertas'){
-			//$(holder_tabs).css({width: app.ancho-40, height: app.alto-200});
+			
 			solapa_eventos.habil(false);
 			solapa_ofertas.habil(true);
-			/*setTimeout(function(){
-				$(holder_tabs).find('>div').html(lista_ofertas.main);
-			}, 100);*/
-			// $(btn_ver_en_mapa.main).css({'margin-left': -70, top:app.alto-80});
-		/*	$(btn_ver_en_mapa.main).show();
-			$(btn_subir_mapa.main).hide();*/
 			$(lista_ofertas.main).transition({x:0}, 0);
+
+			setTimeout(function(){
+				$(lista_ofertas.main).css('pointer-events', 'auto')
+			}, 500)
+			
 		}
 
 		if($obj.solapa == 'una_oferta'){
@@ -122,9 +108,6 @@ function SeccionEventosOfertas()
 			solapa_eventos.habil(false);
 			solapa_ofertas.habil(true);
 			una_oferta._set($obj);
-			
-			/*$(btn_ver_en_mapa.main).hide();
-			$(btn_subir_mapa.main).hide();*/
 			$(una_oferta.main).transition({x:0}, 0);
 
 		}
@@ -134,9 +117,6 @@ function SeccionEventosOfertas()
 			solapa_eventos.habil(true);
 			solapa_ofertas.habil(false);
 			un_evento._set($obj);
-
-			/*$(btn_ver_en_mapa.main).hide();
-			$(btn_subir_mapa.main).hide();*/
 			$(un_evento.main).transition({x:0}, 0);
 			
 		}

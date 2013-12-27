@@ -14,6 +14,8 @@ function Base_Seccion(){
 		$("input").blur();
 		*/
 
+	
+
 		$(self.main).transition({x:app.ancho},0)
 		$(this.main).transition({
 			  x:0,

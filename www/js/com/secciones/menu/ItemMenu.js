@@ -8,6 +8,9 @@ function ItemMenu($txt,$icon,$callback){
 	$(this.main).css("cursor", "pointer");
 	$(this.main).css("width", app.ancho-75);
 
+	$(this.main).append('<img src="img/menu/'+$icon+'" />')
+
+
 	var habil = true;
 
 	if(app.es_touch()){
