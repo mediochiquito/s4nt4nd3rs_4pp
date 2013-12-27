@@ -16,6 +16,7 @@ function Facebook(){
 	this.conectar = function($callback){
 
      	 FB.getLoginStatus(function(response) {
+     	 	console.log(response);
 	          	if (response.status == 'connected') {
 
 	             		if ( device.platform == 'android' || device.platform == 'Android' ){
@@ -45,7 +46,7 @@ function Facebook(){
 							   } else {
 
 							     alert('User cancelled login or did not fully authorize.');
-							     
+
 							   }
 						}, {scope: ''})
 	         		}
