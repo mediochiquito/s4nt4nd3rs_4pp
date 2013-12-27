@@ -35,6 +35,12 @@
 	position: absolute;
 
 }
+#SeccionMenu_holder{
+	position: absolute;
+	top: 100px;
+
+
+}
 .ItemMenu{
 	position: relative;
 	font-family: 'GothamBook';
