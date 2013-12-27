@@ -74,7 +74,7 @@ function UnaOferta()
 
 		app._Facebook.conectar(function(){
 
-                var params = {
+            /*    var params = {
                     method: 'feed',
                     name:  obj.row.ofertas_nombre,
                     link: 'https://developers.facebook.com/docs/reference/dialogs/',
@@ -83,7 +83,7 @@ function UnaOferta()
                     description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
                   };
             
-            FB.ui(params, function(obj) { console.log(obj);});
+            FB.ui(params, function(obj) { console.log(obj);});*/
 		}) 
      
                 
