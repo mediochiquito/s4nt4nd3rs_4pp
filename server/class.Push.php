@@ -26,7 +26,7 @@ class Push{
 	public function enviar_push_ios($token, $titulo, $mensaje){
 		
 		$payload = array();
-		$payload['aps'] = array('alert' => $mensaje, 'badge' => intval(0), 'sound' => 'default');
+		$payload['aps'] = array('idevento' => 12, 'alert' => $mensaje, 'badge' => intval(0), 'sound' => 'default');
 		$payload = json_encode($payload);
 
 		$apns_message = chr(0) . chr(0) . chr(32) . pack('H*', str_replace(' ', '', $token)) . chr(0) . chr(strlen($payload)) . $payload;

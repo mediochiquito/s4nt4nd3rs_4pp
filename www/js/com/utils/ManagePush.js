@@ -69,7 +69,8 @@ function ManagePush(){
 	   
 	    if ( event.alert )
 	    {
-	        navigator.notification.alert(event.alert);
+	        navigator.notification.alert('id_evento: ' + event.idevento + ' - ' + event.alert);
+
 	    }
 
 	    if ( event.sound )
