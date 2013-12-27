@@ -15,7 +15,7 @@ function Facebook(){
 
 	this.conectar = function($callback){
 
-     	 FB.getLoginStatus(function(response) {
+     /*	 FB.getLoginStatus(function(response) {
      	 	console.log(response);
 	          	if (response.status == 'connected') {
 
@@ -28,18 +28,18 @@ function Facebook(){
 						}
 						$callback();
 
-					} else {
+					} else {*/
 			
-			             FB.login(function(response) {
+			             FB.login(function(response2) {
 					 		
-							  if (response.authResponse) {
+							  if (response2.authResponse) {
 							    	
 							    	if ( device.platform == 'android' || device.platform == 'Android' ){
-											app.usuario.uid = response.authResponse.userId;
-											app.usuario.access_token = response.authResponse.accessToken;
+											app.usuario.uid = response2.authResponse.userId;
+											app.usuario.access_token = response2.authResponse.accessToken;
 									}else {
-										 	app.usuario.uid = response.authResponse.userID;
-										 	app.usuario.access_token = response.authResponse.accessToken;
+										 	app.usuario.uid = response2.authResponse.userID;
+										 	app.usuario.access_token = response2.authResponse.accessToken;
 									}
 							    	$callback();
 
@@ -49,9 +49,9 @@ function Facebook(){
 
 							   }
 						}, {scope: ''})
-	         		}
+	         		/*}
          });
-
+*/
 		
 	}
 
