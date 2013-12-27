@@ -29,7 +29,7 @@ function Facebook(){
 						$callback();
 
 					} else {
-			
+						console.log('login');
 			             FB.login(function(response2) {
 					 		
 							  if (response2.authResponse) {
