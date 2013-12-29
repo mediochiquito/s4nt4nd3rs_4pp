@@ -11,7 +11,7 @@ function App(){
 		uid:'1234567890',
 		access_token:''
 	};
-	
+	this.redirigiendo_una_push = false
 	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
 	//this.server = 'http://santander.crudo.com.uy/';
@@ -189,8 +189,10 @@ function App(){
 	function start(){
 		 
 		setTimeout(function(){
+			
+			if(app.secciones.get_obj_seccion_actual()==null)
+				app.secciones.go(app.secciones.seccionhome);
 
-			app.secciones.go(app.secciones.seccionhome)
 			if(app.hay_internet()) setTimeout(verfificar_sync, 2000);
 			else $(document).trigger('LISTAR_EVENTOS');
 

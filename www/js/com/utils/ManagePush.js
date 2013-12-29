@@ -156,9 +156,4 @@ function ManagePush(){
 			}
 		}
 	}
-
-
-
-
-
 }
