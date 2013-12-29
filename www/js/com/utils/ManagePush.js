@@ -100,13 +100,12 @@ function ManagePush(){
 
 		    case 'message':
 		      	
-		  		app.alerta('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
+		  		alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
 
-		        if ( e.foreground )
+		        /*if ( e.foreground )
 		        {
 		            app.alerta('notificacion en primer plano')
-		         /*   var my_media = new Media("/android_asset/www/"+e.soundname);
-		            my_media.play();*/
+		         
 		        }
 		        else
 		        { 
@@ -121,8 +120,7 @@ function ManagePush(){
 		        }
 
 		         app.alerta('MESSAGE -> MSG: ' + e.payload.message);
-		         app.alerta('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
-		         
+		         app.alerta('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt);*/
 		    break;
 
 		    case 'error':
