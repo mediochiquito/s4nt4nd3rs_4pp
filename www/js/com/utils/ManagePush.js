@@ -69,8 +69,8 @@ function ManagePush(){
 	   
 	    if ( event.alert )
 	    {
-	        navigator.notification.alert('id_evento: ' + event.idevento + ' - ' + event.alert);
-
+	        //navigator.notification.alert('id_evento: ' + event.idevento + ' - ' + event.alert);
+	        objeto_recibido(event.idevento)
 	    }
 
 	    if ( event.sound )
@@ -100,8 +100,8 @@ function ManagePush(){
 
 		    case 'message':
 		      	
-		  		alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
-
+		  		//alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
+		  		objeto_recibido(e.payload.idevento)
 		        /*if ( e.foreground )
 		        {
 		            app.alerta('notificacion en primer plano')
@@ -134,4 +134,31 @@ function ManagePush(){
 		  }
 
 	}
+
+
+	function objeto_recibido($obj_id_evento){
+
+		if(typeof($obj_id_evento) !='undefined'){
+
+			if($obj_id_evento > 0){
+
+				app.db.transaction(function (tx) {
+				
+						tx.executeSql("SELECT * FROM eventos WHERE eventos_id='" + $obj_id_evento + "'  AND  eventos_estado=1" , [], 
+							function (tx, resultado) {
+								
+								if(resultado.rows.length == 1)
+				    				app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'un_evento', row: resultado.rows.item(0)});
+				    		}
+				    	);
+
+				});	
+			}
+		}
+	}
+
+
+
+
+
 }
