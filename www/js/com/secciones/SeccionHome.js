@@ -39,5 +39,4 @@ function SeccionHome()
 	}
 
 }
-
 SeccionHome.prototype = new Base_Seccion();

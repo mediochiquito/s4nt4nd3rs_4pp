@@ -99,7 +99,9 @@ function ManagePush(){
 		    break;
 
 		    case 'message':
-		      
+		      	
+		  		app.alerta('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
+
 		        if ( e.foreground )
 		        {
 		            app.alerta('notificacion en primer plano')
@@ -120,6 +122,7 @@ function ManagePush(){
 
 		         app.alerta('MESSAGE -> MSG: ' + e.payload.message);
 		         app.alerta('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt);
+		         
 		    break;
 
 		    case 'error':

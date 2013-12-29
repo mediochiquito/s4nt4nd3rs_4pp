@@ -12,9 +12,9 @@ function App(){
 		access_token:''
 	};
 	
-	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
-	this.server = 'http://santander.crudo.com.uy/';
+	//this.server = 'http://santander.crudo.com.uy/';
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;

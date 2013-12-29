@@ -23,10 +23,10 @@ class Push{
 	}
 	
 	
-	public function enviar_push_ios($token, $titulo, $mensaje){
+	public function enviar_push_ios($token, $titulo, $mensaje, $idevento=0){
 		
 		$payload = array();
-		$payload['aps'] = array('idevento' => 12, 'alert' => $mensaje, 'badge' => intval(0), 'sound' => 'default');
+		$payload['aps'] = array('idevento' => $idevento, 'alert' => $mensaje, 'badge' => intval(0), 'sound' => 'default');
 		$payload = json_encode($payload);
 
 		$apns_message = chr(0) . chr(0) . chr(32) . pack('H*', str_replace(' ', '', $token)) . chr(0) . chr(strlen($payload)) . $payload;
@@ -35,12 +35,12 @@ class Push{
 	}
 	
 	
-	public function enviar_push_android($token, $titulo, $mensaje){   
+	public function enviar_push_android($token, $titulo, $mensaje, $idevento=0){   
 	
 	
 			$headers = array("Content-Type:" . "application/json", "Authorization:" . "key=" . $this->apiKey);
 			$data = array(
-				'data' => array('message' => $mensaje, 'title' => $titulo),
+				'data' => array('idevento' => $idevento, 'message' => $mensaje, 'title' => $titulo),
 				'registration_ids' => array($token)
 			);
 		 
@@ -73,6 +73,6 @@ class Push{
 }
 
 $p = new Push();
-$p->enviar_push_ios('2842f7860c6d8b8e1229c2a7a462e6a70cf1dc314c264887c40b5addd29df11c', 'Test Titulo',  'Test mensaje mensaje');
+//$p->enviar_push_ios('2842f7860c6d8b8e1229c2a7a462e6a70cf1dc314c264887c40b5addd29df11c', 'Test Titulo',  'Test mensaje mensaje');
 
-//$p->enviar_push_android('APA91bE5RcCsiKgVF0aM2_yGkE9owZhsIsc9Kny2uH1ULrIPfz4M368bwRDBdU_WWQoPvjs5As1caqwS95PNGQ-QgzsRXIatcAH3_H-Q4VjoEDuGHNig2EWEmEyBypAW4DHEwAvFW0B-ZbnKWIdWQqO108twyWaDAw', 'titulo titulo', 'caca caca caca');
+$p->enviar_push_android('APA91bGJxK63txVOJ41n1dylXim2BIu2O3NBuzBuZcsNYB87B-5BYl2-EcA5MXYnd5SMUawwR6IILloNM-T4Kq_jpaNJurO6TSicH0mP4MCYY-4Eftf52SiapbPCDH7PvwQ7RLLRcZN98cPIFF0MoaiIXZvPc5UJrA', 'titulo titulo', 'caca caca caca', 14);

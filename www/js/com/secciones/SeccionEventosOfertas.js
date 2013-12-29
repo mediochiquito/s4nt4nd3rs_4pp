@@ -11,11 +11,6 @@ function SeccionEventosOfertas()
 	
 	$(this.main).bind("SOLAPA_CLICK", doSolapaClick)
 
-/*	var holder_tabs = document.createElement('div')
-	holder_tabs.id = 'SeccionEventosOfertas_holder_tabs'
-	$(holder_tabs).append('<div></div>')
-	$(this.main).append(holder_tabs)*/
-
 	var solapa_eventos = new Solapa('EVENTOS', 'eventos', '#674d97')
 	solapa_eventos.main.id = 'solapa_eventos'
 	$(this.main).append(solapa_eventos.main)
@@ -40,8 +35,6 @@ function SeccionEventosOfertas()
 	$(una_oferta.main).transition({x:3000}, 0)
 	$(this.main).append(una_oferta.main);
 
-/*	var is ;
-	var scroll_set =  false*/
 	var en_solapa=''
 
 	function doSolapaClick(e){
@@ -66,7 +59,6 @@ function SeccionEventosOfertas()
 	}
 
 	function mostrar_solapa($obj){
-		
 		
 		if(typeof($obj.solapa) == 'undefined') en_solapa = 'eventos';
 		else en_solapa = $obj.solapa;
@@ -124,13 +116,6 @@ function SeccionEventosOfertas()
 
 	}
 
-	this.updateScroll =  function (){
-
-		is.refresh()
-
-	}
-
-
 	this._set = function ($obj){
 
 		if(typeof($obj)!='undefined'){
@@ -141,8 +126,6 @@ function SeccionEventosOfertas()
 		}else{
 
 			if(en_solapa=='') mostrar_solapa({solapa:'eventos'});
-
-
 
 		}
 	}

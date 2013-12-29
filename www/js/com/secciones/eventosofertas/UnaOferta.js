@@ -16,7 +16,13 @@ function UnaOferta()
 	var img = new Image()
 	img.id = 'SeccionUnaOferta_img'
 	$(holder).find('>div').append(img)
+
+	var hoy = new Image();
+	hoy.id =  'UnaOferta_hoy';
+	hoy.src = 'img/hoy.svg';
+	$(holder).find('>div').append(hoy);
 	
+
 	var header_titulo =  document.createElement('div')
 	header_titulo.id = 'UnaOferta_header_titulo'
 	$(holder).find('>div').append(header_titulo)

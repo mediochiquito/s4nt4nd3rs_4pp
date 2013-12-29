@@ -20,7 +20,13 @@
 	right: 6px;
 	top: 4px;
 }
+#UnaOferta_hoy{
 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 70px;
+}
 #UnaOferta_btn_ver_en_mapa{
 
 	position: absolute;
