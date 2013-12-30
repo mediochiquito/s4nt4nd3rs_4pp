@@ -20,7 +20,7 @@ function SeccionMenu()
 	var btn_descuentos = new ItemMenu('Descuentos', 'icon_ofertas.svg', doVerDescuentos)
 	$(holder).append(btn_descuentos.main)
 	
-	var btn_cargar_evento = new ItemMenu('Cargar Evento', 'icon_cargar_evento.svg', doVerMapa)
+	var btn_cargar_evento = new ItemMenu('Cargar Evento', 'icon_cargar_evento.svg', doSubirEvento)
 	$(holder).append(btn_cargar_evento.main)
 	
 	var btn_notitficaciones = new ItemMenu('Notificaciones Push', 'icon_push.svg', doPush)
@@ -45,7 +45,11 @@ function SeccionMenu()
 
 
 	}
+	function doSubirEvento(){
+		
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'subirevento'});
 
+	}
 	function doTerms(){
 
 

@@ -38,7 +38,7 @@ function ListaEventos()
 	}
 	function doSubirEvento(e){
 
-
+		app.secciones.seccioneventosofertas.ir_a_una_solapa({solapa:'subirevento'})
 		
 	}
 

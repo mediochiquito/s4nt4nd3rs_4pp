@@ -35,6 +35,11 @@ function SeccionEventosOfertas()
 	$(una_oferta.main).transition({x:3000}, 0)
 	$(this.main).append(una_oferta.main);
 
+	var subirevento = new FormSubirEvento()
+	$(subirevento.main).transition({x:3000}, 0)
+	$(this.main).append(subirevento.main);
+
+
 	var en_solapa=''
 
 	function doSolapaClick(e){
@@ -67,9 +72,18 @@ function SeccionEventosOfertas()
 		$(lista_eventos.main).transition({x:3000}, 0);
 		$(un_evento.main).transition({x:3000}, 0);
 		$(una_oferta.main).transition({x:3000}, 0);
+		$(subirevento.main).transition({x:3000}, 0);
 
 		$(lista_ofertas.main).css('pointer-events', 'none')
 		$(lista_eventos.main).css('pointer-events', 'none')
+
+		if($obj.solapa == 'subirevento'){
+		
+			solapa_eventos.habil(true);
+			solapa_ofertas.habil(false);
+			$(subirevento.main).transition({x:0}, 0)
+
+		}
 
 		if($obj.solapa == 'eventos'){
 		
