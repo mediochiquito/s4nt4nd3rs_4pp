@@ -57,8 +57,5 @@ function Secciones(){
 
 	}
 
-	
-
-
 }
 

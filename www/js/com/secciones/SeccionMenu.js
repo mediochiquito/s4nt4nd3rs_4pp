@@ -23,16 +23,40 @@ function SeccionMenu()
 	var btn_cargar_evento = new ItemMenu('Cargar Evento', 'icon_cargar_evento.svg', doVerMapa)
 	$(holder).append(btn_cargar_evento.main)
 	
-	var btn_notitficaciones = new ItemMenu('Notificaciones Push', 'icon_push.svg', doVerMapa)
+	var btn_notitficaciones = new ItemMenu('Notificaciones Push', 'icon_push.svg', doPush)
 	$(holder).append(btn_notitficaciones.main)
 
 	var btn_terms = new ItemMenu('Términos y Condiciones', 'icon_terms.svg', doVerMapa)
 	$(holder).append(btn_terms.main)
 
+
+
+	var chk_push = new BotonToogle("img/mapa/checkbox.svg", '1' , 30, 60, doCheckPush)
+	chk_push.main.id = 'SeccionMenu_chk_push'
+	$(chk_push.main).css('pointer-events', 'none');
+	$(btn_notitficaciones.main).append(chk_push.main)
+
+
 	setTimeout(function(){
 		$('#SeccionMenu_header_bg').css({width: app.ancho-20})
 	})
 
+	function doCheckPush(){
+
+
+	}
+	function doPush(){
+
+		if(chk_push.getSelected()){
+
+			chk_push.setSelected(false)
+
+		}else{
+			chk_push.setSelected(true)
+
+		}
+		
+	}
 
 	function doVerDescuentos(){
 

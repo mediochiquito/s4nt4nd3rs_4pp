@@ -6,7 +6,7 @@ function BotonToogle($img, $value, $img_w, $img_h, $callback){
 
 	$(this.main).css("cursor", "pointer");
 	$(this.main).append('<img src="'+$img+'" width="'+($img_w)+'" height="'+($img_h)+'"  />')
-
+	$(this.main).find('img').css('position', 'absolute');
 
 	$(this.main).css("width", $img_w);
 	$(this.main).css("height", $img_h/2); 
