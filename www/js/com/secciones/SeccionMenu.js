@@ -26,7 +26,7 @@ function SeccionMenu()
 	var btn_notitficaciones = new ItemMenu('Notificaciones Push', 'icon_push.svg', doPush)
 	$(holder).append(btn_notitficaciones.main)
 
-	var btn_terms = new ItemMenu('Términos y Condiciones', 'icon_terms.svg', doVerMapa)
+	var btn_terms = new ItemMenu('Términos y Condiciones', 'icon_terms.svg', doTerms)
 	$(holder).append(btn_terms.main)
 
 
@@ -44,6 +44,12 @@ function SeccionMenu()
 	function doCheckPush(){
 
 
+	}
+
+	function doTerms(){
+
+
+		app.secciones.go(app.secciones.seccionterms)
 	}
 	function doPush(){
 

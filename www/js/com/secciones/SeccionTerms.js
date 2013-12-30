@@ -9,7 +9,27 @@ function SeccionTerms()
 	$(this.main).append(holder_blanco_secciones)
 	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 
+	var holder = document.createElement('div')
+	holder.id = 'SeccionTerms_holder'
+	$(this.main).append(holder);
+	$(holder).css({	width: app.ancho-40, height: app.alto-90})
+	
 
+	var cargada = false;
+
+	this._set  = function (obj){
+		if(!cargada){
+			$(holder).append($(app.get_xml_default_db()).find('terms').text())
+			cargada = true;
+
+
+			setTimeout(function(){  
+				new iScroll('SeccionTerms_holder', {hScrollbar: false, vScrollbar: true});;
+			}, 110)
+		}
+		
+
+	}
 
 }
 

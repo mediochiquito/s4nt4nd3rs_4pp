@@ -1,0 +1,26 @@
+#SeccionTerms{
+
+
+}
+#SeccionTerms_holder{
+	position: absolute;
+	color: #000;
+	top:60px;
+	left: 20px;
+
+}
+#SeccionTerms_scroleable{
+	padding: 10px;
+}
+
+#SeccionTerms_titulo{
+	position: relative;
+	font-family: 'GothamBold';
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+#SeccionTerms_txt{
+	position: relative;
+	 font-family: 'GothamBook';
+	 font-size: 13px;
+}

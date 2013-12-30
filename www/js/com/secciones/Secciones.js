@@ -21,6 +21,11 @@ function Secciones(){
 	$(this.main).append(this.seccionmenu.main)
 	this.seccionmenu.ocultar(0);
 
+	this.seccionterms = new SeccionTerms();
+	$(this.main).append(this.seccionterms.main)
+	this.seccionterms.ocultar(0);
+
+	
 	var obj_seccion_actual = null;	
 	
 	this.get_obj_seccion_actual = function (){
