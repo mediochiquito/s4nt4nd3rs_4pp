@@ -15,9 +15,10 @@ function ItemMenu($txt,$icon,$callback){
 
 	if(app.es_touch()){
 
-		this.main.addEventListener("touchend", do_click);
+		//this.main.addEventListener("touchend", do_click);
 		this.main.addEventListener("touchend", do_mouseout);
 		this.main.addEventListener("touchstart", do_mouseover);
+		this.main.addEventListener("touchstart", do_touchstart);
 
 	}else{
 
@@ -41,7 +42,17 @@ function ItemMenu($txt,$icon,$callback){
 		}
 
 	}
+	
+	function do_touchstart(){
 
+		
+		setTimeout(function (){
+
+			
+			do_mouseout()
+			do_click()
+		}, 200)
+	}
 
 	function do_click(){
 	

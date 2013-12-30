@@ -21,10 +21,6 @@ function Secciones(){
 	$(this.main).append(this.seccionmenu.main)
 	this.seccionmenu.ocultar(0);
 
-	/*this.seccionunaoferta = new SeccionUnaOferta();
-	$(this.main).append(this.seccionunaoferta.main)
-	this.seccionunaoferta.ocultar(0);
-*/
 	var obj_seccion_actual = null;	
 	
 	this.get_obj_seccion_actual = function (){

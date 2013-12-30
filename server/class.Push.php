@@ -71,9 +71,9 @@ class Push{
 	
 	
 }
-
+/* ejemplo
 $p = new Push();
 
 
 $p->enviar_push_ios('2842f7860c6d8b8e1229c2a7a462e6a70cf1dc314c264887c40b5addd29df11c', 'Test Titulo',  'Test mensaje mensaje', 9);
-$p->enviar_push_android('APA91bGJxK63txVOJ41n1dylXim2BIu2O3NBuzBuZcsNYB87B-5BYl2-EcA5MXYnd5SMUawwR6IILloNM-T4Kq_jpaNJurO6TSicH0mP4MCYY-4Eftf52SiapbPCDH7PvwQ7RLLRcZN98cPIFF0MoaiIXZvPc5UJrA', 'titulo titulo', 'caca caca caca', 9);
+$p->enviar_push_android('APA91bGJxK63txVOJ41n1dylXim2BIu2O3NBuzBuZcsNYB87B-5BYl2-EcA5MXYnd5SMUawwR6IILloNM-T4Kq_jpaNJurO6TSicH0mP4MCYY-4Eftf52SiapbPCDH7PvwQ7RLLRcZN98cPIFF0MoaiIXZvPc5UJrA', 'titulo titulo', 'caca caca caca', 9);*/

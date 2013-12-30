@@ -15,6 +15,11 @@ function ItemListaOferta($row)
 	$(this.main).append(txt)
 	$(txt).html($row.ofertas_descuento)
 	
+	var hoy = new Image();
+	hoy.className =  'ItemListaOferta_hoy';
+	hoy.src = 'img/hoy.svg';
+	$(this.main).append(hoy);
+
 	this.main.addEventListener('click', doClick);
 /*	this.main.addEventListener('touchstart', pintar);
 	this.main.addEventListener('touchend', despintar);

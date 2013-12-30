@@ -52,6 +52,10 @@ function UnEvento()
 	btn_ver_en_mapa.main.id = 'UnEvento_btn_ver_en_mapa'
 	$(header_titulo).append(btn_ver_en_mapa.main)
 
+	var hoy = new Image();
+	hoy.id =  'UnaOferta_hoy';
+	hoy.src = 'img/hoy.svg';
+	$(holder).find('>div').append(hoy);
 
  	$(holder_participaciones).append('<div id="UnEvento_txt_tambien_participan">También participan de este Evento:</div><div id="UnEvento_holder_usuarios_fb"></div>')
  	$(holder).find('>div').append(holder_participaciones)
@@ -110,23 +114,24 @@ function UnEvento()
 
 		                success: function($data) {
 		                	if($data == '1'){
+		                	
+		    
+		                	}else{
+		                		app.alerta($data)
+		                		
+		            
+		                	}
 		                		app.db.transaction(function (tx) {
 
 									tx.executeSql('INSERT INTO participaciones (participaciones_id_evento, participaciones_uid) VALUES (?,?)', 
 												  [String(obj.row.eventos_id), String(app.usuario.uid)]
 												  );
 
-									 app.cargando(false);
-									 btn_participar.habil(false);
+									app.cargando(false)
+		                			btn_participar.habil(false);
 									 
 								},  app.db_errorGeneral);
-		    
-		                	}else{
-		                		app.alerta($data)
-		                		app.cargando(false)
-		                		btn_participar.habil(false);
-		                	}
-		                	
+
 		                	
 		                },
 		                error: function(){ 
@@ -190,17 +195,52 @@ function UnEvento()
                 
 	}
 
+	function este_evento_es_hoy(){
+
+		var array_fecha_hora = obj.row.eventos_fecha_hora.split(' ')
+		var array_fecha =array_fecha_hora[0].split('-')
+		
+
+		var d = new Date();
+		var hoy = new Date(d.getFullYear(),d.getMonth(), d.getDate())
+		var dia_evento = new Date(Number(array_fecha[0]), Number(array_fecha[1])-1, Number(array_fecha[2]));
+		
+		
+		if(hoy.getTime() == dia_evento.getTime()) return true;
+		else return false;
+
+	}
+	
+
+	function getDateUruguay($fecha_hora){
+
+		var array_fecha_hora = $fecha_hora.split(' ')
+		var array_fecha =array_fecha_hora[0].split('-')
+		var array_hora =array_fecha_hora[1].split(':')
+
+		return array_fecha[2]+'/'+array_fecha[1]+'/'+array_fecha[0] + ' ' +  array_hora[0] + ':' +  array_hora[1]  +  'hs.'
+
+	}
+
 	this._set = function ($obj){
 
 		obj = $obj;
-		img.src = 'img/fotos_header_eventos/' + $obj.row.eventos_categoria_id + '.jpg';
-		$(img).css('width', app.ancho-40);
 
+		if(app.hay_internet() && $obj.row.eventos_header_img!='')
+			img.src =  $obj.row.eventos_header_img;
+		else
+			img.src = 'img/fotos_header_eventos/' + $obj.row.eventos_categoria_id + '.jpg';
+		
+		$(img).css('width', app.ancho-40);
+		
+		if(este_evento_es_hoy()) $(hoy).show();
+		else  $(hoy).hide();
+		
 		$(titulo_txt).html($obj.row.eventos_nombre);
 		$(holder_data).empty()
 		
 		addRegistro('Categoria', app.categorias_eventos[$obj.row.eventos_categoria_id-1])
-		addRegistro('Fecha', $obj.row.eventos_fecha_hora)
+		addRegistro('Fecha', getDateUruguay($obj.row.eventos_fecha_hora))
 		addRegistro('Lugar', $obj.row.eventos_lugar)
 		addRegistro('Descripción', $obj.row.eventos_desc)
 		

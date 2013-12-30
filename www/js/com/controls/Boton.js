@@ -14,9 +14,10 @@ function Boton($html, $callback, $className){
 
 	if(app.es_touch()){
 
-		this.main.addEventListener("touchend", do_click);
+		//this.main.addEventListener("touchend", do_click);
 		this.main.addEventListener("touchend", do_mouseout);
 		this.main.addEventListener("touchstart", do_mouseover);
+		this.main.addEventListener("touchstart", do_touchstart);
 
 	}else{
 
@@ -39,6 +40,17 @@ function Boton($html, $callback, $className){
 		   $(this.main).transition({ opacity: .3 }, 0);
 		}
 
+	}
+
+	function do_touchstart(){
+
+	
+		setTimeout(function (){
+
+			
+			do_mouseout()
+	do_click()
+		}, 200)
 	}
 
 

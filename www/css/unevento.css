@@ -31,6 +31,8 @@
 	height: 35px;
 	width: 100%;
 	background-color: #674d97;
+		margin-top: -4px;
+
 }
 #UnEvento_titulo_txt{
 	position: absolute;

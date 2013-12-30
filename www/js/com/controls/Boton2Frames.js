@@ -5,9 +5,17 @@ function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 	this.main.className = 'Boton2Frames'
 
 	$(this.main).css("cursor", "pointer");
-	$(this.main).css("background-image", "url("+$img+")");
-	$(this.main).css("background-size", ($img_w)+"px "+($img_h)+"px");
+	/*$(this.main).css("background-image", "url("+$img+")");
+	$(this.main).css("background-size", ($img_w)+"px "+($img_h)+"px");*/
+	$(this.main).append('<img src="'+$img+'" width="'+($img_w)+'" height="'+($img_h)+'"  />')
 
+	// hakc
+	var ext_array = $img.split('.');
+	var ext = ext_array[ext_array.length-1]
+	if(ext == 'png') $(this.main).find('img').css('-webkit-backface-visibility', 'hidden');
+
+
+		
 	$(this.main).css("width", $img_w);
 	$(this.main).css("height", $img_h/2); 
 	$(this.main).css("cursor", "pointer");
@@ -17,8 +25,10 @@ function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 	if(app.es_touch()){
 
 		$(this.main).bind("touchend", do_mouseout);
-		$(this.main).bind("touchend", do_click);
+		//$(this.main).bind("touchend", do_click);
 		$(this.main).bind("touchstart", do_mouseover);
+		$(this.main).bind("touchstart", do_touchstart);
+
 
 	}else{
 
@@ -41,6 +51,17 @@ function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 		}
 
 	}
+	
+	function do_touchstart(){
+
+	
+		setTimeout(function (){
+
+			do_click()
+			do_mouseout()
+			
+		}, 200)
+	}
 
 	function do_click(){
 
@@ -51,14 +72,13 @@ function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 	
 	function do_mouseover(){
 		//if(habil)
-	
-			$(self.main).css("background-position", '0px '+($img_h/2)+'px');
+			$(self.main).find('img').css("top", -($img_h/2));
 	}
 	
 	function do_mouseout(){
 		
 		//if(habil)
-			$(self.main).css("background-position", '0px 0px');
+			$(self.main).find('img').css("top",0);
 		
 	}
 

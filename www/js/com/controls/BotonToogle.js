@@ -5,12 +5,13 @@ function BotonToogle($img, $value, $img_w, $img_h, $callback){
 	this.main.className = '_BotonToogle'
 
 	$(this.main).css("cursor", "pointer");
-	$(this.main).css("background-image", "url("+$img+")");
-	$(this.main).css("background-size", ($img_w)+"px "+($img_h)+"px");
+	$(this.main).append('<img src="'+$img+'" width="'+($img_w)+'" height="'+($img_h)+'"  />')
+
 
 	$(this.main).css("width", $img_w);
 	$(this.main).css("height", $img_h/2); 
 	$(this.main).css("cursor", "pointer");
+	$(this.main).css("overflow", "hidden");
 
 	var habil = true;
 	var Selected = false;
@@ -35,10 +36,9 @@ function BotonToogle($img, $value, $img_w, $img_h, $callback){
 		
 		Selected = $Selected;
 		if(Selected){
-			$(self.main).css("background-position", '0px '+($img_h/2)+'px');
+			$(self.main).find('img').css("top", -($img_h/2));
 		}else{
-			$(self.main).css("background-position", '0px 0px');
-
+			$(self.main).find('img').css("top",0);
 		}
 	
 	}

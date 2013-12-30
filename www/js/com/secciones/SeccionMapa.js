@@ -33,11 +33,22 @@ function SeccionMapa()
 
 	$(holdermap_canvas).css({	width: app.ancho-20, height: app.alto-120})
 
-	/*var esquina_si = new Image()
-	esquina_si.src = 'img/mapa/esquina_si.png';
-	esquina_si.id = 'SeccionMapa_esquina_si';
-	$(this.main).append(esquina_si);*/
 
+	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+	
+		var esquina_si = new Image()
+		esquina_si.src = 'img/mapa/esquina_izq.svg';
+		esquina_si.id = 'SeccionMapa_esquina_si';
+		$(this.main).append(esquina_si);
+
+		var esquina_der = new Image()
+		esquina_der.src = 'img/mapa/esquina_der.svg';
+		esquina_der.id = 'SeccionMapa_esquina_der';
+		$(this.main).append(esquina_der);
+		$(esquina_der).css('left',app.ancho-25);
+	}
+
+	var my_marker;
 
 	var array_markers_eventos;
 	var array_markers_ofertas;
@@ -47,8 +58,7 @@ function SeccionMapa()
 	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 
 
-
-
+	
 	function doCheckEventos(){
 
 		mostrar_elementos('eventos', chk_eventos.getSelected())
@@ -61,14 +71,18 @@ function SeccionMapa()
 
 	function _construct() {
 		
+	
+
 		  var mapOptions = {
-		    zoom: 16,
+		    zoom: 15,
 		    mapTypeControl: false,
 		    zoomControl: true,
+		    mapTypeId: google.maps.MapTypeId.ROADMAP,
 		    zoomControlOptions: {
 		        style: google.maps.ZoomControlStyle.LARGE,
 		        position: google.maps.ControlPosition.LEFT_CENTER
 		    },
+
 		     streetViewControl: false,
 		     styles:[
 					    {
@@ -80,42 +94,32 @@ function SeccionMapa()
 					    }
 					]
 		  };
-		 
+		
 		  map = new google.maps.Map(map_canvas,  mapOptions);
-		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
-		  map.setCenter(pos);
+
+		 
+
+		 my_marker = new google.maps.Marker(
+		           				{
+								  icon: {url:'img/mapa/mypoint.png', scaledSize: new google.maps.Size(20, 20), size: new google.maps.Size(20, 20)}
+								  
+								});
+		 my_marker.setMap(map);
+
 
 		 listar_ofertas()
 
 
 
+		    setTimeout(function() {
+		     google.maps.event.trigger(map,'resize');
 		 
-		  //  setTimeout(function() {
-		    //  google.maps.event.trigger(map,'resize');
-		  // }, 200);
+		   }, 200);
+	
+
+
 		
-/*
 
-		  if(navigator.geolocation) {
-
-		        navigator.geolocation.getCurrentPosition(function(position) {
-		        	 alert(position.coords.latitude)
-			        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-				    
-			      map.setCenter(pos);
-
-			    }, function() {
-			      handleNoGeolocation(true);
-			    }{
-                        enableHighAccuracy: true
-                        ,timeout : 5000
-                    });
-
-		  } else {
-		    // Browser doesn't support Geolocation
-		    handleNoGeolocation(false);
-		  }*/
 	}
 	/*this.setMarcadores = function(xml){
 			
@@ -138,7 +142,30 @@ function SeccionMapa()
 				  map.setCenter(new google.maps.LatLng(obj.center[0], obj.center[1]));
 				  map.setZoom(18)
 
-			}catch(e){}
+			}catch(e){
+
+
+				  if(navigator.geolocation) {
+
+				        navigator.geolocation.getCurrentPosition(function(position) {
+				        	
+					        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+					    	map.setCenter(pos);
+					    	my_marker.setPosition(pos);
+
+
+					    }, function() {
+
+					     	 handleNoGeolocation(true);
+
+					   	}, { enableHighAccuracy: true, timeout : 5000 } );
+
+				  } else {
+					  handleNoGeolocation(false);
+				  }
+
+
+			}
 				  
 
 			switch(solo_ver){
@@ -165,6 +192,10 @@ function SeccionMapa()
 
 
 		}
+
+
+
+
 	}
 
 	function mostrar_elementos($que_elmentos, $visiblildad){
@@ -213,6 +244,7 @@ function SeccionMapa()
 		           				{
 								  position: new google.maps.LatLng(resulato_ofertas.rows.item(i).ofertas_lat, resulato_ofertas.rows.item(i).ofertas_lon),
 								  title:resulato_ofertas.rows.item(i).ofertas_nombre,
+
 								  icon: {url:'img/markers/oferta.png', scaledSize: new google.maps.Size(19, 30), size: new google.maps.Size(19, 30)},
 								  row: resulato_ofertas.rows.item(i)
 								});
@@ -262,8 +294,6 @@ function SeccionMapa()
 
 	}
 
-
-
 	function mostrar_una_oferta($row){
 	
 		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'una_oferta', row: $row})
@@ -276,21 +306,14 @@ function SeccionMapa()
 
 	function handleNoGeolocation(errorFlag) {
 		  
-		  if (errorFlag) {
-		    var content = 'Error: The Geolocation service failed.';
-		  } else {
-		    var content = 'Error: Your browser doesn\'t support geolocation.';
-		  }
-		  alert(content)
-		  //defaul centro de punta -34.965311,-54.94985
-		  var options = {
-		    map: map,
-		    position: new google.maps.LatLng(-34.965311, -54.94985),
-		    content: content
-		  };
+		 
+		
+		 
+		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
+		  map.setCenter(pos);
 
-		  var infowindow = new google.maps.InfoWindow(options);
-		  map.setCenter(options.position);
+
+		
 	}
 
 

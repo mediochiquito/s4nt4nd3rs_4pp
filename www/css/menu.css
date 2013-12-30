@@ -54,7 +54,7 @@
 .ItemMenu{
 	position: relative;
 	font-family: 'GothamBook';
-	font-size: 16px;
+	font-size: 17px;
 	color: #fff;
 	border-bottom: solid 1px #fff;
 	padding: 10px 10px 10px 40px;
@@ -63,7 +63,6 @@
 .ItemMenu > img{
 	position: absolute;
 	width: 30px;
-	
 	top: 4px;
 	left: 5px;
 }

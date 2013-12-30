@@ -3,12 +3,8 @@
 }
 
 #solapa_eventos{
-
 	left: 20px;
-	
-
 	top: 60px;
-
 }
 
 #solapa_ofertas{
@@ -17,7 +13,12 @@
 	top: 60px;
 
 }
-
+.ItemListaOferta_hoy{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 30px;
+}
 #ListaOfertas{
 	position: absolute;
 

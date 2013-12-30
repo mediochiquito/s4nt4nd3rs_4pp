@@ -3,8 +3,8 @@ html,body {
     -webkit-touch-callout: none; 
     -webkit-text-size-adjust: none;
     -webkit-user-select: none;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     height: 100%;
    
 }
@@ -36,7 +36,7 @@ body{
 	
     background-color: #60478b;*/
 
-    background-image: -webkit-linear-gradient(bottom, #60478b 0%, #ec1c24 80%);
+    background-image: -webkit-linear-gradient(bottom, #60478b 0%, #cc3333 80%);
     background-attachment:fixed;
 }
 
@@ -72,8 +72,7 @@ body{
 	overflow: hidden;
 	top: 50px;
 	position: absolute;
-	/* -webkit-transition: all 2s linear;
-	 -webkit-transform: scale(.6);*/
+
 	-webkit-mask-image: url('../img/mapa/mask.png');
 }
 
@@ -88,8 +87,6 @@ body{
 #fpo_fb_connect{
 	top: 40px;
 }
-
-
 
 /*LightBox*/
 

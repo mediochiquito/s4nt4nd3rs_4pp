@@ -6,6 +6,6 @@ $rs = mysql_query('INSERT INTO participaciones SET participaciones_eventos_id="'
 												   participaciones_uid="' . $uid . '"');
 
 if($rs) die('1');
-else die('error');
+else die('Ya estás participando de este evento');
  ?>
 
