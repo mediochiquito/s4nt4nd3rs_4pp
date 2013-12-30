@@ -144,7 +144,7 @@ function SeccionMapa()
 
 			}catch(e){
 
-
+				// { enableHighAccuracy: true, timeout : 5000 } 
 				  if(navigator.geolocation) {
 
 				        navigator.geolocation.getCurrentPosition(function(position) {
@@ -158,7 +158,7 @@ function SeccionMapa()
 
 					     	 handleNoGeolocation(true);
 
-					   	}, { enableHighAccuracy: true, timeout : 5000 } );
+					   	});
 
 				  } else {
 					  handleNoGeolocation(false);
