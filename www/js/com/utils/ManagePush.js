@@ -38,8 +38,22 @@ function ManagePush(){
 	}
 
 	this.unregistrar = function (){
-
-		pushNotification.unregister(successHandler, errorHandler);
+		 try  {
+	        pushNotification.unregister(
+	        function(e) {
+	            //unRegister Success!!!
+	            alert('unRegister Success');
+	        }, 
+	        function(e) {
+	            //unRegister Failed!!!
+	            alert('unRegister Failed');
+	        });
+	    }
+	    catch(err) {
+	        //Handle errors here
+	        alert(err.message);
+	    }
+		
 	}
 
 
