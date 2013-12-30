@@ -35,7 +35,7 @@ function SeccionMenu()
 	chk_push.main.id = 'SeccionMenu_chk_push'
 	$(chk_push.main).css('pointer-events', 'none');
 	$(btn_notitficaciones.main).append(chk_push.main)
-
+	chk_push.setSelected(true)
 
 	setTimeout(function(){
 		$('#SeccionMenu_header_bg').css({width: app.ancho-20})
@@ -49,11 +49,13 @@ function SeccionMenu()
 
 		if(chk_push.getSelected()){
 
+			
+			app._ManagePush.unregistrar()
 			chk_push.setSelected(false)
-
 		}else{
+			
+			app._ManagePush.registrar()
 			chk_push.setSelected(true)
-
 		}
 		
 	}

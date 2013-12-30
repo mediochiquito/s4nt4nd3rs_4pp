@@ -37,6 +37,12 @@ function ManagePush(){
 		
 	}
 
+	this.unregistrar = function (){
+
+		pushNotification.unregister(successHandler, errorHandler);
+	}
+
+
 	function sendToken(){
 		
 		$.ajax({
