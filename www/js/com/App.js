@@ -206,7 +206,7 @@ function App(){
 		    	app.db.transaction(function (tx) {
 					tx.executeSql("SELECT push FROM app" , [], function (tx, resultado) {
 		    				
-		    				if(String(resultado.rows.item(0).push) == '0') 
+		    				if(String(resultado.rows.item(0).push) == '0' || String(resultado.rows.item(0).push) == '1' ) 
 		    						self._ManagePush.registrar();
 		    					
 					})
