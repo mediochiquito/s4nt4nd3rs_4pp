@@ -66,7 +66,7 @@ function SeccionMapa()
 	var  config_gps = {
 		minAccuracy : 150,
 		highAccuracy : true,
-		maximumAge : 15000,
+		maximumAge : 3000,
 		readTimeout : 5000
 		};
 	var gps_locator;
@@ -94,25 +94,23 @@ function SeccionMapa()
 	 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 	 		console.log(ultima_pos)
 	 		if(mostrando_mi_pos){
-				map.setCenter(ultima_pos);
+			//	map.setCenter(ultima_pos);
 				my_marker.setPosition(ultima_pos);
 				$(imposible).hide()
 			}
 
 	}
-	function errorLocation(errorFlag) {
+	function errorLocation(error) {
+		
 		  console.log('errorLocation')
+			
+		   alert('code: '    + error.code    + '\n' +
+       		     'message: ' + error.message + '\n');
+
 		  $(imposible).show();
 		  setTimeout(function(){
 				$(imposible).hide()
-
-		  }, 3000)
-		/* 
-			alert(errorFlag)
-		 
-		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
-		  map.setCenter(pos);
-*/
+		  }, 3000);
 
 		
 	}
@@ -122,7 +120,7 @@ function SeccionMapa()
 		    if(navigator.geolocation) {
 
 
-		    	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+		    	/*if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 
 			
 							fn = function(){
@@ -143,7 +141,7 @@ function SeccionMapa()
 
 		    	}else{
 
-
+*/
 
 		    		gps_locator = navigator.geolocation.watchPosition(
 											onLocation, 
@@ -157,23 +155,8 @@ function SeccionMapa()
 
 
 
-		    	}
+		    	//}
 
-				/*		  navigator.geolocation.watchPosition(function(position) {
-						        	
-						      	if(mostrando_mi_pos){
-
-							        	ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-								    	map.setCenter(ultima_pos);
-								    	my_marker.setPosition(ultima_pos);
-
-						        }
-							     
-						}, function() {
-							    	
-							  handleNoGeolocation(true);
-
-						}, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });*/
 
 			}
 	

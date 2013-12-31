@@ -5,15 +5,19 @@
 		[
 			[
 				"ba",
-				"background-color"
-			],
-			[
-				"te",
-				"text-align"
+				"background-clip"
 			],
 			[
 				"mar",
-				"margin-bottom"
+				"margin-top"
+			],
+			[
+				"ma",
+				"max-height"
+			],
+			[
+				"bo",
+				"border"
 			],
 			[
 				"i",
@@ -22,10 +26,6 @@
 			[
 				"fon",
 				"font-style"
-			],
-			[
-				"bo",
-				"border-bottom"
 			],
 			[
 				"p",
@@ -91,8 +91,40 @@
 			"file": "www/js/com/secciones/SeccionMapa.js",
 			"settings":
 			{
-				"buffer_size": 7494,
-				"line_ending": "Unix"
+				"buffer_size": 9502,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/css/mapa.css",
+			"settings":
+			{
+				"buffer_size": 1758,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/config.xml",
+			"settings":
+			{
+				"buffer_size": 1478,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/com/secciones/Secciones.js",
+			"settings":
+			{
+				"buffer_size": 1855,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/js/com/App.js",
+			"settings":
+			{
+				"buffer_size": 14591,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -120,66 +152,52 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMenu.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unaoferta.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/terms.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/xml/default_db.xml",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionTerms.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
-		"/Volumes/www/ffmpeg/index.php",
-		"/Volumes/www/ffmpeg/process.php",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
+		"/C/Users/Mateo/Desktop/Santanders_App-release/AndroidManifest.xml",
+		"/C/Users/Mateo/Desktop/Santanders_App-release/res/xml/config.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMenu.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/menu/ItemMenu.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/menu.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
+		"/C/Users/Mateo/Desktop/core.gps.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
-		"/C/wamp/www/s4nt4nd3rs_4pp__/www/js/com/secciones/SeccionMenu.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unevento.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/json.participaciones.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/menu.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/ManagePush.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/menu/ItemMenu.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unevento.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/set_participar.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp__/www/js/com/secciones/SeccionMenu.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/json.participaciones.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnaOferta.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/SeccionHome.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa - copia.js",
@@ -190,7 +208,6 @@
 		"/C/Users/Mateo/AppData/Local/Temp/fz3temp-1/Home.js",
 		"/C/Users/Mateo/Downloads/vida en balance mobile/public/config.xml",
 		"/C/Users/Mateo/Downloads/vida en balance mobile/public/index.html",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/ManagePush.js",
 		"/C/wamp/www/green ray led/public/css/controls.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/void.set_push_token.php",
 		"/C/Users/Mateo/AppData/Local/Temp/Rar$DRa1.425/Payload/SantandersApp.app/config.xml",
@@ -247,7 +264,22 @@
 		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.jquery.js",
 		"/C/wamp/www/ford_escapate/public/tab/index.php",
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/BotonToogle.js",
-		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js"
+		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css",
+		"/C/wamp/www/gennerayled/js/com/secciones/savings/SavingsList.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/savings/Savings.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/login.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/LightBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CanvasSaver.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/registro.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/btn_continuar.png",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_guardar - copia.js"
 	],
 	"find":
 	{
@@ -265,12 +297,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"subirevento",
-			"SubirEvento",
-			"subirevento",
-			"xml_default_db",
-			"crear_db",
-			"xml_default_db",
+			"highAccuracy",
+			"SeccionMapa_imposible",
+			"gps.vars.locator",
+			"		        	\n",
+			"mask",
 			"this.main",
 			"response",
 			"ListaOfertas_holder",
@@ -349,12 +380,12 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -362,15 +393,15 @@
 					"file": "www/js/com/secciones/SeccionMapa.js",
 					"settings":
 					{
-						"buffer_size": 7494,
+						"buffer_size": 9502,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2922,
+								2922
 							]
 						],
 						"settings":
@@ -379,7 +410,116 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3016.0,
+						"translation.y": 940.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/css/mapa.css",
+					"settings":
+					{
+						"buffer_size": 1758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/config.xml",
+					"settings":
+					{
+						"buffer_size": 1478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								290,
+								291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/js/com/secciones/Secciones.js",
+					"settings":
+					{
+						"buffer_size": 1855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								825,
+								825
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 168.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/js/com/App.js",
+					"settings":
+					{
+						"buffer_size": 14591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2622,
+								2622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1092.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
