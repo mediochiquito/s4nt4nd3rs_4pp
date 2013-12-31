@@ -35,10 +35,15 @@ function Secciones(){
 		return obj_seccion_actual;
 	}
 	function backKeyDown(){
+		
+		try{
 
-		var ultimo_elemento = historia.pop()
-		var penultimo_elemento = historia.pop();
-		app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1]);
+			var ultimo_elemento = historia.pop()
+			var penultimo_elemento = historia.pop();
+			app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1]);
+
+		}catch(e){}
+		
 	}
 	this.go = function($base_seccion, $time, $data){
 
