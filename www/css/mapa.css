@@ -23,6 +23,23 @@
 -webkit-backface-visibility: hidden;
 	 margin-left: -127px;
 }
+#SeccionMapa_imposible{
+ 	font-family: 'GothamBook';
+	 font-size: 13px;
+	padding: 5px;
+	
+ 	position: absolute;
+
+
+ 	top: 67px;
+ 	text-align: center;
+ 	/* width: 80%; */
+ 	background-color: #fff;
+ 	width: 300px;
+ 	left: 50%;
+ 	margin-left: -150px;
+ 	box-shadow: 2px 2px 8px #000;
+}
 #SeccionMapa_txt_eventos{
 
 	 font-family: 'GothamBook';

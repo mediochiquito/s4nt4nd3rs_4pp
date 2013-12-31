@@ -31,6 +31,9 @@ function SeccionMapa()
 	map_canvas.id = 'SeccionMapa_map_canvas'
 	$(holdermap_canvas).append(map_canvas)
 
+
+
+
 	$(holdermap_canvas).css({	width: app.ancho-20, height: app.alto-120})
 
 
@@ -69,6 +72,12 @@ function SeccionMapa()
 	var gps_locator;
 	var gps_intervalo;
 
+	var imposible =   document.createElement('div')
+	imposible.id = 'SeccionMapa_imposible';
+	$(imposible).append('IMPOSIBLE OBTENER SU POSICION GLOBAL');
+	$(imposible).hide()
+	$(this.main).append(imposible)
+
 	function doCheckEventos(){
 
 		mostrar_elementos('eventos', chk_eventos.getSelected())
@@ -87,10 +96,17 @@ function SeccionMapa()
 	 		if(mostrando_mi_pos){
 				map.setCenter(ultima_pos);
 				my_marker.setPosition(ultima_pos);
+				$(imposible).hide()
 			}
+
 	}
 	function errorLocation(errorFlag) {
 		  console.log('errorLocation')
+		  $(imposible).show();
+		  setTimeout(function(){
+				$(imposible).hide()
+
+		  }, 3000)
 		/* 
 			alert(errorFlag)
 		 
