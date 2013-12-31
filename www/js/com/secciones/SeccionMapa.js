@@ -144,31 +144,32 @@ function SeccionMapa()
 
 			}catch(e){
 				   
-				   var options = { enableHighAccuracy: true, timeout: 5000};
+				  var options = {  maximumAge: 3000, timeout: 10000, enableHighAccuracy: false };
 				
 				  // { enableHighAccuracy: true, timeout : 5000 } 
 				  
-				  if(navigator.geolocation) {
-
-				        navigator.geolocation.watchPosition(function(position) {
+				  //if(navigator.geolocation) {
+						alert('0	')
+						
+				        navigator.geolocation.getCurrentPosition(function(position) {
 				        	
 					        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 					    	map.setCenter(pos);
 					    	my_marker.setPosition(pos);
-
+					    	alert('1')
 
 					    }, function() {
-
+					    	alert('w')
 					     	 handleNoGeolocation(true);
 
-					   	}, options);
-
+					   	});
+/*
 				  } else {
 
 					  handleNoGeolocation(false);
 
 				  }
-
+*/
 
 			}
 				  
@@ -312,7 +313,7 @@ function SeccionMapa()
 	function handleNoGeolocation(errorFlag) {
 		  
 		 
-		
+			alert(errorFlag)
 		 
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
