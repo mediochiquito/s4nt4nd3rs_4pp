@@ -25,13 +25,16 @@ function Secciones(){
 	$(this.main).append(this.seccionterms.main)
 	this.seccionterms.ocultar(0);
 
-	
+	document.addEventListener("backbutton", backKeyDown, false);
 	var obj_seccion_actual = null;	
 	
 	this.get_obj_seccion_actual = function (){
 		return obj_seccion_actual;
 	}
+	function backKeyDown(){
 
+		alert('back')
+	}
 	this.go = function($base_seccion, $time, $data){
 
 		if($base_seccion.main.id == 'SeccionMenu') app.header.ocultar_menu()
