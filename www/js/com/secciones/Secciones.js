@@ -25,7 +25,10 @@ function Secciones(){
 	$(this.main).append(this.seccionterms.main)
 	this.seccionterms.ocultar(0);
 
+	var historia = new Array()
+
 	document.addEventListener("backbutton", backKeyDown, true);
+
 	var obj_seccion_actual = null;	
 	
 	this.get_obj_seccion_actual = function (){
@@ -33,7 +36,9 @@ function Secciones(){
 	}
 	function backKeyDown(){
 
-		alert('back')
+		var ultimo_elemento = historia.pop()
+		var penultimo_elemento = historia.pop();
+		app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1]);
 	}
 	this.go = function($base_seccion, $time, $data){
 
@@ -44,14 +49,14 @@ function Secciones(){
 		var d = new Date()
 		document.location.href = '#'  + d.getTime();
 		$(this.main).css({ display: 'block'});
-	
+		
 		try{
 			if($base_seccion != obj_seccion_actual)
 				obj_seccion_actual.ocultar($time);
 		}catch(e){}
 		
-		
-			$base_seccion.mostrar($time, $data);
+		historia.push([$base_seccion, $data])
+		$base_seccion.mostrar($time, $data);
 
 		obj_seccion_actual = $base_seccion
 		
