@@ -143,8 +143,11 @@ function SeccionMapa()
 				  map.setZoom(18)
 
 			}catch(e){
-
-				// { enableHighAccuracy: true, timeout : 5000 } 
+				   
+				   var options = { enableHighAccuracy: true, timeout: 5000};
+				
+				  // { enableHighAccuracy: true, timeout : 5000 } 
+				  
 				  if(navigator.geolocation) {
 
 				        navigator.geolocation.watchPosition(function(position) {
@@ -158,10 +161,12 @@ function SeccionMapa()
 
 					     	 handleNoGeolocation(true);
 
-					   	},  { enableHighAccuracy: true, timeout : 5000 } );
+					   	}, options);
 
 				  } else {
+
 					  handleNoGeolocation(false);
+
 				  }
 
 
@@ -306,7 +311,8 @@ function SeccionMapa()
 
 	function handleNoGeolocation(errorFlag) {
 		  
-		alert('handleNoGeolocation')
+		 
+		
 		 
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
