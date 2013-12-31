@@ -106,7 +106,7 @@ function App(){
 	
 	function deviceready(){
 		try{
-						window.BackButton.override();
+						navigator.device.overrideBackButton();
 				}catch(e){}
 		if(app.is_phonegap()){
 
