@@ -147,9 +147,7 @@ function SeccionMapa()
 											onLocation, 
 											errorLocation, 
 											{
-												enableHighAccuracy : config_gps.highAccuracy, 
-												maximumAge : config_gps.maximumAge, 
-												timeout : config_gps.readTimeout
+												timeout: 30000
 											}
 					);
 
