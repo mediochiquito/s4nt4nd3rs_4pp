@@ -81,7 +81,7 @@ function SeccionMapa()
 
 	function onLocation(position){
 			
-
+			console.log('onLocation')
 	 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 	 		console.log(ultima_pos)
 	 		if(mostrando_mi_pos){
@@ -90,7 +90,7 @@ function SeccionMapa()
 			}
 	}
 	function errorLocation(errorFlag) {
-		  
+		  console.log('errorLocation')
 		/* 
 			alert(errorFlag)
 		 
@@ -110,7 +110,7 @@ function SeccionMapa()
 
 			
 							fn = function(){
-								
+								console.log('gps_locator')	
 								gps_locator = navigator.geolocation.getCurrentPosition(
 									onLocation, 
 									errorLocation, 
