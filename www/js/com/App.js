@@ -131,7 +131,8 @@ function App(){
                                });
             
 	    	self._ManagePush = new ManagePush();
-	    	self._ManagePush.registrar();
+
+	    	
 
 	    	self._Facebook = new Facebook()
 	    	self._Facebook.init() 
@@ -199,6 +200,20 @@ function App(){
 			
 			if(app.secciones.get_obj_seccion_actual()==null)
 				app.secciones.go(app.secciones.seccionhome);
+
+
+			if(app.is_phonegap()){
+		    	app.db.transaction(function (tx) {
+					tx.executeSql("SELECT push FROM app" , [], function (tx, resultado) {
+		    				
+		    				if(String(resultado.rows.item(0).push) == '0') 
+		    						self._ManagePush.registrar();
+		    					
+					})
+				});
+	    	}
+
+
 
 			if(app.hay_internet()) setTimeout(verfificar_sync, 2000);
 			else $(document).trigger('LISTAR_EVENTOS');

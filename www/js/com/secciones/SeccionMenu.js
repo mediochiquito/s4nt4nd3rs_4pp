@@ -89,7 +89,7 @@ function SeccionMenu()
 							success:function(){
 								 chk_push.setSelected(false)
 								 app.db.transaction(function (tx) {
-									 tx.executeSql('UPDATE app SET push=?', [0]);
+									 tx.executeSql('UPDATE app SET push=?', ['-1']);
 								 });
 								 app.cargando(false)
 							}	

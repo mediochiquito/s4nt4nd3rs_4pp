@@ -2,7 +2,7 @@
 include dirname(__FILE__) . '/_init.php';
 
 
-if(isset($_POST['desactivar']){
+if(isset($_POST['desactivar'])){
 
 	mysql_query("UPDATE push SET push_activa=0 WHERE push_token='" . $_POST['token'] . "'");
 
