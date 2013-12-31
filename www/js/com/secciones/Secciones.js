@@ -30,18 +30,23 @@ function Secciones(){
 	document.addEventListener("backbutton", backKeyDown, true);
 
 	var obj_seccion_actual = null;	
-	
+	var cambiando_historia = false;
 	this.get_obj_seccion_actual = function (){
 		return obj_seccion_actual;
 	}
 	function backKeyDown(){
 		
 		try{
-			console.log(historia)
-			var ultimo_elemento = historia.pop();
-			var penultimo_elemento = historia[historia.length-1];
-			app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1], false);
-			console.log(historia)
+			if(!cambiando_historia){
+						cambiando_historia = true;
+						var ultimo_elemento = historia.pop();
+						var penultimo_elemento = historia[historia.length-1];
+						app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1], false);
+
+						setTimeout(function (){
+							cambiando_historia = false;
+						}, 1000)
+			}
 		}catch(e){}
 		
 	}
