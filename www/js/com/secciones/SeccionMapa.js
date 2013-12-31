@@ -57,7 +57,9 @@ function SeccionMapa()
 	setTimeout(_construct, 0);
 	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 
-
+	
+	var mostrando_mi_pos = true
+	var ultima_pos;
 	
 	function doCheckEventos(){
 
@@ -70,7 +72,26 @@ function SeccionMapa()
 	}
 
 	function _construct() {
-		
+	
+		    if(navigator.geolocation) {
+
+				  navigator.geolocation.watchPosition(function(position) {
+				        	
+				      	if(mostrando_mi_pos){
+
+					        	ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+						    	map.setCenter(ultima_pos);
+						    	my_marker.setPosition(ultima_pos);
+
+				        }
+					     
+				}, function() {
+					    	
+					  handleNoGeolocation(true);
+
+				}, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+
+			}
 	
 
 		  var mapOptions = {
@@ -138,39 +159,19 @@ function SeccionMapa()
 			}catch(e){}
 
 			try{
-
+				  mostrando_mi_pos = false
 				  map.setCenter(new google.maps.LatLng(obj.center[0], obj.center[1]));
-				  map.setZoom(18)
+				  map.setZoom(16)
 
 			}catch(e){
-				   
-				  var options = {  maximumAge: 3000, timeout: 10000, enableHighAccuracy: false };
-				
-				  // { enableHighAccuracy: true, timeout : 5000 } 
-				  
-				  //if(navigator.geolocation) {
-						alert('0	')
-						
-				        navigator.geolocation.getCurrentPosition(function(position) {
-				        	
-					        var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-					    	map.setCenter(pos);
-					    	my_marker.setPosition(pos);
-					    	alert('1')
-
-					    }, function() {
-					    	alert('w')
-					     	 handleNoGeolocation(true);
-
-					   	});
-/*
-				  } else {
-
-					  handleNoGeolocation(false);
-
-				  }
-*/
-
+		
+ 				mostrando_mi_pos = true;
+ 				try{
+						map.setCenter(ultima_pos);
+						my_marker.setPosition(ultima_pos);
+ 				}catch(e){}
+					        	
+		
 			}
 				  
 
@@ -312,12 +313,12 @@ function SeccionMapa()
 
 	function handleNoGeolocation(errorFlag) {
 		  
-		 
+		/* 
 			alert(errorFlag)
 		 
 		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
 		  map.setCenter(pos);
-
+*/
 
 		
 	}

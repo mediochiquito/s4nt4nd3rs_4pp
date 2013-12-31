@@ -226,11 +226,21 @@ function UnEvento()
 
 		obj = $obj;
 
+
+		try{
+			img.onLoad = function(){
+				is.refresh();
+			}
+		}catch(e){}
+
 		if(app.hay_internet() && $obj.row.eventos_header_img!='')
 			img.src =  $obj.row.eventos_header_img;
 		else
 			img.src = 'img/fotos_header_eventos/' + $obj.row.eventos_categoria_id + '.jpg';
 		
+
+
+
 		$(img).css('width', app.ancho-40);
 		
 		if(este_evento_es_hoy()) $(hoy).show();
