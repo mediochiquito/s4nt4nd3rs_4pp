@@ -40,13 +40,16 @@ function Secciones(){
 
 			var ultimo_elemento = historia.pop()
 			var penultimo_elemento = historia.pop();
-			app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1]);
+			app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1], false);
 
 		}catch(e){}
 		
 	}
-	this.go = function($base_seccion, $time, $data){
+	this.go = function($base_seccion, $time, $data, $guardar_historia){
 
+		var guardar_historia = true;
+		if(typeof($guardar_historia) != 'undefined') guardar_historia =  $guardar_historia;
+		
 		if($base_seccion.main.id == 'SeccionMenu') app.header.ocultar_menu()
 		else  app.header.mostrar_menu()
 
@@ -60,7 +63,8 @@ function Secciones(){
 				obj_seccion_actual.ocultar($time);
 		}catch(e){}
 		
-		historia.push([$base_seccion, $data])
+		if(guardar_historia) historia.push([$base_seccion, $data]);
+
 		$base_seccion.mostrar($time, $data);
 
 		obj_seccion_actual = $base_seccion

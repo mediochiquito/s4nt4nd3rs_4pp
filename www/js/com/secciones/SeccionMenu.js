@@ -37,6 +37,18 @@ function SeccionMenu()
 	$(btn_notitficaciones.main).append(chk_push.main)
 	chk_push.setSelected(true)
 
+
+
+	app.db.transaction(function (tx) {
+			tx.executeSql("SELECT push FROM app" , [], function (tx, resultado) {
+	    					if(String(resultado.rows.item(0).push) == '1'){
+	    						chk_push.setSelected(true)
+	    					}else{
+	    						chk_push.setSelected(false)
+	    					}
+					})
+	});
+
 	setTimeout(function(){
 		$('#SeccionMenu_header_bg').css({width: app.ancho-20})
 	})
@@ -57,13 +69,31 @@ function SeccionMenu()
 	}
 	function doPush(){
 
+		if(!app.hay_internet()) {
+			app.alerta('Debes conectarte a internet para ejecutar esta acción.')
+			return;
+		}
+
 		if(chk_push.getSelected()){
 
+			//app._ManagePush.unregistrar()
 			
-			app._ManagePush.unregistrar()
-			chk_push.setSelected(false)
+			app.cargando(true, 'Quitando registro push...')
+			$.ajax({
 
-			
+							type: "POST",
+							url: app.server + "void.set_push_token.php",
+							dataType: 'text',
+							cache: false, 
+							data:{desactivar: true, plataform: app._ManagePush.plataform, token:app._ManagePush.token}, 
+							success:function(){
+								 chk_push.setSelected(false)
+								 app.db.transaction(function (tx) {
+									 tx.executeSql('UPDATE app SET push=?', [0]);
+								 });
+								 app.cargando(false)
+							}	
+						});	
 			
 		}else{
 			

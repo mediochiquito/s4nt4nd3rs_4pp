@@ -7,7 +7,7 @@ function ManagePush(){
 
 
 
-	 this.registrar = function(){
+	 this.registrar = function($callback){
 
 		pushNotification = window.plugins.pushNotification;
 	
@@ -65,7 +65,14 @@ function ManagePush(){
 							url: app.server + "void.set_push_token.php",
 							dataType: 'text',
 							cache: false, 
-							data:{plataform: self.plataform, token:self.token}
+							data:{plataform: self.plataform, token:self.token},
+							success:function(){
+
+								 app.db.transaction(function (tx) {
+									 tx.executeSql('UPDATE app SET push=?', [1]);
+								 });
+
+							}
 						});	
 	}
 
@@ -89,7 +96,7 @@ function ManagePush(){
 	   
 	    if ( event.alert )
 	    {
-	        //navigator.notification.alert('id_evento: ' + event.idevento + ' - ' + event.alert);
+	       
 	        objeto_recibido(event.idevento)
 	    }
 
