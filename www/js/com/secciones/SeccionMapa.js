@@ -83,6 +83,7 @@ function SeccionMapa()
 			
 
 	 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	 		console.log(ultima_pos)
 	 		if(mostrando_mi_pos){
 				map.setCenter(ultima_pos);
 				my_marker.setPosition(ultima_pos);
