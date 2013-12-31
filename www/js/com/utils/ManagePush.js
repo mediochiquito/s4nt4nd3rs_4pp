@@ -42,11 +42,11 @@ function ManagePush(){
 	        pushNotification.unregister(
 	        function(e) {
 	            //unRegister Success!!!
-	            alert('unRegister Success');
+	            //alert('unRegister Success');
 	        }, 
 	        function(e) {
 	            //unRegister Failed!!!
-	            alert('unRegister Failed');
+	           // alert('unRegister Failed');
 	        });
 	    }
 	    catch(err) {
@@ -96,7 +96,7 @@ function ManagePush(){
 	   
 	    if ( event.alert )
 	    {
-	       alert('event.idevento: ' + event.idevento)
+	      // alert('event.idevento: ' + event.idevento)
 	        objeto_recibido(event.idevento)
 	    }
 
@@ -127,7 +127,7 @@ function ManagePush(){
 
 		    case 'message':
 		      
-		  		alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
+		  		//alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
 		  		objeto_recibido(e.payload.idevento)
 		        /*if ( e.foreground )
 		        {
