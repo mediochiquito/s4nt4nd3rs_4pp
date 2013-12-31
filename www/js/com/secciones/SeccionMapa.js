@@ -80,11 +80,12 @@ function SeccionMapa()
 	}
 
 	function onLocation(position){
-			if(mostrando_mi_pos){
+			
 
- 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-								    	map.setCenter(ultima_pos);
-								    	my_marker.setPosition(ultima_pos);
+	 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	 		if(mostrando_mi_pos){
+				map.setCenter(ultima_pos);
+				my_marker.setPosition(ultima_pos);
 			}
 	}
 	function errorLocation(errorFlag) {
@@ -231,7 +232,7 @@ function SeccionMapa()
 				  map.setZoom(16)
 
 			}catch(e){
-		
+			
  				mostrando_mi_pos = true;
  				try{
 						map.setCenter(ultima_pos);
