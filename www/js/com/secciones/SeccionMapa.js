@@ -67,7 +67,7 @@ function SeccionMapa()
 		minAccuracy : 150,
 		highAccuracy : true,
 		maximumAge : 15000,
-		readTimeout : 30000
+		readTimeout : 5000
 		};
 	var gps_locator;
 	var gps_intervalo;
