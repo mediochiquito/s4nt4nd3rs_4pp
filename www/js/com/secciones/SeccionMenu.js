@@ -62,6 +62,9 @@ function SeccionMenu()
 			
 			app._ManagePush.unregistrar()
 			chk_push.setSelected(false)
+
+			
+			
 		}else{
 			
 			app._ManagePush.registrar()

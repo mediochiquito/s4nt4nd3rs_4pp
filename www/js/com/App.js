@@ -353,10 +353,10 @@ function App(){
 
 			la_tala_fue_creada($tx, 'app', function($bool){
 				
-				$tx.executeSql('CREATE TABLE IF NOT EXISTS app ("sync_value" INTEGER)', [], comprobacion_total_tablas_creadas);
+				$tx.executeSql('CREATE TABLE IF NOT EXISTS app ("sync_value" INTEGER, "push" INTEGER)', [], comprobacion_total_tablas_creadas);
 
 				if(!$bool) {
-					$tx.executeSql('INSERT INTO app (sync_value) VALUES (?)', [0]);
+					$tx.executeSql('INSERT INTO app (sync_value, push) VALUES (?,?)', [0,0]);
 
 				} else {
 
