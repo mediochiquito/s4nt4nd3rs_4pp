@@ -27,7 +27,7 @@ function Secciones(){
 
 	document.addEventListener("backbutton", backKeyDown, false);
 	var obj_seccion_actual = null;	
-	
+	window.BackButton.override();
 	this.get_obj_seccion_actual = function (){
 		return obj_seccion_actual;
 	}

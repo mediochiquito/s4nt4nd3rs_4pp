@@ -105,7 +105,9 @@ function App(){
 
 	
 	function deviceready(){
-		
+		try(
+				window.BackButton.override();
+				)catch(e){}
 		if(app.is_phonegap()){
 
 			if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
@@ -140,6 +142,8 @@ function App(){
 			   StatusBar.hide();
 			}
 
+
+			
    		}
    		
    		
