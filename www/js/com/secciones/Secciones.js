@@ -38,14 +38,18 @@ function Secciones(){
 		
 		try{
 			if(!cambiando_historia){
+
+
+
 						cambiando_historia = true;
-						var ultimo_elemento = historia.pop();
+						if(historia.length>1) historia.pop();
 						var penultimo_elemento = historia[historia.length-1];
 						app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1], false);
 
 						setTimeout(function (){
 							cambiando_historia = false;
-						}, 1000)
+						}, 500)
+
 			}
 		}catch(e){}
 		
