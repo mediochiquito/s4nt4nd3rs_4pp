@@ -58,9 +58,17 @@ function SeccionMapa()
 	$(document).bind('LISTAR_EVENTOS', do_LISTAR_EVENTOS);
 
 	
-	var mostrando_mi_pos = true
+	var mostrando_mi_pos = false
 	var ultima_pos;
-	
+	var  config_gps = {
+		minAccuracy : 150,
+		highAccuracy : true,
+		maximumAge : 15000,
+		readTimeout : 30000
+		};
+	var gps_locator;
+	var gps_intervalo;
+
 	function doCheckEventos(){
 
 		mostrar_elementos('eventos', chk_eventos.getSelected())
@@ -71,25 +79,82 @@ function SeccionMapa()
 		mostrar_elementos('ofertas', chk_oferta.getSelected())
 	}
 
+	function onLocation(position){
+		
+ 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+								    	map.setCenter(ultima_pos);
+								    	my_marker.setPosition(ultima_pos);
+
+	}
+	function errorLocation(errorFlag) {
+		  
+		/* 
+			alert(errorFlag)
+		 
+		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
+		  map.setCenter(pos);
+*/
+
+		
+	}
+
 	function _construct() {
 	
 		    if(navigator.geolocation) {
 
-				  navigator.geolocation.watchPosition(function(position) {
-				        	
-				      	if(mostrando_mi_pos){
 
-					        	ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-						    	map.setCenter(ultima_pos);
-						    	my_marker.setPosition(ultima_pos);
+		    	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 
-				        }
-					     
-				}, function() {
-					    	
-					  handleNoGeolocation(true);
+			
+							fn = function(){
+								
+								gps_locator = navigator.geolocation.getCurrentPosition(
+									onLocation, 
+									errorLocation, 
+									{
+												enableHighAccuracy : config_gps.highAccuracy, 
+												maximumAge : config_gps.maximumAge, 
+												timeout : config_gps.readTimeout
+									}
+								)
+							};
+							fn();
+							gps_intervalo = setInterval(fn, config_gps.maximumAge);
 
-				}, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });
+
+		    	}else{
+
+
+
+		    		gps_locator = navigator.geolocation.watchPosition(
+											onLocation, 
+											errorLocation, 
+											{
+												enableHighAccuracy : config_gps.highAccuracy, 
+												maximumAge : config_gps.maximumAge, 
+												timeout : config_gps.readTimeout
+											}
+					);
+
+
+
+		    	}
+
+				/*		  navigator.geolocation.watchPosition(function(position) {
+						        	
+						      	if(mostrando_mi_pos){
+
+							        	ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+								    	map.setCenter(ultima_pos);
+								    	my_marker.setPosition(ultima_pos);
+
+						        }
+							     
+						}, function() {
+							    	
+							  handleNoGeolocation(true);
+
+						}, { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true });*/
 
 			}
 	
@@ -118,7 +183,8 @@ function SeccionMapa()
 		
 		  map = new google.maps.Map(map_canvas,  mapOptions);
 
-		 
+		 var pos = new google.maps.LatLng(-34.965311,-54.94985);
+		  map.setCenter(pos);
 
 		 my_marker = new google.maps.Marker(
 		           				{
@@ -311,18 +377,7 @@ function SeccionMapa()
 		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa:'un_evento', row: $row})
 	}
 
-	function handleNoGeolocation(errorFlag) {
-		  
-		/* 
-			alert(errorFlag)
-		 
-		  var pos = new google.maps.LatLng(-34.965311,-54.94985);
-		  map.setCenter(pos);
-*/
-
-		
-	}
-
+	
 
 }
 

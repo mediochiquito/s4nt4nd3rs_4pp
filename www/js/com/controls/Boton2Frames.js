@@ -5,8 +5,7 @@ function Boton2Frames($img, $img_w, $img_h, $callback, $facetor_scale){
 	this.main.className = 'Boton2Frames'
 
 	$(this.main).css("cursor", "pointer");
-	/*$(this.main).css("background-image", "url("+$img+")");
-	$(this.main).css("background-size", ($img_w)+"px "+($img_h)+"px");*/
+	
 	$(this.main).append('<img src="'+$img+'" width="'+($img_w)+'" height="'+($img_h)+'"  />')
 
 	// hakc
