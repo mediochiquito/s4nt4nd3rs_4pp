@@ -147,7 +147,7 @@ function SeccionMapa()
 											onLocation, 
 											errorLocation, 
 											{
-												timeout: 30000
+												 timeout: 5000, enableHighAccuracy: true 
 											}
 					);
 
