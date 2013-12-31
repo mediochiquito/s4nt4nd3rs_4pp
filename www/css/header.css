@@ -34,15 +34,15 @@ top: 10px;
 }
 #Header_btn_close{
 	position: absolute;
-	right: 50%;
-	margin-right: -153px;
+	right: 10px;
+	
 	
 	top: 10px;
 }
 
 #Header_search{
-	right: 50%;
-	margin-right: -153px;
+	right: 10px;
+	
 	border-radius: 20px;
 	background-color: #fff;
 	border: none;

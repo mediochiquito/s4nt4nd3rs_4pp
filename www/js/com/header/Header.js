@@ -21,8 +21,11 @@ function Header(){
 	$(search).bind('click', do_click)
 	$(search).bind('touchstart', do_touchstart)
 	$(search).bind('blur', do_blur)
+
+
 	var btn_close = new Boton2Frames('img/header/close.svg', 30, 60, do_click_btn_close)
 	btn_close.main.id = 'Header_btn_close'
+	$(btn_close.main).bind('touchstart', doTocuhStartClose)
 	$(this.main).append(btn_close.main)
 	$(btn_close.main).hide()
 
@@ -36,7 +39,15 @@ function Header(){
 
 		if($(search).val() == '') $(search).val(wm);
 	}
-	
+	function doTocuhStartClose(){
+		//hack
+		$(search).css('pointer-events', 'none');
+		setTimeout(function(){
+			$(search).css('pointer-events', 'auto');
+
+		}, 500)
+
+	}
 	function do_touchstart(){
 
 		$(search).focus();
