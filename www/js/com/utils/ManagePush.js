@@ -96,7 +96,7 @@ function ManagePush(){
 	   
 	    if ( event.alert )
 	    {
-	       
+	       alert('event.idevento: ' + event.idevento)
 	        objeto_recibido(event.idevento)
 	    }
 
@@ -126,8 +126,8 @@ function ManagePush(){
 		    break;
 
 		    case 'message':
-		      	
-		  		//alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
+		      
+		  		alert('id_evento: ' + e.payload.idevento + ' - ' + e.payload.message)
 		  		objeto_recibido(e.payload.idevento)
 		        /*if ( e.foreground )
 		        {

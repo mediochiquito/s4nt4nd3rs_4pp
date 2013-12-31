@@ -104,9 +104,9 @@ function SeccionMapa()
 		
 		  console.log('errorLocation')
 			
-		   alert('code: '    + error.code    + '\n' +
+		/*   alert('code: '    + error.code    + '\n' +
        		     'message: ' + error.message + '\n');
-
+*/
 		  $(imposible).show();
 		  setTimeout(function(){
 				$(imposible).hide()

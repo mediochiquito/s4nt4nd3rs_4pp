@@ -26,7 +26,8 @@
 
 #SeccionMapa_imposible{
  	font-family: 'GothamBook';
-	 font-size: 13px;
+	 
+ 	font-size: 10px;
 	padding: 5px;
 	
  	position: absolute;
@@ -38,7 +39,7 @@
  	background-color: #fff;
  
  	left: 50%;
- 	margin-left: -153px;
+ 	margin-left: -116px;
  	box-shadow: 2px 2px 8px #000;
 }
 #SeccionMapa_txt_eventos{
