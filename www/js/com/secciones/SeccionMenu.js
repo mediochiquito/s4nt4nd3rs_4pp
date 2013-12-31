@@ -76,7 +76,7 @@ function SeccionMenu()
 
 		if(chk_push.getSelected()){
 
-			//app._ManagePush.unregistrar()
+			
 			
 			app.cargando(true, 'Quitando registro push...')
 			$.ajax({
@@ -87,7 +87,8 @@ function SeccionMenu()
 							cache: false, 
 							data:{desactivar: true, plataform: app._ManagePush.plataform, token:app._ManagePush.token}, 
 							success:function(){
-								 chk_push.setSelected(false)
+								 chk_push.setSelected(false);
+								 app._ManagePush.unregistrar()
 								 app.db.transaction(function (tx) {
 									 tx.executeSql('UPDATE app SET push=?', ['-1']);
 								 });
