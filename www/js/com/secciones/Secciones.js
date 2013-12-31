@@ -25,7 +25,7 @@ function Secciones(){
 	$(this.main).append(this.seccionterms.main)
 	this.seccionterms.ocultar(0);
 
-	document.addEventListener("backKeyDown", backKeyDown, false);
+	document.addEventListener("backbutton", backKeyDown, true);
 	var obj_seccion_actual = null;	
 	
 	this.get_obj_seccion_actual = function (){
