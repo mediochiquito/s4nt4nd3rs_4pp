@@ -51,7 +51,7 @@ function ListaEventos()
 	}
 
 
-	this.listar =  function ($busqueda){
+	this.listar =  function ($busqueda, $callback){
 
 		var where = ' WHERE eventos_estado=1 ';
 		if($busqueda != ''){
@@ -96,6 +96,7 @@ function ListaEventos()
 					is.scrollTo(0, 0, 0);
 		   		}, 0)
 
+				if(typeof($callback)!='undefined') $callback(cant_eventos);
 
 		    })
 		});

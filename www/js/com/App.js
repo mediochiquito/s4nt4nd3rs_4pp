@@ -12,9 +12,9 @@ function App(){
 		access_token:''
 	};
 	this.redirigiendo_una_push = false
-	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
-	//this.server = 'http://santander.crudo.com.uy/';
+	this.server = 'http://santander.crudo.com.uy/';
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
@@ -146,11 +146,6 @@ function App(){
 
 			
    		}
-   		
-   		
-		
-
-   	
    		
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
@@ -404,11 +399,39 @@ function App(){
 						  '"eventos_estado" INTEGER, ' +
 						  '"eventos_header_img" VARCHAR, ' +
 						  '"eventos_fecha_hora_creado" DATETIME)', [], comprobacion_total_tablas_creadas);
+
+
+
+			var obj = $.parseJSON($(xml_default_db).find('eventos').text())
+		
+			for(var item_evento in obj){
+					
+
+				$tx.executeSql('INSERT OR IGNORE INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria_id","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_tags","eventos_estado","eventos_header_img","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', 
+													  [
+													  obj[item_evento].eventos_id, 
+													  obj[item_evento].eventos_nombre, 
+													  obj[item_evento].eventos_fecha_hora, 
+													  obj[item_evento].eventos_categoria_id, 
+													  obj[item_evento].eventos_lugar, 
+													  obj[item_evento].eventos_desc, 
+													  obj[item_evento].eventos_lat, 
+													  obj[item_evento].eventos_lon, 
+													  obj[item_evento].eventos_uid, 
+													  obj[item_evento].eventos_tags, 
+													  obj[item_evento].eventos_estado, 
+													  obj[item_evento].eventos_header_img, 
+													  obj[item_evento].eventos_fecha_hora_creado
+
+
+													  ]);
+
+			}
     }
 
 
     function crearTabla_Ofertas($tx){
-		//$tx.executeSql('DROP TABLE IF EXISTS ofertas');
+		
 			$tx.executeSql('CREATE TABLE IF NOT EXISTS ofertas ("ofertas_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , ' +
 						  '"ofertas_nombre" VARCHAR, ' +
 						  '"ofertas_tel" VARCHAR, ' +
@@ -455,19 +478,6 @@ function App(){
 
 		
     }
-
-  /*  function crearTabla_Categorias($tx){
-		
-
-			$tx.executeSql('CREATE  TABLE  IF NOT EXISTS "categorias" ("categorias_id" INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL , "categorias_nombre" VARCHAR NOT NULL ) ', [], comprobacion_total_tablas_creadas);
-
-			$tx.executeSql('INSERT OR IGNORE INTO categorias (categorias_id, categorias_nombre) VALUES ("1", "Deportes")');
-			$tx.executeSql('INSERT OR IGNORE INTO categorias (categorias_id, categorias_nombre) VALUES ("2", "Moda")');
-			$tx.executeSql('INSERT OR IGNORE INTO categorias (categorias_id, categorias_nombre) VALUES ("3", "Música")');
-			$tx.executeSql('INSERT OR IGNORE  INTO categorias (categorias_id, categorias_nombre) VALUES ("4", "Culturales")');
-			$tx.executeSql('INSERT OR IGNORE  INTO categorias (categorias_id, categorias_nombre) VALUES ("5", "Gastronómico")');
-    
-    }*/
 
     function la_tala_fue_creada($tx, $table_name, $callback){
     	$tx.executeSql("SELECT name FROM sqlite_master WHERE name='"+$table_name+"'" , [],	

@@ -29,7 +29,7 @@ function ListaOfertas()
 	}
 	
 	
-	this.listar =  function ($busqueda){
+	this.listar =  function ($busqueda, $callback){
 		
 
 	var where = '';
@@ -70,9 +70,9 @@ function ListaOfertas()
 							is.refresh()
 					}
 					is.scrollTo(0, 0, 0);
-		   		}, 0)
-
-		      
+		   		}, 0);
+		   		
+				if(typeof($callback)!='undefined') $callback(cant_ofertas);
 
 		    })
 		});
