@@ -490,9 +490,9 @@ function App(){
     this.db_errorGeneral = function(tx, err) {
 		
 		try{
-      		alert("Error processing SQL: " + err.message);
+      		app.alerta("Error processing SQL: " + err.message);
 		}catch(e){
-			alert("Error processing SQL: " + tx.message);
+			app.alerta("Error processing SQL: " + tx.message);
 
 		}
 

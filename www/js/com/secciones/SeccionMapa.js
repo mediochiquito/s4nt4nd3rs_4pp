@@ -201,7 +201,9 @@ function SeccionMapa()
 	*/
 
 	this._set = function (obj){
-			
+		
+		if(!app.hay_internet()) app.alerta("Debes conectarte a internet para ver el mapa.");
+
 		if(app.hay_internet() && !cargo_mapa)
 			$.getScript("http://maps.google.com/maps/api/js?callback=app.secciones.seccionmapa.googleMapsLoaded&sensor=false", function(){});
 
