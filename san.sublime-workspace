@@ -91,6 +91,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/js/com/App.js",
+			"settings":
+			{
+				"buffer_size": 15117,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/app/index.php",
+			"settings":
+			{
+				"buffer_size": 742,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/app/app.plist",
+			"settings":
+			{
+				"buffer_size": 662,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -116,19 +140,29 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/app/app.plist",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/app/index.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.default_db.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.ofertas.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMenu.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/void.set_push_token.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/ManagePush.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
 		"/C/Users/Mateo/AppData/Local/Temp/fz3temp-1/class.Push.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/set_participar.php",
 		"/C/Users/Mateo/Desktop/Santanders_App-release/AndroidManifest.xml",
@@ -136,7 +170,6 @@
 		"/C/Users/Mateo/Desktop/core.gps.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton2Frames.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/menu.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
@@ -145,17 +178,12 @@
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/menu/ItemMenu.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unevento.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp__/www/js/com/secciones/SeccionMenu.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/json.participaciones.php",
@@ -239,11 +267,7 @@
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css",
 		"/C/wamp/www/gennerayled/js/com/secciones/savings/SavingsList.js",
 		"/C/wamp/www/gennerayled/js/com/secciones/savings/Savings.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/login.php",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/LightBox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CanvasSaver.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/registro.css"
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php"
 	],
 	"find":
 	{
@@ -261,6 +285,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"item_ofeta",
 			"highAccuracy",
 			"SeccionMapa_imposible",
 			"gps.vars.locator",
@@ -349,8 +374,88 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/js/com/App.js",
+					"settings":
+					{
+						"buffer_size": 15117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14819,
+								14870
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 6041.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server/app/index.php",
+					"settings":
+					{
+						"buffer_size": 742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								263,
+								263
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/app/app.plist",
+					"settings":
+					{
+						"buffer_size": 662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								598,
+								607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
