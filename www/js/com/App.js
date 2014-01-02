@@ -90,9 +90,12 @@ function App(){
 	            states[Connection.CELL_4G]  = 'Cell 4G connection';
 	            states[Connection.CELL]     = 'Cell generic connection';
 	            states[Connection.NONE]     = 'No network connection';
-	            alert(networkState);
-	            if(networkState == Connection.WIFI ||  networkState == Connection.CELL_3G || networkState == Connection.CELL_4G || networkState == Connection.WIFI){
-	 				return true;
+	          
+
+	            if(networkState == Connection.NONE ){
+	 				return false;
+	            }else{
+	            	return true;
 	            }
 
 			}catch(e){

@@ -42,7 +42,34 @@ position: absolute;
 
 	left: 20px;
 }
+#FormSubirEvento_combo_categorias{
 
+	-webkit-appearance: none;
+	border: none;
+	padding: 0px 10px 0px 10px;
+	outline: none;
+	font-family: 'GothamBook';
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-webkit-appearance: none;
+	height: 31px;
+	border-radius: 5px;
+	border: solid 1px #ccc;
+	
+	position: absolute;
+	background-image: url(../img/form/flecha_combo.png);
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	
+
+	background-position: right 0px;
+
+	top: 70px;
+
+	
+
+	left: 110px;
+}
 #FormSubirEvento_label_categoria{
 	top: 80px;
 }
@@ -66,12 +93,34 @@ position: absolute;
 #FormSubirEvento_txt_titulo{
 
 	top: 110px;
-	left: 100px;
+	left: 110px;
 
 
 }
 #FormSubirEvento_txt_fecha{
 
 	top: 150px;
-	left: 100px;
+	left: 110px;
+}
+#FormSubirEvento_txt_lugar{
+
+	top: 190px;
+	left: 110px;
+}
+#FormSubirEvento_txt_desc{
+
+	top: 230px;
+	left: 110px;
+}
+#FormSubirEvento_btn_position{
+	position: absolute;
+	top: 287px;
+	
+}
+#FormSubirEvento_btn_date{
+
+	position: absolute;
+	
+
+	top: 249px;
 }

@@ -28,22 +28,22 @@
 }
 #UnEvento_header_titulo{
 	position: relative;
-	height: 35px;
 	width: 100%;
 	background-color: #674d97;
-		margin-top: -4px;
+		
 
+	margin-top: -4px;
 }
 #UnEvento_titulo_txt{
-	position: absolute;
+	position: relative;
 	
-	height: 35px;
-	width: 90%;
 	color: #fff;
 	font-family: 'GothamBold';
 	font-size: 14px;
-	top: 9px;
-	left: 11px;
+	top:;
+	margin-left: 11px;
+	padding-top: 10px;
+	padding-bottom: 7px;
 }
 #UnEvento_holder_data{
 	position: relative;

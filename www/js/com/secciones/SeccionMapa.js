@@ -191,6 +191,7 @@ function SeccionMapa()
 		
 
 	}
+	
 	/*this.setMarcadores = function(xml){
 			
 		arr_marcadores = new Array();

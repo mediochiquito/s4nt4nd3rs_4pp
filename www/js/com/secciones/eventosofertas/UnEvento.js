@@ -21,9 +21,12 @@ function UnEvento()
 	header_titulo.id = 'UnEvento_header_titulo'
 	$(holder).find('>div').append(header_titulo)
 	
+
+
 	var titulo_txt =  document.createElement('div')
 	titulo_txt.id = 'UnEvento_titulo_txt'
 	$(header_titulo).append(titulo_txt)
+	$(titulo_txt).css('width', app.ancho-110)
 
 	var holder_data =  document.createElement('div')
 	holder_data.id = 'UnEvento_holder_data'
