@@ -106,7 +106,7 @@ function UnaOferta()
 		
 		addRegistro('Descuento', $obj.row.ofertas_descuento)
 		addRegistro('Cuotas', $obj.row.ofertas_cutoas)
-		addRegistro('Dias de descuento', $obj.row.ofertas_dias)
+		addRegistro('Días de descuentos', $obj.row.ofertas_dias)
 		addRegistro('Teléfono', '<a href="tel:' + $obj.row.ofertas_tel + '">' + $obj.row.ofertas_tel + "</a>")
 		addRegistro('Dirección', $obj.row.ofertas_dir)
 		addRegistro('Observaciones', $obj.row.ofertas_desc)

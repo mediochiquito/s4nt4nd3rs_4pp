@@ -52,8 +52,9 @@ var holder = document.createElement('div')
 	$(holder).append(txt_desc.main);
 
 
-	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doDate)
+	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
 	btn_date.main.id = 'FormSubirEvento_btn_date'
+	$(btn_date.main).bind('click', doDate)
 	$(this.main).append(btn_date.main)
 	$(btn_date.main).css({'left': app.ancho-60})
 
@@ -64,11 +65,17 @@ var holder = document.createElement('div')
 
 
 	function doDate(){
-	$(btn_date.main)[0].focus()
-                    var event = document.createEvent('MouseEvents');
+		/*$(txt_lugar.main).css('pointer-events', 'none');
+			$(txt_desc.main).css('pointer-events', 'none');*/
+
+			$(txt_fecha.main).focus()
+		//$(txt_fecha).trigger('click')
+		
+		
+                 /*   var event = document.createEvent('MouseEvents');
                         event.initMouseEvent('mousedown', true, true, window);
                         $(btn_date.main)[0].dispatchEvent(event);
-              $(btn_date.main).trigger('mousedown')          
+              $(btn_date.main).trigger('mousedown')     */     
 		//$(txt_desc.main).focus()
 
 	}

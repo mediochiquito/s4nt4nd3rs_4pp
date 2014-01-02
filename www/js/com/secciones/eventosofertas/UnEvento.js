@@ -252,7 +252,7 @@ function UnEvento()
 		$(titulo_txt).html($obj.row.eventos_nombre);
 		$(holder_data).empty()
 		
-		addRegistro('Categoria', app.categorias_eventos[$obj.row.eventos_categoria_id-1])
+		addRegistro('Categoría', app.categorias_eventos[$obj.row.eventos_categoria_id-1])
 		addRegistro('Fecha', getDateUruguay($obj.row.eventos_fecha_hora))
 		addRegistro('Lugar', $obj.row.eventos_lugar)
 		addRegistro('Descripción', $obj.row.eventos_desc)
