@@ -10,7 +10,7 @@ function SeccionMapa()
 	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 
 
-		$(this.main).append('<div id="SeccionMapa_txt_filtrar">Filtrar:</div>')
+	$(this.main).append('<div id="SeccionMapa_txt_filtrar">Filtrar:</div>')
 	$(this.main).append('<div id="SeccionMapa_txt_eventos">Eventos</div>')
 	$(this.main).append('<div id="SeccionMapa_txt_ofertas">Descuentos:</div>')
 
@@ -173,24 +173,16 @@ function SeccionMapa()
 								  icon: {url:'img/mapa/mypoint.png', scaledSize: new google.maps.Size(20, 20), size: new google.maps.Size(20, 20)}
 								  
 								});
-		 my_marker.setMap(map);
+		my_marker.setMap(map);
 
-
-		 listar_ofertas()
-
-
+		listar_ofertas()
 
 		setTimeout(function() {
 		     google.maps.event.trigger(map,'resize');
-		 
-		   }, 200);
+		}, 200);
 	
-
-		
-
-		
-
 	}
+
 	
 	/*this.setMarcadores = function(xml){
 			
@@ -225,17 +217,10 @@ function SeccionMapa()
 				}
 
 
-
-			
 			var solo_ver = '';
 			try{
 				solo_ver = obj.solo_ver;
 			}catch(e){}
-
-			
-			
-
-		
 
 
 			switch(solo_ver){

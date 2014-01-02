@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bo",
+				"bottom"
+			],
+			[
 				"bor",
 				"border"
 			],
@@ -26,10 +30,6 @@
 			[
 				"ma",
 				"max-height"
-			],
-			[
-				"bo",
-				"border"
 			],
 			[
 				"i",
@@ -95,7 +95,7 @@
 			"file": "www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 			"settings":
 			{
-				"buffer_size": 1377,
+				"buffer_size": 3292,
 				"line_ending": "Unix"
 			}
 		},
@@ -103,31 +103,7 @@
 			"file": "www/css/formsubirevento.css",
 			"settings":
 			{
-				"buffer_size": 875,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/controls/InputText.js",
-			"settings":
-			{
-				"buffer_size": 1045,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/index.html",
-			"settings":
-			{
-				"buffer_size": 4448,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/controls.css",
-			"settings":
-			{
-				"buffer_size": 1786,
+				"buffer_size": 1734,
 				"line_ending": "Unix"
 			}
 		}
@@ -156,8 +132,24 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
+		"/Volumes/www/greenray_ipad/public/js/com/controls/ComboBox.js",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/unevento.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
+		"/Users/mateomenrstrina/Desktop/ffmpeg",
+		"/Volumes/www/ffmpeg/index.php",
+		"/Volumes/www/ffmpeg/process.php",
+		"/Volumes/www/ffmpeg/download.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/app/index.php",
 		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/app/app.plist",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
@@ -267,23 +259,7 @@
 		"/C/wamp/www/ford_escapate/public/tab/js/actions/sharpen.js",
 		"/C/wamp/www/ford_escapate/public/tab/js/actions/unsharpmask.js",
 		"/C/wamp/www/ford_escapate/public/tab/js/actions/pointillize.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/lighten.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/resize.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/hsl.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/blend.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/colorhistogram.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/sepia.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/CamanJS - Interactive Examples.html",
-		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.core.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.jquery.js",
-		"/C/wamp/www/ford_escapate/public/tab/index.php",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/BotonToogle.js",
-		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
-		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js"
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/lighten.js"
 	],
 	"find":
 	{
@@ -301,6 +277,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Teléfono",
+			"∂",
 			"di",
 			"';",
 			"item_ofeta",
@@ -392,7 +370,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -400,15 +378,15 @@
 					"file": "www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 					"settings":
 					{
-						"buffer_size": 1377,
+						"buffer_size": 3292,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1279,
-								1279
+								2087,
+								2087
 							]
 						],
 						"settings":
@@ -417,7 +395,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 303.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -427,15 +405,15 @@
 					"file": "www/css/formsubirevento.css",
 					"settings":
 					{
-						"buffer_size": 875,
+						"buffer_size": 1734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								392,
-								392
+								1705,
+								1705
 							]
 						],
 						"settings":
@@ -444,88 +422,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "www/js/com/controls/InputText.js",
-					"settings":
-					{
-						"buffer_size": 1045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								140,
-								157
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/index.html",
-					"settings":
-					{
-						"buffer_size": 4448,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1139,
-								1139
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/css/controls.css",
-					"settings":
-					{
-						"buffer_size": 1786,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1786,
-								1786
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1027.0,
+						"translation.y": 1339.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -589,6 +486,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 206.0,
+	"side_bar_width": 339.0,
 	"status_bar_visible": true
 }

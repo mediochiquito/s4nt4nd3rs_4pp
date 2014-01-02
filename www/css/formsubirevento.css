@@ -1,8 +1,10 @@
 #FormSubirEvento{
 	position: absolute;
+
 }
 #FormSubirEvento_holder{
 position: absolute;
+
 
 
 }
@@ -121,4 +123,13 @@ position: absolute;
 	
 
 	top: 249px;
+}
+#FormSubirEvento_btn_subir{
+
+	position: absolute;
+	left: 50%;
+	width: 140px;
+	bottom: 30px;
+	margin-left: -70px;
+
 }

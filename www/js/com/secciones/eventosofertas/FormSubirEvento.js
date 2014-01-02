@@ -51,7 +51,6 @@ var holder = document.createElement('div')
 	txt_desc.main.id = 'FormSubirEvento_txt_desc';
 	$(holder).append(txt_desc.main);
 
-
 	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
 	btn_date.main.id = 'FormSubirEvento_btn_date'
 	$(btn_date.main).bind('click', doDate)
@@ -63,6 +62,14 @@ var holder = document.createElement('div')
 	$(this.main).append(btn_position.main)
 	$(btn_position.main).css({'left': app.ancho-55})
 
+	var btn_subir = new Boton('SUBIR EVENTO', doSubirEvento);
+	btn_subir.main.id = 'FormSubirEvento_btn_subir'
+	$(holder).append(btn_subir.main);
+
+	function doSubirEvento(){
+
+
+	}
 
 	function doDate(){
 		/*$(txt_lugar.main).css('pointer-events', 'none');
