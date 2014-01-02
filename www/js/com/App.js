@@ -11,21 +11,21 @@ function App(){
 		uid:'1234567890',
 		access_token:''
 	};
-	this.redirigiendo_una_push = false
+	this.redirigiendo_una_push = false;
 	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
-	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
-	this.server = 'http://santander.crudo.com.uy/';
+	this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
+	//this.server = 'http://santander.crudo.com.uy/';
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
-	this._Facebook
-	var self = this
-	var tablas_creadas = 0
+	this._Facebook;
+	var self = this;
+	var tablas_creadas = 0;
 	var xml_default_db;
 	var primera_vez_que_instala = false;
 	var array_tablas_a_crear;
 	var sync_value = 0;
-	var new_sync_value = 0
+	var new_sync_value = 0;
 	var btn_connect;
 
 	this.categorias_eventos = new Array("Deportes","Moda", "Música", "Culturales", "Gastronómico");
@@ -171,8 +171,8 @@ function App(){
 
 		/*var fpo_320 = document.createElement('div')
 		fpo_320.id= 'fpo_320'
-		$(self.main).append(fpo_320)
-		*/
+		$(self.main).append(fpo_320)*/
+		
 
        	$(self.main).append('<div id="loading"><div id="txt_loading"></div><div class="spinner"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
 		

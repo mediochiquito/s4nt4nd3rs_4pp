@@ -4,16 +4,24 @@
 		"selected_items":
 		[
 			[
+				"bor",
+				"border"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
 				"fu",
 				"function"
 			],
 			[
 				"ba",
 				"background-clip"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"ma",
@@ -28,10 +36,6 @@
 				"italic"
 			],
 			[
-				"fon",
-				"font-style"
-			],
-			[
 				"p",
 				"position"
 			],
@@ -42,10 +46,6 @@
 			[
 				"bac",
 				"background-color"
-			],
-			[
-				"bor",
-				"border-left"
 			],
 			[
 				"crea",
@@ -92,27 +92,43 @@
 	"buffers":
 	[
 		{
-			"file": "www/js/com/App.js",
+			"file": "www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 			"settings":
 			{
-				"buffer_size": 15117,
-				"line_ending": "Windows"
+				"buffer_size": 1377,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/app/index.php",
+			"file": "www/css/formsubirevento.css",
 			"settings":
 			{
-				"buffer_size": 742,
-				"line_ending": "Windows"
+				"buffer_size": 875,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "server/app/app.plist",
+			"file": "www/js/com/controls/InputText.js",
 			"settings":
 			{
-				"buffer_size": 662,
-				"line_ending": "Windows"
+				"buffer_size": 1045,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 4448,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/css/controls.css",
+			"settings":
+			{
+				"buffer_size": 1786,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -140,6 +156,10 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/app/index.php",
+		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/server/app/app.plist",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
@@ -263,11 +283,7 @@
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
 		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css",
-		"/C/wamp/www/gennerayled/js/com/secciones/savings/SavingsList.js",
-		"/C/wamp/www/gennerayled/js/com/secciones/savings/Savings.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/upload.php"
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js"
 	],
 	"find":
 	{
@@ -285,6 +301,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"di",
+			"';",
 			"item_ofeta",
 			"highAccuracy",
 			"SeccionMapa_imposible",
@@ -374,23 +392,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/js/com/App.js",
+					"file": "www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 					"settings":
 					{
-						"buffer_size": 15117,
+						"buffer_size": 1377,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14819,
-								14870
+								1279,
+								1279
 							]
 						],
 						"settings":
@@ -399,30 +417,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6041.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "server/app/index.php",
+					"file": "www/css/formsubirevento.css",
 					"settings":
 					{
-						"buffer_size": 742,
+						"buffer_size": 875,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								263,
-								263
+								392,
+								392
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -432,26 +451,81 @@
 				},
 				{
 					"buffer": 2,
-					"file": "server/app/app.plist",
+					"file": "www/js/com/controls/InputText.js",
 					"settings":
 					{
-						"buffer_size": 662,
+						"buffer_size": 1045,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								598,
-								607
+								140,
+								157
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/index.html",
+					"settings":
+					{
+						"buffer_size": 4448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1139,
+								1139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/css/controls.css",
+					"settings":
+					{
+						"buffer_size": 1786,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1786,
+								1786
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1027.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -515,6 +589,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 277.0,
+	"side_bar_width": 206.0,
 	"status_bar_visible": true
 }

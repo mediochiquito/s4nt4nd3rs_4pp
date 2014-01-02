@@ -1,12 +1,5 @@
 #FormSubirEvento{
 	position: absolute;
-	
-	
-	
-	
-	
-	
-
 }
 #FormSubirEvento_holder{
 position: absolute;
@@ -14,10 +7,71 @@ position: absolute;
 
 }
 #FormSubirEvento_prox{
-position: absolute;
-top: 80px;
-font-size: 25px;
+
+	position: absolute;
+	top: 80px;
+	font-size: 25px;
 	width: 100%;
 	text-align: center;
-	color: #ccc;font-family: 'GothamBold';
+	color: #ccc;
+	font-family: 'GothamBold';
+
+}
+
+
+#FormSubirEvento_titulo{
+	font-family: 'GothamBold';
+	color: #000;
+	
+	font-size: 14px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 90%;
+}
+
+
+.FormSubirEvento_label{
+
+	font-family: 'GothamBook';
+	color: #000;
+	font-size: 14px;
+	
+	position: absolute;
+	
+
+	left: 20px;
+}
+
+#FormSubirEvento_label_categoria{
+	top: 80px;
+}
+
+#FormSubirEvento_label_titulo{
+	top: 120px;
+}
+
+#FormSubirEvento_label_fecha{
+	top: 160px;
+}
+
+#FormSubirEvento_label_lugar{
+	top: 200px;
+}
+
+#FormSubirEvento_label_desc{
+	top: 240px;
+}
+
+#FormSubirEvento_txt_titulo{
+
+	top: 110px;
+	left: 100px;
+
+
+}
+#FormSubirEvento_txt_fecha{
+
+	top: 150px;
+	left: 100px;
 }
