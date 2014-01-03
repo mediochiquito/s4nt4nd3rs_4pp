@@ -79,7 +79,11 @@ var holder = document.createElement('div')
 		if(txt_lugar.getValor()=='') txt_lugar.marcar_error(true);
 		if(txt_desc.getValor()=='') txt_desc.marcar_error(true);
 
+		
+
 	}
+
+
 
 	function doDate(){
 		/*$(txt_lugar.main).css('pointer-events', 'none');
