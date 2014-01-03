@@ -18,6 +18,7 @@ var holder = document.createElement('div')
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_categoria">Categoría</div>');
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_titulo">Título</div>');
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_fecha">Fecha</div>');
+	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_hora">Hora</div>');
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_lugar">Lugar</div>');
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_desc">Descripción</div>');
 
@@ -39,25 +40,38 @@ var holder = document.createElement('div')
 	txt_titulo.main.id = 'FormSubirEvento_txt_titulo';
 	$(holder).append(txt_titulo.main);
 
+	var txt_desc = new InputText(app.ancho-180, 'text', 50);
+	txt_desc.main.id = 'FormSubirEvento_txt_desc';
+	$(holder).append(txt_desc.main);
+
 	var txt_fecha = new InputText(app.ancho-220, 'text', 50);
 	txt_fecha.habil(false)
 	txt_fecha.main.id = 'FormSubirEvento_txt_fecha';
 	$(holder).append(txt_fecha.main);
+
+	var txt_hora = new InputText(app.ancho-220, 'text', 50);
+	txt_hora.habil(false)
+	txt_hora.main.id = 'FormSubirEvento_txt_hora';
+	$(holder).append(txt_hora.main);
 
 	var txt_lugar = new InputText(app.ancho-220, 'text', 50);
 	txt_lugar.habil(false)
 	txt_lugar.main.id = 'FormSubirEvento_txt_lugar';
 	$(holder).append(txt_lugar.main);
 
-	var txt_desc = new InputText(app.ancho-180, 'text', 50);
-	txt_desc.main.id = 'FormSubirEvento_txt_desc';
-	$(holder).append(txt_desc.main);
+	
 
 	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
 	btn_date.main.id = 'FormSubirEvento_btn_date'
 	$(btn_date.main).bind('click', doDate)
 	$(this.main).append(btn_date.main)
-	$(btn_date.main).css({'left': app.ancho-60})
+	$(btn_date.main).css({'left': app.ancho-60});
+
+	var btn_time = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
+	btn_time.main.id = 'FormSubirEvento_btn_time'
+	$(btn_time.main).bind('click', doTime)
+	$(this.main).append(btn_time.main)
+	$(btn_time.main).css({'left': app.ancho-60})
 
 	var btn_position = new Boton2Frames('img/form/btn_evento.png', 20, 60, doVerMapa)
 	btn_position.main.id = 'FormSubirEvento_btn_position'
@@ -82,13 +96,8 @@ var holder = document.createElement('div')
 
 	}
 
+	function doTime(){
 
-
-	function doDate(){
-		
-		//if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-
-			// defining options
 			var options = {
 			   date: new Date(),
 			   allowOldDates:false,
@@ -103,10 +112,28 @@ var holder = document.createElement('div')
 			  txt_fecha.setValor(date.getFullYear())
 			});
 
-		/*}else{
+	}
+		
 
-			$(txt_fecha.main).focus()
-		}*/
+
+	function doDate(){
+		
+	
+			var options = {
+			   date: new Date(),
+			   allowOldDates:false,
+			   mode : 'time',
+			   allowFutureDates : true
+			};
+			
+			// calling show() function with options and a result handler
+			datePicker.show(options, function(date){
+			  console.log("date result " + date);  
+			  var date = new Date(date)
+			  txt_fecha.setValor(date.getFullYear())
+			});
+
+
 		
 		
 	}
@@ -119,21 +146,8 @@ var holder = document.createElement('div')
 	}
 
 	function doVerMapa(){
-		var options = {
-			   date: new Date(),
-			   allowOldDates:false,
-			   mode : 'date',
-			   allowFutureDates : true
-			};
-			
-			// calling show() function with options and a result handler
-			datePicker.show(options, function(date){
-			  console.log("date result " + date);  
-			  var date = new Date(date)
-			  txt_fecha.setValor(date.getFullYear())
-			});
-
-	//	app.secciones.go(app.secciones.seccionmapaform)
+		
+		app.secciones.go(app.secciones.seccionmapaform)
 	}
 
 }
