@@ -90,7 +90,10 @@ var holder = document.createElement('div')
 
 			// defining options
 			var options = {
-			  date: new Date()
+			   date: new Date(),
+			   allowOldDates:false,
+			   mode : 'datetime',
+			   allowFutureDates : true
 			};
 			
 			// calling show() function with options and a result handler

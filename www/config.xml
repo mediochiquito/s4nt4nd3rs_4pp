@@ -39,9 +39,9 @@
         <param name="APP_ID" value="381248932009498" />
         <param name="APP_NAME" value="Santanders App" />
     </gap:plugin>
-    <gap:plugin name="com.dileep.plugins.datepicker" />
+
     <gap:plugin name="com.phonegap.plugin.statusbar" />
-    
-  
+    <gap:plugin name="com.dileep.plugins.datepicker" />
+  <!--   <gap:plugin name="de.websector.datepicker" /> -->
  
 </widget>
