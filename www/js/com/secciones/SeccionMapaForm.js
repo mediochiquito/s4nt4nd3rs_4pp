@@ -9,6 +9,10 @@ function SeccionMapaForm()
 	$(this.main).append(holder_blanco_secciones)
 	$(holder_blanco_secciones).css({	width: app.ancho-20, height: app.alto-60})
 
+	var btn_aceptar = new Boton('ACEPTAR', doAceptar);
+	btn_aceptar.main.id = 'SeccionMapaForm_btn_aceptar'
+	$(this.main).append(btn_aceptar.main);
+
 
 	var holdermap_canvas = document.createElement('div')
 	holdermap_canvas.id = 'SeccionMapaForm_holdermap_canvas'
@@ -35,10 +39,7 @@ function SeccionMapaForm()
 		$(esquina_der).css('left',app.ancho-25);
 	}
 
-	var btn_aceptar = new Boton('ACEPTAR', doAceptar);
-	btn_aceptar.main.id = 'SeccionMapaForm_btn_aceptar'
-	$(this.main).append(btn_aceptar.main);
-
+	
 	var marker;
 	var lat = "";
 	var lon = "";
