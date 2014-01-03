@@ -1,0 +1,59 @@
+#SeccionMapaForm{
+	position: absolute;
+
+}
+#SeccionMapaForm img{
+	position: absolute;
+
+}
+#SeccionMapaForm div{
+	position: absolute;
+
+}
+
+
+#SeccionMapaForm_holdermap_canvas{
+
+	top: 0px;
+	left: 0px;
+	width: 100%;
+height: 100%;
+}
+
+#SeccionMapaForm_map_canvas{
+
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+
+}
+#SeccionMapaForm_esquina_der{
+
+	top: 49px;
+	
+	-webkit-backface-visibility: hidden;
+	width: 15px;
+
+}
+#SeccionMapaForm_esquina_si{
+
+	top: 49px;
+	left: 9px;
+	-webkit-backface-visibility: hidden;
+	width: 15px;
+
+}
+#SeccionMapaForm_holdermap_canvas{
+
+	font-size:75%;
+}
+
+#SeccionMapaForm_holdermap_canvas img{
+
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+
+
+}

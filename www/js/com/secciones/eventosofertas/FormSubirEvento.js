@@ -69,6 +69,7 @@ var holder = document.createElement('div')
 	function doSubirEvento(){
 
 
+
 	}
 
 	function doDate(){
@@ -89,7 +90,7 @@ var holder = document.createElement('div')
 
 	function doVerMapa(){
 
-
+		app.secciones.go(app.secciones.seccionmapaform)
 	}
 
 }

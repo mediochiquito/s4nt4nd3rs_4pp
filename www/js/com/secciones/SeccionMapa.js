@@ -33,8 +33,7 @@ function SeccionMapa()
 
 
 	$(holdermap_canvas).css({	width: app.ancho-20, height: app.alto-120})
-
-
+	
 	if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
 	
 		var esquina_si = new Image()
@@ -77,19 +76,20 @@ function SeccionMapa()
 	$(this.main).append(imposible)
 
 	var ya_me_localizo_una_vez = false;
-	var cargo_mapa = false;
+	
 	function doCheckEventos(){
 
 		mostrar_elementos('eventos', chk_eventos.getSelected())
 
 	}
+
+
 	function doCheckOfertas(){
 
 		mostrar_elementos('ofertas', chk_oferta.getSelected())
 	}
 
 	function onLocation(position){
-			
 			
 	 		ultima_pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 	 		
@@ -100,6 +100,9 @@ function SeccionMapa()
 			}
 
 	}
+
+
+
 	function errorLocation(error) {
 		
 
@@ -112,18 +115,16 @@ function SeccionMapa()
 		
 	}
 	
-	if(app.hay_internet() && !cargo_mapa)
+	if(app.hay_internet() && !app.cargo_mapa)
 		$.getScript("http://maps.google.com/maps/api/js?callback=app.secciones.seccionmapa.googleMapsLoaded&sensor=false", function(){});
 
 	this.googleMapsLoaded = function (){
-		cargo_mapa = true;
+		app.cargo_mapa = true;
 		_construct()
 
 	}
 	function _construct() {
 		
-			
-			
 		    if(navigator.geolocation) {
 
 
@@ -134,12 +135,8 @@ function SeccionMapa()
 												timeout: 30000
 											}
 					);
-
-
-
-
 			}
-	
+		
 
 		  var mapOptions = {
 		    zoom: 15,
@@ -197,7 +194,7 @@ function SeccionMapa()
 		
 		if(!app.hay_internet()) app.alerta("Debes conectarte a internet para ver el mapa.");
 
-		if(app.hay_internet() && !cargo_mapa)
+		if(app.hay_internet() && !app.cargo_mapa)
 			$.getScript("http://maps.google.com/maps/api/js?callback=app.secciones.seccionmapa.googleMapsLoaded&sensor=false", function(){});
 
 				try{

@@ -25,6 +25,10 @@ function Secciones(){
 	$(this.main).append(this.seccionterms.main)
 	this.seccionterms.ocultar(0);
 
+	this.seccionmapaform = new SeccionMapaForm();
+	$(this.main).append(this.seccionmapaform.main)
+	this.seccionmapaform.ocultar(0);
+
 	var historia = new Array()
 
 	document.addEventListener("backbutton", backKeyDown, true);
@@ -34,6 +38,7 @@ function Secciones(){
 	this.get_obj_seccion_actual = function (){
 		return obj_seccion_actual;
 	}
+
 	function backKeyDown(){
 		
 		try{
