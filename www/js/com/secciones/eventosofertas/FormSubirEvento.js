@@ -88,7 +88,7 @@ var holder = document.createElement('div')
 	function doDate(){
 		
 		//if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-
+			alert('asd')
 			// defining options
 			var options = {
 			  date: new Date(),
