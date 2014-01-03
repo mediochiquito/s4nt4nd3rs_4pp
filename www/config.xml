@@ -10,7 +10,7 @@
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true"/>
     <preference name="ios-statusbarstyle" value="black-translucent"/>
-    <preference name="android-windowSoftInputMode" value="adjustUnspecified" />
+
 
     <access origin="*" />
     
@@ -42,6 +42,7 @@
 
     <gap:plugin name="com.phonegap.plugin.statusbar" />
     <gap:plugin name="com.dileep.plugins.datepicker" />
+
 <!--     <gap:plugin name="de.websector.datepicker" /> -->
 
 </widget>
