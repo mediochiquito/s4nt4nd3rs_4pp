@@ -34,6 +34,12 @@ function InputText($width, $type, $len){
     	}
     }
 
+    this.marcar_error = function($bool){
+    	if($bool)
+    	 self.main.className = 'InputTextError';
+    	else 
+         self.main.className = 'InputText';
+    }
 	
 	this.getValor = function(){
 

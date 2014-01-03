@@ -34,7 +34,7 @@
 .InputText{
 	
 	-webkit-appearance: none;
-	border: none;
+	
 	padding: 0px 10px 0px 10px;
 	outline: none;
 	font-family: 'GothamBook';
@@ -46,6 +46,23 @@
 	border: solid 1px #ccc;
 	
 	position: absolute;
+}
+.InputTextError{
+	
+	-webkit-appearance: none;
+	padding: 0px 10px 0px 10px;
+	outline: none;
+	font-family: 'GothamBook';
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-webkit-appearance: none;
+	height: 31px;
+	border-radius: 5px;
+	border: solid 1px #D35454;
+	background-color: #FFECEC;
+	position: absolute;
+
+
 }
 .InputTextEnable{
 	background-color: #fff;

@@ -121,7 +121,6 @@ function SeccionMapa()
 	this.googleMapsLoaded = function (){
 		app.cargo_mapa = true;
 		_construct()
-
 	}
 	function _construct() {
 		

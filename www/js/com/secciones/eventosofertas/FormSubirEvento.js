@@ -68,7 +68,16 @@ var holder = document.createElement('div')
 
 	function doSubirEvento(){
 
+		txt_titulo.marcar_error(false);
+		txt_fecha.marcar_error(false);
+		txt_lugar.marcar_error(false);
+		txt_desc.marcar_error(false);
 
+
+		if(txt_titulo.getValor()=='') txt_titulo.marcar_error(true);
+		if(txt_fecha.getValor()=='') txt_fecha.marcar_error(true);
+		if(txt_lugar.getValor()=='') txt_lugar.marcar_error(true);
+		if(txt_desc.getValor()=='') txt_desc.marcar_error(true);
 
 	}
 
@@ -85,6 +94,13 @@ var holder = document.createElement('div')
                         $(btn_date.main)[0].dispatchEvent(event);
               $(btn_date.main).trigger('mousedown')     */     
 		//$(txt_desc.main).focus()
+
+	}
+
+	this._set = function (){
+		
+		if(app.secciones.seccionmapaform.getLatLonString() != '')
+			txt_lugar.setValor(app.secciones.seccionmapaform.getLatLonString())
 
 	}
 

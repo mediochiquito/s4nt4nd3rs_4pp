@@ -35,8 +35,26 @@ function SeccionMapaForm()
 		$(esquina_der).css('left',app.ancho-25);
 	}
 
-	var marker;
+	var btn_aceptar = new Boton('ACEPTAR', doAceptar);
+	btn_aceptar.main.id = 'SeccionMapaForm_btn_aceptar'
+	$(this.main).append(btn_aceptar.main);
 
+	var marker;
+	var lat = "";
+	var lon = "";
+
+
+	function doAceptar(){
+		
+		lat = marker.getPosition().nb
+		lon = marker.getPosition().ob
+
+		app.secciones.go(app.secciones.seccioneventosofertas, 300, {solapa: 'subirevento'});
+	}
+	this.getLatLonString = function (){
+		if(lat=='') return '';
+		return lat + ',' + lon
+	}
 	function _construct() {
 			
 
@@ -110,11 +128,6 @@ function SeccionMapaForm()
 				}
 
 	}
-
-	
-
-	
-
 }
 
 SeccionMapaForm.prototype = new Base_Seccion();

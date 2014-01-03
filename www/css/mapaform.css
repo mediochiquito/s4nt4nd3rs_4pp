@@ -44,6 +44,14 @@ height: 100%;
 	width: 15px;
 
 }
+#SeccionMapaForm_btn_aceptar{
+	position: absolute; 
+	bottom: 21px;
+	width: 140px;
+	left: 50%;
+	margin-left: -70px;
+}
+
 #SeccionMapaForm_holdermap_canvas{
 
 	font-size:75%;

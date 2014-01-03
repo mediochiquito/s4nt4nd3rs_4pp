@@ -92,7 +92,8 @@ function SeccionEventosOfertas()
 		$(lista_eventos.main).css('pointer-events', 'none')
 
 		if($obj.solapa == 'subirevento'){
-		
+			
+			subirevento._set()
 			solapa_eventos.habil(true);
 			solapa_ofertas.habil(false);
 			$(subirevento.main).transition({x:0}, 0)
