@@ -97,7 +97,7 @@ var holder = document.createElement('div')
 			// calling show() function with options and a result handler
 			datePicker.show(options, function(date){
 			  console.log("date result " + date);  
-			  var date = new (date)
+			  var date = new Date(date)
 			  txt_fecha.setValor(date.getFullYear())
 			});
 
