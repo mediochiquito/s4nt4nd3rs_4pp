@@ -53,8 +53,9 @@ var holder = document.createElement('div')
 	txt_desc.main.id = 'FormSubirEvento_txt_desc';
 	$(holder).append(txt_desc.main);
 
-	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doDate)
+	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
 	btn_date.main.id = 'FormSubirEvento_btn_date'
+	$(btn_date.main).bind('click', doDate)
 	$(this.main).append(btn_date.main)
 	$(btn_date.main).css({'left': app.ancho-60})
 
