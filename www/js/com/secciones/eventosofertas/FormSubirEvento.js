@@ -61,15 +61,15 @@ var holder = document.createElement('div')
 
 	
 
-	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
+	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doDate)
 	btn_date.main.id = 'FormSubirEvento_btn_date'
-	$(btn_date.main).bind('click', doDate)
+	//$(btn_date.main).bind('click', doDate)
 	$(this.main).append(btn_date.main)
 	$(btn_date.main).css({'left': app.ancho-60});
 
-	var btn_time = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
+	var btn_time = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doTime)
 	btn_time.main.id = 'FormSubirEvento_btn_time'
-	$(btn_time.main).bind('click', doTime)
+	//$(btn_time.main).bind('click', doTime)
 	$(this.main).append(btn_time.main)
 	$(btn_time.main).css({'left': app.ancho-60})
 
