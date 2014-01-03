@@ -39,7 +39,7 @@ var holder = document.createElement('div')
 	txt_titulo.main.id = 'FormSubirEvento_txt_titulo';
 	$(holder).append(txt_titulo.main);
 
-	var txt_fecha = new InputText(app.ancho-220, 'date', 50);
+	var txt_fecha = new InputText(app.ancho-220, 'text', 50);
 	txt_fecha.habil(false)
 	txt_fecha.main.id = 'FormSubirEvento_txt_fecha';
 	$(holder).append(txt_fecha.main);
@@ -75,13 +75,10 @@ var holder = document.createElement('div')
 		txt_lugar.marcar_error(false);
 		txt_desc.marcar_error(false);
 
-
 		if(txt_titulo.getValor()=='') txt_titulo.marcar_error(true);
 		if(txt_fecha.getValor()=='') txt_fecha.marcar_error(true);
 		if(txt_lugar.getValor()=='') txt_lugar.marcar_error(true);
 		if(txt_desc.getValor()=='') txt_desc.marcar_error(true);
-
-
 
 	}
 
