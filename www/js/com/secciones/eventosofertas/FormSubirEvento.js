@@ -119,7 +119,8 @@ var holder = document.createElement('div')
 								fecha: txt_fecha.getValor(),
 								lugar: txt_lugar.getValor(),
 								hora: txt_hora.getValor(),
-								desc: txt_desc.getValor()
+								desc: txt_desc.getValor(),
+								uid: app.usuario.uid
 							},
 
 							success: function($xml) {
@@ -183,7 +184,7 @@ var holder = document.createElement('div')
 			datePicker.show(options, function(date){
 			 // console.log("date result " + date);  
 			  var date = new Date(date)
-			  txt_fecha.setValor(date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear());
+			  txt_fecha.setValor(date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear());
 			});
 
 	}

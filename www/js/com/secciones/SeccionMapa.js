@@ -124,6 +124,8 @@ function SeccionMapa()
 		app.cargo_mapa = true;
 		_construct()
 	}
+
+	
 	function _construct() {
 		
 		    if(navigator.geolocation) {

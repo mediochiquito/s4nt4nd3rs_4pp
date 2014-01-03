@@ -80,10 +80,10 @@ function ListaEventos()
 		    	}
 
 		        for(var i=0; i<cant_eventos; i++){
-					
+					//for(var u=0; u<30; u++){
 					var _ItemListaEvento = new ItemListaEvento(resultado.rows.item(i));
 					$(holder).find('>div').append(_ItemListaEvento.main)
-		          
+		            //}
 		        }
 
 				setTimeout(function(){  
