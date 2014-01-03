@@ -20,7 +20,7 @@ var holder = document.createElement('div')
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_fecha">Fecha</div>');
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_lugar">Lugar</div>');
 	$(holder).append('<div class="FormSubirEvento_label" id="FormSubirEvento_label_desc">Descripción</div>');
-/*
+
 	var combo_categorias = document.createElement('select');
 	combo_categorias.id = 'FormSubirEvento_combo_categorias'
 	$(combo_categorias).css({'width': app.ancho-158})
@@ -33,7 +33,7 @@ var holder = document.createElement('div')
 				$(combo_categorias).append(option);
 
 	}
-	$(holder).append(combo_categorias);*/
+	$(holder).append(combo_categorias);
 
 	var txt_titulo = new InputText(app.ancho-180, 'text', 50);
 	txt_titulo.main.id = 'FormSubirEvento_txt_titulo';
@@ -119,8 +119,21 @@ var holder = document.createElement('div')
 	}
 
 	function doVerMapa(){
+		var options = {
+			   date: new Date(),
+			   allowOldDates:false,
+			   mode : 'date',
+			   allowFutureDates : true
+			};
+			
+			// calling show() function with options and a result handler
+			datePicker.show(options, function(date){
+			  console.log("date result " + date);  
+			  var date = new Date(date)
+			  txt_fecha.setValor(date.getFullYear())
+			});
 
-		app.secciones.go(app.secciones.seccionmapaform)
+	//	app.secciones.go(app.secciones.seccionmapaform)
 	}
 
 }
