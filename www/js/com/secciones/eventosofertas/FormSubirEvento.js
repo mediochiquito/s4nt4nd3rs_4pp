@@ -79,26 +79,34 @@ var holder = document.createElement('div')
 		if(txt_lugar.getValor()=='') txt_lugar.marcar_error(true);
 		if(txt_desc.getValor()=='') txt_desc.marcar_error(true);
 
-		
+
 
 	}
 
 
 
 	function doDate(){
-		/*$(txt_lugar.main).css('pointer-events', 'none');
-			$(txt_desc.main).css('pointer-events', 'none');*/
+		
+		//if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+
+			// defining options
+			var options = {
+			  date: new Date(),
+			  mode: 'date'
+			};
+			
+			// calling show() function with options and a result handler
+			datePicker.show(options, function(date){
+			  console.log("date result " + date);  
+			  alert(date)
+			});
+
+		/*}else{
 
 			$(txt_fecha.main).focus()
-		//$(txt_fecha).trigger('click')
+		}*/
 		
 		
-                 /*   var event = document.createEvent('MouseEvents');
-                        event.initMouseEvent('mousedown', true, true, window);
-                        $(btn_date.main)[0].dispatchEvent(event);
-              $(btn_date.main).trigger('mousedown')     */     
-		//$(txt_desc.main).focus()
-
 	}
 
 	this._set = function (){

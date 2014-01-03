@@ -41,6 +41,7 @@
     </gap:plugin>
 
     <gap:plugin name="com.phonegap.plugin.statusbar" />
-    
+    <gap:plugin name="com.dileep.plugins.datepicker" />
+    <gap:plugin name="de.websector.datepicker" />
     
 </widget>
