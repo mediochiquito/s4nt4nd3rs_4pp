@@ -10,7 +10,7 @@
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true"/>
     <preference name="ios-statusbarstyle" value="black-translucent"/>
-    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustPan" />
 
     <access origin="*" />
     
