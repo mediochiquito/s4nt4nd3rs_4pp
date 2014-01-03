@@ -49,6 +49,7 @@ height: 100%;
 	width: 140px;
 	left: 50%;
 	margin-left: -70px;
+	-webkit-backface-visibility: hidden;
 }
 
 #SeccionMapaForm_holdermap_canvas{

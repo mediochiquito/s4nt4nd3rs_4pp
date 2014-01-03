@@ -39,7 +39,11 @@ top: 10px;
 	
 	top: 10px;
 }
-
+#Header input{
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-modify: read-write-plaintext-only;
+	
+}
 #Header_search{
 	right: 10px;
 	
@@ -61,6 +65,6 @@ top: 10px;
 	background-size: 16px 16px;
 	background-position: 9px 8px;
 	
- 
+ 	
   	outline-style: none;
 }

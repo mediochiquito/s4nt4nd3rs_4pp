@@ -1,6 +1,8 @@
 #FormSubirEvento{
 	position: absolute;
 
+	top: 95px;
+
 }
 #FormSubirEvento_holder{
 position: absolute;
@@ -19,7 +21,14 @@ position: absolute;
 	font-family: 'GothamBold';
 
 }
+.FormSubirEvento_Tabs_holder{
 
+	position: absolute;
+	border-top: solid 1px #e5e5e5;
+	left: 20px;
+	top: 0px;
+
+}
 
 #FormSubirEvento_titulo{
 	font-family: 'GothamBold';
@@ -72,6 +81,11 @@ position: absolute;
 
 	left: 110px;
 }
+#FormSubirEvento input{
+
+	display: inline-block;
+}
+
 #FormSubirEvento_label_categoria{
 	top: 80px;
 }

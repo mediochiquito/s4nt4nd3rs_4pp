@@ -4,9 +4,11 @@ function FormSubirEvento()
 	this.main = document.createElement('div')
 	this.main.id = 'FormSubirEvento';
 
+
+$(this.main).css({width: app.ancho, height: app.alto-120});
 var holder = document.createElement('div')
 	holder.id = 'FormSubirEvento_holder'
-	holder.className = 'Tabs_holder'
+	holder.className = 'FormSubirEvento_Tabs_holder'
 	$(holder).append('<div></div>')
 	$(this.main).append(holder)
 
@@ -64,18 +66,18 @@ var holder = document.createElement('div')
 	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doDate)
 	btn_date.main.id = 'FormSubirEvento_btn_date'
 	//$(btn_date.main).bind('click', doDate)
-	$(this.main).append(btn_date.main)
+	$(holder).append(btn_date.main)
 	$(btn_date.main).css({'left': app.ancho-60});
 
 	var btn_time = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doTime)
 	btn_time.main.id = 'FormSubirEvento_btn_time'
 	//$(btn_time.main).bind('click', doTime)
-	$(this.main).append(btn_time.main)
+	$(holder).append(btn_time.main)
 	$(btn_time.main).css({'left': app.ancho-60})
 
 	var btn_position = new Boton2Frames('img/form/btn_evento.png', 20, 60, doVerMapa)
 	btn_position.main.id = 'FormSubirEvento_btn_position'
-	$(this.main).append(btn_position.main)
+	$(holder).append(btn_position.main)
 	$(btn_position.main).css({'left': app.ancho-55})
 
 	var btn_subir = new Boton('SUBIR EVENTO', doSubirEvento);
@@ -86,12 +88,14 @@ var holder = document.createElement('div')
 
 		txt_titulo.marcar_error(false);
 		txt_fecha.marcar_error(false);
+		txt_hora.marcar_error(false);
 		txt_lugar.marcar_error(false);
 		txt_desc.marcar_error(false);
 
 		if(txt_titulo.getValor()=='') txt_titulo.marcar_error(true);
 		if(txt_fecha.getValor()=='') txt_fecha.marcar_error(true);
 		if(txt_lugar.getValor()=='') txt_lugar.marcar_error(true);
+		if(txt_hora.getValor()=='') txt_hora.marcar_error(true);
 		if(txt_desc.getValor()=='') txt_desc.marcar_error(true);
 
 	}
