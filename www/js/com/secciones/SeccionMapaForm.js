@@ -56,9 +56,11 @@ function SeccionMapaForm()
 		if(lat=='') return '';
 		return lat + ',' + lon
 	}
+	this.resetLatLonString = function (){
+		return '';
+	}
 	function _construct() {
-			
-
+		
 
 		  var mapOptions = {
 		    zoom: 15,
@@ -84,12 +86,9 @@ function SeccionMapaForm()
 		
 		  map = new google.maps.Map(map_canvas,  mapOptions);
 
-		 var pos = new google.maps.LatLng(-34.965311,-54.94985);
-		 map.setCenter(pos);
-
 		 marker = new google.maps.Marker(
 		           				{
-								  position: pos,
+								 
 								  draggable:true,
 								  icon: {url:'img/markers/evento.png',  scaledSize: new google.maps.Size(19, 30), size: new google.maps.Size(19, 30)}
 								});
@@ -108,27 +107,37 @@ function SeccionMapaForm()
 	this._set = function (obj){
 		
 		if(!app.hay_internet()) app.alerta("Debes conectarte a internet para ver el mapa.");
-		_construct()
-		if(app.hay_internet() && !app.cargo_mapa)
+			_construct()	;
+
+		if(!app.cargo_mapa)
 			$.getScript("http://maps.google.com/maps/api/js?callback=app.secciones.seccionmapa.googleMapsLoaded&sensor=false", function(){});
+		
+		if(app.cargo_mapa){
 
-				try{
-				 	  mostrando_mi_pos = false
-					  map.setCenter(new google.maps.LatLng(obj.center[0], obj.center[1]));
-					  map.setZoom(16)
-
-				}catch(e){
+			var pos
+			if(obj.pos != ''){
 				
-	 				mostrando_mi_pos = true;
-	 				try{
-							map.setCenter(ultima_pos);
-							my_marker.setPosition(ultima_pos);
-	 				}catch(e){}
-						        	
-			
-				}
+				var array_pos = obj.pos.split(',')
+				pos = new google.maps.LatLng(array_pos[0],array_pos[1]);
+			}
+			else if(app.secciones.seccionmapa.getUltimaPos()!=''){
+				pos = app.secciones.seccionmapa.getUltimaPos();
 
+			}else{
+				pos = new google.maps.LatLng(-34.965311,-54.94985);
+			}
+
+			marker.setPosition(pos)
+			map.setCenter(pos);
+
+		}else{
+
+			setTimeout(function(){
+				self._set(obj)
+			}, 4000)
+		}
 	}
 }
+
 
 SeccionMapaForm.prototype = new Base_Seccion();

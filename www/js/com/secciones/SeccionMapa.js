@@ -59,7 +59,7 @@ function SeccionMapa()
 
 	
 	var mostrando_mi_pos = false
-	var ultima_pos;
+	var ultima_pos = '';
 	var  config_gps = {
 		minAccuracy : 150,
 		highAccuracy : true,
@@ -83,6 +83,9 @@ function SeccionMapa()
 
 	}
 
+	this.getUltimaPos = function(){
+		return ultima_pos;
+	}
 
 	function doCheckOfertas(){
 
@@ -105,7 +108,6 @@ function SeccionMapa()
 
 	function errorLocation(error) {
 		
-
 			if(!ya_me_localizo_una_vez){
 					  $(imposible).show();
 					  setTimeout(function(){

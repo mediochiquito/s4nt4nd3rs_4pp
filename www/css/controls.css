@@ -62,14 +62,14 @@
 	background-color: #FFECEC;
 	position: absolute;
 
-
 }
 .InputTextEnable{
 	background-color: #fff;
 	color: #666;
 }
 .InputTextDisnable{
-	opacity: .6;
+	opacity: .4;
+	background-color: #ccc;
 }
 
 .BotonAzul{

@@ -14,6 +14,7 @@ function InputText($width, $type, $len){
 	$(this.main).bind('keydown', doKeyDown);
 	//$(this.main).bind('touchend', doTouchStart);
 	
+	var _habil =true
 	
 	this.foco=function(){
 		$(this.main).focus();
@@ -35,10 +36,13 @@ function InputText($width, $type, $len){
     }
 
     this.marcar_error = function($bool){
-    	if($bool)
-    	 self.main.className = 'InputTextError';
-    	else 
-         self.main.className = 'InputText';
+    	if($bool){
+    	    	 self.main.className = 'InputTextError';
+    	    	}else{ 
+    	    		if(_habil)
+    	    	         self.main.className = 'InputText';
+							else  self.main.className = 'InputText InputTextDisnable';
+    	    	     }
     }
 	
 	this.getValor = function(){
@@ -53,7 +57,7 @@ function InputText($width, $type, $len){
 	}
 
 	this.habil = function($b){
-
+		_habil = $b;
 		if($b){
 		  self.main.className = 'InputText InputTextEnable';
 		  $(self.main).removeAttr("disabled");

@@ -57,32 +57,31 @@ var holder = document.createElement('div')
 	$(holder).append(txt_hora.main);
 
 	var txt_lugar = new InputText(app.ancho-220, 'text', 50);
-	txt_lugar.habil(false)
 	txt_lugar.main.id = 'FormSubirEvento_txt_lugar';
 	$(holder).append(txt_lugar.main);
-
-	
 
 	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doDate)
 	btn_date.main.id = 'FormSubirEvento_btn_date'
 	//$(btn_date.main).bind('click', doDate)
 	$(holder).append(btn_date.main)
-	$(btn_date.main).css({'left': app.ancho-60});
+	$(btn_date.main).css({'left': app.ancho-80});
 
 	var btn_time = new Boton2Frames('img/form/btn_calendario.png', 28, 56, doTime)
 	btn_time.main.id = 'FormSubirEvento_btn_time'
 	//$(btn_time.main).bind('click', doTime)
 	$(holder).append(btn_time.main)
-	$(btn_time.main).css({'left': app.ancho-60})
+	$(btn_time.main).css({'left': app.ancho-80})
 
 	var btn_position = new Boton2Frames('img/form/btn_evento.png', 20, 60, doVerMapa)
 	btn_position.main.id = 'FormSubirEvento_btn_position'
 	$(holder).append(btn_position.main)
-	$(btn_position.main).css({'left': app.ancho-55})
+	$(btn_position.main).css({'left': app.ancho-75})
 
 	var btn_subir = new Boton('SUBIR EVENTO', doSubirEvento);
 	btn_subir.main.id = 'FormSubirEvento_btn_subir'
 	$(holder).append(btn_subir.main);
+
+
 
 	function doSubirEvento(){
 
@@ -92,12 +91,61 @@ var holder = document.createElement('div')
 		txt_lugar.marcar_error(false);
 		txt_desc.marcar_error(false);
 
-		if(txt_titulo.getValor()=='') txt_titulo.marcar_error(true);
-		if(txt_fecha.getValor()=='') txt_fecha.marcar_error(true);
-		if(txt_lugar.getValor()=='') txt_lugar.marcar_error(true);
-		if(txt_hora.getValor()=='') txt_hora.marcar_error(true);
-		if(txt_desc.getValor()=='') txt_desc.marcar_error(true);
+		var r = true;
 
+		if(txt_titulo.getValor()=='') {txt_titulo.marcar_error(true); r = false;}
+		if(txt_fecha.getValor()=='') {txt_fecha.marcar_error(true); r = false;}
+		if(txt_lugar.getValor()=='') {txt_lugar.marcar_error(true); r = false;}
+		if(txt_hora.getValor()=='') {txt_hora.marcar_error(true); r = false;}
+		if(txt_desc.getValor()=='') {txt_desc.marcar_error(true);  r = false;}
+		if(r && app.secciones.seccionmapaform.getLatLonString()=='') {app.alerta('Debes elegir las coordenadas del lugar.'); r = false;}
+		
+
+		if(r)
+
+		{
+
+			app.cargando(true, 'Creando evento...')
+						$.ajax({
+
+							type: "POST",
+							url: app.server + "xml.crear_evento.php",
+							dataType: 'xml',
+							cache: false, 
+							data:{
+								lat_lon: app.secciones.seccionmapaform.getLatLonString(),
+								id_categoria: $(combo_categorias).val(),
+								titulo: txt_titulo.getValor(),
+								fecha: txt_fecha.getValor(),
+								lugar: txt_lugar.getValor(),
+								hora: txt_hora.getValor(),
+								desc: txt_desc.getValor()
+							},
+
+							success: function($xml) {
+								app.alerta('Tu evento ha sido creado con exito. El mismo será moderado antes de ser publicado.')	
+								app.cargando(false);
+								
+							},
+							error: function(){ 
+								app.alerta('Ocurrio un error al guardar el evento.')							
+								app.cargando(false)
+								
+							}
+						});	
+
+			_reset()
+		}
+
+	}
+	
+	function _reset(){ 
+		txt_titulo.setValor('')
+		txt_fecha.setValor('')
+		txt_lugar.setValor('')
+		txt_hora.setValor('')
+		txt_desc.setValor('')
+		app.secciones.seccionmapaform.resetLatLonString();
 	}
 
 	function doTime(){
@@ -111,9 +159,10 @@ var holder = document.createElement('div')
 			
 			// calling show() function with options and a result handler
 			datePicker.show(options, function(date){
-			  console.log("date result " + date);  
+			  //console.log("date result " + date);  
 			  var date = new Date(date)
-			  txt_fecha.setValor(date.getFullYear())
+			  	 txt_hora.setValor(date.getHours() + ':' + date.getMinutes() )
+
 			});
 
 	}
@@ -132,26 +181,23 @@ var holder = document.createElement('div')
 			
 			// calling show() function with options and a result handler
 			datePicker.show(options, function(date){
-			  console.log("date result " + date);  
+			 // console.log("date result " + date);  
 			  var date = new Date(date)
-			  txt_fecha.setValor(date.getFullYear())
+			  txt_fecha.setValor(date.getDate()+'/'+date.getMonth()+'/'+date.getFullYear());
 			});
 
-
-		
-		
 	}
 
 	this._set = function (){
 		
-		if(app.secciones.seccionmapaform.getLatLonString() != '')
-			txt_lugar.setValor(app.secciones.seccionmapaform.getLatLonString())
+		/*if(app.secciones.seccionmapaform.getLatLonString() != '')
+			txt_lugar.setValor()*/
 
 	}
 
 	function doVerMapa(){
 		
-		app.secciones.go(app.secciones.seccionmapaform)
+		app.secciones.go(app.secciones.seccionmapaform, 300, {pos:app.secciones.seccionmapaform.getLatLonString()})
 	}
 
 }
