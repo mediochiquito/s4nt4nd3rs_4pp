@@ -90,8 +90,7 @@ var holder = document.createElement('div')
 
 			// defining options
 			var options = {
-			  date: new Date(),
-			  mode: 'date'
+			  date: new Date()
 			};
 			
 			// calling show() function with options and a result handler
