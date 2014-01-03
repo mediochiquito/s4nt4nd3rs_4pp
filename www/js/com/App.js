@@ -12,8 +12,8 @@ function App(){
 		access_token:''
 	};
 	this.redirigiendo_una_push = false;
-	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
-	this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
+	this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
+	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
 	//this.server = 'http://santander.crudo.com.uy/';
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
@@ -108,6 +108,9 @@ function App(){
 
 	
 	function deviceready(){
+
+
+	
 		try{
 					//	navigator.device.overrideBackButton();
 				}catch(e){}
@@ -186,7 +189,7 @@ function App(){
 			crear_db(tx)	
 		});
       
-
+        
 	}
 
 
@@ -507,12 +510,11 @@ function App(){
 			$('#txt_loading').html($txt);
 			$('#loading').show();
 		}else{
-			$('#loading').hide();
+			//$('#loading').hide();
 		}
 
 	}
 
-	
 	
 
 }
