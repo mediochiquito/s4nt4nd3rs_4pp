@@ -40,10 +40,12 @@ var holder = document.createElement('div')
 	$(holder).append(txt_titulo.main);
 
 	var txt_fecha = new InputText(app.ancho-220, 'date', 50);
+	txt_fecha.habil(false)
 	txt_fecha.main.id = 'FormSubirEvento_txt_fecha';
 	$(holder).append(txt_fecha.main);
 
 	var txt_lugar = new InputText(app.ancho-220, 'text', 50);
+	txt_lugar.habil(false)
 	txt_lugar.main.id = 'FormSubirEvento_txt_lugar';
 	$(holder).append(txt_lugar.main);
 
@@ -53,7 +55,7 @@ var holder = document.createElement('div')
 
 	var btn_date = new Boton2Frames('img/form/btn_calendario.png', 28, 56, function(){})
 	btn_date.main.id = 'FormSubirEvento_btn_date'
-	$(btn_date.main).bind('click', doDate)
+	//$(btn_date.main).bind('click', doDate)
 	$(this.main).append(btn_date.main)
 	$(btn_date.main).css({'left': app.ancho-60})
 
@@ -88,17 +90,18 @@ var holder = document.createElement('div')
 	function doDate(){
 		
 		//if (!navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
-			alert('asd')
+
 			// defining options
 			var options = {
 			  date: new Date(),
-			  mode: 'date'
+			  mode: 'datetime'
 			};
 			
 			// calling show() function with options and a result handler
 			datePicker.show(options, function(date){
 			  console.log("date result " + date);  
-			  alert(date)
+			  var date = new (date)
+			  txt_fecha.setValor(date.getFullYear())
 			});
 
 		/*}else{
