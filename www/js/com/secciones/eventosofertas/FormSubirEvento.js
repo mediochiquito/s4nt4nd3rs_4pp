@@ -92,7 +92,7 @@ var holder = document.createElement('div')
 			var options = {
 			   date: new Date(),
 			   allowOldDates:false,
-			   mode : 'datetime',
+			   mode : 'date',
 			   allowFutureDates : true
 			};
 			
