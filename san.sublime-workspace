@@ -4,28 +4,24 @@
 		"selected_items":
 		[
 			[
-				"bac",
+				"ba",
 				"background-color"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"bo",
+				"bottom"
 			],
 			[
 				"fu",
 				"function"
 			],
 			[
-				"ba",
-				"background-clip"
-			],
-			[
-				"mar",
-				"margin-top"
-			],
-			[
 				"ma",
 				"max-height"
-			],
-			[
-				"bo",
-				"border"
 			],
 			[
 				"i",
@@ -42,6 +38,10 @@
 			[
 				"app",
 				"append"
+			],
+			[
+				"bac",
+				"background-color"
 			],
 			[
 				"bor",
@@ -91,62 +91,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "www/js/com/secciones/SeccionMapa.js",
-			"settings":
-			{
-				"buffer_size": 8810,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/SeccionMapaForm.js",
-			"settings":
-			{
-				"buffer_size": 3447,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/eventosofertas/FormSubirEvento.js",
-			"settings":
-			{
-				"buffer_size": 6270,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/xml.crear_evento.php",
-			"settings":
-			{
-				"buffer_size": 939,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/js/com/secciones/eventosofertas/ListaEventos.js",
-			"settings":
-			{
-				"buffer_size": 2695,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/app.css",
-			"settings":
-			{
-				"buffer_size": 4568,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/css/eventosofertas.css",
-			"settings":
-			{
-				"buffer_size": 2008,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -172,45 +116,37 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/App.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/xml/default_db.xml",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/controls.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/config.xml",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/app.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/header.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapaForm.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/mapaform.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/index.html",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.default_db.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapaForm.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapaform.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMenu.js",
+		"/C/Users/Mateo/SkyDrive/Documentos/A9VZXL4Q",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/app/app.plist",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/app/index.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.default_db.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.ofertas.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMenu.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/void.set_push_token.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/ManagePush.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
 		"/C/Users/Mateo/AppData/Local/Temp/fz3temp-1/class.Push.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/set_participar.php",
 		"/C/Users/Mateo/Desktop/Santanders_App-release/AndroidManifest.xml",
@@ -222,8 +158,6 @@
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/menu/ItemMenu.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unevento.css",
@@ -237,11 +171,8 @@
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/json.participaciones.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/_init.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/sync_value.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionUnEvento.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/SeccionHome.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa - copia.js",
 		"/C/wamp/www/green ray led/public/js/com/App.js",
@@ -299,7 +230,20 @@
 		"/C/wamp/www/ford_escapate/public/tab/js/actions/resize.js",
 		"/C/wamp/www/ford_escapate/public/tab/js/actions/hsl.js",
 		"/C/wamp/www/ford_escapate/public/tab/js/actions/blend.js",
-		"/C/wamp/www/ford_escapate/public/tab/js/actions/colorhistogram.js"
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/colorhistogram.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/actions/sepia.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/libs/CamanJS - Interactive Examples.html",
+		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.core.js",
+		"/C/wamp/www/ford_escapate/public/tab/js/pixastic.jquery.js",
+		"/C/wamp/www/ford_escapate/public/tab/index.php",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/BotonToogle.js",
+		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
+		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js",
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/inicio.css"
 	],
 	"find":
 	{
@@ -317,21 +261,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			".Tabs_holder",
-			"Tabs_holder",
-			"ListaEventos_holder",
-			"							\n",
-			"getValor",
-			"if(",
-			"}",
-			"onLocation",
-			"this.main",
-			"SeccionMapaForm_btn_aceptar",
-			"_date",
-			"FormSubirEvento_txt_hora",
-			"_fecha",
-			"txt_desc",
-			"			  \n",
+			"_eventos",
+			"actualizar_db",
+			"click",
 			"cargo_mapa",
 			"SeccionMapa_",
 			"item_ofeta",
@@ -423,197 +355,8 @@
 	"groups":
 	[
 		{
-			"selected": 6,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "www/js/com/secciones/SeccionMapa.js",
-					"settings":
-					{
-						"buffer_size": 8810,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4042,
-								4042
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2039.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "www/js/com/secciones/SeccionMapaForm.js",
-					"settings":
-					{
-						"buffer_size": 3447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2192,
-								2192
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 789.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "www/js/com/secciones/eventosofertas/FormSubirEvento.js",
-					"settings":
-					{
-						"buffer_size": 6270,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5825,
-								5825
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 20.0,
-						"translation.y": 1486.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "server/xml.crear_evento.php",
-					"settings":
-					{
-						"buffer_size": 939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								921,
-								921
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/js/com/secciones/eventosofertas/ListaEventos.js",
-					"settings":
-					{
-						"buffer_size": 2695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								701,
-								712
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 12.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "www/css/app.css",
-					"settings":
-					{
-						"buffer_size": 4568,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1242,
-								1242
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 729.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "www/css/eventosofertas.css",
-					"settings":
-					{
-						"buffer_size": 2008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1166,
-								1166
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 803.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -673,6 +416,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 273.0,
+	"side_bar_width": 335.0,
 	"status_bar_visible": true
 }

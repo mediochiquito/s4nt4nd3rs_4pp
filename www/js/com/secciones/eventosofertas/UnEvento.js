@@ -98,6 +98,8 @@ function UnEvento()
 
 			participo_de_este_evento(function($bool){
 
+
+
 				if($bool) {
 
 					app.alerta('Ya estás participando de este evento.')
@@ -156,6 +158,9 @@ function UnEvento()
 
 	function participo_de_este_evento($callback){
 		
+		alert(app.usuario.uid)
+		alert(app.usuario.access_token)
+
 		app.db.transaction(function (tx) {
 			
 			tx.executeSql("SELECT * FROM participaciones WHERE participaciones_id_evento="+obj.row.eventos_id+" AND participaciones_uid="+app.usuario.uid+"" , [], function (tx, resultado) {
