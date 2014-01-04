@@ -11,7 +11,7 @@ include dirname(__FILE__) . '/_init.php';
 	echo ']]></ofertas>';
 
 
-	$rs_eventos = mysql_query('SELECT * FROM eventos ORDER BY eventos_id ASC');
+	$rs_eventos = mysql_query('SELECT * FROM eventos ORDER BY eventos_id WHERE eventos_estado=1 ASC');
 	echo '<eventos><![CDATA[';
 	$rows_eventos = array();
 	while($row_eventos =  mysql_fetch_assoc($rs_eventos)){

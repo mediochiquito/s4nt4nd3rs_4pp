@@ -57,7 +57,8 @@ function SeccionMapaForm()
 		return lat + ',' + lon
 	}
 	this.resetLatLonString = function (){
-		return '';
+		lat = "";
+		lon = "";
 	}
 	function _construct() {
 		

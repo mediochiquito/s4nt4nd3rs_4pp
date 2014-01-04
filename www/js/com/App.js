@@ -8,12 +8,12 @@ function App(){
 	this.lightbox = null;
 	this.header = null;
 	this.usuario = {
-		uid:'1234567890',
+		uid:0,
 		access_token:''
 	};
 	this.redirigiendo_una_push = false;
 	this.cargo_mapa = false;
-	//this.server = 'http://192.168.2.2/s4nt4nd3rs_4pp/server/'
+	//this.server = 'http://192.168.0.2/s4nt4nd3rs_4pp/server/'
 	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
 	this.server = 'http://santander.crudo.com.uy/';
 	
@@ -263,7 +263,9 @@ function App(){
 
 			for(var item_evento in obj){
 					tx.executeSql('INSERT OR IGNORE INTO "eventos" ("eventos_id","eventos_nombre","eventos_fecha_hora","eventos_categoria_id","eventos_lugar","eventos_desc","eventos_lat","eventos_lon","eventos_uid","eventos_tags","eventos_estado","eventos_header_img","eventos_fecha_hora_creado") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', 
+			
 													  [
+													  
 													  obj[item_evento].eventos_id, 
 													  obj[item_evento].eventos_nombre, 
 													  obj[item_evento].eventos_fecha_hora, 
@@ -310,6 +312,19 @@ function App(){
 				
 
 			}
+
+		
+
+			// a eliminar
+			var array_del = $($xml).find('del').text().split(',')
+			var where='';
+			for(var del_id in array_del){
+				if(where!='') where += ' OR ';
+				where += ' eventos_id=' + array_del[del_id] ;
+
+			}
+			
+			tx.executeSql('DELETE FROM "eventos" WHERE ' + where);
 
 			tx.executeSql('UPDATE app SET sync_value=?', [new_sync_value]);
 			$(document).trigger('LISTAR_EVENTOS');
