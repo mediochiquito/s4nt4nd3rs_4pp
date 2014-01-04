@@ -42,7 +42,7 @@ var holder = document.createElement('div')
 	txt_titulo.main.id = 'FormSubirEvento_txt_titulo';
 	$(holder).append(txt_titulo.main);
 
-	var txt_desc = new InputText(app.ancho-180, 'text', 50);
+	var txt_desc = new InputText(app.ancho-180, 'text', 255);
 	txt_desc.main.id = 'FormSubirEvento_txt_desc';
 	$(holder).append(txt_desc.main);
 
