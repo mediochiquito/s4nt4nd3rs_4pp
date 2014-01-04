@@ -16,9 +16,9 @@ function Facebook(){
 	this.conectar = function($callback){
 
      	 FB.getLoginStatus(function(response) {
-     	 	//console.log(response);
+     	 		console.log(response);
 	          	if (response.status == 'connected') {
-
+	          		
 	             		if ( device.platform == 'android' || device.platform == 'Android' ){
 								app.usuario.uid = response.authResponse.userId;
 								app.usuario.access_token = response.authResponse.accessToken;

@@ -158,8 +158,7 @@ function UnEvento()
 
 	function participo_de_este_evento($callback){
 		
-		alert(app.usuario.uid)
-		alert(app.usuario.access_token)
+		
 
 		app.db.transaction(function (tx) {
 			
