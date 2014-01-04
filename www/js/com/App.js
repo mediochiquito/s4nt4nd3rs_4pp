@@ -14,8 +14,8 @@ function App(){
 	this.redirigiendo_una_push = false;
 	this.cargo_mapa = false;
 	//this.server = 'http://192.168.2.2/s4nt4nd3rs_4pp/server/'
-	this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
-	//this.server = 'http://santander.crudo.com.uy/';
+	//this.server = 'http://192.168.235.140:8888/s4nt4nd3rs_4pp/server/';
+	this.server = 'http://santander.crudo.com.uy/';
 	
 	this.db = openDatabase('santanders_app_punta', '1.0', 'santanders_app_punta', 2000000);
 	this._ManagePush;
@@ -58,7 +58,6 @@ function App(){
 	
 	this.is_phonegap =  function (){
 
-		//alert('device.platform: ' +  device.platform)
 		try {
 		    if(device.platform == ''){}
 		    return true;  
@@ -111,10 +110,6 @@ function App(){
 	function deviceready(){
 
 
-	
-		try{
-					//	navigator.device.overrideBackButton();
-				}catch(e){}
 		if(app.is_phonegap()){
 
 			if ((typeof cordova == 'undefined') && (typeof Cordova == 'undefined')) alert('Cordova variable does not exist. Check that you have included cordova.js correctly');
@@ -157,17 +152,7 @@ function App(){
         self.ancho = window.innerWidth;
 		self.alto = window.innerHeight;
 		if(self.alto<480)self.alto = 480;
-		/*
-		if( self.ancho<320) self.ancho = 320;
-		if( self.alto<640) self.alto = 640;
-		*/
-		/*if(window.innerWidth<640){
 
-			$(self.main).css('transform-origin', '0 0');
-			$(self.main).transition({scale: [(window.innerWidth/640)]}, 0);
-
-		}
-*/
 		$(self.main).css({width:self.ancho, height:self.alto})
 
 		self.secciones = new Secciones()
