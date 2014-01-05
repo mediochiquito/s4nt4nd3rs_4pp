@@ -40,7 +40,7 @@ function UnEvento()
 	btn_compartir.main.id = 'UnEvento_btn_compartir'
 	$(holder_footer).append(btn_compartir.main)
 
-	var btn_participar = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;PARTICIPAR", doParticipar, 'BotonAzul')
+	var btn_participar = new Boton("<img src='img/fb.svg' width='20' />&nbsp;&nbsp;ASISTIR", doParticipar, 'BotonAzul')
 	btn_participar.main.id = 'UnEvento_btn_participar'
 	$(holder_footer).append(btn_participar.main)
 
@@ -158,7 +158,7 @@ function UnEvento()
 
 	function participo_de_este_evento($callback){
 		
-		
+
 
 		app.db.transaction(function (tx) {
 			
@@ -189,11 +189,13 @@ function UnEvento()
 	  		var params = {
 	            method: 'feed',
 	            name: obj.row.eventos_nombre,
-	           	link: 'http://www.google.com',
-	            picture: 'http://fbrell.com/f8.jpg',
+	            link: 'http://www.ideasparahoy.com.uy',
+                picture: 'santander.crudo.com.uy/icon.png',
 	            caption: obj.row.eventos_lugar,
-	            description: obj.row.eventos_desc
+	           description: 'Publicado a través de la APP de Eventos y Descuentos de Banco Santander. Descargala gratis en ⦁	www.ideasparahoy.com.uy y enterate de las actividades del verano.'
+                  
 	        };
+
 
 	       FB.ui(params, function(obj) { console.log(obj);});
 
@@ -206,12 +208,10 @@ function UnEvento()
 
 		var array_fecha_hora = obj.row.eventos_fecha_hora.split(' ')
 		var array_fecha =array_fecha_hora[0].split('-')
-		
 
 		var d = new Date();
 		var hoy = new Date(d.getFullYear(),d.getMonth(), d.getDate())
 		var dia_evento = new Date(Number(array_fecha[0]), Number(array_fecha[1])-1, Number(array_fecha[2]));
-		
 		
 		if(hoy.getTime() == dia_evento.getTime()) return true;
 		else return false;

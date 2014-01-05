@@ -116,7 +116,22 @@
 	text-align: right;
 
 }
+.ItemListaEvento_fecha{
+	position: relative;
+	font-family: 'GothamBold';
+	 font-size: 13px;
+	 color: #674d97;
+	 
+	width: 55px;
 
+	display: block;
+	float: left;
+}
+.ItemListaEvento_nombre{
+	position: relative;
+	
+	float: left;
+}
 .sin_resultados{
 
 	font-family: 'GothamBook';

@@ -30,7 +30,7 @@ function App(){
 	var btn_connect;
 
 	this.categorias_eventos = new Array("Deportes","Moda", "Música", "Culturales", "Gastronómico");
-
+	this.meses = new Array('Ene', 'Feb', 'Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic');
 
 	this.initialize = function(){
 

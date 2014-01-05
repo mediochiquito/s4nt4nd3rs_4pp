@@ -21,7 +21,9 @@ function ListaEventos()
 	holder.id = 'ListaEventos_holder'
 	holder.className = 'Tabs_holder'
 	$(holder).append('<div></div>')
-	$(this.main).append(holder)
+	$(this.main).append(holder),
+
+
 
 	$(holder).css({width: app.ancho-40, height: app.alto-200});
 
@@ -53,9 +55,9 @@ function ListaEventos()
 
 	this.listar =  function ($busqueda, $callback){
 
-		var where = ' WHERE eventos_estado=1 ';
+		var where = ' WHERE eventos_estado=1 AND   date(eventos_fecha_hora)>=date("now")';
 		if($busqueda != ''){
-			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 ';
+			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  date(eventos_fecha_hora)>=date("now")';
 		}
 
 
@@ -63,11 +65,16 @@ function ListaEventos()
 
 		app.db.transaction(function (tx) {
 
-			tx.executeSql("SELECT * FROM eventos "+where+" ORDER BY eventos_fecha_hora DESC" , [], function (tx, resultado) {
+			tx.executeSql("SELECT * FROM eventos "+where+" ORDER BY eventos_fecha_hora ASC" , [], function (tx, resultado) {
 		    	
 		    	var cant_eventos = resultado.rows.length;
 		    	if(cant_eventos == 0){
-		    		$(holder).find('>div').html('<div class="sin_resultados"><div>La busqueda no ha arrojado ningun resultado en eventos.</div></div>')
+		    		
+		    		if($busqueda != '')
+		    			$(holder).find('>div').html('<div class="sin_resultados"><div>La busqueda no ha arrojado ningun resultado en eventos.</div></div>');
+		    		else 
+		    			$(holder).find('>div').html('<div class="sin_resultados"><div>No hay eventos disponibles.</div></div>');
+
 		    		setTimeout(function(){
 			        	$(holder).find('>div').css('height', 50)
 			        },100)

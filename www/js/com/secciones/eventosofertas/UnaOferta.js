@@ -83,10 +83,10 @@ function UnaOferta()
                 var params = {
                     method: 'feed',
                     name:  obj.row.ofertas_nombre,
-                    link: 'https://developers.facebook.com/docs/reference/dialogs/',
-                    picture: 'http://fbrell.com/f8.jpg',
-                    caption: 'Reference Documentation',
-                    description: 'Dialogs provide a simple, consistent interface for applications to interface with users.'
+                    link: 'http://www.ideasparahoy.com.uy',
+                    picture: 'santander.crudo.com.uy/icon.png',
+                    caption: $obj.row.ofertas_cutoas,
+                    description: 'Publicado a través de la APP de Eventos y Descuentos de Banco Santander. Descargala gratis en ⦁	www.ideasparahoy.com.uy y enterate de las actividades del verano.'
                   };
             
             FB.ui(params, function(obj) { console.log(obj);});
