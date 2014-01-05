@@ -47,7 +47,12 @@ function App(){
 	function doPrevent(event) {
 		//event.preventDefault();
 	}
+	this.openlink = function($url){
 
+		 window.open($url, '_system');
+
+	}
+	
 	this.alerta = function($str){
 		try{
     		navigator.notification.alert($str, function(){}, 'ALERTA')

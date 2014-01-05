@@ -17,7 +17,7 @@ function Facebook(){
 		// console.log(FB.getAuthResponse ())
      	 FB.getLoginStatus(function(response) {
      	 //		 console.log(FB.getAuthResponse ())
-     	 		console.log(response);
+     	 		//console.log(response);
 	          	if (response.status == 'connected') {
 
 	             		if ( device.platform == 'android' || device.platform == 'Android' ){
@@ -32,8 +32,8 @@ function Facebook(){
 					} else {
 						//console.log('login');
 			             FB.login(function(response2) {
-					 		  console.log(response2);
-					 		  console.log(FB.getAuthResponse())
+					 		 /* console.log(response2);
+					 		  console.log(FB.getAuthResponse())*/
 							  if (response2.authResponse) {
 							    	
 							    	if ( device.platform == 'android' || device.platform == 'Android' ){
