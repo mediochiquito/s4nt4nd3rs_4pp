@@ -55,9 +55,9 @@ function ListaEventos()
 
 	this.listar =  function ($busqueda, $callback){
 
-		var where = ' WHERE eventos_estado=1 AND   date(eventos_fecha_hora)>=date("now")';
+		var where = ' WHERE eventos_estado=1 AND  eventos_fecha_hora>=date("now")';
 		if($busqueda != ''){
-			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  date(eventos_fecha_hora)>=date("now")';
+			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  eventos_fecha_hora>=date("now")';
 		}
 
 
@@ -69,7 +69,7 @@ function ListaEventos()
 		    	
 		    	var cant_eventos = resultado.rows.length;
 		    	if(cant_eventos == 0){
-		    		
+
 		    		if($busqueda != '')
 		    			$(holder).find('>div').html('<div class="sin_resultados"><div>La busqueda no ha arrojado ningun resultado en eventos.</div></div>');
 		    		else 
