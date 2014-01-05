@@ -14,9 +14,9 @@ function Facebook(){
 
 
 	this.conectar = function($callback){
-		 console.log(FB.getAuthResponse ())
+		// console.log(FB.getAuthResponse ())
      	 FB.getLoginStatus(function(response) {
-     	 		 console.log(FB.getAuthResponse ())
+     	 //		 console.log(FB.getAuthResponse ())
      	 		console.log(response);
 	          	if (response.status == 'connected') {
 
