@@ -55,7 +55,7 @@ function ListaEventos()
 
 	this.listar =  function ($busqueda, $callback){
 
-		var where = ' WHERE eventos_estado=1';
+		var where = ' WHERE eventos_estado=1 AND  eventos_fecha_hora>="2014-01-05 00:00:00" ';
 		if($busqueda != ''){
 			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  eventos_fecha_hora>=date("now")';
 		}
