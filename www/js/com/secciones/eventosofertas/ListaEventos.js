@@ -55,9 +55,18 @@ function ListaEventos()
 
 	this.listar =  function ($busqueda, $callback){
 
-		var where = ' WHERE eventos_estado=1 AND  eventos_fecha_hora>="2014-01-05 00:00:00" ';
+		var _date = new Date();
+		var mes =  (_date.getMonth()+1)
+		if(mes<10) mes = '0' + mes;
+		var dia =  (_date.getDate())
+		if(dia<10) dia = '0' + dia;
+
+		var fecha_hasta_hoy = _date.getFullYear() + '-' + mes + '-' + dia + ' 00:00:00';
+
+		
+		var where = ' WHERE eventos_estado=1 AND  eventos_fecha_hora>="'+fecha_hasta_hoy+'" ';
 		if($busqueda != ''){
-			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  eventos_fecha_hora>=date("now")';
+			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  eventos_fecha_hora>="'+fecha_hasta_hoy+'"';
 		}
 
 
