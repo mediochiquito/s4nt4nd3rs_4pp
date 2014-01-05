@@ -55,7 +55,7 @@ function ListaEventos()
 
 	this.listar =  function ($busqueda, $callback){
 
-		var where = ' WHERE eventos_estado=1 AND  eventos_fecha_hora>=date("now")';
+		var where = ' WHERE eventos_estado=1';
 		if($busqueda != ''){
 			where = ' WHERE (eventos_nombre LIKE "%' + $busqueda + '%" OR eventos_tags LIKE "%' + $busqueda + '%") AND eventos_estado=1 AND  eventos_fecha_hora>=date("now")';
 		}
@@ -73,7 +73,7 @@ function ListaEventos()
 		    		if($busqueda != '')
 		    			$(holder).find('>div').html('<div class="sin_resultados"><div>La busqueda no ha arrojado ningun resultado en eventos.</div></div>');
 		    		else 
-		    			$(holder).find('>div').html('<div class="sin_resultados"><div>No hay eventos disponibles.</div></div>');
+		    			$(holder).find('>div').html('<div class="sin_resultados"><div>No hay eventos publicados por el momento.<br /><br />Te invitamos a que consultes la sección Descuentos.</div></div>');
 
 		    		setTimeout(function(){
 			        	$(holder).find('>div').css('height', 50)
