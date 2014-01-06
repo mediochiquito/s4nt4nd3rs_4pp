@@ -48,7 +48,7 @@ function Facebook(){
 							     alert('User cancelled login or did not fully authorize.');
 
 							   }
-						}, {scope: 'email'})
+						}, {scope: 'publish_stream'})
 	         	/*	}
          });
 */
