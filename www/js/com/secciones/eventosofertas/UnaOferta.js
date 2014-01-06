@@ -85,7 +85,7 @@ function UnaOferta()
                     name:  obj.row.ofertas_nombre,
                     link: 'http://www.ideasparahoy.com.uy',
                     picture: 'http://santander.crudo.com.uy/icon.png',
-                    caption: obj.row.ofertas_cutoas,
+                    caption: obj.row.ofertas_descuento+'. '+obj.row.ofertas_cutoas,
                     description: 'Publicado a través de la APP de Eventos y Descuentos de Banco Santander. Descargala gratis en www.ideasparahoy.com.uy y enterate de las actividades del verano.'
                   };
             
