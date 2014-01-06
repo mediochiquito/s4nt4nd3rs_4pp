@@ -31,7 +31,7 @@ function Facebook(){
 					} else {
 						*/
 			             FB.login(function(response2) {
-					 		
+					 		  console.log(response2)
 							  if (response2.authResponse) {
 							    	
 							    	if ( device.platform == 'android' || device.platform == 'Android' ){
@@ -44,11 +44,11 @@ function Facebook(){
 							    	$callback();
 
 							   } else {
-
+ 
 							     alert('User cancelled login or did not fully authorize.');
 
 							   }
-						}, {scope: 'email'})
+						}, {scope: 'publish_stream, email'})
 	         	/*	}
          });
 */
