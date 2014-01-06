@@ -15,7 +15,7 @@ function Facebook(){
 
 	this.conectar = function($callback){
 		
-     	/* FB.getLoginStatus(function(response) {
+     	 FB.getLoginStatus(function(response) {
      	
 	          	if (response.status == 'connected') {
 
@@ -29,9 +29,9 @@ function Facebook(){
 						$callback();
 
 					} else {
-						*/
+						
 			             FB.login(function(response2) {
-					 		  console.log(response2)
+					 		 // console.log(response2)
 							  if (response2.authResponse) {
 							    	
 							    	if ( device.platform == 'android' || device.platform == 'Android' ){
@@ -49,9 +49,9 @@ function Facebook(){
 
 							   }
 						}, {scope: 'email'})
-	         	/*	}
+	         		}
          });
-*/
+
 		
 	}
 
