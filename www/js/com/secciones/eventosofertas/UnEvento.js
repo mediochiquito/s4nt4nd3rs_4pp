@@ -190,9 +190,9 @@ function UnEvento()
 	            method: 'feed',
 	            name: obj.row.eventos_nombre,
 	            link: 'http://www.ideasparahoy.com.uy',
-                picture: 'santander.crudo.com.uy/icon.png',
+                picture: 'http://santander.crudo.com.uy/icon.png',
 	            caption: obj.row.eventos_lugar,
-	           description: 'Publicado a través de la APP de Eventos y Descuentos de Banco Santander. Descargala gratis en ⦁	www.ideasparahoy.com.uy y enterate de las actividades del verano.'
+	           description: 'Publicado a través de la APP de Eventos y Descuentos de Banco Santander. Descargala gratis en www.ideasparahoy.com.uy y enterate de las actividades del verano.'
                   
 	        };
 
