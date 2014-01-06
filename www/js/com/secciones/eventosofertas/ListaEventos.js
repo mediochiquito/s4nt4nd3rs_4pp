@@ -74,7 +74,7 @@ function ListaEventos()
 
 		app.db.transaction(function (tx) {
 
-			tx.executeSql("SELECT * FROM eventos "+where+" ORDER BY eventos_fecha_hora ASC" , [], function (tx, resultado) {
+			tx.executeSql('SELECT * FROM eventos ' + where + ' ORDER BY eventos_fecha_hora ASC' , [], function (tx, resultado) {
 		    	
 		    	var cant_eventos = resultado.rows.length;
 		    	if(cant_eventos == 0){
