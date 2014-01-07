@@ -91,6 +91,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/config.xml",
+			"settings":
+			{
+				"buffer_size": 2135,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -116,30 +124,34 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/App.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.default_db.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/index.html",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapaForm.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/formsubirevento.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/controls.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/InputText.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapaform.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMapa.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Base_Seccion.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionMenu.js",
 		"/C/Users/Mateo/SkyDrive/Documentos/A9VZXL4Q",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/Secciones.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/app/app.plist",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/app/index.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.ofertas.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
@@ -156,16 +168,12 @@
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/menu.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/BotonToogle.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/app.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/home.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Boton.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/menu/ItemMenu.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unevento.css",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaOferta.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnaOferta.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionHome.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/utils/Facebook.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp__/www/js/com/secciones/SeccionMenu.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/controls/Solapa.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/json.participaciones.php",
@@ -261,6 +269,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"listar",
+			"doParticipar",
 			"_eventos",
 			"actualizar_db",
 			"click",
@@ -355,8 +365,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/config.xml",
+					"settings":
+					{
+						"buffer_size": 2135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -416,6 +455,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 335.0,
+	"side_bar_width": 233.0,
 	"status_bar_visible": true
 }
