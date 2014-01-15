@@ -116,7 +116,11 @@
 	},
 	"file_history":
 	[
-		"/Applications/MAMP/htdocs/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionTerms.js",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/terms.css",
+		"/C/wamp/www/s4nt4nd3rs_4pp/assets/detos",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
+		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaOfertas.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/eventosofertas.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/UnEvento.js",
@@ -126,7 +130,6 @@
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ListaEventos.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/ItemListaEvento.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/SeccionEventosOfertas.js",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/config.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/xml/default_db.xml",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.eventos.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/secciones/eventosofertas/FormSubirEvento.js",
@@ -147,7 +150,6 @@
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/class.Push.php",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/unaoferta.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/xml.ofertas.php",
-		"/C/wamp/www/s4nt4nd3rs_4pp/www/js/com/header/Header.js",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/header.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/www/css/mapa.css",
 		"/C/wamp/www/s4nt4nd3rs_4pp/server/void.set_push_token.php",
@@ -241,9 +243,7 @@
 		"/C/wamp/www/gennerayled/js/com/home/ItemHome.js",
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/css/app.css",
 		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/CheckBox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js",
-		"/C/wamp/www/gennerayled/js/com/secciones/relevamiento/plano_editor/PlanoEditorLightbox.js",
-		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/SeccionInicio.js"
+		"/C/wamp/www/dev_sm1rn00_ka3a1a/com/Ligthbox_legales.js"
 	],
 	"find":
 	{
@@ -261,6 +261,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"android",
+			"andro",
 			"listar",
 			"doParticipar",
 			"_eventos",
@@ -418,6 +420,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 233.0,
+	"side_bar_width": 197.0,
 	"status_bar_visible": true
 }

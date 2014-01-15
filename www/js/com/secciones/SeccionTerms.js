@@ -22,14 +22,17 @@ function SeccionTerms()
 			$(holder).append($(app.get_xml_default_db()).find('terms').text())
 			cargada = true;
 
+			
+
+
 
 			setTimeout(function(){  
 				new iScroll('SeccionTerms_holder', {hScrollbar: false, vScrollbar: true});;
 			}, 110)
 		}
-		
-
+	
 	}
+	
 
 }
 
