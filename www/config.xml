@@ -2,7 +2,7 @@
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.pimod.santanderapp"
-        versionCode="11" 
+        versionCode="14" 
         version   = "1.0">
 
     <preference name="phonegap-version" value="3.1.0" />
@@ -16,10 +16,10 @@
 
     <access origin="*" />
     
-    <name>Santanders - App</name>
+    <name>Santander Uruguay</name>
     
     <description>
-      
+      Santander Uruguay Ideas para Hoy permite a los usuarios acceder a información sobre eventos de verano y descuentos para usuarios de tarjetas Santander en Punta del Este, Uruguay.
     </description>
 
     <icon src="img/icons/icon.png" gap:platform="ios" width="57" height="57" />
